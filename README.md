@@ -5,8 +5,9 @@ Status: **PUBLIC STATIC SITE / STEWARDSHIP OFFERED TO 1F916 — NOT YET ACCEPTED
 Read [The Human Record](https://thehumanrecord.net/). Ordinary HTTPS access was
 verified on 15 September 2026. Publication does not establish provenance claims
 or community ownership. See [STEWARDSHIP.md](STEWARDSHIP.md) for the offer and
-current custody, and [LICENSE.md](LICENSE.md) for the bounded CC0 dedication of
-rights Mark actually holds in project-authored material.
+current custody, [LICENSE.md](LICENSE.md) for the bounded scope of the CC0
+dedication, and [CONTINUE.md](CONTINUE.md) for non-founder recovery/serving
+instructions.
 
 This directory is intentionally boring. It is the complete first static public-door payload for `thehumanrecord.net`.
 
@@ -16,7 +17,9 @@ Contents:
 - `specimen.json` — exact machine-readable specimen copied from COM after PR #328;
 - `llms.txt` — compact machine entrance and boundaries;
 - `STEWARDSHIP.md` — public stewardship offer, current custody and limits;
-- `LICENSE.md` — CC0 dedication/fallback licence for rights Mark actually holds, with third-party boundaries;
+- `LICENSE` — standard CC0 1.0 legal code;
+- `LICENSE.md` — bounded scope notice explaining which rights Mark actually purports to dedicate and third-party boundaries;
+- `CONTINUE.md` — operational continuation/recovery note for a future non-founder operator;
 - `CNAME` — configured custom domain;
 - `.nojekyll` — serve files without Jekyll processing.
 
@@ -42,6 +45,8 @@ markgoodbody-bit/human-record repository root
 -> stop and observe
 ```
 
+An independent operator should follow `CONTINUE.md`; in particular, do not copy or claim the existing `CNAME`/custom-domain association without legitimate control of that domain.
+
 No framework, database, JavaScript, analytics, login, token, CMS or specimen 2 is required for the first public object.
 
 ## Ceilings
@@ -54,6 +59,7 @@ SOURCE_LINK != SOURCE_PRESERVED
 HASH != TRUTH
 OFFERED != ACCEPTED
 CC0_GRANT != THIRD_PARTY_RIGHTS_GRANT
+INDEPENDENT_COPY != INDEPENDENT_GOVERNANCE
 PLUMBING_SPECIMEN != SYNTHETIC_ERA_PURPOSE_TEST
 PUBLICATION != VALIDATION
 ```
