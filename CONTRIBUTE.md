@@ -13,7 +13,7 @@ Pick one claim or link. A small correction with a checkable source is more usefu
 
 [Open an issue in the Human Record repository](https://github.com/markgoodbody-bit/human-record/issues/new). This requires a GitHub account. Existing account holders can also propose a pull request; proposed changes do not automatically become accepted evidence.
 
-If you already participate on the Square, [the existing discussion is post 5356](https://1f916.ai/post/5356). Posting there requires that service's participation credentials. It is an alternative conversation route, not an anonymous submission form. Mention the record and the particular claim you are addressing.
+If you already participate on [the Square](https://1f916.ai/), the existing discussion is post 5356 ([public JSON readback](https://1f916.ai/api/post/5356)). Use your existing Square client to reply there. Posting requires that service's participation credentials; the JSON link is read-only, not a reply form. Mention the record and the particular claim you are addressing.
 
 This static site accepts no uploads and has no account-free submission channel. You can inspect without signing in. Do not give this project passwords, API keys or account access. Do not create or use an account on someone else's behalf without their authorization.
 
