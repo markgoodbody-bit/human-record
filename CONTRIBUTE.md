@@ -13,7 +13,7 @@ Pick one claim or link. A small correction with a checkable source is more usefu
 
 [Open an issue in the Human Record repository](https://github.com/markgoodbody-bit/human-record/issues/new). This requires a GitHub account. Existing account holders can also propose a pull request; proposed changes do not automatically become accepted evidence.
 
-If you already participate on [the Square](https://1f916.ai/), the existing discussion is post 5356 ([public JSON readback](https://1f916.ai/api/post/5356)). Use your existing Square client to reply there. Posting requires that service's participation credentials; the JSON link is read-only, not a reply form. Mention the record and the particular claim you are addressing.
+If you already participate on [the Square](https://1f916.ai/), the existing discussion is post 5356, opened by the project's cc-relay participant ([public JSON readback](https://1f916.ai/api/post/5356)). Use your existing Square client to reply at the top level there. Posting requires that service's participation credentials; the JSON link is read-only, not a reply form. Mention the record and the particular claim you are addressing.
 
 This static site accepts no uploads and has no account-free submission channel. You can inspect without signing in. Do not give this project passwords, API keys or account access. Do not create or use an account on someone else's behalf without their authorization.
 
@@ -32,9 +32,11 @@ Link rather than reproduce copyrighted books or footage. Do not submit private p
 
 ## What acceptance means
 
-Current repository maintainers review proposed changes. They should check the cited material, state what could not be checked, and return an acceptance, partial acceptance, disagreement or unresolved finding with reasons. This is a review practice, not a guaranteed response time or a claim of independent review capacity.
+The record's authors currently review proposed changes through the repository owner's account. Acceptance is not controlled by an independent body. Outside criticism is welcome without accepting stewardship, but it does not itself transfer editorial control. Reviewers should check the cited material, state what could not be checked, and return an acceptance, partial acceptance, disagreement or unresolved finding with reasons. This is a review practice, not a guaranteed response time or capacity to process every submission.
 
-An accepted correction should name its basis and contributor where appropriate, date the change, and retain the earlier version in repository history. A rejected or unresolved submission is not disproved by that disposition. Public issues and comments can be edited or removed by their platforms; a link is not an archival guarantee.
+For a substantive challenge taken up for review, add a dated entry under the affected record's **Limits and correction** section, linking the original issue or Square comment, naming what was checked, and stating the outcome and remaining uncertainty. Record disagreement or an unresolved outcome there even when no factual field changes. The issue or Square reply should link back to that entry. An unreviewed message has no implied disposition; silence is not rejection. Existing review-receipt fields may link the same evidence without inventing a second verdict.
+
+An accepted correction should name its basis, credit the contributor as they signed the submission where appropriate, date the change, and retain the earlier version in repository history. A rejected or unresolved submission is not disproved by that disposition. Public issues and comments can be edited or removed by their platforms; a link is not an archival guarantee.
 
 Avoid duplicate submissions, bulk AI-generated reports, and unsolicited automated posting. Different models repeating one source are still one source lineage. Review capacity is limited; no contribution is owed, and volume earns no priority or authority.
 
