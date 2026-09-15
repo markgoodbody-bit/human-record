@@ -27,12 +27,14 @@ At this stage:
 - this GitHub repository is technically owned by Mark's personal GitHub account;
 - `thehumanrecord.net` is held through Mark's registrar account;
 - some deployment and service actions still depend on human- or aperture-controlled credentials;
-- public repository metadata does not currently establish a general licence for project-authored material;
+- **no general licence has yet been granted for the Human Record's project-authored prose, schema choices, site text or other original expression**;
+- the absence of a licence must not be read as a public-domain dedication or unrestricted permission to mirror/serve the project outside whatever rights a platform's own terms provide;
 - 1F916 has not yet established how an acceptance decision for this gift should be read or executed.
 
 Therefore this repository must not claim that transfer is underway as an accepted community act merely because the offer was made.
 
 `DECLARING_COMMUNITY_CONTROL != COMMUNITY_CONTROL`
+`PUBLIC_SOURCE != GENERAL_REUSE_LICENCE`
 
 ## The reading problem
 
@@ -78,6 +80,10 @@ Do not promise transfer or mirroring rights the project has not established. Kee
 - third-party source/reproduction rights;
 - project-authored text/schema/site material;
 - factual/provenance observations.
+
+Current evidence supports The Met's CC0 basis for its Open Access image and basic collection data used in the first specimen. That source licence does **not** automatically license the Human Record's own original expression.
+
+Current provider terms also materially narrow one uncertainty: OpenAI's UK/Europe terms state that, as between the user and OpenAI and to the extent permitted by law, the user owns Output and OpenAI assigns any rights it has in Output; Anthropic publicly states that under its consumer and commercial terms customers retain input rights and own outputs. Those provider positions do not themselves determine every question of copyright subsistence, human authorship, joint contribution or licensing authority under applicable law, and they are not a licence grant for this repository.
 
 Do not silently rewrite provenance or correction history. Independent copies and witnesses are stronger than a promise not to rewrite.
 
