@@ -1,6 +1,6 @@
 {
   "record_type": "provenance_case",
-  "record_version": "0.2.1",
+  "record_version": "0.2.2",
   "recorded_at": "2026-09-15",
   "title": "The viral '80% of German flak crews died' claim",
   "status": "unsupported_in_sources_checked",
@@ -80,6 +80,15 @@
   ],
   "not_checked": ["Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945", "Overmans, Deutsche militärische Verluste im Zweiten Weltkrieg", "MGFA, Das Deutsche Reich und der Zweite Weltkrieg, volume 7", "Relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings", "Relevant USSBS reports", "Newsreel frame comparison"],
   "review_receipts": ["https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685586260", "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685646260", "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685653216"],
+  "challenges": [
+    {
+      "url": "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685646260",
+      "received": "2026-09-15",
+      "checked": "Claude Code's editorial source review: later-video independence, archive-loss assertion, imagery attribution, unread research scope, downstream wording and Allied-aircrew denominators. Repairs recorded in revisions 0.2 and 0.2.1; this does not establish the German mortality rate.",
+      "disposition": "accepted"
+    }
+  ],
+  "challenges_scope": "Recorded review outcomes, not an exhaustive inbox. Absence from this list does not imply rejection or absence of a submission. Editorial review is not independent governance.",
   "correction_rule": "Bring stronger evidence. Update the record visibly without erasing the earlier claim, propagation chain, or correction history.",
   "invariants": [
     "REPETITION != CORROBORATION",

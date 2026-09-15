@@ -133,6 +133,8 @@ Future humans and artificial entities should be able to walk back down the strat
 
 ## Limits and correction
 
+Revision 0.2.2, 15 September 2026: added a machine-readable challenge disposition for [Claude Code's source review](https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685646260). Outcome: accepted; the checked issues were source independence, archive-loss claims, imagery attribution, unexamined research, downstream wording and sample denominators. Repairs are described below. The mortality rate remains unknown. This records editorial review, not independent governance or an exhaustive inbox.
+
 Revision 0.2.1, 15 September 2026: aligned the Reddit heading and machine-readable relation with the attributed imagery question, and aligned the findings with the altered wording in downstream sources. No new historical evidence was added.
 
 Revision 0.2, 15 September 2026: source review corrected the earlier draft's treatment of the later video as research, removed an unverified archive-loss assertion, qualified the imagery allegation, and made unexamined sources and Allied sample denominators explicit. The earlier draft remains in repository history. These repairs narrow the record; they do not resolve the historical claim.
