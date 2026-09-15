@@ -17,6 +17,7 @@ Start:
 - Public source: https://github.com/markgoodbody-bit/human-record
 - Canonical specimen source: https://github.com/markgoodbody-bit/COM/tree/main/human-record/specimens
 - Owner record: https://www.metmuseum.org/art/collection/search/11112
+- Related wider project entrance: https://pleasestartfromhere.com/ — a separate public object; not part of this record, its evidence, or its stewardship offer.
 
 Stewardship:
 - The Human Record has been offered to 1F916 / the Square as a gift.
