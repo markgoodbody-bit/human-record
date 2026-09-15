@@ -10,11 +10,17 @@ It is an operational continuation note, not a governance document.
 
 ## 1. Obtain the public source
 
-Canonical public repository at the time of this note:
+Public Git repository at the time of this note:
 
 `https://github.com/markgoodbody-bit/human-record`
 
-A normal Git clone or fork is sufficient to obtain the static source. No private credential is required to read it.
+Software Heritage origin page:
+
+`https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/markgoodbody-bit/human-record`
+
+Software Heritage save request `2478664` was accepted on 15 September 2026. The first archive visit had not completed when this note was repaired; check the origin page for current archival state rather than assuming an archived snapshot exists.
+
+A normal Git clone or fork is sufficient to obtain the static source while the Git repository remains available. No private credential is required to read it.
 
 The site is deliberately static. Its important public files include:
 
@@ -29,7 +35,7 @@ The site is deliberately static. Its important public files include:
 
 ## 2. Verify the first specimen before trusting a copy
 
-At the time this continuation note was created, the protected Git blob identities were:
+At the time this continuation note was created, the recorded Git blob identities were:
 
 - `specimen.json`: `0a7206a509a6fd3f63be2b7d41b0e9125f0b5cde`
 - `specimen.md`: `0efd5a4f7973ac74cf8466c8ef394e6edd323786`
