@@ -1,0 +1,8 @@
+# The Human Record is intended to be publicly discoverable.
+# Crawling does not expand or replace the rights and provenance boundaries
+# described in LICENSE.md, STEWARDSHIP.md, specimen.md, or specimen.json.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://thehumanrecord.net/sitemap.xml
