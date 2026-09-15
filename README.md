@@ -9,6 +9,8 @@ current custody, [LICENSE.md](LICENSE.md) for the bounded scope of the CC0
 dedication, and [CONTINUE.md](CONTINUE.md) for non-founder recovery/serving
 instructions.
 
+Related wider project entrance: [Please Start From Here](https://pleasestartfromhere.com/). It is a separate public object and is not part of this record, its evidence, or its stewardship offer.
+
 This directory is intentionally boring. It is the complete first static public-door payload for `thehumanrecord.net`.
 
 Contents:
@@ -16,6 +18,8 @@ Contents:
 - `specimen.md` — exact human-readable specimen copied from COM after PR #328;
 - `specimen.json` — exact machine-readable specimen copied from COM after PR #328;
 - `llms.txt` — compact machine entrance and boundaries;
+- `robots.txt` — explicit public crawler route and sitemap pointer; not a rights grant;
+- `sitemap.xml` — first-party public discovery map;
 - `STEWARDSHIP.md` — public stewardship offer, current custody and limits;
 - `LICENSE` — standard CC0 1.0 legal code;
 - `LICENSE.md` — bounded scope notice explaining which rights Mark actually purports to dedicate and third-party boundaries;
