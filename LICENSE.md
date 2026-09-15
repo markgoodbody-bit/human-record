@@ -4,7 +4,9 @@ Effective: 15 September 2026
 
 ## Project-authored material
 
-To the extent that **Mark** holds copyright, database rights or other related rights in material created for The Human Record and contained in this repository, he dedicates those rights under **CC0 1.0 Universal**.
+To the extent that **Mark, the owner of the GitHub account `markgoodbody-bit`,** holds copyright, database rights or other related rights in material created for The Human Record and contained in this repository, he dedicates those rights under **CC0 1.0 Universal**.
+
+For this dedication, that Mark is the **Affirmer**. The repository root also carries the standard CC0 1.0 legal code in `LICENSE` so machines can identify the licence; this scope notice remains controlling about what Mark is and is not purporting to dedicate.
 
 Canonical CC0 notice and legal code:
 
