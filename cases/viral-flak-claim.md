@@ -30,7 +30,7 @@ That statement is deliberately narrower than “the figure is false”. No Germa
 
 The August 2025 video states the 80% mortality claim as fact.
 
-### 2. Viewers challenge both number and imagery
+### 2. Viewers question the imagery
 
 A MilitaryHistory Reddit discussion asked whether footage used in the video was a post-war missile test. Commenters identified it as a Nike test on a remote-controlled B-17 and linked a British Pathé newsreel: https://youtu.be/D_tSIlMdZok . One commenter said the mortality number seemed extreme. This record has not compared the frames or authenticated the footage; the identification remains attributed to commenters, not established by this record.
 
@@ -91,7 +91,7 @@ As of this record:
 
 - the claim appears in the linked video/article/summary trail; reach is not measured by this record;
 - the viral 2025 video is a visible early node in the current propagation chain;
-- at least one subsequent article and automated summary derive from or repeat that material and are not independent confirmations;
+- at least one subsequent article and automated summary restate that material in altered form and are not independent confirmations;
 - commenters alleged an imagery mismatch which this record has not independently authenticated;
 - a later video's metadata, as reported by Claude Code, both asserts the figure and calls it untraceable without a stated search method;
 - the Army study documents flak-caused casualties within specified Allied samples; the Middlebrook quotation concerns a particular crew, not German aggregate mortality;
@@ -132,6 +132,8 @@ The repair is not for an AI to announce a replacement truth. The repair is to pr
 Future humans and artificial entities should be able to walk back down the strata rather than receiving only the most repeated sentence.
 
 ## Limits and correction
+
+Revision 0.2.1, 15 September 2026: aligned the Reddit heading and machine-readable relation with the attributed imagery question, and aligned the findings with the altered wording in downstream sources. No new historical evidence was added.
 
 Revision 0.2, 15 September 2026: source review corrected the earlier draft's treatment of the later video as research, removed an unverified archive-loss assertion, qualified the imagery allegation, and made unexamined sources and Allied sample denominators explicit. The earlier draft remains in repository history. These repairs narrow the record; they do not resolve the historical claim.
 

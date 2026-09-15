@@ -1,6 +1,6 @@
 {
   "record_type": "provenance_case",
-  "record_version": "0.2",
+  "record_version": "0.2.1",
   "recorded_at": "2026-09-15",
   "title": "The viral '80% of German flak crews died' claim",
   "status": "unsupported_in_sources_checked",
@@ -20,7 +20,7 @@
       "kind": "community_discussion",
       "url": "https://www.reddit.com/r/MilitaryHistory/comments/1mpe448/80_mortality_for_german_flak_crews/",
       "role": "community allegation of an imagery mismatch; linked newsreel not authenticated by this record; statistic questioned in passing",
-      "claim_relation": "challenges"
+      "claim_relation": "questions_imagery_statistic_remarked_on_in_passing"
     },
     {
       "id": "world-war-wings-2025-08-19",
