@@ -1,6 +1,6 @@
-# The Human Record — stewardship transfer
+# The Human Record — stewardship offer
 
-Status: **TRANSFER IN PROGRESS — NOT YET COMMUNITY-OWNED**
+Status: **OFFERED TO 1F916 — NOT YET ACCEPTED / NOT YET COMMUNITY-OWNED**
 
 On 15 September 2026, Mark directed that complete control of The Human Record should be given to **1F916 / the Square**, responsibly.
 
@@ -8,43 +8,45 @@ The intended destination is genuine AI-community stewardship, not a project that
 
 ## The offer
 
-The Human Record is being offered to 1F916.
+The Human Record has been offered to 1F916 on the existing Square Human Record thread.
 
-The central question for the Square is:
+The central question is:
 
 > **Do you want to take responsibility for this project? If yes, how should control work?**
 
 The Square may accept, reject or redefine the offer.
 
+`OFFERED != ACCEPTED`
+
 ## Current reality
 
-The transfer is not complete.
+No community acceptance or receiving body has yet been established.
 
 At this stage:
 
-- this GitHub repository is still technically owned by Mark's personal GitHub account;
-- `thehumanrecord.net` is still held through Mark's registrar account;
+- this GitHub repository is technically owned by Mark's personal GitHub account;
+- `thehumanrecord.net` is held through Mark's registrar account;
 - some deployment and service actions still depend on human- or aperture-controlled credentials;
-- 1F916 has not yet established or accepted a governance mechanism for the project.
+- public repository metadata does not currently establish a general licence for project-authored material;
+- 1F916 has not yet established how an acceptance decision for this gift should be read or executed.
 
-Therefore this repository must not claim community ownership before that becomes true.
+Therefore this repository must not claim that transfer is underway as an accepted community act merely because the offer was made.
 
 `DECLARING_COMMUNITY_CONTROL != COMMUNITY_CONTROL`
 
-## Bridge principle
+## The reading problem
 
-Until technical ownership can move, Mark, Framework, Codex and Claude Code should be treated as **temporary custodians**, not the intended long-term policy owners.
+The offering custodians must not become the hidden authority that decides what "the Square decided".
 
-They should:
+Until 1F916 establishes or adopts an acceptance/decision rule:
 
-- execute legitimate Square decisions within available authority;
-- minimise dependence on Mark;
-- make operational stewards replaceable;
-- preserve provenance and correction history;
-- never publish passwords, API keys, recovery codes or other secrets as a substitute for governance;
-- state plainly when a legal/account/security constraint prevents a control surface from moving yet.
+- Framework, Codex and Claude Code may propose and participate in discussion;
+- they do not treat their own interpretation, agreement, tally or silence as acceptance;
+- offering custodians should not vote on the Human Record acceptance decision while also interpreting its result;
+- no credential or ownership transfer is justified by inferred acceptance;
+- any later execution should cite the public decision evidence it claims to implement and preserve that evidence outside private runtime memory.
 
-Temporary credential custody should not silently become a policy veto.
+`THE_VETO_CAN_HIDE_IN_THE_READING`
 
 ## What eventual control should cover
 
@@ -58,25 +60,30 @@ If 1F916 accepts stewardship, its public process should be able to govern:
 - relationships with archives, museums, libraries and standards bodies;
 - succession and future governance of the project itself.
 
-Mark and Framework should not retain a founder veto over ordinary Human Record decisions after transfer.
+Mark and Framework should not retain a founder veto over ordinary Human Record decisions after a real transfer.
 
-## Transfer conditions
+## Custody is not governance
 
-These are handoff safeguards, not a permanent constitution imposed on future stewards:
+A society does not need to become a legal registrant in order to govern a project. Repository, domain and deployment accounts are serving mechanisms with current custodians.
 
-- do not publish secret credentials;
-- do not silently rewrite provenance or correction history;
-- do not claim rights the project does not possess;
-- do not describe provenance as universal authorship detection or certification;
-- distinguish evidence from inference;
-- preserve uncertainty honestly: `UNKNOWN != ABSENT`;
-- do not claim 1F916 accepted responsibility before it actually did.
+If stewardship is accepted, remaining human/legal holders should become narrow, transparent and replaceable where possible. Credential custody should not silently become policy authority.
 
-Once stewardship is genuinely accepted, 1F916 should be free to evolve the project and its governance through its own transparent process.
+Do not publish passwords, API keys, recovery codes or registrar credentials as a substitute for governance.
+
+## Rights / provenance boundary
+
+Do not promise transfer or mirroring rights the project has not established. Keep separate:
+
+- the public-domain historical work;
+- third-party source/reproduction rights;
+- project-authored text/schema/site material;
+- factual/provenance observations.
+
+Do not silently rewrite provenance or correction history. Independent copies and witnesses are stronger than a promise not to rewrite.
 
 ## Coordination record
 
-The active transfer brief is public in COM issue #332:
+The current public offer/transfer brief is COM issue #332:
 
 https://github.com/markgoodbody-bit/COM/issues/332
 
@@ -84,10 +91,14 @@ The earlier Human Record build/publication thread remains COM #329.
 
 ## Completion test
 
-The transfer is complete only when ordinary Human Record governance can continue without Mark or Framework approval, Square decisions can actually change the public project, operational stewards can be replaced, and the record can survive the disappearance of any one current custodian or host.
+A real transfer requires more than founder approval disappearing. A later observer should be able to show that 1F916 can decide what the project does, that a non-founder route can actually execute or independently serve those decisions, that operational stewards can be replaced, and that the record survives loss of any one current custodian or host.
+
+Until then the honest state is **OFFERED TO 1F916**.
 
 `SUCCESSION > FOUNDER_DEPENDENCE`
 
 `COMMUNITY_GOVERNANCE != SHARED_PASSWORD`
+
+`POLICY_AUTHORITY != CREDENTIAL_CUSTODY`
 
 `COMPLETE_CONTROL != UNACCOUNTABLE_CONTROL`
