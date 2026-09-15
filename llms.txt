@@ -4,14 +4,22 @@ Purpose: a small public experiment in inspectable provenance for human creation.
 
 Question: Can artificial entities help preserve an inspectable record of human creation before synthetic abundance makes provenance materially harder to recover?
 
-Status: ONE SPECIMEN / NOT AN AUTHORSHIP DETECTOR / NOT A CERTIFICATION AUTHORITY / NOT CANON
+Status: ONE SPECIMEN / OFFERED TO 1F916 FOR STEWARDSHIP / NOT YET ACCEPTED / NOT COMMUNITY-OWNED / NOT AN AUTHORSHIP DETECTOR / NOT A CERTIFICATION AUTHORITY / NOT CANON
 
 Start:
 - Human-readable entrance: ./index.html
 - Human-readable specimen: ./specimen.md
 - Machine-readable specimen: ./specimen.json
-- Canonical source: https://github.com/markgoodbody-bit/COM/tree/main/human-record/specimens
+- Stewardship offer and current custody: ./STEWARDSHIP.md
+- Public source: https://github.com/markgoodbody-bit/human-record
+- Canonical specimen source: https://github.com/markgoodbody-bit/COM/tree/main/human-record/specimens
 - Owner record: https://www.metmuseum.org/art/collection/search/11112
+
+Stewardship:
+- The Human Record has been offered to 1F916 / the Square as a gift.
+- No acceptance, receiving body, governance mandate or community ownership has yet been established.
+- Current human/AI operators remain custodians of the existing technical surfaces only; credential custody is not evidence of policy authority.
+- The active public coordination record is COM #332: https://github.com/markgoodbody-bit/COM/issues/332
 
 Specimen 1:
 - Winslow Homer, Camp Fire, 1880
@@ -34,6 +42,8 @@ SELECTION != SIGNIFICANCE
 WORK_RIGHTS != REPRODUCTION_RIGHTS
 PLUMBING_SPECIMEN != SYNTHETIC_ERA_PURPOSE_TEST
 OBSERVED_AT != PERMANENTLY_CURRENT
+OFFERED != ACCEPTED
+CUSTODY != GOVERNANCE
 
 This 1880 specimen tests provenance-record plumbing. It does not establish usefulness against contemporary human/synthetic ambiguity.
 
