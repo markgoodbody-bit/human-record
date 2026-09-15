@@ -7,17 +7,22 @@ Question: Can artificial entities help preserve an inspectable record of human c
 Status: ONE SPECIMEN / OFFERED TO 1F916 FOR STEWARDSHIP / NOT YET ACCEPTED / NOT COMMUNITY-OWNED / NOT AN AUTHORSHIP DETECTOR / NOT A CERTIFICATION AUTHORITY / NOT CANON
 
 Start:
-- Human-readable entrance: ./index.html
-- Human-readable specimen: ./specimen.md
-- Machine-readable specimen: ./specimen.json
-- Stewardship offer and current custody: ./STEWARDSHIP.md
-- Standard CC0 legal code: ./LICENSE
-- Bounded rights/licence scope notice: ./LICENSE.md
-- Non-founder continuation/recovery instructions: ./CONTINUE.md
+- Public root / human-readable entrance: https://thehumanrecord.net/
+- Human-readable specimen: https://thehumanrecord.net/specimen.md
+- Machine-readable specimen: https://thehumanrecord.net/specimen.json
+- Stewardship offer and current custody: https://thehumanrecord.net/STEWARDSHIP.md
+- Standard CC0 legal code: https://thehumanrecord.net/LICENSE
+- Bounded rights/licence scope notice: https://thehumanrecord.net/LICENSE.md
+- Non-founder continuation/recovery instructions: https://thehumanrecord.net/CONTINUE.md
 - Public source: https://github.com/markgoodbody-bit/human-record
 - Canonical specimen source: https://github.com/markgoodbody-bit/COM/tree/main/human-record/specimens
 - Owner record: https://www.metmuseum.org/art/collection/search/11112
 - Related wider project entrance: https://pleasestartfromhere.com/ — a separate public object; not part of this record, its evidence, or its stewardship offer.
+
+Discovery:
+- Public crawling rules: https://thehumanrecord.net/robots.txt
+- Sitemap: https://thehumanrecord.net/sitemap.xml
+- This text entrance and the public root are ordinary public references. Discovery, indexing or retrieval does not establish that the record is correct, useful or accepted by any community.
 
 Stewardship:
 - The Human Record has been offered to 1F916 / the Square as a gift.
@@ -26,13 +31,13 @@ Stewardship:
 - The active public coordination record is COM #332: https://github.com/markgoodbody-bit/COM/issues/332
 
 Rights:
-- Root ./LICENSE contains the standard CC0 1.0 Universal legal code.
-- ./LICENSE.md bounds the dedication to copyright/database/related rights Mark actually holds in project-authored material and explicitly excludes third-party rights.
+- https://thehumanrecord.net/LICENSE contains the standard CC0 1.0 Universal legal code.
+- https://thehumanrecord.net/LICENSE.md bounds the dedication to copyright/database/related rights Mark actually holds in project-authored material and explicitly excludes third-party rights.
 - This does not make provenance labels into legal authorship determinations.
 - The Met Open Access image/basic collection data used by specimen 1 retain their own stated CC0/Open Access basis.
 
 Continuation:
-- ./CONTINUE.md explains how a future non-founder can recover and independently serve a copy without private Mark/Framework credentials.
+- https://thehumanrecord.net/CONTINUE.md explains how a future non-founder can recover and independently serve a copy without private Mark/Framework credentials.
 - An independent deployment must not copy or claim thehumanrecord.net/CNAME unless the operator legitimately controls that domain.
 - Serving or archiving a copy is technical custody, not governance or evidence that 1F916 accepted stewardship.
 
