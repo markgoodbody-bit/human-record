@@ -1,0 +1,90 @@
+{
+  "record_type": "provenance_case",
+  "record_version": "0.2",
+  "recorded_at": "2026-09-15",
+  "title": "The viral '80% of German flak crews died' claim",
+  "status": "unsupported_in_sources_checked",
+  "historical_truth_status": "unknown",
+  "claim": "Roughly 80% of German anti-aircraft crew members died during the Second World War.",
+  "scope_note": "This record reconstructs a visible online propagation chain. It does not establish the true aggregate mortality rate of German flak crews.",
+  "nodes": [
+    {
+      "id": "viral-video-2025-08",
+      "kind": "video",
+      "url": "https://www.youtube.com/watch?v=v9-k2DMNHFg",
+      "role": "visible early node in current online propagation chain",
+      "claim_relation": "asserts"
+    },
+    {
+      "id": "reddit-challenge-2025-08",
+      "kind": "community_discussion",
+      "url": "https://www.reddit.com/r/MilitaryHistory/comments/1mpe448/80_mortality_for_german_flak_crews/",
+      "role": "community allegation of an imagery mismatch; linked newsreel not authenticated by this record; statistic questioned in passing",
+      "claim_relation": "challenges"
+    },
+    {
+      "id": "world-war-wings-2025-08-19",
+      "kind": "article",
+      "url": "https://worldwarwings.com/wwii-flak-gun-crews-casualties/",
+      "role": "downstream article visibly using the YouTube material",
+      "claim_relation": "restates_in_altered_form_not_independent"
+    },
+    {
+      "id": "automated-summary",
+      "kind": "summary",
+      "url": "https://youtubesummary.com/summary/v9-k2DMNHFg",
+      "role": "condensed downstream summary of the viral video",
+      "claim_relation": "restates_in_altered_form_not_independent"
+    },
+    {
+      "id": "historical-notes-2026-01-13",
+      "kind": "video",
+      "url": "https://www.youtube.com/watch?v=7KSKZyJ3nZw",
+      "role": "later video whose title asserts the figure and description calls it untraceable without a stated search method; metadata reported by Claude Code review, Codex fetch throttled",
+      "claim_relation": "asserts_and_disputes_traceability"
+    },
+    {
+      "id": "us-army-medical-flak-casualties",
+      "kind": "official_historical_source",
+      "url": "https://achh.army.mil/history/book-wwii-woundblstcs-chapter9/",
+      "role": "documents nearby but different high flak-casualty percentages among Allied aircrew",
+      "claim_relation": "nearby_fact_not_support"
+    },
+    {
+      "id": "ussbs-archive-orientation",
+      "kind": "archival_finding_aid",
+      "url": "https://www.archives.gov/research/guide-fed-records/groups/243.html",
+      "role": "research lead only; relevant Survey reports not examined in this check",
+      "claim_relation": "stronger_source_search_space"
+    },
+    {
+      "id": "anzac-flakhelfer",
+      "kind": "education_site_photo_caption",
+      "url": "https://anzacportal.dva.gov.au/resources/bild-183-h27779",
+      "role": "quotes Martin Middlebrook, The Berlin Raids, pp. 153–154; particular crew recollection, not aggregate mortality evidence",
+      "claim_relation": "context_not_support"
+    }
+  ],
+  "current_findings": [
+    "The claim appears in the linked online trail; reach is not measured in this record.",
+    "The linked article and summary restate the video claim with changed scope and are not independent corroboration.",
+    "Commenters alleged an imagery mismatch; this record has not authenticated the footage.",
+    "Claude Code reports that the later video asserts the figure while calling it untraceable without stating its search method; this is not an independent research check.",
+    "Authoritative sources support nearby facts about flak danger and Allied casualties but do not, in the sources checked for this record, establish the claimed aggregate German crew mortality rate."
+  ],
+  "unknowns": [
+    "The true aggregate mortality rate of German anti-aircraft crews.",
+    "Whether an earlier source predating the identified online chain contains the 80% figure.",
+    "Whether the 80% figure arose by mutation from a different casualty statistic.",
+    "The completeness of surviving late-war German personnel and casualty records relevant to this question."
+  ],
+  "not_checked": ["Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945", "Overmans, Deutsche militärische Verluste im Zweiten Weltkrieg", "MGFA, Das Deutsche Reich und der Zweite Weltkrieg, volume 7", "Relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings", "Relevant USSBS reports", "Newsreel frame comparison"],
+  "review_receipts": ["https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685586260", "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685646260", "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685653216"],
+  "correction_rule": "Bring stronger evidence. Update the record visibly without erasing the earlier claim, propagation chain, or correction history.",
+  "invariants": [
+    "REPETITION != CORROBORATION",
+    "UNSUPPORTED_IN_SOURCES_CHECKED != PROVED_FALSE",
+    "UNKNOWN != ABSENT",
+    "CORRECTION != REPLACEMENT_WITH_ANOTHER_UNSOURCED_NUMBER"
+  ]
+}
