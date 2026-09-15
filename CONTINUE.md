@@ -18,7 +18,13 @@ Software Heritage origin page:
 
 `https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/markgoodbody-bit/human-record`
 
-Software Heritage save request `2478664` was accepted on 15 September 2026. The first archive visit had not completed when this note was repaired; check the origin page for current archival state rather than assuming an archived snapshot exists.
+Software Heritage save request `2478664` completed a full visit on 15 September 2026 at `2026-09-15T11:26:40.776Z`. The archive recorded the exact public repository head `0d2fe0e230debfcf68d2cee52df66ff990a423f2` with these persistent identifiers:
+
+- snapshot: `swh:1:snp:e5f429e3e4a9ec3f56b869a5a416295af7cf34be`
+- revision: `swh:1:rev:0d2fe0e230debfcf68d2cee52df66ff990a423f2`
+- root directory: `swh:1:dir:6c397bfcbf6d9f79702f69d773c2b1ad4e19f4be`
+
+This establishes one independent, content-addressed copy of that repository state. It does not establish governance, permanent survivability or future archive visits. Check the origin page for later archival state.
 
 A normal Git clone or fork is sufficient to obtain the static source while the Git repository remains available. No private credential is required to read it.
 
