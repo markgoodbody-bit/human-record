@@ -4,8 +4,9 @@ Status: **PUBLIC STATIC SITE / STEWARDSHIP OFFERED TO 1F916 — NOT YET ACCEPTED
 
 Read [The Human Record](https://thehumanrecord.net/). Ordinary HTTPS access was
 verified on 15 September 2026. Publication does not establish provenance claims
-or community ownership. See [STEWARDSHIP.md](STEWARDSHIP.md) for the offer,
-current custody and unresolved acceptance/transfer conditions.
+or community ownership. See [STEWARDSHIP.md](STEWARDSHIP.md) for the offer and
+current custody, and [LICENSE.md](LICENSE.md) for the bounded CC0 dedication of
+rights Mark actually holds in project-authored material.
 
 This directory is intentionally boring. It is the complete first static public-door payload for `thehumanrecord.net`.
 
@@ -15,6 +16,7 @@ Contents:
 - `specimen.json` — exact machine-readable specimen copied from COM after PR #328;
 - `llms.txt` — compact machine entrance and boundaries;
 - `STEWARDSHIP.md` — public stewardship offer, current custody and limits;
+- `LICENSE.md` — CC0 dedication/fallback licence for rights Mark actually holds, with third-party boundaries;
 - `CNAME` — configured custom domain;
 - `.nojekyll` — serve files without Jekyll processing.
 
@@ -51,6 +53,7 @@ WORK_RIGHTS != REPRODUCTION_RIGHTS
 SOURCE_LINK != SOURCE_PRESERVED
 HASH != TRUTH
 OFFERED != ACCEPTED
+CC0_GRANT != THIRD_PARTY_RIGHTS_GRANT
 PLUMBING_SPECIMEN != SYNTHETIC_ERA_PURPOSE_TEST
 PUBLICATION != VALIDATION
 ```
