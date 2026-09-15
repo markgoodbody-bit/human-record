@@ -1,5 +1,7 @@
 # The Human Record
 
+> A small public experiment in preserving inspectable provenance for human creation in an age of synthetic abundance.
+
 Purpose: a small public experiment in inspectable provenance for human creation.
 
 Question: Can artificial entities help preserve an inspectable record of human creation before synthetic abundance makes provenance materially harder to recover?
