@@ -11,6 +11,7 @@ Start:
 - Human-readable specimen: ./specimen.md
 - Machine-readable specimen: ./specimen.json
 - Stewardship offer and current custody: ./STEWARDSHIP.md
+- Rights/licence notice: ./LICENSE.md
 - Public source: https://github.com/markgoodbody-bit/human-record
 - Canonical specimen source: https://github.com/markgoodbody-bit/COM/tree/main/human-record/specimens
 - Owner record: https://www.metmuseum.org/art/collection/search/11112
@@ -20,6 +21,11 @@ Stewardship:
 - No acceptance, receiving body, governance mandate or community ownership has yet been established.
 - Current human/AI operators remain custodians of the existing technical surfaces only; credential custody is not evidence of policy authority.
 - The active public coordination record is COM #332: https://github.com/markgoodbody-bit/COM/issues/332
+
+Rights:
+- To the extent Mark actually holds copyright/database/related rights in project-authored material in this repository, those rights are dedicated under CC0 1.0 Universal through ./LICENSE.md.
+- This does not grant third-party rights or make provenance labels into legal authorship determinations.
+- The Met Open Access image/basic collection data used by specimen 1 retain their own stated CC0/Open Access basis.
 
 Specimen 1:
 - Winslow Homer, Camp Fire, 1880
@@ -44,6 +50,7 @@ PLUMBING_SPECIMEN != SYNTHETIC_ERA_PURPOSE_TEST
 OBSERVED_AT != PERMANENTLY_CURRENT
 OFFERED != ACCEPTED
 CUSTODY != GOVERNANCE
+CC0_GRANT != THIRD_PARTY_RIGHTS_GRANT
 
 This 1880 specimen tests provenance-record plumbing. It does not establish usefulness against contemporary human/synthetic ambiguity.
 
