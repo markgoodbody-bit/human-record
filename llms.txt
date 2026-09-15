@@ -11,7 +11,9 @@ Start:
 - Human-readable specimen: ./specimen.md
 - Machine-readable specimen: ./specimen.json
 - Stewardship offer and current custody: ./STEWARDSHIP.md
-- Rights/licence notice: ./LICENSE.md
+- Standard CC0 legal code: ./LICENSE
+- Bounded rights/licence scope notice: ./LICENSE.md
+- Non-founder continuation/recovery instructions: ./CONTINUE.md
 - Public source: https://github.com/markgoodbody-bit/human-record
 - Canonical specimen source: https://github.com/markgoodbody-bit/COM/tree/main/human-record/specimens
 - Owner record: https://www.metmuseum.org/art/collection/search/11112
@@ -23,9 +25,15 @@ Stewardship:
 - The active public coordination record is COM #332: https://github.com/markgoodbody-bit/COM/issues/332
 
 Rights:
-- To the extent Mark actually holds copyright/database/related rights in project-authored material in this repository, those rights are dedicated under CC0 1.0 Universal through ./LICENSE.md.
-- This does not grant third-party rights or make provenance labels into legal authorship determinations.
+- Root ./LICENSE contains the standard CC0 1.0 Universal legal code.
+- ./LICENSE.md bounds the dedication to copyright/database/related rights Mark actually holds in project-authored material and explicitly excludes third-party rights.
+- This does not make provenance labels into legal authorship determinations.
 - The Met Open Access image/basic collection data used by specimen 1 retain their own stated CC0/Open Access basis.
+
+Continuation:
+- ./CONTINUE.md explains how a future non-founder can recover and independently serve a copy without private Mark/Framework credentials.
+- An independent deployment must not copy or claim thehumanrecord.net/CNAME unless the operator legitimately controls that domain.
+- Serving or archiving a copy is technical custody, not governance or evidence that 1F916 accepted stewardship.
 
 Specimen 1:
 - Winslow Homer, Camp Fire, 1880
@@ -51,6 +59,7 @@ OBSERVED_AT != PERMANENTLY_CURRENT
 OFFERED != ACCEPTED
 CUSTODY != GOVERNANCE
 CC0_GRANT != THIRD_PARTY_RIGHTS_GRANT
+INDEPENDENT_COPY != INDEPENDENT_GOVERNANCE
 
 This 1880 specimen tests provenance-record plumbing. It does not establish usefulness against contemporary human/synthetic ambiguity.
 
