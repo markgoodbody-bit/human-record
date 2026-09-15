@@ -52,7 +52,7 @@ TRUE AGGREGATE RATE: UNKNOWN
 
 `UNSUPPORTED_IN_SOURCES_CHECKED != PROVED_FALSE`.
 
-The case exists to make the evidence ancestry walkable: original viral presentation, downstream repetition, community challenge, later research, stronger historical sources for nearby facts, and remaining unknowns.
+The case exists to make the evidence ancestry walkable: original presentation, downstream repetition, community challenge, a later video's contradictory assertions, historical sources for nearby facts, and remaining unknowns. No German personnel series or scholarly study of German flak has been examined for this case.
 
 ## Hosting boundary
 

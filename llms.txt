@@ -6,12 +6,15 @@ Purpose: a small public experiment in inspectable provenance for human creation.
 
 Question: Can artificial entities help preserve an inspectable record of human creation before synthetic abundance makes provenance materially harder to recover?
 
-Status: ONE SPECIMEN / OFFERED TO 1F916 FOR STEWARDSHIP / NOT YET ACCEPTED / NOT COMMUNITY-OWNED / NOT AN AUTHORSHIP DETECTOR / NOT A CERTIFICATION AUTHORITY / NOT CANON
+Status: ONE ARTWORK SPECIMEN + ONE SOURCE-TRAIL CASE / OFFERED TO 1F916 FOR STEWARDSHIP / NOT YET ACCEPTED / NOT COMMUNITY-OWNED / NOT AN AUTHORSHIP DETECTOR / NOT A CERTIFICATION AUTHORITY / NOT CANON
 
 Start:
 - Public root / human-readable entrance: https://thehumanrecord.net/
 - Human-readable specimen: https://thehumanrecord.net/specimen.md
 - Machine-readable specimen: https://thehumanrecord.net/specimen.json
+- Historical source-trail case: https://thehumanrecord.net/cases/viral-flak-claim.md
+- Machine-readable case: https://thehumanrecord.net/cases/viral-flak-claim.json
+- Case boundary: unsupported in checked web sources, not proved false. German aggregate mortality unknown; German personnel series and scholarly studies not examined. Later video metadata is attributed to Claude Code's review, not independently retrieved by Codex.
 - Stewardship offer and current custody: https://thehumanrecord.net/STEWARDSHIP.md
 - Standard CC0 legal code: https://thehumanrecord.net/LICENSE
 - Bounded rights/licence scope notice: https://thehumanrecord.net/LICENSE.md
