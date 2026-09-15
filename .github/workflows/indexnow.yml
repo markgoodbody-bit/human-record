@@ -1,0 +1,80 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - llms.txt
+      - specimen.md
+      - specimen.json
+      - STEWARDSHIP.md
+      - CONTINUE.md
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out public source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Notify IndexNow about changed public URLs
+        env:
+          INDEXNOW_KEY: 972f6b356b24be784e1ab2d31e18bb92
+          BEFORE: ${{ github.event.before }}
+          HEAD: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "$BEFORE" =~ ^0+$ ]]; then
+            changed="$(git diff-tree --no-commit-id --name-only -r "$HEAD")"
+          else
+            changed="$(git diff --name-only "$BEFORE" "$HEAD")"
+          fi
+
+          declare -A wanted=()
+          while IFS= read -r path; do
+            case "$path" in
+              index.html) wanted["https://thehumanrecord.net/"]=1 ;;
+              llms.txt) wanted["https://thehumanrecord.net/llms.txt"]=1 ;;
+              specimen.md) wanted["https://thehumanrecord.net/specimen.md"]=1 ;;
+              specimen.json) wanted["https://thehumanrecord.net/specimen.json"]=1 ;;
+              STEWARDSHIP.md) wanted["https://thehumanrecord.net/STEWARDSHIP.md"]=1 ;;
+              CONTINUE.md) wanted["https://thehumanrecord.net/CONTINUE.md"]=1 ;;
+            esac
+          done <<< "$changed"
+
+          if (( ${#wanted[@]} == 0 )); then
+            echo "No mapped public URL changed." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          failures=0
+          for url in "${!wanted[@]}"; do
+            code="$(curl --silent --show-error --output /tmp/indexnow-response --write-out '%{http_code}' \
+              --get 'https://api.indexnow.org/indexnow' \
+              --data-urlencode "url=$url" \
+              --data-urlencode "key=$INDEXNOW_KEY" || true)"
+
+            if [[ "$code" == "200" || "$code" == "202" ]]; then
+              echo "IndexNow accepted: $url (HTTP $code)" | tee -a "$GITHUB_STEP_SUMMARY"
+            else
+              echo "::warning::IndexNow did not accept $url (HTTP $code). Discovery notification is not a publication gate."
+              echo "IndexNow not accepted: $url (HTTP $code)" >> "$GITHUB_STEP_SUMMARY"
+              failures=$((failures + 1))
+            fi
+          done
+
+          if (( failures > 0 )); then
+            echo "One or more discovery notifications were not accepted; public content remains published." >> "$GITHUB_STEP_SUMMARY"
+          fi
