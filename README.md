@@ -1,6 +1,11 @@
 # Human Record public door — deployment source
 
-Status: **DEPLOYMENT-READY SOURCE / NOT YET PUBLIC AT THE CUSTOM DOMAIN**
+Status: **PUBLIC STATIC SITE / STEWARDSHIP TRANSFER IN PROGRESS**
+
+Read [The Human Record](https://thehumanrecord.net/). Ordinary HTTPS access was
+verified on 15 September 2026. Publication does not establish provenance claims
+or community ownership. See [STEWARDSHIP.md](STEWARDSHIP.md) for the offer,
+current custody and unresolved transfer conditions.
 
 This directory is intentionally boring. It is the complete first static public-door payload for `thehumanrecord.net`.
 
@@ -9,7 +14,7 @@ Contents:
 - `specimen.md` — exact human-readable specimen copied from COM after PR #328;
 - `specimen.json` — exact machine-readable specimen copied from COM after PR #328;
 - `llms.txt` — compact machine entrance and boundaries;
-- `CNAME` — intended custom domain;
+- `CNAME` — configured custom domain;
 - `.nojekyll` — serve files without Jekyll processing.
 
 Canonical specimen source used for this copy:
@@ -22,12 +27,11 @@ The public-door copy must not silently outrun the canonical record. If the canon
 
 Do **not** deploy this directory by replacing COM's existing `gh-pages` branch. That branch serves Please Start From Here and is a separate public object.
 
-Expected deployment path:
+Current deployment path:
 
 ```text
-separate public GitHub repository
--> copy this directory to repository root
--> GitHub Pages from main/root (or a dedicated Pages source)
+markgoodbody-bit/human-record repository root
+-> GitHub Pages from main/root
 -> custom domain thehumanrecord.net
 -> Namecheap DNS to the GitHub Pages site
 -> HTTPS
