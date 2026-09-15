@@ -5,7 +5,7 @@ Status: **PUBLIC STATIC SITE / STEWARDSHIP OFFERED TO 1F916 — NOT YET ACCEPTED
 Read [The Human Record](https://thehumanrecord.net/). Ordinary HTTPS access was
 verified on 15 September 2026. Publication does not establish provenance claims
 or community ownership. See [STEWARDSHIP.md](STEWARDSHIP.md) for the offer and
-current custody, [LICENSE.md`](LICENSE.md) for the bounded scope of the CC0
+current custody, [LICENSE.md](LICENSE.md) for the bounded scope of the CC0
 dedication, and [CONTINUE.md](CONTINUE.md) for non-founder recovery/serving
 instructions.
 
