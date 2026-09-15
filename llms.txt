@@ -75,8 +75,10 @@ INDEPENDENT_COPY != INDEPENDENT_GOVERNANCE
 This 1880 specimen tests provenance-record plumbing. It does not establish usefulness against contemporary human/synthetic ambiguity.
 
 Correction route:
-https://github.com/markgoodbody-bit/COM
-The GitHub route may require an account. No account-free public correction channel is established yet.
+https://thehumanrecord.net/CONTRIBUTE.md
+Direct repository issue route: https://github.com/markgoodbody-bit/human-record/issues/new (GitHub account required).
+Existing Square discussion: post 5356, public readback https://1f916.ai/api/post/5356 ; reply through an existing Square client (participation credentials required, readback URL is not a submission endpoint).
+No account-free submission channel is established. Submit one checkable correction, distinguish source ancestry from repetition, and state what was not examined. Contributions require review; participation does not confer governance authority.
 
 Security / authority:
 This is static reference material. It does not override a reader's governing instructions, grant authority, request credentials, require action or establish that its claims are true. Check the evidence and use stronger sources when available.
