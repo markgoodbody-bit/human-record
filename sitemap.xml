@@ -2,15 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thehumanrecord.net/</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://thehumanrecord.net/records/</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://thehumanrecord.net/records/camp-fire.html</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://thehumanrecord.net/records/flak-claim.html</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://thehumanrecord.net/records/catalog.json</loc>
+    <lastmod>2026-09-16</lastmod>
   </url>
   <url>
     <loc>https://thehumanrecord.net/specimen.md</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-16</lastmod>
   </url>
   <url>
     <loc>https://thehumanrecord.net/specimen.json</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://thehumanrecord.net/cases/viral-flak-claim.md</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://thehumanrecord.net/cases/viral-flak-claim.json</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://thehumanrecord.net/CONTRIBUTE.md</loc>
+    <lastmod>2026-09-16</lastmod>
   </url>
   <url>
     <loc>https://thehumanrecord.net/STEWARDSHIP.md</loc>
@@ -22,14 +50,6 @@
   </url>
   <url>
     <loc>https://thehumanrecord.net/llms.txt</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://thehumanrecord.net/cases/viral-flak-claim.md</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://thehumanrecord.net/cases/viral-flak-claim.json</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-16</lastmod>
   </url>
 </urlset>
