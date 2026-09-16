@@ -160,13 +160,15 @@ Every source can carry a preservation block even when the honest state is that p
 Working preservation states:
 
 - `not_yet_checked`
+- `related_copy_observed`
 - `external_archive_found`
-- `institutionally_preserved`
-- `local_copy_legitimate`
+- `institutional_preservation_route_identified`
 - `multiple_preservation_routes`
 - `restricted_archive`
 - `capture_not_permitted_or_not_appropriate`
 - `preservation_unknown`
+
+These labels should describe what was actually established. For example, a project-hosted byte-identical copy can be `related_copy_observed` without making a legal conclusion that the copy is universally authorised or durable forever.
 
 The state is about recoverability, not truth.
 
@@ -184,6 +186,14 @@ Examples of relevant patterns and owners include:
 - domain repositories for research data and specialist records.
 
 For web captures, WARC is a common archival container and Memento provides a standard model for accessing prior resource states. THR does not need to replace either.
+
+Useful public interoperability references:
+
+- Memento / RFC 7089: https://www.rfc-editor.org/rfc/rfc7089
+- Perma record/capture documentation: https://perma.cc/docs/perma-link-creation
+- Software Heritage persistent identifiers: https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html
+
+Those systems have their own scope, access, policy and durability boundaries. Referencing them is not a guarantee that a particular THR source is archived there.
 
 A preservation reference should record enough to identify the external copy and its relationship to the observed source state.
 
