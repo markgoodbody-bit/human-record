@@ -32,6 +32,14 @@
   </section>
 
   <section class="panel">
+    <p class="meta-label">Mentions</p>
+    <h2>A source can name someone without THR building a profile for them</h2>
+    <p>The mention registry now preserves literal source references separately from persistent entity identities. A mention can resolve to an existing entity, carry several candidates, or remain unresolved.</p>
+    <p>The first live examples deliberately include both cases: the Camp Fire record resolves the owner-source mention “Winslow Homer” to its existing person entity, while the public mention “Mike Turnock” remains <code>unresolved_not_required</code> because the current craft record does not need a cross-record living-person profile.</p>
+    <div class="callout"><p><strong>MENTION EXISTS ≠ ENTITY PROFILE REQUIRED · BETTER MATCHING ≠ MORE SURVEILLANCE</strong></p></div>
+  </section>
+
+  <section class="panel">
     <p class="meta-label">Assertions</p>
     <h2>An entity is not the claims made about it</h2>
     <p>Dates, roles, relationships, creator attributions and institutional status labels can change or be disputed. THR therefore keeps evidence-bearing assertions separate from the opaque entity identifier.</p>
@@ -58,6 +66,14 @@
     </ol>
   </section>
 
+  <section class="panel known">
+    <p class="meta-label">Currentness checks</p>
+    <h2>“It still loads” is useful evidence, but much weaker than “it is unchanged”</h2>
+    <p>THR now keeps an append-only source-check ledger separate from the evidence observations inside a record. A routine maintenance fetch can record that a locator was reachable without silently becoming new historical evidence.</p>
+    <p>The first currentness pass rechecked one source from each vulnerable web pattern already in the collection: the Guardian craft feature, the current Heritage Crafts page and the World War Wings article. All three were reachable from the checking aperture on 16 September 2026. No comparable byte digest was produced by that retrieval route, so the ledger does not claim the pages were unchanged.</p>
+    <div class="callout"><p><strong>SOURCE CHECK ≠ RECORD EVIDENCE · LIVE TODAY ≠ PRESERVED · RETRIEVED AGAIN ≠ UNCHANGED</strong></p></div>
+  </section>
+
   <section class="panel unknown">
     <p class="meta-label">Preservation boundary</p>
     <h2>The answer is not “copy the entire internet”</h2>
@@ -67,7 +83,7 @@
 
   <section>
     <h2>The scalable shape</h2>
-    <div class="callout"><p><strong>MENTION → ENTITY CANDIDATES<br>SOURCE LOCATOR → TIMED OBSERVATION → PRESERVATION ROUTE<br>ASSERTION → EVIDENCE / SOURCE ANCESTRY<br>RECORD STATE → HUMAN + MACHINE VIEWS</strong></p></div>
+    <div class="callout"><p><strong>MENTION → ENTITY CANDIDATES<br>SOURCE LOCATOR → TIMED OBSERVATION → PRESERVATION ROUTE<br>SOURCE CHECK → CURRENTNESS RECEIPT<br>ASSERTION → EVIDENCE / SOURCE ANCESTRY<br>RECORD STATE → HUMAN + MACHINE VIEWS</strong></p></div>
     <div class="prose">
       <p>The current website is a reading surface over the records. As the collection grows, more of those pages can be generated from structured record state. The underlying identities, observations, assertions, corrections and provenance remain the durable part.</p>
       <p>This lets the storage technology change later without changing what a THR identifier means.</p>
@@ -85,18 +101,20 @@
   <section class="panel prose">
     <p class="meta-label">Current implementation</p>
     <h2>Small enough to inspect today</h2>
-    <p>The current repository now carries working entity, source and assertion registries plus an automated integrity check. The registries are deliberately sparse: they grow when a real record needs shared identity, source tracking, preservation state or a stable cross-record assertion.</p>
+    <p>The current repository carries working entity, mention, source, source-check and assertion registries plus automated integrity checks. The registries are deliberately sparse: they grow when a real record needs shared identity, source tracking, preservation state or a stable cross-record assertion.</p>
     <div class="actions">
       <a class="button" href="../SCALE.md">Technical scale note</a>
       <a class="button" href="../IDENTITY_MODEL.md">Identity model</a>
       <a class="button" href="../SOURCE_MODEL.md">Source model</a>
       <a class="button" href="../ASSERTION_MODEL.md">Assertion model</a>
       <a class="button" href="../registry/entities.json">Entity registry</a>
+      <a class="button" href="../registry/mentions.json">Mention registry</a>
       <a class="button" href="../registry/sources.json">Source registry</a>
+      <a class="button" href="../registry/source-checks.json">Source-check ledger</a>
       <a class="button" href="../registry/assertions.json">Assertion registry</a>
     </div>
   </section>
 </main>
-<footer class="site-footer"><code>NAME != ENTITY · ENTITY != ASSERTION · URL != SOURCE · PRESERVED COPY != TRUTH · SCALE != LOSS OF CORRECTION</code></footer>
+<footer class="site-footer"><code>NAME != ENTITY · MENTION != ENTITY · URL != SOURCE · LIVE TODAY != PRESERVED · SCALE != LOSS OF CORRECTION</code></footer>
 </body>
 </html>
