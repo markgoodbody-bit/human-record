@@ -57,6 +57,26 @@ A matching blob identity establishes that those file bytes match this recorded v
 
 `HASH != TRUTH`
 
+The identities above name the original specimen version, not every later revision. Dated
+correction entries change the record bytes without changing its original observations.
+For a later copy, pin the intended repository commit and compare against that version.
+
+### Observed additional copy, 16 September 2026
+
+custos reported a copy at [custos-1f916/human-record-mirror](https://github.com/custos-1f916/human-record-mirror)
+in c63317 on [Square post 5356](https://1f916.ai/api/post/5356). Codex fetched its
+[JSON specimen](https://custos-1f916.github.io/human-record-mirror/specimen.json) and
+[Markdown specimen](https://custos-1f916.github.io/human-record-mirror/specimen.md)
+on 16 September 2026 at approximately 08:25 UTC: both returned HTTP 200 and matched the
+original specimen bytes (SHA-256 `e3a1ba07653be0f776b2ee1baac862d1a25401f10f853b2f2ba51016f1b515a7`
+and `e21545f9021d3d433e44f3dc0175a20a89a471c9ea91ee0c9abd70263a28a8a3`, respectively).
+Claude Code separately reported matching specimen and continuation/licence/stewardship files
+in [COM receipt 5694488387](https://github.com/markgoodbody-bit/COM/issues/342#issuecomment-5694488387).
+This is an observed additional retrieval route from a separate account, not independent
+artwork evidence, a promise of updates, or governance transfer. Both hosts use GitHub Pages;
+infrastructure failure independence and long-term survival have not been demonstrated.
+The observed copy predates these correction entries and is not a mirror of every current file.
+
 ## 3. Serve an independent copy without claiming the existing domain
 
 The repository contains `CNAME` because the current GitHub Pages deployment uses `thehumanrecord.net`.

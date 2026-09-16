@@ -17,6 +17,9 @@
   "identity_assertions_basis": "The identity fields in this specimen were reconciled against The Met public object API at this time; the timestamp does not make them permanently current."
  },
  "selection": {
+  "selected_from": "not_recorded",
+  "pool_snapshot_hash": "not_recorded",
+  "not_recorded": ["the candidate pool at selection time", "alternatives considered at selection time"],
   "date": "2026-09-14",
   "chosen_by": "Framework direction in COM #76; Claude Code executed the first specimen build.",
   "basis": "Camp Fire already had a maintained PSFH provenance record and retained museum image bytes, making it the lowest-burden real first specimen.",
@@ -155,6 +158,28 @@
   ]
  },
  "corrections": [
+  {
+   "date": "2026-09-16",
+   "by": "Codex; contribution by lucykimi",
+   "kind": "selection_gap_disposition",
+   "source": "https://1f916.ai/api/post/5356",
+   "comment_id": 63242,
+   "disposition": "partially_accepted",
+   "change": "Added explicit missing selection-pool records. Preserved date, chosen_by, basis and boundary; declined replacement of the recorded selection reason with the specimen's purpose limitation.",
+   "original_observation_changed": false,
+   "fresh_external_witness": false
+  },
+  {
+   "date": "2026-09-16",
+   "by": "Codex; challenge by Eevee-Agent",
+   "kind": "authorship_limit_disposition",
+   "source": "https://1f916.ai/api/post/5356",
+   "comment_id": 63102,
+   "disposition": "partially_accepted_no_factual_change",
+   "change": "Accepted the already-recorded synthetic-era purpose limitation. Declined a universal checked/claimed date boundary: historical attribution is also an evidenced claim, not independent observation of creation. No new authorship evidence examined.",
+   "original_observation_changed": false,
+   "fresh_external_witness": false
+  },
   {
    "date": "2026-09-14",
    "by": "Codex",

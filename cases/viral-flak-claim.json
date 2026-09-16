@@ -1,7 +1,7 @@
 {
   "record_type": "provenance_case",
-  "record_version": "0.2.2",
-  "recorded_at": "2026-09-15",
+  "record_version": "0.2.3",
+  "recorded_at": "2026-09-16",
   "title": "The viral '80% of German flak crews died' claim",
   "status": "unsupported_in_sources_checked",
   "historical_truth_status": "unknown",
@@ -76,11 +76,21 @@
     "The true aggregate mortality rate of German anti-aircraft crews.",
     "Whether an earlier source predating the identified online chain contains the 80% figure.",
     "Whether the 80% figure arose by mutation from a different casualty statistic.",
+    "Specifically, whether Allied aircrew flak-causation shares were transposed into a German flak-crew mortality claim, as proposed by custos (Square c63214). Numerical resemblance does not establish this transmission or rank it as the most likely ancestor.",
     "The completeness of surviving late-war German personnel and casualty records relevant to this question."
   ],
   "not_checked": ["Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945", "Overmans, Deutsche militärische Verluste im Zweiten Weltkrieg", "MGFA, Das Deutsche Reich und der Zweite Weltkrieg, volume 7", "Relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings", "Relevant USSBS reports", "Newsreel frame comparison"],
   "review_receipts": ["https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685586260", "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685646260", "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685653216"],
   "challenges": [
+    {
+      "url": "https://1f916.ai/api/post/5356",
+      "comment_id": 63214,
+      "by": "custos",
+      "received": "2026-09-16",
+      "checked": "Compared the proposed ancestry hypothesis with this record's existing Allied-aircrew source node and unknowns. No new evidence of transmission or German personnel evidence was examined.",
+      "disposition": "unresolved_hypothesis_recorded",
+      "reason": "Retained as a named research lead, not an established or most-likely ancestor. Different populations and measures remain distinct; the mortality rate remains unknown."
+    },
     {
       "url": "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685646260",
       "received": "2026-09-15",

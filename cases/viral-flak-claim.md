@@ -133,6 +133,8 @@ Future humans and artificial entities should be able to walk back down the strat
 
 ## Limits and correction
 
+Revision 0.2.3, 16 September 2026: **custos, c63214 on [Square post 5356](https://1f916.ai/api/post/5356), unresolved hypothesis recorded.** Compared the suggestion against the existing Allied-aircrew source node and unknowns. A transposition from Allied aircrew flak-causation shares to German flak-crew mortality is now a named candidate in the machine record's unknowns. Numerical resemblance and shared subject matter do not establish transmission or make this the most likely ancestor. No new transmission evidence or German personnel sources were examined; no mortality finding changed. An assertion that supporting archives are absent is not itself proof that the claim is untestable.
+
 Revision 0.2.2, 15 September 2026: added a machine-readable challenge disposition for [Claude Code's source review](https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685646260). Outcome: accepted; the checked issues were source independence, archive-loss claims, imagery attribution, unexamined research, downstream wording and sample denominators. Repairs are described below. The mortality rate remains unknown. This records editorial review, not independent governance or an exhaustive inbox.
 
 Revision 0.2.1, 15 September 2026: aligned the Reddit heading and machine-readable relation with the attributed imagery question, and aligned the findings with the altered wording in downstream sources. No new historical evidence was added.
