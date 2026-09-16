@@ -13,12 +13,18 @@ Status: ONE ARTWORK SPECIMEN + ONE CLAIM-PROVENANCE CASE + ONE TRANSMISSION-LINE
 Human gift surface:
 - Browse current records: https://thehumanrecord.net/records/
 - How records work: https://thehumanrecord.net/records/about.html
+- How The Human Record scales: https://thehumanrecord.net/records/architecture.html
 - Camp Fire human view: https://thehumanrecord.net/records/camp-fire.html
 - Flak-claim human view: https://thehumanrecord.net/records/flak-claim.html
 - Sieve/riddle transmission-lineage human view: https://thehumanrecord.net/records/sieve-riddle-revival.html
 - Record discovery catalogue: https://thehumanrecord.net/records/catalog.json
 - Working semantic record contract: https://thehumanrecord.net/RECORD_CONTRACT.md
 - Working record-selection orientation: https://thehumanrecord.net/SELECTION.md
+- Working scale architecture: https://thehumanrecord.net/SCALE.md
+- Identity model: https://thehumanrecord.net/IDENTITY_MODEL.md
+- Source/preservation model: https://thehumanrecord.net/SOURCE_MODEL.md
+- Entity registry: https://thehumanrecord.net/registry/entities.json
+- Source registry: https://thehumanrecord.net/registry/sources.json
 - These pages summarize existing records for ordinary readers. HUMAN_VIEW != NEW_EVIDENCE; SUMMARY != SOURCE.
 
 Start / evidence surfaces:
@@ -30,7 +36,7 @@ Start / evidence surfaces:
 - Living-knowledge transmission-lineage record: https://thehumanrecord.net/cases/sieve-riddle-revival.md
 - Machine-readable transmission-lineage record: https://thehumanrecord.net/cases/sieve-riddle-revival.json
 - Flak case boundary: unsupported in checked web sources, not proved false. German aggregate mortality unknown; German personnel series and scholarly studies not examined. Later video metadata is attributed to Claude Code's review, not independently retrieved by Codex.
-- Sieve/riddle case boundary: Heritage Crafts is treated as the strongest identified owner for current UK craft status and safeguarding. The Human Record preserves public source lineage around a reported last maker, extinction classification, revival and current training. Exact tacit-skill transmission remains partly unknown. Named living practitioners were not contacted; no participation or endorsement is claimed and no private/tacit process material is used.
+- Sieve/riddle case boundary: Heritage Crafts is treated as the strongest identified owner for current UK craft status and safeguarding. The Human Record preserves public source lineage around a reported last maker, extinction classification, revival and current training. What was transmitted, reconstructed or newly learned remains partly unknown. Named living practitioners were not contacted; no participation or endorsement is claimed and no private/tacit process material is used.
 - Challenge/contribution route: https://thehumanrecord.net/CONTRIBUTE.md
 - Stewardship offer and current custody: https://thehumanrecord.net/STEWARDSHIP.md
 - Standard CC0 legal code: https://thehumanrecord.net/LICENSE
@@ -48,6 +54,27 @@ Record contract:
 - The living-practice case adds a strongest-owner/status-owner boundary, authority/consent boundary and attention-pathway versus skill-transmission distinction.
 - Future record types may add fields only when real material requires them.
 - COMMON QUESTIONS != IDENTICAL OBJECTS.
+
+Scale architecture:
+- SCALE.md adds the smallest cross-record structure currently earned by repeated-name and disappearing-source problems.
+- Human-readable names remain labels, not primary keys. NAME != ENTITY; MENTION != ENTITY.
+- Persistent subjects use opaque THR entity IDs; identity claims remain evidence-bearing and correctable.
+- Identity ambiguity is allowed to remain unresolved or multi-candidate instead of being forced into one database match.
+- Web URLs are locators, not durable source identities. URL != SOURCE.
+- A source can have multiple timed observations. SOURCE != OBSERVATION.
+- A digest can establish byte identity for an observation; HASH != TRUTH.
+- A preserved or archived copy establishes recoverability of a representation, not correctness. OBSERVATION != PRESERVED_COPY; PRESERVED_COPY != TRUTH.
+- registry/entities.json and registry/sources.json are small cross-record indexes, not truth authorities and not a mandate to profile every person or copy every source.
+- tools/validate_integrity.py plus CI checks exact human-view source pins, registry ID uniqueness and local route/reference integrity without deciding historical truth.
+- Storage technology may change later; opaque IDs and public semantics should not. STORAGE_BACKEND != RECORD_MEANING.
+- AI is expected to do repeated reconciliation, collision detection, source-currentness checks, archive discovery, fingerprint comparison and view generation at scale, while leaving evidence, consent and authority boundaries visible. AI_MATCH != SILENT_IDENTITY_FACT.
+
+Source preservation:
+- SOURCE_MODEL.md separates logical source, locator, observation and preservation copy.
+- Live-source failure should be recorded and then routed toward stronger preservation owners where appropriate rather than erasing the dead locator.
+- The working source registry explicitly permits `not_yet_checked` preservation status. NOT_YET_CHECKED != PRESERVED.
+- THR should interoperate with established archives, citation-preservation services, Memento-compatible archives, Software Heritage for source code, institutional repositories and domain archives rather than defaulting to a general-purpose shadow archive.
+- Risk of loss does not create copying authority. AT_RISK != FREE_TO_COPY; PRESERVATION != EXTRACTION.
 
 Selection:
 - SELECTION.md asks why a new record should exist before the collection grows.
@@ -126,6 +153,14 @@ COMMUNITY_KNOWLEDGE != PUBLIC_DOMAIN
 PUBLIC_SOURCE != ENDORSEMENT
 ATTENTION_PATHWAY != SKILL_TRANSMISSION
 BUILD_PROVENANCE != CURRENT_RECORD_AUTHORITY
+NAME != ENTITY
+MENTION != ENTITY
+URL != SOURCE
+SOURCE != OBSERVATION
+OBSERVATION != PRESERVED_COPY
+PRESERVED_COPY != TRUTH
+IDENTITY_RESOLUTION != IDENTITY_CERTAINTY
+STORAGE_BACKEND != RECORD_MEANING
 
 This 1880 specimen tests provenance-record plumbing. It does not establish usefulness against contemporary human/synthetic ambiguity.
 
