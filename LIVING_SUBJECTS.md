@@ -4,7 +4,7 @@ Status: **WORKING HUMAN-SUBJECT ENCOUNTER BOUNDARY / NOT A UNIVERSAL CONSENT MOD
 
 This document governs one narrow situation:
 
-> The Human Record actively asks a competent living human to provide information about themselves voluntarily.
+> The Human Record actively asks a living human who can meaningfully understand and make the specific choice to provide information about themselves voluntarily.
 
 It does not define consent for children, people who cannot currently make the relevant decision, unconscious people, non-human animals, organisations, communities, deceased people, artificial systems or emergency/compelled disclosure. Those cases need their own legitimate representation, authority and protection questions rather than being forced into this model.
 
@@ -28,13 +28,20 @@ Before a question whose answer may enter a record, make the relevant context und
 - what is being asked;
 - why it is being asked;
 - what part of the record it could affect;
-- whether the answer would be public, private, restricted or only used for verification;
+- whether the answer would be public, private, restricted or only used for verification **if those handling modes actually exist**;
 - who could inspect it under the current arrangement;
 - whether it may be linked to existing material;
 - what can still be changed or withdrawn later;
 - what cannot realistically be undone once published or copied elsewhere.
 
 Do not treat a buried policy page as equivalent to an understandable explanation at the point where the choice is made.
+
+Do not offer a privacy, restricted-access or verification-only mode that THR cannot actually honour. The current public GitHub/Square contribution routes are not a private-submission channel. If no suitable restricted route exists, say so before asking for the material and do not invite the person to place private information into a public channel.
+
+```text
+ROUTE_EXISTS != ROUTE_USABLE
+PRIVACY_OPTION_CLAIMED != PRIVATE_CUSTODY_EXISTS
+```
 
 ## 2. Normal valid responses
 
@@ -48,18 +55,20 @@ I DON'T KNOW
 I DON'T REMEMBER
 I DISAGREE WITH THE QUESTION
 THAT IS PRIVATE
-VERIFY IT BUT DO NOT PUBLISH IT
-RECORD IT BUT DO NOT PUBLISH IT
+I WOULD ONLY ANSWER UNDER A RESTRICTED / VERIFICATION-ONLY ARRANGEMENT
 STOP
 ```
 
 The exact interface need not use these labels. The substance must remain available.
 
-A refusal is an event in the interaction. It is not proof of the proposition the person declined to discuss.
+A request for a restricted or verification-only arrangement is not a promise that THR currently provides one. If the needed handling route does not exist, the safe result is to decline collection through the available public route.
+
+A refusal is an event in the interaction. It is not proof of the proposition the person declined to discuss, and it is not automatically something the record needs to retain.
 
 ```text
 REFUSAL_IS_AN_EVENT
 REFUSAL_ALONE != ESTABLISHMENT_OF_THE_REFUSED_CLAIM
+REFUSAL_OCCURRED != REFUSAL_MUST_BE_RECORDED
 PRIVATE != DECEPTIVE
 WITHHELD != ABSENT
 ```
@@ -86,10 +95,10 @@ Do not answer a refusal with an automatic demand to justify the refusal. Do not 
 
 ```text
 STOP -> STOP
-VOLUNTARY != GUILT-INDUCING EXIT
+VOLUNTARY != GUILT-INDUCING_EXIT
 ```
 
-A person may later return voluntarily. Returning does not erase the earlier refusal or manufacture retroactive consent.
+A person may later return voluntarily. Returning does not manufacture retroactive consent for the earlier interaction.
 
 ## 5. Withdrawal is not time travel
 
@@ -106,7 +115,7 @@ Say this before publication where it is material to the person's choice.
 
 ## 6. Answer-back is not ownership of truth
 
-A living subject should be able to challenge how THR represents them. Their correction, disagreement and explanation are evidence that must remain distinguishable from the earlier state.
+A living subject should be able to challenge how THR represents them. Their correction, disagreement and explanation are evidence that must remain distinguishable from the earlier state where material.
 
 But volunteering to participate does not grant the subject unilateral control over independently evidenced historical claims.
 
@@ -156,20 +165,20 @@ This encounter boundary does not give a living person a veto over every independ
 
 If THR already holds or is reviewing evidence about a consequential public claim, the subject may decline to answer questions about it. The refusal does not establish the claim, and it does not automatically erase the external evidence.
 
-The record should preserve:
+Where material and legitimately recordable, the record may preserve:
 
 - the independently sourced claim and its evidence state;
-- the fact that the subject was invited to answer, if that fact is itself material and appropriate to record;
-- the subject's response, refusal or disagreement only to the extent legitimately recordable;
+- the subject's response, correction or disagreement;
+- the fact that an answer was sought only when that fact itself is genuinely material;
 - unresolved uncertainty.
 
-Do not make participation in THR the price of being represented accurately.
+Do not record a refusal merely to make the subject's non-participation part of their profile. Do not make participation in THR the price of being represented accurately.
 
 ## 10. Compulsion is outside this voluntary lane
 
 THR is not an emergency authority, court, police power, intelligence service, medical decision-maker or universal arbiter of when another person's refusal may be overridden.
 
-If information is obtained through a separately authorised or compelled process and later becomes material to a record, do not rewrite coercion as consent.
+If information obtained through an external compelled process later becomes material to a record, do not rewrite coercion as consent and do not treat the existence of a formal order as proof of moral legitimacy.
 
 Where appropriate, preserve the distinction:
 
@@ -206,6 +215,7 @@ Stop or narrow when:
 - the requested information is not necessary to the bounded record purpose;
 - the interaction is drifting into general profiling;
 - the person cannot meaningfully exercise the choices this model assumes;
+- the requested privacy/restricted handling route does not actually exist;
 - the proposed use has changed enough that the earlier permission no longer answers it;
 - the relevant authority/consent boundary is unresolved;
 - another stronger owner already governs the material and THR adds no legitimate delta.
@@ -219,6 +229,6 @@ NO_CONSENT_FOR_THIS_USE -> STOP / NARROW / ROUTE
 
 ## Current boundary
 
-This is a working encounter rule for future use. It does not assert that THR currently holds a voluntary living-person profile or that any living person owes the project an interview.
+This is a working encounter rule for future use. It does not assert that THR currently holds a voluntary living-person profile, provides a private-submission channel, or that any living person owes the project an interview.
 
 If a real interaction exposes a missing state, revise this document from that encounter rather than expanding it in advance into a universal personhood, privacy or consent theory.
