@@ -1,0 +1,35 @@
+name: Integrate THR validator repairs
+
+on:
+  push:
+    branches:
+      - framework/thr-validator-convergence
+    paths:
+      - ".github/workflows/integrate-validator-repairs.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: framework/thr-validator-convergence
+          fetch-depth: 0
+      - name: Replay returned repair commits on current integration head
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin 3d0d160b9c029215d657dcd05bc2bfa8cef82430 1cacc1d758564fc1df1daa7b869e11fb5089e5db a4cd8bae6a2834868df0f26ed36a5f240e6c66ca
+          git cherry-pick 3d0d160b9c029215d657dcd05bc2bfa8cef82430
+          git cherry-pick 1cacc1d758564fc1df1daa7b869e11fb5089e5db
+          git cherry-pick a4cd8bae6a2834868df0f26ed36a5f240e6c66ca
+      - name: Run unified validation and all validator tests
+        run: |
+          python tools/validate_all.py
+          python -m unittest discover -s tools -p 'test_validate*.py'
+          git diff --check HEAD~3..HEAD
+      - name: Push integrated repairs
+        run: git push origin HEAD:framework/thr-validator-convergence
