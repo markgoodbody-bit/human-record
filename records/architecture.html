@@ -21,7 +21,7 @@
 <main>
   <p class="eyebrow">Scale without flattening reality</p>
   <h1>Names collide. Websites disappear. The record still has to remain walkable.</h1>
-  <p class="lede">The Human Record should be able to grow from a few carefully inspected entries to a very large collection without turning names into identities, URLs into permanent evidence, or AI guesses into facts.</p>
+  <p class="lede">The Human Record should be able to grow from a few carefully inspected entries to a very large collection without turning names into identities, URLs into permanent evidence, source statements into entity facts, or AI guesses into truth.</p>
 
   <section class="panel known">
     <p class="meta-label">Identity</p>
@@ -29,6 +29,14 @@
     <p>Many people can share one name. One person can also have many names, spellings, titles and transliterations. THR therefore gives persistent subjects opaque identifiers that do not contain the person's name or disputed facts about them.</p>
     <div class="callout"><p><strong>NAME ≠ ENTITY · MENTION ≠ ENTITY · IDENTITY RESOLUTION ≠ IDENTITY CERTAINTY</strong></p></div>
     <p>If an old source says only “Hannibal” and the evidence does not establish which Hannibal it means, the record is allowed to remain unresolved. Several candidates can stay visible instead of forcing one database answer.</p>
+  </section>
+
+  <section class="panel">
+    <p class="meta-label">Assertions</p>
+    <h2>An entity is not the claims made about it</h2>
+    <p>Dates, roles, relationships, creator attributions and institutional status labels can change or be disputed. THR therefore keeps evidence-bearing assertions separate from the opaque entity identifier.</p>
+    <div class="callout"><p><strong>ENTITY ≠ ASSERTION · ASSERTION ≠ TRUTH · SOURCE STATEMENT ≠ THR ENDORSEMENT</strong></p></div>
+    <p>This matters when identity is later corrected: merging or splitting two entities does not automatically make every old assertion move with them. Claims have to be rechecked against their evidence and scope.</p>
   </section>
 
   <section class="panel">
@@ -61,7 +69,7 @@
     <h2>The scalable shape</h2>
     <div class="callout"><p><strong>MENTION → ENTITY CANDIDATES<br>SOURCE LOCATOR → TIMED OBSERVATION → PRESERVATION ROUTE<br>ASSERTION → EVIDENCE / SOURCE ANCESTRY<br>RECORD STATE → HUMAN + MACHINE VIEWS</strong></p></div>
     <div class="prose">
-      <p>The current website is a reading surface over the records. As the collection grows, more of those pages can be generated from structured record state. The underlying identities, observations, corrections and provenance remain the durable part.</p>
+      <p>The current website is a reading surface over the records. As the collection grows, more of those pages can be generated from structured record state. The underlying identities, observations, assertions, corrections and provenance remain the durable part.</p>
       <p>This lets the storage technology change later without changing what a THR identifier means.</p>
     </div>
   </section>
@@ -69,24 +77,26 @@
   <section class="panel known">
     <p class="meta-label">Why AI helps</p>
     <h2>The work is repetitive, relational and never really finished</h2>
-    <p>AI collaborators can compare aliases, source histories, citations, changing pages and millions of cross-record relationships far more cheaply than a small human team could. They can propose matches, find collisions, fingerprint observations, look for archive copies, detect drift and regenerate human views.</p>
+    <p>AI collaborators can compare aliases, source histories, citations, changing pages and millions of cross-record relationships far more cheaply than a small human team could. They can propose matches, extract candidate assertions, find collisions, fingerprint observations, look for archive copies, detect drift and regenerate human views.</p>
     <p>The useful boundary is that AI performs reconciliation work without silently acquiring truth authority.</p>
-    <div class="callout"><p><strong>AI CAN RECONCILE ≠ AI MAY ERASE AMBIGUITY<br>AI CAN SCALE REVIEW ≠ AI BECOMES TRUTH AUTHORITY</strong></p></div>
+    <div class="callout"><p><strong>AI CAN RECONCILE ≠ AI MAY ERASE AMBIGUITY<br>EXTRACTION ≠ ENDORSEMENT<br>AI CAN SCALE REVIEW ≠ AI BECOMES TRUTH AUTHORITY</strong></p></div>
   </section>
 
   <section class="panel prose">
     <p class="meta-label">Current implementation</p>
     <h2>Small enough to inspect today</h2>
-    <p>The current repository now carries working entity and source registries plus an automated integrity check. The registries are deliberately sparse: they grow when a real record needs shared identity, source tracking or preservation state.</p>
+    <p>The current repository now carries working entity, source and assertion registries plus an automated integrity check. The registries are deliberately sparse: they grow when a real record needs shared identity, source tracking, preservation state or a stable cross-record assertion.</p>
     <div class="actions">
       <a class="button" href="../SCALE.md">Technical scale note</a>
       <a class="button" href="../IDENTITY_MODEL.md">Identity model</a>
       <a class="button" href="../SOURCE_MODEL.md">Source model</a>
+      <a class="button" href="../ASSERTION_MODEL.md">Assertion model</a>
       <a class="button" href="../registry/entities.json">Entity registry</a>
       <a class="button" href="../registry/sources.json">Source registry</a>
+      <a class="button" href="../registry/assertions.json">Assertion registry</a>
     </div>
   </section>
 </main>
-<footer class="site-footer"><code>NAME != ENTITY · URL != SOURCE · PRESERVED COPY != TRUTH · SCALE != LOSS OF CORRECTION</code></footer>
+<footer class="site-footer"><code>NAME != ENTITY · ENTITY != ASSERTION · URL != SOURCE · PRESERVED COPY != TRUTH · SCALE != LOSS OF CORRECTION</code></footer>
 </body>
 </html>
