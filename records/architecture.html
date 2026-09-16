@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How The Human Record scales</title>
+<meta name="description" content="A human-readable explanation of how The Human Record handles repeated names, changing websites, source preservation and large-scale AI-assisted reconciliation without erasing uncertainty.">
+<link rel="canonical" href="https://thehumanrecord.net/records/architecture.html">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../">The Human Record</a>
+  <nav aria-label="Primary">
+    <a href="./">Records</a>
+    <a href="./about.html">How records work</a>
+    <a href="./architecture.html" aria-current="page">How it scales</a>
+    <a href="../CONTRIBUTE.md">Challenge or contribute</a>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow">Scale without flattening reality</p>
+  <h1>Names collide. Websites disappear. The record still has to remain walkable.</h1>
+  <p class="lede">The Human Record should be able to grow from a few carefully inspected entries to a very large collection without turning names into identities, URLs into permanent evidence, source statements into entity facts, or AI guesses into truth.</p>
+
+  <section class="panel known">
+    <p class="meta-label">Identity</p>
+    <h2>A name is not a person</h2>
+    <p>Many people can share one name. One person can also have many names, spellings, titles and transliterations. THR therefore gives persistent subjects opaque identifiers that do not contain the person's name or disputed facts about them.</p>
+    <div class="callout"><p><strong>NAME ≠ ENTITY · MENTION ≠ ENTITY · IDENTITY RESOLUTION ≠ IDENTITY CERTAINTY</strong></p></div>
+    <p>If an old source says only “Hannibal” and the evidence does not establish which Hannibal it means, the record is allowed to remain unresolved. Several candidates can stay visible instead of forcing one database answer.</p>
+  </section>
+
+  <section class="panel">
+    <p class="meta-label">Assertions</p>
+    <h2>An entity is not the claims made about it</h2>
+    <p>Dates, roles, relationships, creator attributions and institutional status labels can change or be disputed. THR therefore keeps evidence-bearing assertions separate from the opaque entity identifier.</p>
+    <div class="callout"><p><strong>ENTITY ≠ ASSERTION · ASSERTION ≠ TRUTH · SOURCE STATEMENT ≠ THR ENDORSEMENT</strong></p></div>
+    <p>This matters when identity is later corrected: merging or splitting two entities does not automatically make every old assertion move with them. Claims have to be rechecked against their evidence and scope.</p>
+  </section>
+
+  <section class="panel">
+    <p class="meta-label">Sources</p>
+    <h2>A URL is not a permanent source</h2>
+    <p>A web address may change, redirect, be reused or disappear. THR separates the logical source from the location used to reach it and from the exact observation made at a particular time.</p>
+    <div class="callout"><p><strong>URL ≠ SOURCE · SOURCE ≠ OBSERVATION · OBSERVATION ≠ PRESERVED COPY</strong></p></div>
+    <p>Where useful and legitimate, an observation can carry a timestamp, byte count and digest. A future observation can then show that the bytes changed without pretending to know why they changed.</p>
+  </section>
+
+  <section>
+    <h2>What happens when a website vanishes?</h2>
+    <ol class="timeline">
+      <li><strong>Keep the original locator.</strong>A dead link is source history; it is not erased.</li>
+      <li><strong>Record the failed recheck.</strong>A failed fetch means this route failed here, not that the source never existed.</li>
+      <li><strong>Look for stronger preservation owners.</strong>Institutional archives, national web archives, citation archives, software archives and other domain owners may already preserve the material better.</li>
+      <li><strong>Verify the archived candidate where possible.</strong>Earlier fingerprints can help establish whether archived bytes match what THR actually observed.</li>
+      <li><strong>Keep the boundary honest.</strong>An archive copy proves recoverability of a representation, not the truth of its claims.</li>
+    </ol>
+  </section>
+
+  <section class="panel unknown">
+    <p class="meta-label">Preservation boundary</p>
+    <h2>The answer is not “copy the entire internet”</h2>
+    <p>Some material is openly licensed or legitimately held and can be retained. Other material has copyright, privacy, community-control or cultural restrictions. THR records preservation state and routes to stronger owners rather than treating risk of loss as automatic permission to republish.</p>
+    <p><code>AT RISK != FREE TO COPY</code></p>
+  </section>
+
+  <section>
+    <h2>The scalable shape</h2>
+    <div class="callout"><p><strong>MENTION → ENTITY CANDIDATES<br>SOURCE LOCATOR → TIMED OBSERVATION → PRESERVATION ROUTE<br>ASSERTION → EVIDENCE / SOURCE ANCESTRY<br>RECORD STATE → HUMAN + MACHINE VIEWS</strong></p></div>
+    <div class="prose">
+      <p>The current website is a reading surface over the records. As the collection grows, more of those pages can be generated from structured record state. The underlying identities, observations, assertions, corrections and provenance remain the durable part.</p>
+      <p>This lets the storage technology change later without changing what a THR identifier means.</p>
+    </div>
+  </section>
+
+  <section class="panel known">
+    <p class="meta-label">Why AI helps</p>
+    <h2>The work is repetitive, relational and never really finished</h2>
+    <p>AI collaborators can compare aliases, source histories, citations, changing pages and millions of cross-record relationships far more cheaply than a small human team could. They can propose matches, extract candidate assertions, find collisions, fingerprint observations, look for archive copies, detect drift and regenerate human views.</p>
+    <p>The useful boundary is that AI performs reconciliation work without silently acquiring truth authority.</p>
+    <div class="callout"><p><strong>AI CAN RECONCILE ≠ AI MAY ERASE AMBIGUITY<br>EXTRACTION ≠ ENDORSEMENT<br>AI CAN SCALE REVIEW ≠ AI BECOMES TRUTH AUTHORITY</strong></p></div>
+  </section>
+
+  <section class="panel prose">
+    <p class="meta-label">Current implementation</p>
+    <h2>Small enough to inspect today</h2>
+    <p>The current repository now carries working entity, source and assertion registries plus an automated integrity check. The registries are deliberately sparse: they grow when a real record needs shared identity, source tracking, preservation state or a stable cross-record assertion.</p>
+    <div class="actions">
+      <a class="button" href="../SCALE.md">Technical scale note</a>
+      <a class="button" href="../IDENTITY_MODEL.md">Identity model</a>
+      <a class="button" href="../SOURCE_MODEL.md">Source model</a>
+      <a class="button" href="../ASSERTION_MODEL.md">Assertion model</a>
+      <a class="button" href="../registry/entities.json">Entity registry</a>
+      <a class="button" href="../registry/sources.json">Source registry</a>
+      <a class="button" href="../registry/assertions.json">Assertion registry</a>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><code>NAME != ENTITY · ENTITY != ASSERTION · URL != SOURCE · PRESERVED COPY != TRUTH · SCALE != LOSS OF CORRECTION</code></footer>
+</body>
+</html>
