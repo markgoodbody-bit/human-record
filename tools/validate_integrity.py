@@ -38,7 +38,11 @@ def warn(message: str) -> None:
 def load_json(relative: str):
     path = ROOT / relative
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
+        value = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(value, dict):
+            error(f"{relative}: JSON root must be an object")
+            return None
+        return value
     except FileNotFoundError:
         error(f"missing JSON file: {relative}")
     except json.JSONDecodeError as exc:
@@ -128,8 +132,29 @@ def check_catalog() -> set[str]:
         if not isinstance(pinned, dict) or not pinned:
             error(f"{record_id}: view_basis.source_git_blobs must be a non-empty object")
             continue
+        required_paths: set[str] = set()
+        for field in ("full_human_record", "machine_record"):
+            value = record.get(field)
+            path = local_public_path(value) if isinstance(value, str) else None
+            if path is None:
+                error(f"{record_id}: {field} must identify a local public source")
+                continue
+            resolved = path.resolve()
+            if not resolved.is_relative_to(ROOT.resolve()):
+                error(f"{record_id}: {field} escapes the checkout")
+                continue
+            required_paths.add(resolved.relative_to(ROOT.resolve()).as_posix())
+        if len(required_paths) != 2 or set(pinned) != required_paths:
+            error(f"{record_id}: source pins must cover exactly both record source routes")
+            continue
         for rel, expected in pinned.items():
-            path = ROOT / rel
+            path = (ROOT / rel).resolve()
+            if not path.is_relative_to(ROOT.resolve()):
+                error(f"{record_id}: pinned source escapes checkout: {rel}")
+                continue
+            if not isinstance(expected, str) or not re.fullmatch(r"[0-9a-f]{40}", expected):
+                error(f"{record_id}: invalid Git blob ID: {rel}")
+                continue
             if not path.exists():
                 error(f"{record_id}: pinned source does not exist: {rel}")
                 continue
