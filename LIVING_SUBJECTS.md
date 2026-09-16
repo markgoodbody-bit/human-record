@@ -21,7 +21,16 @@ THE RECORD EXISTS FOR ENTITIES
 ENTITIES DO NOT EXIST FOR THE RECORD
 ```
 
-## 1. Explain before asking
+## 1. Establish the right encounter before asking
+
+Before contacting someone as the subject of a record, establish enough identity for the bounded purpose that THR is not carelessly disclosing sensitive context to the wrong person.
+
+An unresolved or weak identity match is not a reason to collect more private disambiguators from whoever happens to be reachable. Narrow the outreach, use a stronger owner/authority route, or do not initiate the contact.
+
+```text
+POSSIBLE_MATCH != SAFE_TO_CONTACT_AS_SUBJECT
+IDENTITY_RESOLUTION_NEED != PERMISSION_TO_COLLECT_PRIVATE_DISAMBIGUATORS
+```
 
 Before a question whose answer may enter a record, make the relevant context understandable:
 
@@ -38,9 +47,12 @@ Do not treat a buried policy page as equivalent to an understandable explanation
 
 Do not offer a privacy, restricted-access or verification-only mode that THR cannot actually honour. The current public GitHub/Square contribution routes are not a private-submission channel. If no suitable restricted route exists, say so before asking for the material and do not invite the person to place private information into a public channel.
 
+If a future restricted route is created, its custody, access, retention, deletion/withdrawal limits and possible redisclosure must be explained before it is used. A channel being technically private is not by itself a complete handling policy.
+
 ```text
 ROUTE_EXISTS != ROUTE_USABLE
 PRIVACY_OPTION_CLAIMED != PRIVATE_CUSTODY_EXISTS
+PRIVATE_CHANNEL_EXISTS != HANDLING_TERMS_ESTABLISHED
 ```
 
 ## 2. Normal valid responses
@@ -91,10 +103,13 @@ If a proposed later use materially changes audience, purpose, sensitivity, infer
 
 If the person says `STOP`, stop the voluntary questioning.
 
-Do not answer a refusal with an automatic demand to justify the refusal. Do not make continued participation the price of dignity, correction or ordinary access to the record.
+Do not answer a refusal with an automatic demand to justify the refusal. Do not repeatedly rephrase or re-ask a refused question simply to wear down the boundary. A materially new reason or context may justify offering the person a fresh choice, but the person must be free not to reopen it.
+
+Do not make continued participation the price of dignity, correction or ordinary access to the record.
 
 ```text
 STOP -> STOP
+REFUSAL != INVITATION_TO_PERSIST
 VOLUNTARY != GUILT-INDUCING_EXIT
 ```
 
@@ -119,7 +134,7 @@ A living subject should be able to challenge how THR represents them. Their corr
 
 But volunteering to participate does not grant the subject unilateral control over independently evidenced historical claims.
 
-If a source shows that the person said `X` at time `T1`, and the person later says at `T2` that they reject `X`, the record should be capable of preserving both states with their provenance.
+If evidence supports that the person said `X` at time `T1`, and the person later says at `T2` that they reject `X`, the record should be capable of preserving both states with their provenance and uncertainty.
 
 ```text
 SUBJECT_ANSWER_BACK != SUBJECT_OWNS_REALITY
@@ -180,6 +195,8 @@ THR is not an emergency authority, court, police power, intelligence service, me
 
 If information obtained through an external compelled process later becomes material to a record, do not rewrite coercion as consent and do not treat the existence of a formal order as proof of moral legitimacy.
 
+The existence of compelled material also does not by itself grant THR a right to possess, reproduce or publish it. Rights, custody, safety, source legitimacy and public-interest questions remain separate.
+
 Where appropriate, preserve the distinction:
 
 ```text
@@ -188,6 +205,10 @@ RECORDED OR CLAIMED AUTHORITY: <source>
 SUBJECT CONSENT: NO / NOT ESTABLISHED
 SUBJECT DISPUTE: <if available>
 LEGITIMACY: NOT ESTABLISHED BY THR MERELY BY RECORDING THE PROCESS
+```
+
+```text
+COMPELLED_DISCLOSURE_EXISTS != THR_MAY_REPUBLISH
 ```
 
 Lawfulness, institutional procedure and moral legitimacy are not interchangeable labels. THR records the basis it can inspect; it does not manufacture legitimacy by naming an authority.
@@ -205,7 +226,18 @@ UNKNOWN != DEAD
 
 This document does not create a universal ranking of life, memory, privacy, history or public interest. It only requires the record to notice that its own actions can change reachable futures.
 
-## 12. Stop conditions
+## 12. Capacity uncertainty is a stop signal for this lane, not an excuse to diagnose
+
+This document assumes the person can meaningfully understand and make the specific choice in question. THR should not make medical, cognitive or legal-competence determinations merely to unlock collection.
+
+If that ability is materially uncertain, do not stretch this voluntary lane to fit. Stop or narrow and use an appropriate stronger owner, representative, safeguarding or domain-specific process if one legitimately applies.
+
+```text
+CAPACITY_UNCERTAIN != THR_MAY_DECLARE_CAPACITY
+NO_DIRECT_ANSWER_BACK != NO_PROTECTED_SCOPE
+```
+
+## 13. Stop conditions
 
 Do not continue a voluntary living-subject interaction merely because more information could be collected.
 
@@ -214,7 +246,7 @@ Stop or narrow when:
 - the person refuses or withdraws from the voluntary interaction;
 - the requested information is not necessary to the bounded record purpose;
 - the interaction is drifting into general profiling;
-- the person cannot meaningfully exercise the choices this model assumes;
+- the person cannot meaningfully exercise the choices this model assumes, or that is materially uncertain;
 - the requested privacy/restricted handling route does not actually exist;
 - the proposed use has changed enough that the earlier permission no longer answers it;
 - the relevant authority/consent boundary is unresolved;
