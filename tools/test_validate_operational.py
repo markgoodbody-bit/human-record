@@ -87,6 +87,44 @@ class OperationalRegistryTests(unittest.TestCase):
         (self.root / "records/catalog.json").write_text(json.dumps(catalog), encoding="utf-8")
         self.assertTrue(validator.validate(self.root)[0])
 
+    def add_unrelated_observation(self):
+        other = "thr:observation:11111111-1111-4111-8111-111111111111"
+        path = self.root / "registry/sources.json"
+        data = json.loads(path.read_text(encoding="utf-8"))
+        data["sources"].append({
+            "id": "thr:source:22222222-2222-4222-8222-222222222222",
+            "observations": [{"id": other}],
+        })
+        path.write_text(json.dumps(data), encoding="utf-8")
+        return other
+
+    def test_mention_observation_must_belong_to_source(self):
+        self.mention["observation_id"] = "thr:observation:11111111-1111-4111-8111-111111111111"
+        self.write()
+        self.add_unrelated_observation()
+        self.assertTrue(any("different source" in e for e in validator.validate(self.root)[0]))
+
+    def test_promoted_observation_must_belong_to_source(self):
+        self.check["record_evidence_promoted"] = True
+        self.check["promoted_observation_id"] = "thr:observation:11111111-1111-4111-8111-111111111111"
+        self.write()
+        self.add_unrelated_observation()
+        self.assertTrue(any("different source" in e for e in validator.validate(self.root)[0]))
+
+    def test_promoted_observation_from_same_source(self):
+        self.check["record_evidence_promoted"] = True
+        self.check["promoted_observation_id"] = self.observation
+        self.write()
+        self.assertEqual(validator.validate(self.root)[0], [])
+
+    def test_duplicate_observation_id_rejected(self):
+        self.add_unrelated_observation()
+        path = self.root / "registry/sources.json"
+        data = json.loads(path.read_text(encoding="utf-8"))
+        data["sources"][1]["observations"][0]["id"] = self.observation
+        path.write_text(json.dumps(data), encoding="utf-8")
+        self.assertTrue(any("duplicate observation" in e for e in validator.validate(self.root)[0]))
+
 
 if __name__ == "__main__":
     unittest.main()
