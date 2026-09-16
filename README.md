@@ -14,8 +14,10 @@ The project is built collaboratively with artificial-intelligence apertures, but
 public record is intended as a gift for humans as well as machine readers. The normal
 human route is [`records/`](records/): a browseable catalogue and readable views of the
 current records. [`records/about.html`](records/about.html) explains the common anatomy
-of a record in ordinary language. Those pages are derived reading surfaces, not new
-evidence and not replacements for the Markdown/JSON records or Git history.
+of a record in ordinary language. [`records/architecture.html`](records/architecture.html)
+explains how the same discipline can scale when human names collide and web sources
+change or disappear. Those pages are derived reading surfaces, not new evidence and not
+replacements for the Markdown/JSON records or Git history.
 
 The smallest common structure earned by the existing records is described in
 [`RECORD_CONTRACT.md`](RECORD_CONTRACT.md). It is a semantic interoperability note,
@@ -27,6 +29,12 @@ for a specific recoverability/provenance gap, check stronger preservation owners
 and do not turn risk into permission to extract or publish living/community knowledge.
 It is a selection orientation, not a ranked queue of human importance.
 
+The first scale layer is documented in [`SCALE.md`](SCALE.md),
+[`IDENTITY_MODEL.md`](IDENTITY_MODEL.md) and [`SOURCE_MODEL.md`](SOURCE_MODEL.md).
+Cross-record opaque identifiers and source-currentness/preservation state live in the
+small [`registry/`](registry/) index. They are working interoperability machinery, not a
+universal ontology or a database of everyone.
+
 Related wider project entrance: [Please Start From Here](https://pleasestartfromhere.com/).
 It is a separate public object and is not part of this record, its evidence, or its
 stewardship offer.
@@ -35,7 +43,7 @@ The public door currently carries three deliberately different record objects:
 
 - the original human-made artwork provenance specimen;
 - a provenance case tracing the viral “80% of German flak crews died” claim without replacing uncertainty with another unsupported number;
-- a public-source transmission-lineage case tracing sieve and riddle making from a reported last maker, through an extinction classification, into renewed practice while leaving the tacit skill-transfer gap visible.
+- a public-source transmission-lineage case tracing sieve and riddle making from a reported last maker, through an extinction classification, into renewed practice while leaving open what was transmitted, reconstructed or newly learned.
 
 None is a detector, certification authority, historical oracle or claim of canon. The living-practice case is not a craft manual and does not imply practitioner participation or endorsement.
 
@@ -43,6 +51,7 @@ Contents:
 - `index.html` — human-facing public entrance;
 - `records/index.html` — human-facing record catalogue;
 - `records/about.html` — human explanation of the common record anatomy;
+- `records/architecture.html` — human explanation of scale, identity collisions and source survival;
 - `records/camp-fire.html` — readable view of the artwork specimen;
 - `records/flak-claim.html` — readable view of the historical claim-provenance case;
 - `records/sieve-riddle-revival.html` — readable view of the living-knowledge transmission-lineage case;
@@ -50,6 +59,14 @@ Contents:
 - `records/style.css` — shared presentation for the human record browser;
 - `RECORD_CONTRACT.md` — minimum semantic contract earned by the current records;
 - `SELECTION.md` — working selection discipline for future records;
+- `SCALE.md` — current scale architecture and incremental migration path;
+- `IDENTITY_MODEL.md` — opaque entity IDs, mentions and unresolved identity handling;
+- `SOURCE_MODEL.md` — source/locator/observation/preservation separation;
+- `registry/entities.json` — sparse cross-record entity index;
+- `registry/sources.json` — cross-record source/observation/preservation-state index;
+- `registry/README.md` — registry growth and privacy boundaries;
+- `tools/validate_integrity.py` — local structural/view-pin/registry validator;
+- `.github/workflows/validate-integrity.yml` — CI execution of the validator;
 - `specimen.md` — current human-readable artwork record;
 - `specimen.json` — current machine-readable artwork record;
 - `cases/viral-flak-claim.md` — human-readable provenance reconstruction of the viral historical claim;
@@ -112,13 +129,41 @@ BROWSEABLE != CERTIFIED
 AI_BUILT != AI_FACING_ONLY
 ```
 
+## Scale boundary
+
+The Human Record should be able to grow without making names or URLs into brittle primary keys.
+
+The current working separations are:
+
+```text
+NAME != ENTITY
+MENTION != ENTITY
+URL != SOURCE
+SOURCE != OBSERVATION
+OBSERVATION != PRESERVED COPY
+PRESERVED COPY != TRUTH
+HUMAN VIEW != RECORD STATE
+```
+
+Opaque entity IDs let a label change without changing the referent. A source ID can retain several locators and observations over time. Identity ambiguity can remain unresolved rather than being forced into one machine match. Preservation state can remain `not_yet_checked` rather than treating a live link as an archive.
+
+The scale layer is intentionally incremental. Existing record formats are not being flattened into one schema. Add shared entity/source references when a real repeated-identity, source-ancestry, currentness or preservation problem makes them useful.
+
+AI is particularly useful for the repeated work: reconciling aliases and source relations, detecting proposition drift, fingerprinting observations, finding archived states, checking currentness, surfacing ambiguity and regenerating human views. That comparative advantage does not confer truth or governance authority.
+
+```text
+AI_MATCH != SILENT_IDENTITY_FACT
+STORAGE_BACKEND != RECORD_MEANING
+COMPREHENSIVE PURPOSE != COLLECT EVERYTHING NOW
+```
+
 ## Living-knowledge boundary
 
 The sieve-and-riddle case is the first current Human Record entry about a living practice.
 
 Heritage Crafts is treated as the strongest identified owner for current UK craft status, practitioner counts, viability and safeguarding. The Human Record does not independently classify the craft or replace that work.
 
-The THR contribution is narrower: preserve public-source lineage around the reported last maker, extinction classification, revival and current training, while keeping the central missing question visible — how the tacit skill itself crossed the break.
+The THR contribution is narrower: preserve public-source lineage around the reported last maker, extinction classification, revival and current training, while keeping the central missing question visible — what was transmitted, reconstructed or newly learned, and through which routes.
 
 The record uses already-public reporting. It does not claim contact, consent, participation or endorsement from the named living practitioners, and it does not reproduce a detailed craft manual or private teaching material.
 
@@ -160,7 +205,7 @@ markgoodbody-bit/human-record repository root
 -> custom domain thehumanrecord.net
 -> Namecheap DNS to the GitHub Pages site
 -> HTTPS
--> verify index.html + records/* + specimen.* + llms.txt + cases/*
+-> verify index.html + records/* + registry/* + specimen.* + llms.txt + cases/*
 -> stop and observe
 ```
 
@@ -190,4 +235,11 @@ RECORDING != OWNING
 RECORDING != CONTINUATION
 PRESERVATION != EXTRACTION
 PUBLIC_SOURCE != ENDORSEMENT
+NAME != ENTITY
+MENTION != ENTITY
+URL != SOURCE
+SOURCE != OBSERVATION
+OBSERVATION != PRESERVED COPY
+PRESERVED COPY != TRUTH
+IDENTITY_RESOLUTION != IDENTITY_CERTAINTY
 ```
