@@ -31,12 +31,13 @@ Related wider project entrance: [Please Start From Here](https://pleasestartfrom
 It is a separate public object and is not part of this record, its evidence, or its
 stewardship offer.
 
-The public door currently carries two deliberately different record objects:
+The public door currently carries three deliberately different record objects:
 
 - the original human-made artwork provenance specimen;
-- a provenance case tracing the viral “80% of German flak crews died” claim without replacing uncertainty with another unsupported number.
+- a provenance case tracing the viral “80% of German flak crews died” claim without replacing uncertainty with another unsupported number;
+- a public-source transmission-lineage case tracing sieve and riddle making from a reported last maker, through an extinction classification, into renewed practice while leaving the tacit skill-transfer gap visible.
 
-Neither is a detector, certification authority, historical oracle or claim of canon.
+None is a detector, certification authority, historical oracle or claim of canon. The living-practice case is not a craft manual and does not imply practitioner participation or endorsement.
 
 Contents:
 - `index.html` — human-facing public entrance;
@@ -44,6 +45,7 @@ Contents:
 - `records/about.html` — human explanation of the common record anatomy;
 - `records/camp-fire.html` — readable view of the artwork specimen;
 - `records/flak-claim.html` — readable view of the historical claim-provenance case;
+- `records/sieve-riddle-revival.html` — readable view of the living-knowledge transmission-lineage case;
 - `records/catalog.json` — small discovery/currentness catalogue, not a universal schema;
 - `records/style.css` — shared presentation for the human record browser;
 - `RECORD_CONTRACT.md` — minimum semantic contract earned by the current records;
@@ -52,6 +54,8 @@ Contents:
 - `specimen.json` — current machine-readable artwork record;
 - `cases/viral-flak-claim.md` — human-readable provenance reconstruction of the viral historical claim;
 - `cases/viral-flak-claim.json` — machine-readable provenance reconstruction;
+- `cases/sieve-riddle-revival.md` — full human-readable public-source transmission-lineage record;
+- `cases/sieve-riddle-revival.json` — machine-readable transmission-lineage record;
 - `llms.txt` — compact machine entrance and boundaries;
 - `robots.txt` — explicit public crawler route and sitemap pointer; not a rights grant;
 - `sitemap.xml` — first-party public discovery map;
@@ -106,6 +110,24 @@ HUMAN_VIEW != NEW_EVIDENCE
 SUMMARY != SOURCE
 BROWSEABLE != CERTIFIED
 AI_BUILT != AI_FACING_ONLY
+```
+
+## Living-knowledge boundary
+
+The sieve-and-riddle case is the first current Human Record entry about a living practice.
+
+Heritage Crafts is treated as the strongest identified owner for current UK craft status, practitioner counts, viability and safeguarding. The Human Record does not independently classify the craft or replace that work.
+
+The THR contribution is narrower: preserve public-source lineage around the reported last maker, extinction classification, revival and current training, while keeping the central missing question visible — how the tacit skill itself crossed the break.
+
+The record uses already-public reporting. It does not claim contact, consent, participation or endorsement from the named living practitioners, and it does not reproduce a detailed craft manual or private teaching material.
+
+```text
+RECORDING != CONTINUATION
+ATTENTION_PATHWAY != SKILL_TRANSMISSION
+PUBLIC_SOURCE != ENDORSEMENT
+RISK != PERMISSION
+PRESERVATION != EXTRACTION
 ```
 
 ## Provenance-case boundary
@@ -165,5 +187,7 @@ PLUMBING_SPECIMEN != SYNTHETIC_ERA_PURPOSE_TEST
 PUBLICATION != VALIDATION
 SUMMARY != SOURCE
 RECORDING != OWNING
+RECORDING != CONTINUATION
 PRESERVATION != EXTRACTION
+PUBLIC_SOURCE != ENDORSEMENT
 ```
