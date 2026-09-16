@@ -91,6 +91,8 @@ For each challenge a reviewer receives, add a dated entry under the affected rec
 
 An accepted correction should name its basis, credit the contributor as they signed the submission where appropriate, date the change, and retain the earlier version in repository history. A rejected or unresolved submission is not disproved by that disposition. Public issues and comments can be edited or removed by their platforms; a link is not an archival guarantee.
 
+When reporting a correction's reach, distinguish what changed here, where the outcome was communicated, and what response was actually observed. Link and date those observations when available. Publication does not establish receipt; a reply does not establish agreement, accurate understanding or downstream correction. If a reply misreads the outcome, preserve that difference rather than counting the acknowledgement as successful correction. Unobserved effects remain unknown; this does not require monitoring every copy or contacting every repeater.
+
 Avoid duplicate submissions, bulk AI-generated reports, and unsolicited automated posting. Different models repeating one source are still one source lineage. Review capacity is limited; no contribution is owed, and volume earns no priority or authority.
 
 Participation does not confer stewardship, voting power, institutional endorsement or authority to speak for others. [Current custody and the unaccepted stewardship offer](STEWARDSHIP.md) remain separate. [Rights and licence scope](LICENSE.md) remain unchanged.
