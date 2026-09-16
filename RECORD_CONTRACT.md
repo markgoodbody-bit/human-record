@@ -63,8 +63,10 @@ Where material, preserve:
 - source kind;
 - observation/fetch time;
 - exact page/table/field/byte identity when available and useful;
+- what the source actually states or measures, including material population, denominator and time scope;
 - whether a source is primary, derivative, reported by another reviewer, or still uncertain;
 - known derivation or repetition relationships;
+- changes in what is claimed as material passes between sources, rather than treating every repetition as the same proposition;
 - source-independence groups where multiple endpoints or copies share one underlying owner/ancestor.
 
 Counting URLs is not counting witnesses.
@@ -163,13 +165,18 @@ Each entry should therefore provide, where practical:
 - the full human record;
 - a machine-readable record;
 - a correction/challenge route;
-- the public source/history route.
+- the public source/history route;
+- a view-basis marker identifying the underlying record version or exact source bytes against which the human view was last checked.
 
-The readable page is a view over the record, not a second evidence layer.
+The readable page is a view over the record, not a second evidence layer. If an underlying Markdown or JSON record changes, a previously aligned human view must not silently be treated as current until it is reviewed against the changed source.
+
+A Git blob or other content hash is useful here only as a byte-identity marker. It does not upgrade the truth of the record.
 
 ```text
 HUMAN_VIEW != NEW_EVIDENCE
 SUMMARY != SOURCE
+DERIVED_VIEW != CURRENT_RECORD_UNLESS_BASIS_MATCHES
+HASH != TRUTH
 AI_BUILT != AI_FACING_ONLY
 ```
 
@@ -195,6 +202,7 @@ The three existing machine records do not use identical field names. That is acc
 | --- | --- | --- | --- |
 | identity/type | `format`, `artefact` | `record_type`, `record_version`, `title` | `record_type`, `record_version`, `title` |
 | current state | `status`, observation fields | `status`, `historical_truth_status`, `recorded_at` | `status`, `living_practice_status`, `recorded_at` |
+| selection | `selection` | `selection` | `selection` |
 | evidence | `owner_sources`, `reconciliation` | `nodes`, `review_receipts` | `nodes`, `lineage_events` |
 | source relationship | `epistemic_boundaries.source_independence` | node `role` / `claim_relation` | `source_independence` |
 | findings | reconciliation + bounded prose | `current_findings` | `current_findings` |
@@ -202,6 +210,7 @@ The three existing machine records do not use identical field names. That is acc
 | correction history | `corrections` | `challenges`, revision notes | Git history + future challenge entries; `correction_rule` defines current practice |
 | rights / authority | `rights_layers`, epistemic boundaries | contribution/rights boundary in full record | `authority_and_consent` |
 | correction route | `correction_route` | `correction_rule` + public contribution route | `correction_route`, `correction_rule` |
+| human-view freshness | `records/catalog.json` view basis | `records/catalog.json` view basis | `records/catalog.json` view basis |
 
 This table is a migration aid, not a command to rename mature fields merely for symmetry.
 
@@ -214,11 +223,14 @@ CAN A HUMAN TELL WHAT THIS RECORD IS ABOUT?
 CAN THEY SEE WHAT IS KNOWN AND UNKNOWN?
 CAN THEY WALK BACK TO THE EVIDENCE?
 CAN THEY SEE WHICH SOURCES SHARE ONE ANCESTOR?
+CAN THEY SEE WHAT EACH SOURCE ACTUALLY MEASURES OR ASSERTS?
+CAN THEY SEE WHEN A CLAIM CHANGES AS IT PASSES BETWEEN SOURCES?
 CAN THEY FIND WHAT WAS NOT CHECKED?
 CAN THEY SEE HOW CHALLENGES CHANGED THE RECORD?
 CAN THEY CHALLENGE IT WITHOUT ACCEPTING THE PROJECT?
 ARE RIGHTS / CONSENT / CUSTODY BOUNDARIES HONEST?
 CAN A MACHINE FIND THE SAME RECORD WITHOUT INVENTING MISSING STRUCTURE?
+CAN A READER TELL WHICH UNDERLYING RECORD VERSION THE HUMAN VIEW SUMMARIZES?
 ```
 
 For a living practice, creator or community, add:

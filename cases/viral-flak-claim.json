@@ -1,12 +1,24 @@
 {
   "record_type": "provenance_case",
-  "record_version": "0.2.3",
+  "record_version": "0.2.4",
   "recorded_at": "2026-09-16",
   "title": "The viral '80% of German flak crews died' claim",
   "status": "unsupported_in_sources_checked",
   "historical_truth_status": "unknown",
   "claim": "Roughly 80% of German anti-aircraft crew members died during the Second World War.",
   "scope_note": "This record reconstructs a visible online propagation chain. It does not establish the true aggregate mortality rate of German flak crews.",
+  "selection": {
+    "date": "2026-09-15",
+    "selected_from": "not_recorded",
+    "pool_snapshot_hash": "not_recorded",
+    "not_recorded": [
+      "the candidate pool at initial selection time",
+      "alternative cases considered at initial selection time"
+    ],
+    "initial_record_basis": "Human Record PR #2 introduced this as the second Human Record object: a provenance case reconstructing the visible online propagation and correction chain around the 80% claim. Its hostile-review brief explicitly asked whether the case broadened The Human Record appropriately without turning it into a truth oracle.",
+    "later_stress_use": "COM #342 later designated the already-built flak provenance case as the first real stress object for the inspect/challenge/contribute route.",
+    "boundary": "Selection identifies a useful provenance stress case. It does not imply historical importance, representativeness, likelihood of falsehood, measured virality, or that this was the most at-risk candidate available."
+  },
   "nodes": [
     {
       "id": "viral-video-2025-08",
@@ -104,6 +116,7 @@
     "REPETITION != CORROBORATION",
     "UNSUPPORTED_IN_SOURCES_CHECKED != PROVED_FALSE",
     "UNKNOWN != ABSENT",
-    "CORRECTION != REPLACEMENT_WITH_ANOTHER_UNSOURCED_NUMBER"
+    "CORRECTION != REPLACEMENT_WITH_ANOTHER_UNSOURCED_NUMBER",
+    "SELECTION != SIGNIFICANCE"
   ]
 }

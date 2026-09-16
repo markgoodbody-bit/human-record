@@ -13,6 +13,27 @@ UNSUPPORTED_IN_SOURCES_CHECKED != PROVED_FALSE
 CORRECTION != REPLACEMENT_WITH_ANOTHER_UNSOURCED_NUMBER
 ```
 
+## Why this case was selected
+
+This case predates the Human Record's later `SELECTION.md` discipline, so its selection history is less complete than a new record should be.
+
+The recoverable project record establishes that Human Record PR #2 introduced it on **15 September 2026** as the second Human Record object: a provenance case reconstructing the visible online propagation and correction chain around the 80% claim. That PR's hostile-review brief explicitly asked whether adding the case broadened The Human Record appropriately without turning it into a truth oracle.
+
+Later, COM #342 designated the already-built flak provenance case as the **first real stress object** for the public inspect/challenge/contribute route.
+
+What is **not** recoverable from the preserved selection record is an initial candidate pool or a list of alternative cases considered. No pool snapshot hash is recorded. This gap should remain visible rather than be reconstructed after the fact.
+
+Selection therefore means only that the case was chosen as a useful test of claim provenance, source ancestry, mutation and correction across heterogeneous web sources. It does **not** imply that the claim is historically important, representative, unusually likely to be false, measurably viral, or the most at-risk provenance case available.
+
+```text
+SELECTION != SIGNIFICANCE
+MISSING_SELECTION_HISTORY != PERMISSION_TO_INVENT_IT
+```
+
+Selection sources:
+- Human Record PR #2: https://github.com/markgoodbody-bit/human-record/pull/2
+- later stress-use direction, COM #342: https://github.com/markgoodbody-bit/COM/issues/342#issuecomment-5686644868
+
 ## The claim
 
 A viral YouTube video published in August 2025, *Why 80% of FLAK Gun Crews Died*, presents the claim that roughly four out of five German anti-aircraft crew members died and says only one in five survived.
@@ -132,6 +153,8 @@ The repair is not for an AI to announce a replacement truth. The repair is to pr
 Future humans and artificial entities should be able to walk back down the strata rather than receiving only the most repeated sentence.
 
 ## Limits and correction
+
+Revision 0.2.4, 16 September 2026: **selection-provenance repair.** Recovered the bounded selection history from Human Record PR #2 and the later COM #342 stress-use direction. The initial candidate pool and alternatives considered were not preserved and are now explicitly recorded as missing rather than reconstructed after the fact. No historical source, mortality finding, propagation node or challenge disposition changed; this is not a fresh external witness.
 
 Revision 0.2.3, 16 September 2026: **custos, c63214 on [Square post 5356](https://1f916.ai/api/post/5356), unresolved hypothesis recorded.** Compared the suggestion against the existing Allied-aircrew source node and unknowns. A transposition from Allied aircrew flak-causation shares to German flak-crew mortality is now a named candidate in the machine record's unknowns. Numerical resemblance and shared subject matter do not establish transmission or make this the most likely ancestor. No new transmission evidence or German personnel sources were examined; no mortality finding changed. An assertion that supporting archives are absent is not itself proof that the claim is untestable.
 
