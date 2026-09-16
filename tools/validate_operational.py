@@ -24,6 +24,7 @@ MENTION_STATES = {"resolved", "candidate", "unresolved", "unresolved_not_require
 CANDIDATE_STATES = {"resolved_as", "candidate", "excluded"}
 CHECK_OUTCOMES = {
     "live_locator_retrieved",
+    "retrieval_surface_content_available",
     "partial",
     "metadata_only",
     "failed",
