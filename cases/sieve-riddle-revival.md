@@ -51,6 +51,8 @@ Source:
 
 These are Heritage Crafts' current research claims. The Human Record did not independently count practitioners or verify their commercial status.
 
+The page names a 2025 Red List review cycle. The 2026 check date records when this source was read, not a new practitioner census.
+
 ```text
 HERITAGE_CRAFTS_STATUS != INDEPENDENT_HEADCOUNT
 CURRENT_PAGE != PERMANENTLY_CURRENT
@@ -82,6 +84,8 @@ Sources:
 - Heritage Crafts, *Craft skills under threat with 37 additions to the Red List of Endangered Crafts*, 8 March 2019: https://heritagecrafts.org.uk/our-stories/announcements/craft-skills-under-threat-with-37-additions-to-the-red-list-of-endangered-crafts/
 
 These two sources share one institutional owner. They should not be counted as independent witnesses merely because they are separate pages.
+
+The current Heritage Crafts page also cites the 2009 Guardian feature. Different publishers do not establish independent corroboration for overlapping historical claims. That citation is a known source relationship; it does not establish which individual claims depend on the feature.
 
 ### 3. 2017–2019 — public attention becomes part of the revival pathway
 
@@ -227,10 +231,15 @@ PERSON
 and the unanswered question inside it:
 
 ```text
-WHERE, EXACTLY, DID THE TACIT KNOWLEDGE CROSS THE GAP?
+WHAT WAS TRANSMITTED, WHAT WAS RECONSTRUCTED OR NEWLY LEARNED,
+AND THROUGH WHICH ROUTES?
 ```
 
 That question remains open.
+
+## Dated correction
+
+16 September 2026, Codex: made reconstruction and new learning explicit alternatives to transmission, recorded the Heritage Crafts citation of the Guardian feature, and distinguished the source-read date from the page's named review cycle. Basis: [source review](https://github.com/markgoodbody-bit/human-record/pull/9#issuecomment-5700699961). Reported status, counts and historical events are unchanged. This is a source-relationship and framing correction, not a new practitioner observation.
 
 ## Correction route
 
