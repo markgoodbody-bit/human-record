@@ -1,0 +1,48 @@
+{
+  "format": "human-record-mention-registry/0.1",
+  "updated": "2026-09-16",
+  "purpose": "Source-literal mentions and their bounded identity-resolution state. A mention records what appeared in context; it does not force creation or resolution of an entity.",
+  "model": "https://thehumanrecord.net/IDENTITY_MODEL.md",
+  "mentions": [
+    {
+      "id": "thr:mention:911dddc8-21ed-44e2-b6f2-58cff24c9fda",
+      "literal": "Winslow Homer",
+      "source_id": "thr:source:fb6063f7-6e0d-4f87-9a9c-c5e5d001d724",
+      "observation_id": "thr:observation:28fb29f3-ba69-44b4-a96c-c87db4e11bbe",
+      "record_id": "camp-fire-1880",
+      "context": "Met object API creator attribution reconciled by the Camp Fire specimen.",
+      "status": "resolved",
+      "candidates": [
+        {
+          "entity_id": "thr:entity:da243807-2e4e-44a5-86bc-aa8b8d4f23fb",
+          "state": "resolved_as",
+          "basis": [
+            "same literal creator name in the owner record and the existing specimen reconciliation",
+            "the current Camp Fire record treats the Met attribution as the bounded identity basis"
+          ],
+          "conflicts": []
+        }
+      ],
+      "boundary": "Resolution here is the record's current referent mapping. It is not independent proof of the 1880 creation event."
+    },
+    {
+      "id": "thr:mention:6ec3500d-23d4-45fc-8df0-12f0abbd25a2",
+      "literal": "Mike Turnock",
+      "source_id": "thr:source:47f0817a-3cae-4ded-98eb-320332a72bd5",
+      "record_id": "sieve-riddle-revival",
+      "context": "Named practitioner in the 2009 Guardian report used by the sieve-and-riddle lineage record.",
+      "status": "unresolved_not_required",
+      "candidates": [],
+      "boundary": "The current record does not need a cross-record person identity for this living practitioner. No entity profile is created merely because the public source names him. A future record may resolve this mention if a real cross-record need earns it."
+    }
+  ],
+  "ceilings": [
+    "NAME != ENTITY",
+    "MENTION != ENTITY",
+    "MENTION EXISTS != ENTITY PROFILE REQUIRED",
+    "PUBLIC NAME != ENDORSEMENT",
+    "AI MATCH != SILENT IDENTITY FACT",
+    "IDENTITY RESOLUTION != IDENTITY CERTAINTY",
+    "BETTER MATCHING != MORE SURVEILLANCE"
+  ]
+}
