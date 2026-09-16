@@ -84,7 +84,7 @@
         {"type": "byte_identical_observed_copy", "target": "thr:source:341eaaf7-6393-4ea8-a787-ced32f2b97e5", "basis": "specimen.json our_copy and reconciliation at 2026-09-14T20:46:10Z"}
       ],
       "preservation": {
-        "status": "local_copy_legitimate",
+        "status": "related_copy_observed",
         "copies": [
           {
             "kind": "project_hosted_byte_identical_copy_at_observation",
@@ -94,7 +94,7 @@
           }
         ],
         "last_checked_at": "2026-09-14T20:46:10Z",
-        "note": "The current record separates the historical work's public-domain status from the reproduction-rights/Open Access layer."
+        "note": "The record observed a related byte-identical project copy and separately records the Met Open Access basis; this status is not a general legal adjudication or permanence claim."
       },
       "used_by_records": ["camp-fire-1880"]
     },
@@ -120,7 +120,12 @@
       "relations": [
         {"type": "byte_identical_observed_copy_of", "target": "thr:source:c775687c-bab3-4769-833b-5b88a3299029", "basis": "specimen.json at 2026-09-14T20:46:10Z"}
       ],
-      "preservation": {"status": "local_copy_legitimate", "copies": [], "last_checked_at": "2026-09-14T20:46:10Z"},
+      "preservation": {
+        "status": "related_copy_observed",
+        "copies": [],
+        "last_checked_at": "2026-09-14T20:46:10Z",
+        "note": "This records the observed relationship and availability of the project-hosted copy, not a universal legal or permanence claim."
+      },
       "used_by_records": ["camp-fire-1880"]
     },
     {
@@ -301,7 +306,12 @@
         }
       ],
       "relations": [],
-      "preservation": {"status": "institutionally_preserved", "copies": [], "last_checked_at": null, "note": "The locator is an archival finding aid; the underlying relevant reports were not checked by the flak record."},
+      "preservation": {
+        "status": "institutional_preservation_route_identified",
+        "copies": [],
+        "last_checked_at": null,
+        "note": "The locator is a National Archives finding aid identifying an institutional archival route. This does not establish preservation of the current web page, completeness of the holdings for the claim, or that the relevant reports were examined by THR."
+      },
       "used_by_records": ["viral-flak-claim"]
     },
     {
