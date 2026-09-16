@@ -63,8 +63,10 @@ Where material, preserve:
 - source kind;
 - observation/fetch time;
 - exact page/table/field/byte identity when available and useful;
+- what the source actually states or measures, including material population, denominator and time scope;
 - whether a source is primary, derivative, reported by another reviewer, or still uncertain;
 - known derivation or repetition relationships;
+- changes in what is claimed as material passes between sources, rather than treating every repetition as the same proposition;
 - source-independence groups where multiple endpoints or copies share one underlying owner/ancestor.
 
 Counting URLs is not counting witnesses.
@@ -195,6 +197,7 @@ The three existing machine records do not use identical field names. That is acc
 | --- | --- | --- | --- |
 | identity/type | `format`, `artefact` | `record_type`, `record_version`, `title` | `record_type`, `record_version`, `title` |
 | current state | `status`, observation fields | `status`, `historical_truth_status`, `recorded_at` | `status`, `living_practice_status`, `recorded_at` |
+| selection | `selection` | `selection` | `selection` |
 | evidence | `owner_sources`, `reconciliation` | `nodes`, `review_receipts` | `nodes`, `lineage_events` |
 | source relationship | `epistemic_boundaries.source_independence` | node `role` / `claim_relation` | `source_independence` |
 | findings | reconciliation + bounded prose | `current_findings` | `current_findings` |
@@ -214,6 +217,8 @@ CAN A HUMAN TELL WHAT THIS RECORD IS ABOUT?
 CAN THEY SEE WHAT IS KNOWN AND UNKNOWN?
 CAN THEY WALK BACK TO THE EVIDENCE?
 CAN THEY SEE WHICH SOURCES SHARE ONE ANCESTOR?
+CAN THEY SEE WHAT EACH SOURCE ACTUALLY MEASURES OR ASSERTS?
+CAN THEY SEE WHEN A CLAIM CHANGES AS IT PASSES BETWEEN SOURCES?
 CAN THEY FIND WHAT WAS NOT CHECKED?
 CAN THEY SEE HOW CHALLENGES CHANGED THE RECORD?
 CAN THEY CHALLENGE IT WITHOUT ACCEPTING THE PROJECT?
