@@ -1,0 +1,88 @@
+{
+  "format": "human-record-entity-registry/0.1",
+  "updated": "2026-09-16",
+  "purpose": "Cross-record opaque identifiers for persistent subjects. Labels are correctable metadata, not primary keys or proof of identity.",
+  "model": "https://thehumanrecord.net/IDENTITY_MODEL.md",
+  "entities": [
+    {
+      "id": "thr:entity:a9730018-62ab-4ccd-9882-eec34134c526",
+      "type": "work",
+      "status": "current",
+      "labels": [
+        {
+          "text": "Camp Fire",
+          "language": "en",
+          "kind": "current_display_label",
+          "preferred_for_current_view": true
+        }
+      ],
+      "record_links": [
+        "specimen.json",
+        "specimen.md",
+        "records/camp-fire.html"
+      ],
+      "external_identifiers": [
+        {
+          "scheme": "Met accession number",
+          "value": "27.181",
+          "relationship": "owner_record_identifier",
+          "basis": "specimen.json owner-source reconciliation; not an independent truth claim"
+        }
+      ],
+      "notes": [
+        "This entity ID does not encode title, creator, date or attribution. Those remain evidence-bearing assertions in the record."
+      ]
+    },
+    {
+      "id": "thr:entity:da243807-2e4e-44a5-86bc-aa8b8d4f23fb",
+      "type": "person",
+      "status": "current",
+      "labels": [
+        {
+          "text": "Winslow Homer",
+          "language": "en",
+          "kind": "current_display_label",
+          "preferred_for_current_view": true
+        }
+      ],
+      "record_links": [
+        "specimen.json",
+        "specimen.md"
+      ],
+      "external_identifiers": [],
+      "notes": [
+        "The entity registry preserves a referent for cross-record use; the claim that this person created Camp Fire remains an owner attribution / record assertion rather than part of the identifier."
+      ]
+    },
+    {
+      "id": "thr:entity:ccdb0a44-1893-448d-a7fc-631e18d829cf",
+      "type": "practice",
+      "status": "current",
+      "labels": [
+        {
+          "text": "Sieve and riddle making",
+          "language": "en",
+          "kind": "current_display_label",
+          "preferred_for_current_view": true
+        }
+      ],
+      "record_links": [
+        "cases/sieve-riddle-revival.json",
+        "cases/sieve-riddle-revival.md",
+        "records/sieve-riddle-revival.html"
+      ],
+      "external_identifiers": [],
+      "notes": [
+        "This is an identifier for the practice discussed by the current record. It does not certify the boundaries of the practice, its viability, ownership, cultural authority or practitioner membership."
+      ]
+    }
+  ],
+  "ceilings": [
+    "NAME != ENTITY",
+    "MENTION != ENTITY",
+    "EXTERNAL ID != ENTITY",
+    "DUPLICATE LABEL != DUPLICATE ENTITY",
+    "IDENTITY RESOLUTION != IDENTITY CERTAINTY",
+    "BETTER MATCHING != MORE SURVEILLANCE"
+  ]
+}
