@@ -171,8 +171,8 @@ def validate(root: Path = ROOT) -> tuple[list[str], dict[str, int]]:
     return errors, counts
 
 
-def main() -> int:
-    errors, counts = validate()
+def main(root: Path = ROOT) -> int:
+    errors, counts = validate(root)
     for item in errors:
         print(f"ERROR: {item}")
     if errors:
