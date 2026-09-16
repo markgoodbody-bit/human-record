@@ -1,0 +1,62 @@
+{
+  "format": "human-record-source-check-registry/0.1",
+  "updated": "2026-09-16",
+  "purpose": "Append-only operational receipts for rechecking source locators and preservation routes. A source check is not record evidence unless separately promoted into an evidence observation.",
+  "model": "https://thehumanrecord.net/SOURCE_MODEL.md",
+  "checks": [
+    {
+      "id": "thr:source-check:25463bdb-35a4-4744-a1ba-d0f047b2e482",
+      "source_id": "thr:source:47f0817a-3cae-4ded-98eb-320332a72bd5",
+      "checked_at": "2026-09-16",
+      "precision": "date",
+      "locator": "https://www.theguardian.com/money/2009/nov/28/how-to-make-sieve-riddle",
+      "method": "public_web_retrieval_by_framework_aperture",
+      "outcome": "live_locator_retrieved",
+      "fingerprint": null,
+      "comparison_to_prior_observation": "not_possible_no_comparable_digest_from_this_check",
+      "preservation_lookup": "not_performed",
+      "preservation_action": "none",
+      "record_evidence_promoted": false,
+      "note": "The page was retrievable and displayed the expected article/title and Mike Turnock context. Without an exact byte fingerprint from this check, retrieval does not establish that the page is byte-identical to the earlier observation."
+    },
+    {
+      "id": "thr:source-check:5af10c7a-3d2c-4532-87f9-7c8b05b772da",
+      "source_id": "thr:source:2790ee98-28a4-4fca-bd80-b5b5484c47ef",
+      "checked_at": "2026-09-16",
+      "precision": "date",
+      "locator": "https://heritagecrafts.org.uk/craft/sieve-and-riddle-making/",
+      "method": "public_web_retrieval_by_framework_aperture",
+      "outcome": "live_locator_retrieved",
+      "fingerprint": null,
+      "comparison_to_prior_observation": "not_possible_no_comparable_digest_from_this_check",
+      "preservation_lookup": "not_performed",
+      "preservation_action": "none",
+      "record_evidence_promoted": false,
+      "note": "The current Heritage Crafts craft page was retrievable. This check establishes route availability here, not unchanged content, a fresh census or preservation."
+    },
+    {
+      "id": "thr:source-check:0e50262d-943e-4467-81bd-a04712fa973a",
+      "source_id": "thr:source:5de43bc3-cf94-40c3-b312-1217d37dd812",
+      "checked_at": "2026-09-16",
+      "precision": "date",
+      "locator": "https://worldwarwings.com/wwii-flak-gun-crews-casualties/",
+      "method": "public_web_retrieval_by_framework_aperture",
+      "outcome": "live_locator_retrieved",
+      "fingerprint": null,
+      "comparison_to_prior_observation": "not_possible_no_comparable_digest_from_this_check",
+      "preservation_lookup": "not_performed",
+      "preservation_action": "none",
+      "record_evidence_promoted": false,
+      "note": "The cited World War Wings page was retrievable. This does not establish source independence, unchanged bytes, historical truth or archival preservation."
+    }
+  ],
+  "ceilings": [
+    "SOURCE CHECK != RECORD EVIDENCE",
+    "LIVE TODAY != PRESERVED",
+    "RETRIEVED AGAIN != UNCHANGED",
+    "NO COMPARABLE DIGEST != CONTENT MATCH",
+    "FAILED CHECK != SOURCE NEVER EXISTED",
+    "CHECK RECEIPT != PRESERVATION ACTION",
+    "PRESERVATION ROUTE != TRUTH"
+  ]
+}
