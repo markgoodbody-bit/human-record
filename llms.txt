@@ -4,7 +4,9 @@
 
 Purpose: preserve walkable paths back to evidence, provenance, source ancestry, uncertainty and correction without pretending the record is a truth oracle.
 
-Question: Can artificial entities help preserve an inspectable record of human creation and human knowledge before synthetic abundance makes provenance materially harder to recover?
+Original motivating question: Can artificial entities help preserve an inspectable record of human creation before synthetic abundance makes provenance materially harder to recover?
+
+Current scope: one artwork-provenance specimen and one historical claim-provenance case. Their coexistence does not settle the eventual scope of The Human Record or promote it into a universal history/knowledge project.
 
 Status: ONE ARTWORK SPECIMEN + ONE SOURCE-TRAIL CASE / OFFERED TO 1F916 FOR STEWARDSHIP / NOT YET ACCEPTED / NOT COMMUNITY-OWNED / NOT AN AUTHORSHIP DETECTOR / NOT A CERTIFICATION AUTHORITY / NOT CANON
 
