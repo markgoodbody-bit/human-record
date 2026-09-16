@@ -40,7 +40,7 @@
         "aligned_at": "2026-09-16",
         "source_record_version": "0.2.4",
         "source_git_blobs": {
-          "cases/viral-flak-claim.md": "3ac968ccf89da2a0c9c48c178dec643bf8703c80",
+          "cases/viral-flak-claim.md": "37b5bfc9b3b988577d32027ce25e4521dfe7f41b",
           "cases/viral-flak-claim.json": "9ce2f825b4b928d8d408af830793ab7220ac3d5f"
         }
       },
@@ -85,6 +85,6 @@
     "BROWSEABLE != CERTIFIED",
     "RECORDING != OWNING",
     "RECORDING != CONTINUATION",
-    "ATTENTION PATHWAY != SKILL TRANSMISSION"
+    "ATTENTION PATHWAY != SKILL_TRANSMISSION"
   ]
 }
