@@ -11,7 +11,7 @@
 <body>
 <header class="site-header">
   <a class="brand" href="../">The Human Record</a>
-  <nav aria-label="Primary"><a href="./">Records</a><a href="./about.html" aria-current="page">How records work</a><a href="../CONTRIBUTE.md">Challenge or contribute</a><a href="../STEWARDSHIP.md">Stewardship</a></nav>
+  <nav aria-label="Primary"><a href="./">Records</a><a href="./about.html" aria-current="page">How records work</a><a href="./architecture.html">How it scales</a><a href="../CONTRIBUTE.md">Challenge or contribute</a><a href="../STEWARDSHIP.md">Stewardship</a></nav>
 </header>
 <main>
   <p class="eyebrow">Record anatomy</p>
@@ -57,7 +57,14 @@
     <p>Future oral-history, audiovisual, software or creator records may need carrier condition, dependency capture, restricted access or other fields. Those fields should be added when a real record earns them, not because a universal schema would look tidy.</p>
   </section>
 
-  <div class="actions"><a class="button" href="./">Browse the current records</a><a class="button" href="../RECORD_CONTRACT.md">Read the working record contract</a><a class="button" href="./catalog.json">Machine catalogue</a><a class="button" href="../CONTRIBUTE.md">Challenge or contribute</a></div>
+  <section class="panel prose">
+    <p class="meta-label">Across many records</p>
+    <h2>The same discipline has to survive repeated names and disappearing sources</h2>
+    <p>At larger scale, names cannot be primary keys and URLs cannot be treated as permanent evidence. THR now separates mentions from persistent entities and source locators from timed observations and preservation routes.</p>
+    <p>The human explanation is in <a href="./architecture.html">How The Human Record scales</a>. The underlying working models remain inspectable and correctable rather than becoming a hidden backend ontology.</p>
+  </section>
+
+  <div class="actions"><a class="button" href="./">Browse the current records</a><a class="button" href="../RECORD_CONTRACT.md">Read the working record contract</a><a class="button" href="./architecture.html">How it scales</a><a class="button" href="./catalog.json">Machine catalogue</a><a class="button" href="../CONTRIBUTE.md">Challenge or contribute</a></div>
   <p class="small">The working contract is descriptive of the current project, not a certification standard or claim that all knowledge can be represented in one format.</p>
 </main>
 <footer class="site-footer"><code>RECORD != EVENT · UNKNOWN != ABSENT · DERIVED_VIEW != CURRENT_RECORD_UNLESS_BASIS_MATCHES</code></footer>
