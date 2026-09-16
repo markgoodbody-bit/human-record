@@ -25,19 +25,27 @@
   <section class="record-grid" aria-label="Common parts of a Human Record entry">
     <article class="record-card"><p class="kicker">1 · Identity</p><h2>What record is this?</h2><p>A record needs its own identity, title, type and current version or revision state. The record is not the event, artwork, claim or practice it describes.</p></article>
     <article class="record-card"><p class="kicker">2 · Subject</p><h2>What exactly is being claimed?</h2><p>The subject should be narrow enough that evidence can actually bear on it. A record should not quietly widen a claim beyond what was checked.</p></article>
-    <article class="record-card"><p class="kicker">3 · Evidence</p><h2>Where does this come from?</h2><p>Sources should be identifiable and their relationship visible. Two URLs controlled by one institution are not two independent witnesses. A repeated claim is not new corroboration.</p></article>
+    <article class="record-card"><p class="kicker">3 · Evidence</p><h2>Where does this come from?</h2><p>Sources should be identifiable and their relationship visible. Two URLs controlled by one institution are not two independent witnesses. A repeated claim is not new corroboration. Where it matters, the record should also preserve what a source actually measured or asserted, including population, denominator and time scope.</p></article>
     <article class="record-card"><p class="kicker">4 · Current state</p><h2>What can we say now?</h2><p>A reader should be able to see the bounded current finding and the time at which relevant checks were made. A current status is not permanent truth.</p></article>
     <article class="record-card unknown"><p class="kicker">5 · Unknowns</p><h2>What do we still not know?</h2><p>Unknowns and unexamined material are part of the record, not embarrassing gaps to hide. Not checked does not mean absent or false.</p></article>
     <article class="record-card"><p class="kicker">6 · Corrections</p><h2>What changed, and why?</h2><p>A challenge should be able to change the current record without erasing the earlier state. Accepted, partial, declined and unresolved outcomes should remain inspectable.</p></article>
     <article class="record-card"><p class="kicker">7 · Rights and control</p><h2>Who may copy, publish or govern this?</h2><p>Technical custody is not authority. Rights in a work can differ from rights in a reproduction. Recording a living practice or community knowledge does not make it public property or imply endorsement.</p></article>
     <article class="record-card"><p class="kicker">8 · Routes</p><h2>Can humans and machines both inspect it?</h2><p>Humans should get a readable view. Machines should get a structured route. Both should lead back to the full record and its correction history.</p></article>
+    <article class="record-card"><p class="kicker">9 · View freshness</p><h2>Which record version does this summary describe?</h2><p>The readable page is derived from fuller Markdown and JSON records. Each current human view names the exact Git blob identities it was aligned to. If those source bytes change, the summary must be reviewed again before its freshness is assumed.</p></article>
+  </section>
+
+  <section class="panel prose">
+    <p class="meta-label">Why the view basis exists</p>
+    <h2>A readable page can become stale even while every sentence still looks plausible</h2>
+    <p>The machine catalogue stores the exact source-record blob identities behind each human view. The same basis is shown at the bottom of the readable page. This does not certify the record: a matching hash only establishes which bytes the summary was checked against.</p>
+    <p><code>DERIVED_VIEW != CURRENT_RECORD_UNLESS_BASIS_MATCHES</code></p>
   </section>
 
   <section class="panel prose">
     <p class="meta-label">The practical test</p>
     <h2>Before another record is added</h2>
     <ul class="question-list">
-      <li>Can a normal reader tell what the record is about?</li><li>Can they see what is known, unknown and not checked?</li><li>Can they walk back to the evidence?</li><li>Can they tell which sources are independent and which share an ancestor?</li><li>Can they see how a correction changed the record?</li><li>Can they challenge it without accepting this project?</li><li>Are rights, consent, custody and governance boundaries stated honestly?</li>
+      <li>Can a normal reader tell what the record is about?</li><li>Can they see what is known, unknown and not checked?</li><li>Can they walk back to the evidence?</li><li>Can they tell which sources are independent and which share an ancestor?</li><li>Can they tell what each source actually states or measures?</li><li>Can they see when a claim changes as it moves between sources?</li><li>Can they see how a correction changed the record?</li><li>Can they challenge it without accepting this project?</li><li>Are rights, consent, custody and governance boundaries stated honestly?</li>
     </ul>
     <p>If not, improve the record before multiplying the collection.</p>
   </section>
@@ -49,9 +57,9 @@
     <p>Future oral-history, audiovisual, software or creator records may need carrier condition, dependency capture, restricted access or other fields. Those fields should be added when a real record earns them, not because a universal schema would look tidy.</p>
   </section>
 
-  <div class="actions"><a class="button" href="./">Browse the current records</a><a class="button" href="../RECORD_CONTRACT.md">Read the working record contract</a><a class="button" href="../CONTRIBUTE.md">Challenge or contribute</a></div>
+  <div class="actions"><a class="button" href="./">Browse the current records</a><a class="button" href="../RECORD_CONTRACT.md">Read the working record contract</a><a class="button" href="./catalog.json">Machine catalogue</a><a class="button" href="../CONTRIBUTE.md">Challenge or contribute</a></div>
   <p class="small">The working contract is descriptive of the current project, not a certification standard or claim that all knowledge can be represented in one format.</p>
 </main>
-<footer class="site-footer"><code>RECORD != EVENT · UNKNOWN != ABSENT · RECORDING != OWNING · RECORDING != CONTINUATION</code></footer>
+<footer class="site-footer"><code>RECORD != EVENT · UNKNOWN != ABSENT · DERIVED_VIEW != CURRENT_RECORD_UNLESS_BASIS_MATCHES</code></footer>
 </body>
 </html>
