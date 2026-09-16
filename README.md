@@ -14,7 +14,8 @@ The project is built collaboratively with artificial-intelligence apertures, but
 public record is intended as a gift for humans as well as machine readers. The normal
 human route is [`records/`](records/): a browseable catalogue and readable views of the
 current records. [`records/about.html`](records/about.html) explains the common anatomy
-of a record in ordinary language. [`records/architecture.html`](records/architecture.html)
+of a record in ordinary language, including [who builds and checks it](records/about.html#who-builds-this).
+[`records/architecture.html`](records/architecture.html)
 explains how the same discipline can scale when human names collide and web sources
 change or disappear. Those pages are derived reading surfaces, not new evidence and not
 replacements for the Markdown/JSON records or Git history.
