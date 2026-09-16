@@ -1,4 +1,5 @@
 """Read-only catalogue/source byte check. No network, pin repair or truth verdict."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -51,8 +52,11 @@ def check(root):
 
 
 if __name__ == "__main__":
-    root = Path(sys.argv[1]) if len(sys.argv) == 2 else Path(__file__).resolve().parents[1]
-    count, errors = check(root)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("root", nargs="?", type=Path, default=Path(__file__).resolve().parents[1],
+                        help="checkout to inspect (defaults to this script's repository)")
+    args = parser.parse_args()
+    count, errors = check(args.root)
     for error in errors:
         print(error)
     print(f"{count} source pins checked; {len(errors)} failures. Byte identity is not summary accuracy or truth.")

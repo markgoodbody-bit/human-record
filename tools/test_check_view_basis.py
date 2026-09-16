@@ -2,6 +2,8 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+import subprocess
+import sys
 from check_view_basis import check, git_blob
 
 
@@ -47,6 +49,32 @@ class ViewBasisTests(unittest.TestCase):
 
     def test_git_blob_known_vector(self):
         self.assertEqual(git_blob(b""), "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391")
+
+    def test_cli_rejects_extra_arguments(self):
+        script = Path(__file__).with_name("check_view_basis.py")
+        result = subprocess.run([sys.executable, str(script), str(self.root), "extra"],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 2)
+        self.assertNotIn("0 failures", result.stdout)
+
+    def test_cli_checks_requested_directory(self):
+        script = Path(__file__).with_name("check_view_basis.py")
+        result = subprocess.run([sys.executable, str(script), str(self.root / "missing")],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("Cannot establish view basis", result.stdout)
+
+    def test_source_path_cannot_escape_root(self):
+        self.record["full_human_record"] = "https://thehumanrecord.net/../outside.md"
+        pins = self.record["view_basis"]["source_git_blobs"]
+        pins["../outside.md"] = pins.pop("record.md")
+        self.save()
+        self.assertIn("escapes checkout", check(self.root)[1][0])
+
+    def test_invalid_pin(self):
+        self.record["view_basis"]["source_git_blobs"]["record.md"] = "invalid"
+        self.save()
+        self.assertIn("invalid Git blob ID", check(self.root)[1][0])
 
 
 if __name__ == "__main__":
