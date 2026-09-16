@@ -67,6 +67,7 @@ def validate(root: Path = ROOT) -> tuple[list[str], dict[str, int]]:
     entity_ids = {e.get("id") for e in entities.get("entities", []) if isinstance(e, dict) and isinstance(e.get("id"), str)}
     source_ids: set[str] = set()
     observation_ids: set[str] = set()
+    observation_sources: dict[str, str] = {}
     for source in sources.get("sources", []):
         if not isinstance(source, dict):
             continue
@@ -76,6 +77,10 @@ def validate(root: Path = ROOT) -> tuple[list[str], dict[str, int]]:
         for obs in source.get("observations", []):
             if isinstance(obs, dict) and isinstance(obs.get("id"), str):
                 observation_ids.add(obs["id"])
+                if obs["id"] in observation_sources:
+                    errors.append(f"duplicate observation id {obs['id']!r}")
+                if isinstance(sid, str):
+                    observation_sources[obs["id"]] = sid
 
     seen_mentions: set[str] = set()
     mention_items = mentions.get("mentions")
@@ -103,6 +108,8 @@ def validate(root: Path = ROOT) -> tuple[list[str], dict[str, int]]:
             oid = mention.get("observation_id")
             if oid is not None and oid not in observation_ids:
                 errors.append(f"{mid}: unknown observation_id {oid!r}")
+            elif oid is not None and observation_sources.get(oid) != sid:
+                errors.append(f"{mid}: observation_id belongs to a different source")
             rid = mention.get("record_id")
             if rid not in record_ids:
                 errors.append(f"{mid}: unknown record_id {rid!r}")
@@ -163,6 +170,8 @@ def validate(root: Path = ROOT) -> tuple[list[str], dict[str, int]]:
             promoted = check.get("promoted_observation_id")
             if check.get("record_evidence_promoted") is True and promoted not in observation_ids:
                 errors.append(f"{cid}: promoted evidence must name a known observation_id")
+            elif check.get("record_evidence_promoted") is True and observation_sources.get(promoted) != sid:
+                errors.append(f"{cid}: promoted observation belongs to a different source")
             fingerprint = check.get("fingerprint")
             if fingerprint is not None:
                 if not isinstance(fingerprint, dict) or not isinstance(fingerprint.get("algorithm"), str) or not isinstance(fingerprint.get("value"), str):
@@ -171,8 +180,8 @@ def validate(root: Path = ROOT) -> tuple[list[str], dict[str, int]]:
     return errors, counts
 
 
-def main() -> int:
-    errors, counts = validate()
+def main(root: Path = ROOT) -> int:
+    errors, counts = validate(root)
     for item in errors:
         print(f"ERROR: {item}")
     if errors:
