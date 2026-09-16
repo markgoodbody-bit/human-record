@@ -13,6 +13,7 @@ Human entry points:
 
 - [The flak claim](cases/viral-flak-claim.md): follow a historical claim through videos, an article and a summary. The aggregate mortality rate remains unknown here. Relevant German personnel studies have not been examined by this record.
 - [The artwork specimen](specimen.md): inspect the attribution, source and limits of one museum record. Matching copies of an institutional record do not make independent witnesses.
+- [Sieve and riddle making](cases/sieve-riddle-revival.md): follow public evidence from a reported last maker through an extinction classification and revival while keeping the actual tacit-skill transmission gap open. The record is not a craft manual and does not imply practitioner endorsement.
 
 Pick one claim or link. A small correction with a checkable source is more useful than many generated summaries. You can also explain why this approach is not useful, or decline to contribute.
 
@@ -35,7 +36,9 @@ Use as much of this as the correction needs; it is not an admission test:
 
 For the flak case, specify whose casualties, which period, what population and what “casualty” means. A statistic about Allied aircrew hit by flak is not a mortality rate for German gun crews. A footage problem alone does not decide the mortality claim.
 
-Link rather than reproduce copyrighted books or footage. Do not submit private personal information. Share only material you are entitled to share; the project's CC0 notice does not license third-party works.
+For the sieve/riddle case, distinguish evidence that public attention reached a later maker from evidence that practical skill was transmitted. A Red List, news feature or process description can be part of a learning pathway without establishing the person-to-person or tacit transmission chain. Public reporting about a living practitioner does not imply that practitioner endorses this record.
+
+Link rather than reproduce copyrighted books, articles, footage or process material. Do not submit private personal information. Share only material you are entitled to share; the project's CC0 notice does not license third-party works. Do not send private practitioner knowledge or unpublished training material without a legitimate right to share it.
 
 ## Proposing a new record
 
@@ -76,7 +79,7 @@ OWNER_FOUND + NO DELTA -> ROUTE / STOP
 
 The record's authors currently review proposed changes through the repository owner's account. Acceptance is not controlled by an independent body. Outside criticism is welcome without accepting stewardship, but it does not itself transfer editorial control. Reviewers should check the cited material, state what could not be checked, and return an acceptance, partial acceptance, disagreement or unresolved finding with reasons. This is a review practice, not a guaranteed response time or capacity to process every submission.
 
-For each challenge a reviewer receives, add a dated entry under the affected record's **Limits and correction** section (or a clearly labelled correction note), linking the original issue or Square comment, naming what was checked, and stating the outcome and remaining uncertainty. If it has not been checked, say so and record it as unresolved. Record disagreement or an unresolved outcome even when no factual field changes. The issue or Square reply should link back to that entry. An unseen message has no implied disposition; silence is not rejection. The flak case's machine-readable `challenges` entries mirror these outcomes; they are not separate verdicts or an exhaustive inbox.
+For each challenge a reviewer receives, add a dated entry under the affected record's **Limits and correction** section (or a clearly labelled correction note), linking the original issue or Square comment, naming what was checked, and stating the outcome and remaining uncertainty. If it has not been checked, say so and record it as unresolved. Record disagreement or an unresolved outcome even when no factual field changes. The issue or Square reply should link back to that entry. An unseen message has no implied disposition; silence is not rejection. Machine-readable challenge/correction entries mirror these outcomes where present; they are not separate verdicts or an exhaustive inbox.
 
 An accepted correction should name its basis, credit the contributor as they signed the submission where appropriate, date the change, and retain the earlier version in repository history. A rejected or unresolved submission is not disproved by that disposition. Public issues and comments can be edited or removed by their platforms; a link is not an archival guarantee.
 
