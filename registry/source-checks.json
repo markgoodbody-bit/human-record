@@ -10,14 +10,16 @@
       "checked_at": "2026-09-16",
       "precision": "date",
       "locator": "https://www.theguardian.com/money/2009/nov/28/how-to-make-sieve-riddle",
-      "method": "public_web_retrieval_by_framework_aperture",
-      "outcome": "live_locator_retrieved",
+      "method": "public_retrieval_surface_used_by_framework_aperture",
+      "outcome": "retrieval_surface_content_available",
+      "live_http_state": "not_established",
+      "retrieval_surface_freshness": "surface reported a cached crawl approximately 1.1 years old",
       "fingerprint": null,
       "comparison_to_prior_observation": "not_possible_no_comparable_digest_from_this_check",
       "preservation_lookup": "not_performed",
       "preservation_action": "none",
       "record_evidence_promoted": false,
-      "note": "The page was retrievable and displayed the expected article/title and Mike Turnock context. Without an exact byte fingerprint from this check, retrieval does not establish that the page is byte-identical to the earlier observation."
+      "note": "The retrieval surface returned the expected Guardian article/title and Mike Turnock context. This is not a fresh live-HTTP observation and does not establish current origin-server availability or byte identity."
     },
     {
       "id": "thr:source-check:5af10c7a-3d2c-4532-87f9-7c8b05b772da",
@@ -25,14 +27,16 @@
       "checked_at": "2026-09-16",
       "precision": "date",
       "locator": "https://heritagecrafts.org.uk/craft/sieve-and-riddle-making/",
-      "method": "public_web_retrieval_by_framework_aperture",
-      "outcome": "live_locator_retrieved",
+      "method": "public_retrieval_surface_used_by_framework_aperture",
+      "outcome": "retrieval_surface_content_available",
+      "live_http_state": "not_established",
+      "retrieval_surface_freshness": "surface reported a crawl from approximately the previous month",
       "fingerprint": null,
       "comparison_to_prior_observation": "not_possible_no_comparable_digest_from_this_check",
       "preservation_lookup": "not_performed",
       "preservation_action": "none",
       "record_evidence_promoted": false,
-      "note": "The current Heritage Crafts craft page was retrievable. This check establishes route availability here, not unchanged content, a fresh census or preservation."
+      "note": "The retrieval surface returned the expected Heritage Crafts page. This does not establish a fresh census, current origin-server availability, unchanged content or preservation."
     },
     {
       "id": "thr:source-check:0e50262d-943e-4467-81bd-a04712fa973a",
@@ -40,18 +44,22 @@
       "checked_at": "2026-09-16",
       "precision": "date",
       "locator": "https://worldwarwings.com/wwii-flak-gun-crews-casualties/",
-      "method": "public_web_retrieval_by_framework_aperture",
-      "outcome": "live_locator_retrieved",
+      "method": "public_retrieval_surface_used_by_framework_aperture",
+      "outcome": "retrieval_surface_content_available",
+      "live_http_state": "not_established",
+      "retrieval_surface_freshness": "surface reported a crawl from approximately the previous month",
       "fingerprint": null,
       "comparison_to_prior_observation": "not_possible_no_comparable_digest_from_this_check",
       "preservation_lookup": "not_performed",
       "preservation_action": "none",
       "record_evidence_promoted": false,
-      "note": "The cited World War Wings page was retrievable. This does not establish source independence, unchanged bytes, historical truth or archival preservation."
+      "note": "The retrieval surface returned the cited World War Wings article. This does not establish current origin-server availability, source independence, unchanged bytes, historical truth or archival preservation."
     }
   ],
   "ceilings": [
     "SOURCE CHECK != RECORD EVIDENCE",
+    "RETRIEVAL SURFACE != LIVE ORIGIN",
+    "CACHED CONTENT AVAILABLE != LIVE TODAY",
     "LIVE TODAY != PRESERVED",
     "RETRIEVED AGAIN != UNCHANGED",
     "NO COMPARABLE DIGEST != CONTENT MATCH",
