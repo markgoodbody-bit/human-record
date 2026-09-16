@@ -1,9 +1,10 @@
 {
-  "format": "human-record-catalog/0.2",
+  "format": "human-record-catalog/0.3",
   "updated": "2026-09-16",
   "purpose": "Discovery catalogue for current Human Record entries. This is routing metadata, not a universal record schema, evidence upgrade or certification surface.",
   "record_contract": "https://thehumanrecord.net/RECORD_CONTRACT.md",
   "human_explanation": "https://thehumanrecord.net/records/about.html",
+  "selection_orientation": "https://thehumanrecord.net/SELECTION.md",
   "source_repository": "https://github.com/markgoodbody-bit/human-record",
   "records": [
     {
@@ -32,6 +33,22 @@
       "known_summary": "A visible online propagation chain is partially reconstructed; downstream repetition is not independent corroboration and checked nearby historical sources do not establish the claimed aggregate German crew mortality rate.",
       "unknown_summary": "The true rate, any earlier source for the 80% figure, and the figure's exact ancestry remain unknown in this record.",
       "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
+    },
+    {
+      "id": "sieve-riddle-revival",
+      "kind": "transmission_lineage",
+      "title": "Sieve and riddle making returns from extinction",
+      "human_view": "https://thehumanrecord.net/records/sieve-riddle-revival.html",
+      "full_human_record": "https://thehumanrecord.net/cases/sieve-riddle-revival.md",
+      "machine_record": "https://thehumanrecord.net/cases/sieve-riddle-revival.json",
+      "status": "public_lineage_partially_reconstructed",
+      "living_practice_status": "critically_endangered_as_reported_by_heritage_crafts",
+      "recorded_at": "2026-09-16",
+      "known_summary": "Public sources show a reported last maker, a later extinction classification, Red List/media attention and renewed practice; Heritage Crafts currently reports the craft as critically endangered.",
+      "unknown_summary": "The exact person-to-person and tacit-skill transmission path across the extinction interval remains only partly visible.",
+      "strongest_owner": "Heritage Crafts for current UK craft status and safeguarding.",
+      "consent_boundary": "Public-source lineage only; named living practitioners were not contacted and no endorsement or private/tacit process material is claimed.",
+      "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
     }
   ],
   "ceilings": [
@@ -40,6 +57,8 @@
     "HASH != TRUTH",
     "UNKNOWN != ABSENT",
     "BROWSEABLE != CERTIFIED",
-    "RECORDING != OWNING"
+    "RECORDING != OWNING",
+    "RECORDING != CONTINUATION",
+    "ATTENTION PATHWAY != SKILL TRANSMISSION"
   ]
 }
