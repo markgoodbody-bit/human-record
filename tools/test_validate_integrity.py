@@ -112,6 +112,40 @@ class IntegrityRegressionTests(unittest.TestCase):
         self.check_catalog()
         self.assertTrue(validator.errors)
 
+    def test_source_url_suffix_is_not_plain_file(self):
+        for suffix in ("?different=1", "#different"):
+            with self.subTest(suffix=suffix):
+                validator.errors.clear()
+                self.record["machine_record"] = "https://thehumanrecord.net/a.json" + suffix
+                self.check_catalog()
+                self.assertTrue(validator.errors)
+
+    def test_external_correction_route_rejected(self):
+        self.record["correction_route"] = "https://other.example/contribute.md"
+        self.check_catalog()
+        self.assertTrue(validator.errors)
+
+    def test_encoded_source_route(self):
+        self.record["full_human_record"] = "https://thehumanrecord.net/%61.md"
+        self.check_catalog()
+        self.assertEqual(validator.errors, [])
+
+    def test_encoded_traversal_rejected(self):
+        self.record["full_human_record"] = "https://thehumanrecord.net/%2e%2e/outside.md"
+        self.check_catalog()
+        self.assertTrue(validator.errors)
+
+    def test_empty_and_duplicate_catalogue(self):
+        self.check_catalog()
+        catalog = json.loads((self.root / "records/catalog.json").read_text(encoding="utf-8"))
+        for records, expected in (([], "non-empty list"), ([self.record, self.record], "duplicate record id")):
+            with self.subTest(expected=expected):
+                validator.errors.clear()
+                catalog["records"] = records
+                with patch.object(validator, "load_json", return_value=catalog):
+                    validator.check_catalog()
+                self.assertTrue(any(expected in item for item in validator.errors))
+
     def test_missing_source(self):
         (self.root / "a.md").unlink()
         self.check_catalog()
