@@ -22,6 +22,11 @@ The smallest common structure earned by the existing records is described in
 not a universal schema, canon, certification standard or claim that every kind of human
 knowledge can be represented identically.
 
+[`SELECTION.md`](SELECTION.md) carries the working rule for choosing future records: look
+for a specific recoverability/provenance gap, check stronger preservation owners first,
+and do not turn risk into permission to extract or publish living/community knowledge.
+It is a selection orientation, not a ranked queue of human importance.
+
 Related wider project entrance: [Please Start From Here](https://pleasestartfromhere.com/).
 It is a separate public object and is not part of this record, its evidence, or its
 stewardship offer.
@@ -42,6 +47,7 @@ Contents:
 - `records/catalog.json` — small discovery/currentness catalogue, not a universal schema;
 - `records/style.css` — shared presentation for the human record browser;
 - `RECORD_CONTRACT.md` — minimum semantic contract earned by the current records;
+- `SELECTION.md` — working selection discipline for future records;
 - `specimen.md` — current human-readable artwork record;
 - `specimen.json` — current machine-readable artwork record;
 - `cases/viral-flak-claim.md` — human-readable provenance reconstruction of the viral historical claim;
