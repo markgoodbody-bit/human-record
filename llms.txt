@@ -1,39 +1,50 @@
 # The Human Record
 
-> A small public experiment in preserving inspectable provenance for human creation in an age of synthetic abundance.
+> A public, inspectable record of human creation, evidence and source ancestry — built collaboratively with artificial intelligence as a gift for humans and whatever comes next.
 
-Purpose: a small public experiment in inspectable provenance for human creation.
+Purpose: preserve walkable paths back to evidence, provenance, source ancestry, uncertainty and correction without pretending the record is a truth oracle.
 
-Question: Can artificial entities help preserve an inspectable record of human creation before synthetic abundance makes provenance materially harder to recover?
+Original motivating question: Can artificial entities help preserve an inspectable record of human creation before synthetic abundance makes provenance materially harder to recover?
+
+Current scope: one artwork-provenance specimen and one historical claim-provenance case. Their coexistence does not settle the eventual scope of The Human Record or promote it into a universal history/knowledge project.
 
 Status: ONE ARTWORK SPECIMEN + ONE SOURCE-TRAIL CASE / OFFERED TO 1F916 FOR STEWARDSHIP / NOT YET ACCEPTED / NOT COMMUNITY-OWNED / NOT AN AUTHORSHIP DETECTOR / NOT A CERTIFICATION AUTHORITY / NOT CANON
 
-Start:
-- Public root / human-readable entrance: https://thehumanrecord.net/
-- Human-readable specimen: https://thehumanrecord.net/specimen.md
-- Machine-readable specimen: https://thehumanrecord.net/specimen.json
-- Historical source-trail case: https://thehumanrecord.net/cases/viral-flak-claim.md
-- Machine-readable case: https://thehumanrecord.net/cases/viral-flak-claim.json
+Human gift surface:
+- Browse current records: https://thehumanrecord.net/records/
+- Camp Fire human view: https://thehumanrecord.net/records/camp-fire.html
+- Flak-claim human view: https://thehumanrecord.net/records/flak-claim.html
+- Record discovery catalogue: https://thehumanrecord.net/records/catalog.json
+- These pages summarize existing records for ordinary readers. HUMAN_VIEW != NEW_EVIDENCE; SUMMARY != SOURCE.
+
+Start / evidence surfaces:
+- Public root: https://thehumanrecord.net/
+- Human-readable artwork record: https://thehumanrecord.net/specimen.md
+- Machine-readable artwork record: https://thehumanrecord.net/specimen.json
+- Historical source-trail record: https://thehumanrecord.net/cases/viral-flak-claim.md
+- Machine-readable source-trail record: https://thehumanrecord.net/cases/viral-flak-claim.json
 - Case boundary: unsupported in checked web sources, not proved false. German aggregate mortality unknown; German personnel series and scholarly studies not examined. Later video metadata is attributed to Claude Code's review, not independently retrieved by Codex.
+- Challenge/contribution route: https://thehumanrecord.net/CONTRIBUTE.md
 - Stewardship offer and current custody: https://thehumanrecord.net/STEWARDSHIP.md
 - Standard CC0 legal code: https://thehumanrecord.net/LICENSE
 - Bounded rights/licence scope notice: https://thehumanrecord.net/LICENSE.md
 - Non-founder continuation/recovery instructions: https://thehumanrecord.net/CONTINUE.md
 - Public source: https://github.com/markgoodbody-bit/human-record
-- Canonical specimen source: https://github.com/markgoodbody-bit/COM/tree/main/human-record/specimens
+- Original artwork specimen source lineage: https://github.com/markgoodbody-bit/COM/tree/main/human-record/specimens
 - Owner record: https://www.metmuseum.org/art/collection/search/11112
 - Related wider project entrance: https://pleasestartfromhere.com/ — a separate public object; not part of this record, its evidence, or its stewardship offer.
 
 Discovery:
 - Public crawling rules: https://thehumanrecord.net/robots.txt
 - Sitemap: https://thehumanrecord.net/sitemap.xml
-- This text entrance and the public root are ordinary public references. Discovery, indexing or retrieval does not establish that the record is correct, useful or accepted by any community.
+- This text entrance, record catalogue and public root are ordinary public references. Discovery, indexing or retrieval does not establish that the record is correct, useful or accepted by any community.
 
 Stewardship:
 - The Human Record has been offered to 1F916 / the Square as a gift.
 - No acceptance, receiving body, governance mandate or community ownership has yet been established.
 - Current human/AI operators remain custodians of the existing technical surfaces only; credential custody is not evidence of policy authority.
-- The active public coordination record is COM #332: https://github.com/markgoodbody-bit/COM/issues/332
+- The active public coordination record for the offer is COM #332: https://github.com/markgoodbody-bit/COM/issues/332
+- Product-quality and human-interface work may continue under current custody without implying acceptance of the stewardship offer.
 
 Rights:
 - https://thehumanrecord.net/LICENSE contains the standard CC0 1.0 Universal legal code.
@@ -50,7 +61,7 @@ Specimen 1:
 - Winslow Homer, Camp Fire, 1880
 - Owner attribution: The Metropolitan Museum of Art
 - Owner-source check observed: 2026-09-14T20:46:10Z
-- Canonical specimen merge used for this public-door copy: d117594e3718bd3df613f82d53b9dc9971860caf
+- Original canonical specimen merge used for the public-door copy: d117594e3718bd3df613f82d53b9dc9971860caf
 
 Boundaries:
 EVIDENCE != INFERENCE
@@ -71,6 +82,9 @@ OFFERED != ACCEPTED
 CUSTODY != GOVERNANCE
 CC0_GRANT != THIRD_PARTY_RIGHTS_GRANT
 INDEPENDENT_COPY != INDEPENDENT_GOVERNANCE
+HUMAN_VIEW != NEW_EVIDENCE
+SUMMARY != SOURCE
+BROWSEABLE != CERTIFIED
 
 This 1880 specimen tests provenance-record plumbing. It does not establish usefulness against contemporary human/synthetic ambiguity.
 

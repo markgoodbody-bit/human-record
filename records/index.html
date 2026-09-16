@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Browse the records — The Human Record</title>
+<meta name="description" content="Browse the current Human Record entries in a human-readable form, with knowns, unknowns, evidence and corrections kept visible.">
+<link rel="canonical" href="https://thehumanrecord.net/records/">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../">The Human Record</a>
+  <nav aria-label="Primary">
+    <a href="./">Records</a>
+    <a href="../CONTRIBUTE.md">Challenge or contribute</a>
+    <a href="../STEWARDSHIP.md">Stewardship</a>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow">Current public records · 2</p>
+  <h1>Browse the records</h1>
+  <p class="lede">Each entry is a walkable account of what we can check, where the evidence came from, what remains uncertain, and how later corrections changed the record.</p>
+  <div class="intro">
+    <p>This is the human reading surface. It does not replace the underlying Markdown, JSON, source links or repository history. A readable summary is not new evidence.</p>
+    <p>The records are intentionally different. One follows the provenance of a human-made artwork. The other follows the ancestry of a historical claim as it moves across the web. The common rule is simple: preserve the path back to the evidence and keep uncertainty visible.</p>
+  </div>
+
+  <section class="record-grid" aria-label="Human Record entries">
+    <article class="record-card">
+      <p class="kicker">Artwork provenance · Specimen 1</p>
+      <h2><a href="./camp-fire.html">Winslow Homer, <em>Camp Fire</em> (1880)</a></h2>
+      <p class="status">Current state: the Human Record matches The Metropolitan Museum of Art's published attribution and the checked image bytes from 14 September 2026.</p>
+      <p>What it shows: how a present-day provenance record can name its owner source, exact digital copy, independence limits and correction history without pretending to witness the 1880 creation event.</p>
+      <p><strong>Still unknown:</strong> custody before 1927, independent proof of the creation event, and whether this approach will help with genuinely ambiguous contemporary human/synthetic work.</p>
+      <div class="actions">
+        <a class="button" href="./camp-fire.html">Read the record</a>
+        <a class="button" href="../specimen.json">Raw JSON</a>
+      </div>
+    </article>
+
+    <article class="record-card">
+      <p class="kicker">Claim provenance · Case 1</p>
+      <h2><a href="./flak-claim.html">The “80% of German flak crews died” claim</a></h2>
+      <p class="status">Current state: unsupported in the sources checked. The true aggregate mortality rate remains unknown in this record.</p>
+      <p>What it shows: how one dramatic claim can appear to gain support as videos, articles and summaries repeat or mutate it even when the evidentiary ancestry remains thin.</p>
+      <p><strong>Still unknown:</strong> the true mortality rate, whether an earlier source contains the figure, and whether the number mutated from a different casualty statistic.</p>
+      <div class="actions">
+        <a class="button" href="./flak-claim.html">Read the record</a>
+        <a class="button" href="../cases/viral-flak-claim.json">Raw JSON</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="panel prose">
+    <p class="meta-label">Reading rule</p>
+    <h2>What a record is — and is not</h2>
+    <p>A Human Record entry can contain institutional records, web pages, witness reports, hashes, corrections and inference. Those are not all the same kind of evidence. Repetition is not corroboration, a hash is not truth, and a corrected record does not change the original event.</p>
+    <p>If stronger evidence appears, the record should change visibly while the earlier state remains recoverable.</p>
+  </section>
+
+  <p class="small">Machine discovery: <a href="./catalog.json">record catalogue JSON</a>. Full source and history: <a href="https://github.com/markgoodbody-bit/human-record">public repository</a>.</p>
+</main>
+<footer class="site-footer">
+  Human-readable views are derived from the underlying public records. <code>SUMMARY != SOURCE · UNKNOWN != ABSENT · PROVENANCE != CERTIFICATION</code>
+</footer>
+</body>
+</html>
