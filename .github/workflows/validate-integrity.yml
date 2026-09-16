@@ -23,3 +23,7 @@ jobs:
         run: python tools/validate_integrity.py
       - name: Test integrity rejection cases
         run: python -m unittest discover -s tools -p 'test_validate_integrity.py'
+      - name: Validate mention and source-check registries
+        run: python tools/validate_operational.py
+      - name: Test operational registry rejection cases
+        run: python -m unittest discover -s tools -p 'test_validate_operational.py'
