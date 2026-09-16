@@ -1,6 +1,6 @@
 {
   "record_type": "transmission_lineage_case",
-  "record_version": "0.1",
+  "record_version": "0.1.1",
   "recorded_at": "2026-09-16",
   "title": "Sieve and riddle making returns from extinction",
   "subject": "Public evidence about how UK sieve and riddle making moved from a reported last maker and later extinction classification into renewed practice, and what remains unknown about the actual transmission of tacit skill.",
@@ -14,7 +14,7 @@
       "side_income_professionals": 1,
       "trainees": 1
     },
-    "boundary": "These are Heritage Crafts' current research claims. The Human Record did not independently count practitioners or adjudicate craft viability."
+    "boundary": "These are Heritage Crafts' published research claims on a page naming the 2025 Red List review cycle. The 2026 check date is a source-read date, not a new census. The Human Record did not independently count practitioners or adjudicate craft viability."
   },
   "selection": {
     "date": "2026-09-16",
@@ -120,6 +120,7 @@
     "Heritage Crafts currently classifies the practice as critically endangered rather than extinct."
   ],
   "unknowns": [
+    "What was transmitted, what was reconstructed or newly learned, and through which routes.",
     "Exactly what practical knowledge, if any, passed directly from Mike Turnock to later makers.",
     "The relative roles of direct teaching, observation, experimentation, published material, surviving tools, prior adjacent skills or other routes in each maker's learning.",
     "Which parts of the older Hill & Sons practice survive unchanged and which have been adapted.",
@@ -153,8 +154,18 @@
         "nodes": ["steve-overthrow-process-site"]
       }
     ],
-    "warning": "Two Heritage Crafts pages are separate publications but one institutional evidence family. The practitioner site was not inspected and is not evidence for current findings."
+    "warning": "Two Heritage Crafts pages are separate publications but one institutional evidence family. The current Heritage Crafts page also cites the Guardian feature; different publisher groups do not prove claim-level independence. The citation alone does not establish which individual claims depend on that feature. The practitioner site was not inspected and is not evidence for current findings."
   },
+  "corrections": [
+    {
+      "date": "2026-09-16",
+      "by": "Codex",
+      "basis": "https://github.com/markgoodbody-bit/human-record/pull/9#issuecomment-5700699961",
+      "change": "Made reconstruction/new learning explicit alternatives to transmission, recorded a known cross-publisher citation, and separated source-read date from review cycle.",
+      "practitioner_observation_added": false,
+      "reported_status_counts_or_events_changed": false
+    }
+  ],
   "authority_and_consent": {
     "strongest_owner": "Heritage Crafts for current UK craft status and safeguarding.",
     "public_source_scope": "This case summarizes already-public reporting about named practitioners and source relationships.",
