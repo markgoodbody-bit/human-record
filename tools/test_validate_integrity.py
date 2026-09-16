@@ -1,5 +1,7 @@
 """Bounded regressions for false structural PASS; no source-record mutation."""
 import json
+import subprocess
+import sys
 from pathlib import Path
 import tempfile
 import unittest
@@ -51,6 +53,27 @@ class IntegrityRegressionTests(unittest.TestCase):
         self.check_catalog()
         self.assertEqual(validator.errors, [])
 
+    def run_cli(self, *args):
+        return subprocess.run([sys.executable, str(Path(validator.__file__).resolve()), *map(str, args)],
+                              capture_output=True, text=True)
+
+    def test_cli_missing_target(self):
+        result = self.run_cli(self.root / "missing")
+        self.assertEqual(result.returncode, 1)
+        self.assertNotIn("PASS:", result.stdout)
+        self.assertIn("does not exist", result.stderr)
+
+    def test_cli_checks_requested_directory(self):
+        result = self.run_cli(self.root)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("missing JSON file: records/catalog.json", result.stdout)
+        self.assertNotIn("PASS:", result.stdout)
+
+    def test_cli_rejects_extra_arguments(self):
+        result = self.run_cli(self.root, "extra")
+        self.assertEqual(result.returncode, 2)
+        self.assertNotIn("PASS:", result.stdout)
+
     def test_wrong_root_types(self):
         for value in (None, [], "text", 42):
             with self.subTest(value=value):
@@ -88,6 +111,40 @@ class IntegrityRegressionTests(unittest.TestCase):
         self.record["machine_record"] = "https://other.example/a.json"
         self.check_catalog()
         self.assertTrue(validator.errors)
+
+    def test_source_url_suffix_is_not_plain_file(self):
+        for suffix in ("?different=1", "#different"):
+            with self.subTest(suffix=suffix):
+                validator.errors.clear()
+                self.record["machine_record"] = "https://thehumanrecord.net/a.json" + suffix
+                self.check_catalog()
+                self.assertTrue(validator.errors)
+
+    def test_external_correction_route_rejected(self):
+        self.record["correction_route"] = "https://other.example/contribute.md"
+        self.check_catalog()
+        self.assertTrue(validator.errors)
+
+    def test_encoded_source_route(self):
+        self.record["full_human_record"] = "https://thehumanrecord.net/%61.md"
+        self.check_catalog()
+        self.assertEqual(validator.errors, [])
+
+    def test_encoded_traversal_rejected(self):
+        self.record["full_human_record"] = "https://thehumanrecord.net/%2e%2e/outside.md"
+        self.check_catalog()
+        self.assertTrue(validator.errors)
+
+    def test_empty_and_duplicate_catalogue(self):
+        self.check_catalog()
+        catalog = json.loads((self.root / "records/catalog.json").read_text(encoding="utf-8"))
+        for records, expected in (([], "non-empty list"), ([self.record, self.record], "duplicate record id")):
+            with self.subTest(expected=expected):
+                validator.errors.clear()
+                catalog["records"] = records
+                with patch.object(validator, "load_json", return_value=catalog):
+                    validator.check_catalog()
+                self.assertTrue(any(expected in item for item in validator.errors))
 
     def test_missing_source(self):
         (self.root / "a.md").unlink()

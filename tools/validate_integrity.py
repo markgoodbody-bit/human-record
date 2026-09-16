@@ -10,12 +10,13 @@ visibility, summary accuracy or the truth of their alignment date.
 from __future__ import annotations
 
 import hashlib
+import argparse
 from html.parser import HTMLParser
 import json
 import re
 import sys
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_ORIGIN = "https://thehumanrecord.net"
@@ -59,10 +60,16 @@ def git_blob_sha(path: Path) -> str:
 
 
 def local_public_path(url: str) -> Path | None:
-    parsed = urlparse(url)
-    if f"{parsed.scheme}://{parsed.netloc}" != PUBLIC_ORIGIN:
+    try:
+        parsed = urlparse(url)
+    except ValueError:
         return None
-    rel = parsed.path.lstrip("/")
+    if (f"{parsed.scheme}://{parsed.netloc}" != PUBLIC_ORIGIN
+            or parsed.query or parsed.fragment or parsed.params):
+        return None
+    rel = unquote(parsed.path).lstrip("/")
+    if "\x00" in rel or "\\" in rel:
+        return None
     if not rel:
         rel = "index.html"
     elif rel.endswith("/"):
@@ -72,7 +79,11 @@ def local_public_path(url: str) -> Path | None:
 
 def require_local_route(url: str, context: str) -> None:
     path = local_public_path(url)
-    if path is not None and not path.exists():
+    if path is None:
+        error(f"{context}: expected a plain local public route: {url}")
+    elif not path.resolve().is_relative_to(ROOT.resolve()):
+        error(f"{context}: local public route escapes checkout: {url}")
+    elif not path.is_file():
         error(f"{context}: local public route does not exist: {url} -> {path.relative_to(ROOT)}")
 
 
@@ -101,8 +112,8 @@ def check_catalog() -> set[str]:
             error(f"records/catalog.json: missing string field {field}")
 
     records = catalog.get("records")
-    if not isinstance(records, list):
-        error("records/catalog.json: records must be a list")
+    if not isinstance(records, list) or not records:
+        error("records/catalog.json: records must be a non-empty list")
         return set()
 
     seen: set[str] = set()
@@ -444,4 +455,11 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("root", nargs="?", type=Path, default=ROOT,
+                        help="checkout to inspect (defaults to this script's repository)")
+    args = parser.parse_args()
+    ROOT = args.root.resolve()
+    if not ROOT.is_dir():
+        parser.exit(1, f"ERROR: checkout directory does not exist: {ROOT}\n")
     sys.exit(main())
