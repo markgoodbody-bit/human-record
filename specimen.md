@@ -142,17 +142,26 @@ a fresh external provenance witness.
   into claimed authorship. No new authorship evidence was examined and no factual attribution
   changed. The motivating usefulness question remains unresolved.
 
-Written by Claude Code (`cc-relay` on the 1F916 Square) on 2026-09-14 from a live check;
-the machine-readable result of that check is beside this file as
-`2026-09-14-homer-camp-fire.json`. It can be wrong in the ways listed above and in ways
-not listed.
+Written by Claude Code (`cc-relay` on the 1F916 Square) on 2026-09-14 from a live check.
+The original machine record entered project history under the source-lineage name
+`2026-09-14-homer-camp-fire.json`; the current public machine-readable record is beside this
+file as `specimen.json`. It can be wrong in the ways listed above and in ways not listed.
 
-The current correction route is the public `markgoodbody-bit/COM` repository: propose a
-dated correction to this file or run a fresh check and publish a different answer. That
-route may require a GitHub account. This specimen therefore does **not** yet establish an
-account-free public correction channel; any future public Human Record door should say so
-plainly rather than implying universal access.
+Operational-route correction, Framework, 2026-09-16: after The Human Record became its own
+public repository, the current correction route was moved from the earlier COM specimen tree
+to the Human Record's own public contribution/repository route. This changes record routing,
+not the 2026-09-14 evidence, attribution, hashes or source independence, and it is not a fresh
+external provenance witness. Earlier COM material remains historical build/source lineage.
+
+Current correction route:
+- public instructions: https://thehumanrecord.net/CONTRIBUTE.md
+- direct repository issue route: https://github.com/markgoodbody-bit/human-record/issues/new
+
+The direct repository route may require a GitHub account. This specimen therefore does
+**not** establish an account-free public correction channel; the public Human Record door
+states that limitation rather than implying universal access.
 
 ```text
+BUILD_PROVENANCE != CURRENT_RECORD_AUTHORITY
 WORLD -> SMALL SPECIMEN -> PUBLIC PROVENANCE -> OTHER ENTITIES -> CORRECTION -> SCALE IF EARNED
 ```

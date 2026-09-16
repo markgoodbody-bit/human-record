@@ -3,19 +3,33 @@
 Status: **PUBLIC STATIC SITE / STEWARDSHIP OFFERED TO 1F916 — NOT YET ACCEPTED**
 
 Read [The Human Record](https://thehumanrecord.net/). Ordinary HTTPS access was
-verified on 15 September 2026. Publication does not establish provenance claims
-or community ownership. See [STEWARDSHIP.md](STEWARDSHIP.md) for the offer and
-current custody, [LICENSE.md](LICENSE.md) for the bounded scope of the CC0
-dedication, and [CONTINUE.md](CONTINUE.md) for non-founder recovery/serving
-instructions.
+verified on 15 September 2026; the first human-browser deployment was subsequently
+verified against its pinned repository source on 16 September 2026. Publication does
+not establish provenance claims or community ownership. See
+[STEWARDSHIP.md](STEWARDSHIP.md) for the offer and current custody,
+[LICENSE.md](LICENSE.md) for the bounded scope of the CC0 dedication, and
+[CONTINUE.md](CONTINUE.md) for non-founder recovery/serving instructions.
 
 The project is built collaboratively with artificial-intelligence apertures, but the
 public record is intended as a gift for humans as well as machine readers. The normal
-human route is now [`records/`](records/): a browseable catalogue and readable views
-of the current records. Those pages are derived reading surfaces, not new evidence and
-not replacements for the Markdown/JSON records or Git history.
+human route is [`records/`](records/): a browseable catalogue and readable views of the
+current records. [`records/about.html`](records/about.html) explains the common anatomy
+of a record in ordinary language. Those pages are derived reading surfaces, not new
+evidence and not replacements for the Markdown/JSON records or Git history.
 
-Related wider project entrance: [Please Start From Here](https://pleasestartfromhere.com/). It is a separate public object and is not part of this record, its evidence, or its stewardship offer.
+The smallest common structure earned by the existing records is described in
+[`RECORD_CONTRACT.md`](RECORD_CONTRACT.md). It is a semantic interoperability note,
+not a universal schema, canon, certification standard or claim that every kind of human
+knowledge can be represented identically.
+
+[`SELECTION.md`](SELECTION.md) carries the working rule for choosing future records: look
+for a specific recoverability/provenance gap, check stronger preservation owners first,
+and do not turn risk into permission to extract or publish living/community knowledge.
+It is a selection orientation, not a ranked queue of human importance.
+
+Related wider project entrance: [Please Start From Here](https://pleasestartfromhere.com/).
+It is a separate public object and is not part of this record, its evidence, or its
+stewardship offer.
 
 The public door currently carries two deliberately different record objects:
 
@@ -27,12 +41,15 @@ Neither is a detector, certification authority, historical oracle or claim of ca
 Contents:
 - `index.html` — human-facing public entrance;
 - `records/index.html` — human-facing record catalogue;
+- `records/about.html` — human explanation of the common record anatomy;
 - `records/camp-fire.html` — readable view of the artwork specimen;
 - `records/flak-claim.html` — readable view of the historical claim-provenance case;
 - `records/catalog.json` — small discovery/currentness catalogue, not a universal schema;
 - `records/style.css` — shared presentation for the human record browser;
-- `specimen.md` — exact human-readable artwork record copied from COM after PR #328 and later corrected here;
-- `specimen.json` — machine-readable artwork record;
+- `RECORD_CONTRACT.md` — minimum semantic contract earned by the current records;
+- `SELECTION.md` — working selection discipline for future records;
+- `specimen.md` — current human-readable artwork record;
+- `specimen.json` — current machine-readable artwork record;
 - `cases/viral-flak-claim.md` — human-readable provenance reconstruction of the viral historical claim;
 - `cases/viral-flak-claim.json` — machine-readable provenance reconstruction;
 - `llms.txt` — compact machine entrance and boundaries;
@@ -46,11 +63,29 @@ Contents:
 - `CNAME` — configured custom domain;
 - `.nojekyll` — serve files without Jekyll processing.
 
-Canonical specimen source used for the original artwork copy:
+## Current source and historical lineage
+
+The current operational source for Human Record records, corrections, human views and
+continuation is this repository:
+
+`https://github.com/markgoodbody-bit/human-record`
+
+The first artwork specimen entered the public Human Record from earlier project work in
+COM; the original specimen merge lineage includes:
 
 `d117594e3718bd3df613f82d53b9dc9971860caf`
 
-The public-door copy must not silently outrun canonical records. Corrections should be dated and preserve what changed. Human browser pages must likewise stay bounded to what the underlying records support.
+That older COM material remains useful build provenance. It is not required as the
+operational record store or correction route for current Human Record entries.
+
+```text
+BUILD_PROVENANCE != CURRENT_RECORD_AUTHORITY
+HISTORICAL_SOURCE_LINEAGE != OPERATIONAL_DEPENDENCY
+```
+
+The current full record files in this repository own their present state. Human browser
+pages must not silently outrun those underlying records. Corrections should be dated and
+preserve what changed.
 
 ## Human-interface boundary
 
@@ -85,11 +120,15 @@ TRUE AGGREGATE RATE: UNKNOWN
 
 `UNSUPPORTED_IN_SOURCES_CHECKED != PROVED_FALSE`.
 
-The case exists to make the evidence ancestry walkable: original presentation, downstream repetition, community challenge, a later video's contradictory assertions, historical sources for nearby facts, and remaining unknowns. No German personnel series or scholarly study of German flak has been examined for this case.
+The case exists to make the evidence ancestry walkable: original presentation, downstream
+repetition, community challenge, a later video's contradictory assertions, historical
+sources for nearby facts, and remaining unknowns. No German personnel series or scholarly
+study of German flak has been examined for this case.
 
 ## Hosting boundary
 
-Do **not** deploy this directory by replacing COM's existing `gh-pages` branch. That branch serves Please Start From Here and is a separate public object.
+Do **not** deploy this directory by replacing COM's existing `gh-pages` branch. That branch
+serves Please Start From Here and is a separate public object.
 
 Current deployment path:
 
@@ -103,9 +142,11 @@ markgoodbody-bit/human-record repository root
 -> stop and observe
 ```
 
-An independent operator should follow `CONTINUE.md`; in particular, do not copy or claim the existing `CNAME`/custom-domain association without legitimate control of that domain.
+An independent operator should follow `CONTINUE.md`; in particular, do not copy or claim
+the existing `CNAME`/custom-domain association without legitimate control of that domain.
 
-No framework, database, JavaScript, analytics, login, token or CMS is required for this public object.
+No framework, database, JavaScript, analytics, login, token or CMS is required for this
+public object.
 
 ## Ceilings
 
@@ -123,4 +164,6 @@ INDEPENDENT_COPY != INDEPENDENT_GOVERNANCE
 PLUMBING_SPECIMEN != SYNTHETIC_ERA_PURPOSE_TEST
 PUBLICATION != VALIDATION
 SUMMARY != SOURCE
+RECORDING != OWNING
+PRESERVATION != EXTRACTION
 ```

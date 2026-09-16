@@ -12,9 +12,12 @@ Status: ONE ARTWORK SPECIMEN + ONE SOURCE-TRAIL CASE / OFFERED TO 1F916 FOR STEW
 
 Human gift surface:
 - Browse current records: https://thehumanrecord.net/records/
+- How records work: https://thehumanrecord.net/records/about.html
 - Camp Fire human view: https://thehumanrecord.net/records/camp-fire.html
 - Flak-claim human view: https://thehumanrecord.net/records/flak-claim.html
 - Record discovery catalogue: https://thehumanrecord.net/records/catalog.json
+- Working semantic record contract: https://thehumanrecord.net/RECORD_CONTRACT.md
+- Working record-selection orientation: https://thehumanrecord.net/SELECTION.md
 - These pages summarize existing records for ordinary readers. HUMAN_VIEW != NEW_EVIDENCE; SUMMARY != SOURCE.
 
 Start / evidence surfaces:
@@ -29,10 +32,24 @@ Start / evidence surfaces:
 - Standard CC0 legal code: https://thehumanrecord.net/LICENSE
 - Bounded rights/licence scope notice: https://thehumanrecord.net/LICENSE.md
 - Non-founder continuation/recovery instructions: https://thehumanrecord.net/CONTINUE.md
-- Public source: https://github.com/markgoodbody-bit/human-record
-- Original artwork specimen source lineage: https://github.com/markgoodbody-bit/COM/tree/main/human-record/specimens
+- Public source and current operational record repository: https://github.com/markgoodbody-bit/human-record
+- Historical artwork-record build lineage: https://github.com/markgoodbody-bit/COM/tree/main/human-record/specimens — useful provenance, not required as the current correction or continuation surface.
 - Owner record: https://www.metmuseum.org/art/collection/search/11112
 - Related wider project entrance: https://pleasestartfromhere.com/ — a separate public object; not part of this record, its evidence, or its stewardship offer.
+
+Record contract:
+- RECORD_CONTRACT.md describes the minimum semantic questions currently earned by the two existing records: identity, subject/claim, current state, evidence/source ancestry, findings, unknowns/not-checked material, correction history, rights/authority boundaries, and human/machine routes.
+- It is not a universal JSON schema, ontology, canon or certification standard.
+- Future record types may add fields only when real material requires them.
+- COMMON QUESTIONS != IDENTICAL OBJECTS.
+
+Selection:
+- SELECTION.md asks why a new record should exist before the collection grows.
+- Prefer a specific recoverability/provenance gap over fame, ease or abstract importance.
+- Distinguish CONTENT LOSS, LINEAGE LOSS and LIVING-KNOWLEDGE LOSS.
+- Check stronger preservation owners first; OWNER_FOUND + NO CONSEQUENTIAL GAP -> ROUTE / STOP.
+- For living creators, practitioners or communities, risk does not create permission. RECORDING != OWNING; PRESERVATION != EXTRACTION; COMMUNITY_KNOWLEDGE != PUBLIC_DOMAIN.
+- Candidate families are quarry, not a ranked queue of human value.
 
 Discovery:
 - Public crawling rules: https://thehumanrecord.net/robots.txt
@@ -54,6 +71,7 @@ Rights:
 
 Continuation:
 - https://thehumanrecord.net/CONTINUE.md explains how a future non-founder can recover and independently serve a copy without private Mark/Framework credentials.
+- The current Human Record repository is sufficient to inspect the current records, human views, machine catalogue, correction route, rights boundary and continuation instructions. Earlier COM material is historical build provenance, not an operational dependency for current record correction.
 - An independent deployment must not copy or claim thehumanrecord.net/CNAME unless the operator legitimately controls that domain.
 - Serving or archiving a copy is technical custody, not governance or evidence that 1F916 accepted stewardship.
 
@@ -61,7 +79,7 @@ Specimen 1:
 - Winslow Homer, Camp Fire, 1880
 - Owner attribution: The Metropolitan Museum of Art
 - Owner-source check observed: 2026-09-14T20:46:10Z
-- Original canonical specimen merge used for the public-door copy: d117594e3718bd3df613f82d53b9dc9971860caf
+- Original specimen lineage includes merge d117594e3718bd3df613f82d53b9dc9971860caf before the current Human Record repository became the operational public source.
 
 Boundaries:
 EVIDENCE != INFERENCE
@@ -85,6 +103,10 @@ INDEPENDENT_COPY != INDEPENDENT_GOVERNANCE
 HUMAN_VIEW != NEW_EVIDENCE
 SUMMARY != SOURCE
 BROWSEABLE != CERTIFIED
+RECORDING != OWNING
+PRESERVATION != EXTRACTION
+COMMUNITY_KNOWLEDGE != PUBLIC_DOMAIN
+BUILD_PROVENANCE != CURRENT_RECORD_AUTHORITY
 
 This 1880 specimen tests provenance-record plumbing. It does not establish usefulness against contemporary human/synthetic ambiguity.
 
