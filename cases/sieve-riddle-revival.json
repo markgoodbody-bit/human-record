@@ -1,0 +1,183 @@
+{
+  "record_type": "transmission_lineage_case",
+  "record_version": "0.1",
+  "recorded_at": "2026-09-16",
+  "title": "Sieve and riddle making returns from extinction",
+  "subject": "Public evidence about how UK sieve and riddle making moved from a reported last maker and later extinction classification into renewed practice, and what remains unknown about the actual transmission of tacit skill.",
+  "status": "public_lineage_partially_reconstructed",
+  "living_practice_status": {
+    "reported_status": "critically_endangered",
+    "status_owner": "Heritage Crafts",
+    "checked_at": "2026-09-16",
+    "reported_counts": {
+      "main_income_professionals": 0,
+      "side_income_professionals": 1,
+      "trainees": 1
+    },
+    "boundary": "These are Heritage Crafts' current research claims. The Human Record did not independently count practitioners or adjudicate craft viability."
+  },
+  "selection": {
+    "date": "2026-09-16",
+    "chosen_by": "Framework under COM #347 after a bounded at-risk knowledge/creativity quarry and strongest-owner subtraction.",
+    "basis": "The case contains a visible public transition from reported last maker, through an extinction classification, into revival and new training. It tests transmission-lineage recording without treating documentation as preservation of a living skill.",
+    "strongest_owner": "Heritage Crafts for current UK craft status, viability, practitioners, training routes and safeguarding.",
+    "thr_gap": "Preserve the public source ancestry of the revival story, separate attention pathways from skill transmission, and keep the missing parts of the tacit-knowledge chain visible.",
+    "not_implied": [
+      "that this craft is more culturally important than other endangered practices",
+      "that The Human Record can preserve the craft itself",
+      "that named practitioners endorse or participate in this record",
+      "that a public process description substitutes for direct teaching or practice"
+    ],
+    "stop_or_shrink_condition": "If a stronger owner preserves the transmission lineage more completely and accessibly, link outward and reduce or retire duplicative THR material."
+  },
+  "nodes": [
+    {
+      "id": "guardian-turnock-2009",
+      "kind": "independent_news_feature_practitioner_interview",
+      "title": "How to make a sieve and riddle",
+      "publisher": "The Guardian",
+      "date": "2009-11-28",
+      "url": "https://www.theguardian.com/money/2009/nov/28/how-to-make-sieve-riddle",
+      "observed_at": "2026-09-16",
+      "independence_group": "Guardian News & Media",
+      "role": "Contemporary reporting from Mike Turnock's workshop. Reports that, as far as Turnock knew, he was the last British handmade sieve-and-riddle maker; records family/business continuity and his hope to find someone to train before retirement.",
+      "boundary": "Independent reporting about Turnock is not independent proof that no other maker existed in the UK. Detailed process text and images are not reproduced by this record."
+    },
+    {
+      "id": "heritage-crafts-red-list-2019",
+      "kind": "institutional_announcement",
+      "title": "Craft skills under threat with 37 additions to the Red List of Endangered Crafts",
+      "publisher": "Heritage Crafts Association",
+      "date": "2019-03-08",
+      "url": "https://heritagecrafts.org.uk/our-stories/announcements/craft-skills-under-threat-with-37-additions-to-the-red-list-of-endangered-crafts/",
+      "observed_at": "2026-09-16",
+      "independence_group": "Heritage Crafts",
+      "role": "Reports that sieve and riddle making had been listed extinct in the 2017 Red List and had been revived by two new makers who were beginning commercial production by March 2019.",
+      "boundary": "Same institutional source family as the current Heritage Crafts craft entry; separate URLs are not independent witnesses."
+    },
+    {
+      "id": "heritage-crafts-current",
+      "kind": "current_institutional_craft_record",
+      "title": "Sieve and riddle making",
+      "publisher": "Heritage Crafts",
+      "url": "https://heritagecrafts.org.uk/craft/sieve-and-riddle-making/",
+      "observed_at": "2026-09-16",
+      "review_cycle": "2025 Red List reviewers named on page",
+      "independence_group": "Heritage Crafts",
+      "role": "Current craft-status owner used by this record. Reports critically endangered status; 0 main-income professionals, 1 side-income professional, 1 trainee; says Mike Turnock retired in 2010 and the craft was extinct until 2018; identifies Steve Overthrow and Colin Davies as current makers and describes public-attention pathways into the craft.",
+      "boundary": "The Human Record defers current status and practitioner-count claims to Heritage Crafts rather than independently verifying them."
+    },
+    {
+      "id": "steve-overthrow-process-site",
+      "kind": "practitioner_website_linked_by_owner",
+      "title": "Sieve and riddle maker website / process page",
+      "publisher": "Steve Overthrow",
+      "url": "https://www.sievesandriddles.co.uk/",
+      "process_url": "https://www.sievesandriddles.co.uk/sievesandriddles",
+      "observed_at": "2026-09-16",
+      "retrieval_status": "not_retrieved_in_this_aperture",
+      "role": "Heritage Crafts says the practitioner website contains details of the sieve-making process.",
+      "boundary": "The current research aperture did not obtain the linked site/process page. One fetch returned a 502 and another was unavailable from cache. FETCH_FAILED_HERE != SITE_GONE. No finding depends on unseen content."
+    }
+  ],
+  "lineage_events": [
+    {
+      "date": "2009-11-28",
+      "event": "Guardian reports Mike Turnock as, to his knowledge, the last British handmade sieve-and-riddle maker and records his wish to find a successor before retirement.",
+      "basis_nodes": ["guardian-turnock-2009"]
+    },
+    {
+      "date": "2010",
+      "event": "Heritage Crafts currently reports that Mike Turnock retired in 2010.",
+      "basis_nodes": ["heritage-crafts-current"]
+    },
+    {
+      "date": "2017",
+      "event": "Heritage Crafts reports that sieve and riddle making was listed extinct in the first Red List.",
+      "basis_nodes": ["heritage-crafts-red-list-2019", "heritage-crafts-current"]
+    },
+    {
+      "date": "2018",
+      "event": "The current Heritage Crafts page describes the extinction interval as lasting until 2018.",
+      "basis_nodes": ["heritage-crafts-current"]
+    },
+    {
+      "date": "2019-03-08",
+      "event": "Heritage Crafts reports two new makers had revived the craft and were beginning commercial production.",
+      "basis_nodes": ["heritage-crafts-red-list-2019"]
+    },
+    {
+      "date": "current_at_2026-09-16_check",
+      "event": "Heritage Crafts identifies Steve Overthrow and Colin Davies in the revival/current-practice record, reports Steve is focusing on training a new maker, and classifies the craft as critically endangered.",
+      "basis_nodes": ["heritage-crafts-current"]
+    }
+  ],
+  "current_findings": [
+    "A 2009 independent newspaper feature recorded Mike Turnock as, to his knowledge, the last British handmade sieve-and-riddle maker and documented his intention to retire if he could find a successor.",
+    "Heritage Crafts reports that the craft was listed extinct in 2017 and had been revived by two new makers by March 2019.",
+    "Heritage Crafts currently identifies Steve Overthrow's discovery of the Red List and Colin Davies's viewing of a Countryfile feature as pathways into making.",
+    "These public-attention pathways do not establish how the tacit making skill itself was transmitted.",
+    "Heritage Crafts currently classifies the practice as critically endangered rather than extinct."
+  ],
+  "unknowns": [
+    "Exactly what practical knowledge, if any, passed directly from Mike Turnock to later makers.",
+    "The relative roles of direct teaching, observation, experimentation, published material, surviving tools, prior adjacent skills or other routes in each maker's learning.",
+    "Which parts of the older Hill & Sons practice survive unchanged and which have been adapted.",
+    "Whether all materially important tacit knowledge survived the extinction interval.",
+    "The identity or training stage of the current trainee beyond Heritage Crafts' aggregate count.",
+    "The completeness of the current practitioner count.",
+    "Long-term commercial viability.",
+    "The current general availability and contents of the practitioner process website linked by Heritage Crafts."
+  ],
+  "not_checked": [
+    "Direct interviews with Mike Turnock, Steve Overthrow, Colin Davies or the current trainee.",
+    "The BBC Countryfile episode described by Heritage Crafts.",
+    "Steve Overthrow's process website content, because it was not retrieved in this research aperture.",
+    "Surviving Hill & Sons tools, patterns, workshop records or business archives.",
+    "Physical comparison of work from different generations.",
+    "Heritage Crafts' unpublished reviewer evidence.",
+    "Independent search for practitioners outside the Heritage Crafts count."
+  ],
+  "source_independence": {
+    "groups": [
+      {
+        "id": "Guardian News & Media",
+        "nodes": ["guardian-turnock-2009"]
+      },
+      {
+        "id": "Heritage Crafts",
+        "nodes": ["heritage-crafts-red-list-2019", "heritage-crafts-current"]
+      },
+      {
+        "id": "practitioner_site_not_retrieved",
+        "nodes": ["steve-overthrow-process-site"]
+      }
+    ],
+    "warning": "Two Heritage Crafts pages are separate publications but one institutional evidence family. The practitioner site was not inspected and is not evidence for current findings."
+  },
+  "authority_and_consent": {
+    "strongest_owner": "Heritage Crafts for current UK craft status and safeguarding.",
+    "public_source_scope": "This case summarizes already-public reporting about named practitioners and source relationships.",
+    "practitioner_contact": "none",
+    "endorsement_claimed": false,
+    "private_or_restricted_process_material_used": false,
+    "future_boundary": "Any practitioner-specific recording of tacit knowledge, workshop practice, tools, voice, video or teaching requires a separate permission/authority decision. Cultural risk is not permission to extract."
+  },
+  "correction_rule": "Bring stronger public evidence about the transmission chain, dates, source relationships or current-status boundaries. Do not submit private practitioner information or unpublished process material without the right to share it.",
+  "correction_route": {
+    "instructions": "https://thehumanrecord.net/CONTRIBUTE.md",
+    "issue_route": "https://github.com/markgoodbody-bit/human-record/issues/new"
+  },
+  "invariants": [
+    "RECORDING != CONTINUATION",
+    "DOCUMENTATION != LIVING PRACTICE",
+    "ATTENTION PATHWAY != SKILL TRANSMISSION",
+    "REVIVAL != VIABILITY",
+    "PUBLIC SOURCE != ENDORSEMENT",
+    "RISK != PERMISSION",
+    "RECORDING != OWNING",
+    "PRESERVATION != EXTRACTION",
+    "UNKNOWN != ABSENT",
+    "FETCH_FAILED_HERE != SITE_GONE"
+  ]
+}
