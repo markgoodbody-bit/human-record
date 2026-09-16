@@ -20,8 +20,13 @@ class ViewBasisTests(unittest.TestCase):
             "id": "example",
             "full_human_record": "https://thehumanrecord.net/record.md",
             "machine_record": "https://thehumanrecord.net/record.json",
-            "view_basis": {"source_git_blobs": {name: git_blob(data) for name, data in self.data.items()}},
+            "human_view": "https://thehumanrecord.net/records/example.html",
+            "view_basis": {"source_record_version": "0.1", "source_git_blobs": {name: git_blob(data) for name, data in self.data.items()}},
         }
+        markers = " and ".join(f"{name}@{git_blob(data)[:7]}…" for name, data in self.data.items())
+        self.label = f"<p><strong>View basis:</strong> record version <code>0.1</code>, {markers}.</p>"
+        self.view = self.root / "records/example.html"
+        self.view.write_text(self.label, encoding="utf-8")
         self.save()
 
     def save(self):
@@ -75,6 +80,22 @@ class ViewBasisTests(unittest.TestCase):
         self.record["view_basis"]["source_git_blobs"]["record.md"] = "invalid"
         self.save()
         self.assertIn("invalid Git blob ID", check(self.root)[1][0])
+
+    def test_stale_html_pin(self):
+        self.view.write_text(self.label.replace(git_blob(self.data["record.md"])[:7], "0000000"), encoding="utf-8")
+        self.assertIn("HTML source marker", check(self.root)[1][0])
+
+    def test_stale_html_version(self):
+        self.view.write_text(self.label.replace("0.1", "0.2"), encoding="utf-8")
+        self.assertIn("version mismatch", check(self.root)[1][0])
+
+    def test_missing_html_label(self):
+        self.view.write_text("<p>No basis</p>", encoding="utf-8")
+        self.assertTrue(check(self.root)[1])
+
+    def test_duplicate_html_label(self):
+        self.view.write_text(self.label * 2, encoding="utf-8")
+        self.assertTrue(check(self.root)[1])
 
 
 if __name__ == "__main__":
