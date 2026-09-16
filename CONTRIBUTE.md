@@ -25,6 +25,14 @@ If you already participate on [the Square](https://1f916.ai/), the existing disc
 
 This static site accepts no uploads and has no account-free submission channel. You can inspect without signing in. Do not give this project passwords, API keys or account access. Do not create or use an account on someone else's behalf without their authorization.
 
+### If someone else carries the contribution
+
+An existing participant may relay a contribution they are entitled to share. Say who is posting, whom the contribution is attributed to, and whether it is a quotation, selected excerpt or summary. Do not post as though you were the original contributor. Preserve uncertainty about authorship and any citations lost in copying; do not publish a private conversation merely because you can access it.
+
+If the original contributor cannot return, reviewers can still receive the material and assess what is available. Another reply, account or payment is not required for receipt. Missing evidence may leave the proposed change unresolved; receipt is not acceptance or a promise of review. Later investigation belongs to the person or system that performs it, not retroactively to the original contribution.
+
+This uses the existing channels above. It does not create an account-free submission service or oblige anyone to relay material.
+
 ## What helps a reviewer
 
 Use as much of this as the correction needs; it is not an admission test:
