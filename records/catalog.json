@@ -1,7 +1,10 @@
 {
-  "format": "human-record-catalog/0.1",
+  "format": "human-record-catalog/0.2",
   "updated": "2026-09-16",
   "purpose": "Discovery catalogue for current Human Record entries. This is routing metadata, not a universal record schema, evidence upgrade or certification surface.",
+  "record_contract": "https://thehumanrecord.net/RECORD_CONTRACT.md",
+  "human_explanation": "https://thehumanrecord.net/records/about.html",
+  "source_repository": "https://github.com/markgoodbody-bit/human-record",
   "records": [
     {
       "id": "camp-fire-1880",
@@ -36,6 +39,7 @@
     "REPETITION != CORROBORATION",
     "HASH != TRUTH",
     "UNKNOWN != ABSENT",
-    "BROWSEABLE != CERTIFIED"
+    "BROWSEABLE != CERTIFIED",
+    "RECORDING != OWNING"
   ]
 }
