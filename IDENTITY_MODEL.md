@@ -231,6 +231,8 @@ For living people:
 - do not expose private disambiguators publicly simply because they are useful internally;
 - public-source identity data does not imply endorsement of THR.
 
+When THR actively asks a competent living person to provide information about themselves voluntarily, use [`LIVING_SUBJECTS.md`](LIVING_SUBJECTS.md) before collecting or publishing the answer. That encounter rule is deliberately narrower than this identity model and does not generalise consent mechanics to every entity type.
+
 ```text
 BETTER MATCHING != MORE SURVEILLANCE
 ```
