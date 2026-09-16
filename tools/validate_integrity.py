@@ -10,6 +10,7 @@ visibility, summary accuracy or the truth of their alignment date.
 from __future__ import annotations
 
 import hashlib
+import argparse
 from html.parser import HTMLParser
 import json
 import re
@@ -444,4 +445,11 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("root", nargs="?", type=Path, default=ROOT,
+                        help="checkout to inspect (defaults to this script's repository)")
+    args = parser.parse_args()
+    ROOT = args.root.resolve()
+    if not ROOT.is_dir():
+        parser.exit(1, f"ERROR: checkout directory does not exist: {ROOT}\n")
     sys.exit(main())

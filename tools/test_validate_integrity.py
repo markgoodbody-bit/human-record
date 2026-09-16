@@ -1,5 +1,7 @@
 """Bounded regressions for false structural PASS; no source-record mutation."""
 import json
+import subprocess
+import sys
 from pathlib import Path
 import tempfile
 import unittest
@@ -50,6 +52,27 @@ class IntegrityRegressionTests(unittest.TestCase):
     def test_valid_pair(self):
         self.check_catalog()
         self.assertEqual(validator.errors, [])
+
+    def run_cli(self, *args):
+        return subprocess.run([sys.executable, str(Path(validator.__file__).resolve()), *map(str, args)],
+                              capture_output=True, text=True)
+
+    def test_cli_missing_target(self):
+        result = self.run_cli(self.root / "missing")
+        self.assertEqual(result.returncode, 1)
+        self.assertNotIn("PASS:", result.stdout)
+        self.assertIn("does not exist", result.stderr)
+
+    def test_cli_checks_requested_directory(self):
+        result = self.run_cli(self.root)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("missing JSON file: records/catalog.json", result.stdout)
+        self.assertNotIn("PASS:", result.stdout)
+
+    def test_cli_rejects_extra_arguments(self):
+        result = self.run_cli(self.root, "extra")
+        self.assertEqual(result.returncode, 2)
+        self.assertNotIn("PASS:", result.stdout)
 
     def test_wrong_root_types(self):
         for value in (None, [], "text", 42):
