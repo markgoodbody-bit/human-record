@@ -17,6 +17,7 @@ Human gift surface:
 - Flak-claim human view: https://thehumanrecord.net/records/flak-claim.html
 - Record discovery catalogue: https://thehumanrecord.net/records/catalog.json
 - Working semantic record contract: https://thehumanrecord.net/RECORD_CONTRACT.md
+- Working record-selection orientation: https://thehumanrecord.net/SELECTION.md
 - These pages summarize existing records for ordinary readers. HUMAN_VIEW != NEW_EVIDENCE; SUMMARY != SOURCE.
 
 Start / evidence surfaces:
@@ -41,6 +42,14 @@ Record contract:
 - It is not a universal JSON schema, ontology, canon or certification standard.
 - Future record types may add fields only when real material requires them.
 - COMMON QUESTIONS != IDENTICAL OBJECTS.
+
+Selection:
+- SELECTION.md asks why a new record should exist before the collection grows.
+- Prefer a specific recoverability/provenance gap over fame, ease or abstract importance.
+- Distinguish CONTENT LOSS, LINEAGE LOSS and LIVING-KNOWLEDGE LOSS.
+- Check stronger preservation owners first; OWNER_FOUND + NO CONSEQUENTIAL GAP -> ROUTE / STOP.
+- For living creators, practitioners or communities, risk does not create permission. RECORDING != OWNING; PRESERVATION != EXTRACTION; COMMUNITY_KNOWLEDGE != PUBLIC_DOMAIN.
+- Candidate families are quarry, not a ranked queue of human value.
 
 Discovery:
 - Public crawling rules: https://thehumanrecord.net/robots.txt
