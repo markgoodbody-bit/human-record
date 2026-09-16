@@ -58,6 +58,72 @@ def git_blob_sha(path: Path) -> str:
     return hashlib.sha1(header + data).hexdigest()
 
 
+# Vocabularies are read from the model documents, not copied into this file. On
+# 2026-09-16 registry/sources.json shipped two preservation states the model does
+# not define (one of them a rights conclusion SOURCE_MODEL.md §6 says not to draw)
+# and this validator passed, because it checked that `status` was a string. A
+# second copy of the list here would drift from the model the same way the
+# registry did; the model is the mould, so read it.
+#
+# `closed` lists ("Working preservation states:") produce errors on an unknown
+# value; `open` lists ("Possible outcomes include:", "Examples:") produce
+# warnings, because the model itself leaves them extensible.
+VOCABULARIES = (
+    # (document, heading, key path, closed?)
+    ("SOURCE_MODEL.md", "## 6. Preservation state", "preservation.status", True),
+    ("SOURCE_MODEL.md", "## 3. Observation", "observation.outcome", False),
+    ("SOURCE_MODEL.md", "## 5. Source ancestry and relationships", "relation.type", False),
+    ("ASSERTION_MODEL.md", "## 4. Assertion state", "assertion.state", False),
+)
+
+
+_vocabulary_cache: dict[tuple[str, str], set[str] | None] = {}
+
+
+def model_vocabulary(document: str, heading: str) -> set[str] | None:
+    """The backticked bullet items under `heading` in `document`, up to the next heading.
+    None (and one error, not one per row) if the document or heading is missing or the
+    list is empty, so a model that stops naming its states fails loudly rather than passing."""
+    key = (document, heading)
+    if key not in _vocabulary_cache:
+        _vocabulary_cache[key] = _read_model_vocabulary(document, heading)
+    return _vocabulary_cache[key]
+
+
+def _read_model_vocabulary(document: str, heading: str) -> set[str] | None:
+    path = ROOT / document
+    try:
+        text = path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        error(f"{document}: missing; cannot read the vocabulary under {heading!r}")
+        return None
+    start = text.find(heading)
+    if start < 0:
+        error(f"{document}: heading {heading!r} not found; cannot read its vocabulary")
+        return None
+    section = text[start + len(heading):]
+    end = re.search(r"^## ", section, re.M)
+    section = section[: end.start()] if end else section
+    values = set(re.findall(r"^- `([a-z_]+)`", section, re.M))
+    if not values:
+        error(f"{document}: no backticked bullet values under {heading!r}")
+        return None
+    return values
+
+
+def check_vocabulary(value, document: str, heading: str, key: str, closed: bool, context: str) -> None:
+    allowed = model_vocabulary(document, heading)
+    if allowed is None or not isinstance(value, str):
+        return
+    if value in allowed:
+        return
+    message = f"{context}: {key} {value!r} is not in {document} {heading!r} ({', '.join(sorted(allowed))})"
+    if closed:
+        error(message)
+    else:
+        warn(message + "; the model calls this list open, so this is a warning")
+
+
 def local_public_path(url: str) -> Path | None:
     parsed = urlparse(url)
     if f"{parsed.scheme}://{parsed.netloc}" != PUBLIC_ORIGIN:
@@ -313,10 +379,15 @@ def check_sources(record_ids: set[str]) -> tuple[set[str], set[str]]:
                     error(f"{source_id}: observation {obs_id!r} missing observed_at")
                 if not isinstance(observation.get("outcome"), str):
                     error(f"{source_id}: observation {obs_id!r} missing outcome")
+                else:
+                    check_vocabulary(observation["outcome"], *VOCABULARIES[1][:3], VOCABULARIES[1][3],
+                                     f"{source_id}: observation {obs_id!r}")
 
         preservation = source.get("preservation")
         if not isinstance(preservation, dict) or not isinstance(preservation.get("status"), str):
             error(f"{source_id}: preservation.status must be present")
+        else:
+            check_vocabulary(preservation["status"], *VOCABULARIES[0][:3], VOCABULARIES[0][3], source_id)
 
         for record_id in source.get("used_by_records", []):
             if record_id not in record_ids:
@@ -334,6 +405,8 @@ def check_sources(record_ids: set[str]) -> tuple[set[str], set[str]]:
             target = relation.get("target")
             if isinstance(target, str) and target.startswith("thr:source:") and target not in source_ids:
                 error(f"{source_id}: relation points to unknown source {target}")
+            if isinstance(relation.get("type"), str):
+                check_vocabulary(relation["type"], *VOCABULARIES[2][:3], VOCABULARIES[2][3], source_id)
 
     return source_ids, observation_ids
 
@@ -370,6 +443,8 @@ def check_assertions(
             error(f"{assertion_id}: predicate must be a non-empty string")
         if not isinstance(assertion.get("state"), str) or not assertion.get("state"):
             error(f"{assertion_id}: state must be a non-empty string")
+        else:
+            check_vocabulary(assertion["state"], *VOCABULARIES[3][:3], VOCABULARIES[3][3], assertion_id)
 
         for role in ("subject", "object"):
             value = assertion.get(role)
