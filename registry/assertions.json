@@ -1,0 +1,81 @@
+{
+  "format": "human-record-assertion-registry/0.1",
+  "updated": "2026-09-16",
+  "purpose": "Sparse cross-record assertions whose evidence/state need durable reference. This is not a universal truth graph and does not replace record-specific structures.",
+  "model": "https://thehumanrecord.net/ASSERTION_MODEL.md",
+  "assertions": [
+    {
+      "id": "thr:assertion:844f548d-80b8-4f25-a03b-d39e812f1ede",
+      "subject": {"entity_id": "thr:entity:a9730018-62ab-4ccd-9882-eec34134c526"},
+      "predicate": "creator_attribution",
+      "object": {"entity_id": "thr:entity:da243807-2e4e-44a5-86bc-aa8b8d4f23fb"},
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": ["thr:source:fb6063f7-6e0d-4f87-9a9c-c5e5d001d724"],
+        "observation_ids": ["thr:observation:28fb29f3-ba69-44b4-a96c-c87db4e11bbe"]
+      },
+      "scope": {
+        "meaning": "The Metropolitan Museum of Art attributes the identified work to Winslow Homer; THR reconciled that owner attribution at the recorded observation time.",
+        "not_established": "Independent observation or proof of the 1880 creation event."
+      },
+      "record_links": ["specimen.json", "specimen.md"],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:5a39064c-4cd4-4d41-92e5-dff7f38799ea",
+      "subject": {"entity_id": "thr:entity:ccdb0a44-1893-448d-a7fc-631e18d829cf"},
+      "predicate": "current_craft_status",
+      "object": {"literal": "critically endangered"},
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": ["thr:source:2790ee98-28a4-4fca-bd80-b5b5484c47ef"],
+        "observation_ids": ["thr:observation:9b4e00c3-7803-4ee7-9392-b1a3b0a642e0"]
+      },
+      "scope": {
+        "status_owner": "Heritage Crafts",
+        "source_read_at": "2026-09-16",
+        "source_reported_review_cycle": "2025 Red List reviewers named on page",
+        "not_established": "An independent THR practitioner census or adjudication of craft viability."
+      },
+      "record_links": ["cases/sieve-riddle-revival.json", "cases/sieve-riddle-revival.md"],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:a0b4db04-3dc6-4dea-a489-011c8b72baae",
+      "subject": {"record_id": "viral-flak-claim", "local_subject": "primary_claim"},
+      "predicate": "claim_status",
+      "object": {"literal": "Roughly 80% of German anti-aircraft crew members died during the Second World War."},
+      "state": "unsupported_in_sources_checked",
+      "evidence": {
+        "source_ids": [
+          "thr:source:49067461-b413-47a3-b554-fa0ed639db58",
+          "thr:source:5de43bc3-cf94-40c3-b312-1217d37dd812",
+          "thr:source:0b87b7bd-7673-4183-bfbe-03f316efffb0",
+          "thr:source:f2d4cff8-d1bd-49a6-b19b-d177326ad620"
+        ],
+        "observation_ids": [
+          "thr:observation:b10adb22-8832-4337-97f8-d61854b5bf98",
+          "thr:observation:e8987ae5-9762-4deb-a1f5-d85b1154f802",
+          "thr:observation:5a6bc6b4-305a-45d7-9d1e-ad73a6649688",
+          "thr:observation:99b0c704-115b-4286-9748-43cf2add0e67"
+        ]
+      },
+      "scope": {
+        "record_version": "0.2.4",
+        "historical_truth_status": "unknown",
+        "meaning": "The bounded sources checked by the current record do not establish the claimed aggregate German flak-crew mortality rate.",
+        "not_established": "That the claim is false, that the archive search is exhaustive, or that no earlier source contains the figure."
+      },
+      "record_links": ["cases/viral-flak-claim.json", "cases/viral-flak-claim.md"],
+      "corrections": []
+    }
+  ],
+  "ceilings": [
+    "ENTITY != ASSERTION",
+    "ASSERTION != TRUTH",
+    "SOURCE STATEMENT != THR ENDORSEMENT",
+    "CURRENT RECORD FINDING != PERMANENT WORLD FACT",
+    "SAME NUMBER != SAME CLAIM",
+    "EXTRACTION != ENDORSEMENT"
+  ]
+}
