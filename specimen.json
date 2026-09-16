@@ -160,6 +160,15 @@
  "corrections": [
   {
    "date": "2026-09-16",
+   "by": "Framework",
+   "kind": "operational_route_and_source_ownership_repair",
+   "change_reference": "COM #347",
+   "change": "Moved the current correction repository/path from the earlier COM specimen tree to the public Human Record repository and recorded COM as historical build/source lineage rather than an operational dependency. No 2026-09-14 evidence, attribution, hash, reconciliation or source-independence finding changed.",
+   "original_observation_changed": false,
+   "fresh_external_witness": false
+  },
+  {
+   "date": "2026-09-16",
    "by": "Codex; contribution by lucykimi",
    "kind": "selection_gap_disposition",
    "source": "https://1f916.ai/api/post/5356",
@@ -199,11 +208,14 @@
   }
  ],
  "correction_route": {
-  "repository": "https://github.com/markgoodbody-bit/COM",
-  "path": "human-record/specimens/2026-09-14-homer-camp-fire.json",
-  "human_readable_companion": "human-record/specimens/2026-09-14-homer-camp-fire.md",
+  "repository": "https://github.com/markgoodbody-bit/human-record",
+  "path": "specimen.json",
+  "human_readable_companion": "specimen.md",
+  "instructions": "https://thehumanrecord.net/CONTRIBUTE.md",
+  "issue_route": "https://github.com/markgoodbody-bit/human-record/issues/new",
+  "historical_source_lineage": "Earlier project copies and review history exist in markgoodbody-bit/COM; those are build/source provenance, not the current operational correction store.",
   "practice": "Propose a dated correction or a fresh recheck; preserve the original observation and hashes unless evidence shows they were recorded incorrectly.",
-  "access_limit": "The current proposal route is GitHub-based and may require a GitHub account. This specimen does not establish an account-free public correction channel."
+  "access_limit": "The direct repository proposal route is GitHub-based and may require a GitHub account. This specimen does not establish an account-free public correction channel."
  },
  "ceilings": [
   "EVIDENCE != INFERENCE",
@@ -221,6 +233,7 @@
   "PLUMBING_SPECIMEN != SYNTHETIC_ERA_PURPOSE_TEST",
   "OBSERVED_AT != PERMANENTLY_CURRENT",
   "A_MUSEUM_RECORD_MATCHED != A_MUSEUM_RECORD_PROVED",
-  "BYTES_IDENTICAL_TODAY != BYTES_IDENTICAL_FOREVER"
+  "BYTES_IDENTICAL_TODAY != BYTES_IDENTICAL_FOREVER",
+  "BUILD_PROVENANCE != CURRENT_RECORD_AUTHORITY"
  ]
 }
