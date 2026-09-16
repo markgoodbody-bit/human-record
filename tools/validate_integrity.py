@@ -3,12 +3,14 @@
 
 This script deliberately checks structure, identity uniqueness, local routing and byte
 identity. It does not decide whether historical, provenance, identity or assertion claims
-are true.
+are true. HTML basis labels are compared to the catalogue, not assessed for rendered
+visibility, summary accuracy or the truth of their alignment date.
 """
 
 from __future__ import annotations
 
 import hashlib
+from html.parser import HTMLParser
 import json
 import re
 import sys
@@ -147,6 +149,7 @@ def check_catalog() -> set[str]:
         if len(required_paths) != 2 or set(pinned) != required_paths:
             error(f"{record_id}: source pins must cover exactly both record source routes")
             continue
+        check_view_label(record)
         for rel, expected in pinned.items():
             path = (ROOT / rel).resolve()
             if not path.is_relative_to(ROOT.resolve()):
@@ -166,6 +169,62 @@ def check_catalog() -> set[str]:
                 )
 
     return seen
+
+
+class BasisParagraphs(HTMLParser):
+    """Extract labels, not rendered visibility or semantic correctness."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.current = None
+        self.paragraphs = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "p":
+            self.current = []
+
+    def handle_data(self, data):
+        if self.current is not None:
+            self.current.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "p" and self.current is not None:
+            text = "".join(self.current)
+            if text.strip().startswith("View basis:"):
+                self.paragraphs.append(text)
+            self.current = None
+
+
+def check_view_label(record):
+    identity = record["id"]
+    value = record.get("human_view")
+    path = local_public_path(value) if isinstance(value, str) else None
+    if path is None or not path.resolve().is_relative_to(ROOT.resolve()):
+        error(f"{identity}: human view must be inside checkout")
+        return
+    try:
+        parser = BasisParagraphs()
+        parser.feed(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError) as exc:
+        error(f"{identity}: cannot read human view: {exc}")
+        return
+    if len(parser.paragraphs) != 1:
+        error(f"{identity}: expected one View basis paragraph")
+        return
+    text = parser.paragraphs[0]
+    basis = record["view_basis"]
+    for name, pin in basis["source_git_blobs"].items():
+        matches = re.findall(re.escape(name) + r"@([0-9a-f]{7,40})(?:…|\.\.\.|(?=\s|[).,]|$))", text)
+        if not isinstance(pin, str) or len(matches) != 1 or not pin.startswith(matches[0]):
+            error(f"{identity}: stale or missing HTML source marker for {name}")
+    if "source_record_version" in basis:
+        versions = re.findall(r"record version\s+([0-9]+(?:\.[0-9]+)+)", text)
+        if versions != [basis["source_record_version"]]:
+            error(f"{identity}: HTML record version mismatch")
+    elif isinstance(basis.get("source_record_format"), str):
+        if basis["source_record_format"] not in text:
+            error(f"{identity}: HTML record format mismatch")
+    else:
+        error(f"{identity}: missing record version or format")
 
 
 def check_entities() -> set[str]:
@@ -373,7 +432,7 @@ def main() -> int:
 
     print(
         "PASS: Human Record structural integrity checks passed "
-        "(catalogue pins/routes; entity/source/observation/assertion IDs; cross-registry references)."
+        "(catalogue pins/routes and HTML basis labels; entity/source/observation/assertion IDs; cross-registry references)."
     )
     print(
         f"INDEX: {len(record_ids)} record(s), {len(entity_ids)} entity id(s), "
