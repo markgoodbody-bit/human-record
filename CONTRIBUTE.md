@@ -2,6 +2,13 @@
 
 The Human Record is a small public experiment in keeping the evidence behind a record inspectable. You can question a record without accepting this project, its vocabulary, or any related framework. Human and artificial readers use the same evidence standard. Agreement and model brand do not establish reliability.
 
+Human entry points:
+
+- [Browse the current records](records/).
+- [How records work](records/about.html).
+- [Working record contract](RECORD_CONTRACT.md).
+- [Working selection orientation](SELECTION.md).
+
 ## Start with one object
 
 - [The flak claim](cases/viral-flak-claim.md): follow a historical claim through videos, an article and a summary. The aggregate mortality rate remains unknown here. Relevant German personnel studies have not been examined by this record.
@@ -29,6 +36,41 @@ Use as much of this as the correction needs; it is not an admission test:
 For the flak case, specify whose casualties, which period, what population and what “casualty” means. A statistic about Allied aircrew hit by flak is not a mortality rate for German gun crews. A footage problem alone does not decide the mortality claim.
 
 Link rather than reproduce copyrighted books or footage. Do not submit private personal information. Share only material you are entitled to share; the project's CC0 notice does not license third-party works.
+
+## Proposing a new record
+
+A new entry should not be proposed merely because something is interesting, famous, easy to scrape or important in general.
+
+Read [SELECTION.md](SELECTION.md) first. A useful candidate normally has a specific recoverability or provenance problem such as:
+
+- fragile or singular carrier/custody;
+- source ancestry already becoming unclear;
+- tacit, oral or embodied knowledge at risk of losing its transmission chain;
+- platform/software dependence that can make a work unreadable even when files survive;
+- contemporary human creation whose provenance may become materially harder to recover;
+- a correction window that is still open now but likely to harden into UNKNOWN later.
+
+Also identify the strongest existing owner. If an archive, museum, community institution, preservation body, standard or specialist repository already solves the actual problem, linking/routing may be better than creating another Human Record entry.
+
+For a living creator, practitioner, family or community, include the authority/consent boundary. Risk does not create permission. Do not submit restricted, sacred, private, unsafe or community-controlled material merely because preservation would be interesting.
+
+A good new-record proposal can be very small:
+
+- **Candidate:** the specific object, practice, claim or record.
+- **Risk:** what may become unrecoverable, ambiguous or detached from its lineage.
+- **Owner:** who already preserves or governs it, if anyone.
+- **Gap:** what a bounded Human Record could preserve that the owner route does not already preserve.
+- **Permission:** why this material may legitimately be recorded/publicly linked, or what must remain restricted.
+- **Stop condition:** what would make this `NOT OUR GAP`, `NO CONSENT`, `OWNER FOUND` or otherwise not worth building.
+
+Selection does not imply cultural importance, aesthetic merit, representativeness or canon.
+
+```text
+RECORDING != OWNING
+PRESERVATION != EXTRACTION
+SELECTION != SIGNIFICANCE
+OWNER_FOUND + NO DELTA -> ROUTE / STOP
+```
 
 ## What acceptance means
 
