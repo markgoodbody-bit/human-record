@@ -165,13 +165,18 @@ Each entry should therefore provide, where practical:
 - the full human record;
 - a machine-readable record;
 - a correction/challenge route;
-- the public source/history route.
+- the public source/history route;
+- a view-basis marker identifying the underlying record version or exact source bytes against which the human view was last checked.
 
-The readable page is a view over the record, not a second evidence layer.
+The readable page is a view over the record, not a second evidence layer. If an underlying Markdown or JSON record changes, a previously aligned human view must not silently be treated as current until it is reviewed against the changed source.
+
+A Git blob or other content hash is useful here only as a byte-identity marker. It does not upgrade the truth of the record.
 
 ```text
 HUMAN_VIEW != NEW_EVIDENCE
 SUMMARY != SOURCE
+DERIVED_VIEW != CURRENT_RECORD_UNLESS_BASIS_MATCHES
+HASH != TRUTH
 AI_BUILT != AI_FACING_ONLY
 ```
 
@@ -205,6 +210,7 @@ The three existing machine records do not use identical field names. That is acc
 | correction history | `corrections` | `challenges`, revision notes | Git history + future challenge entries; `correction_rule` defines current practice |
 | rights / authority | `rights_layers`, epistemic boundaries | contribution/rights boundary in full record | `authority_and_consent` |
 | correction route | `correction_route` | `correction_rule` + public contribution route | `correction_route`, `correction_rule` |
+| human-view freshness | `records/catalog.json` view basis | `records/catalog.json` view basis | `records/catalog.json` view basis |
 
 This table is a migration aid, not a command to rename mature fields merely for symmetry.
 
@@ -224,6 +230,7 @@ CAN THEY SEE HOW CHALLENGES CHANGED THE RECORD?
 CAN THEY CHALLENGE IT WITHOUT ACCEPTING THE PROJECT?
 ARE RIGHTS / CONSENT / CUSTODY BOUNDARIES HONEST?
 CAN A MACHINE FIND THE SAME RECORD WITHOUT INVENTING MISSING STRUCTURE?
+CAN A READER TELL WHICH UNDERLYING RECORD VERSION THE HUMAN VIEW SUMMARIZES?
 ```
 
 For a living practice, creator or community, add:
