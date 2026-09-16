@@ -8,6 +8,7 @@ Human entry points:
 - [How records work](records/about.html).
 - [Working record contract](RECORD_CONTRACT.md).
 - [Working selection orientation](SELECTION.md).
+- [Living-subject encounter boundary](LIVING_SUBJECTS.md).
 
 ## Start with one object
 
@@ -32,6 +33,18 @@ An existing participant may relay a contribution they are entitled to share. Say
 If the original contributor cannot return, reviewers can still receive the material and assess what is available. Another reply, account or payment is not required for receipt. Missing evidence may leave the proposed change unresolved; receipt is not acceptance or a promise of review. Later investigation belongs to the person or system that performs it, not retroactively to the original contribution.
 
 This uses the existing channels above. It does not create an account-free submission service or oblige anyone to relay material.
+
+### If the record is about you
+
+Being named in a public source does not create an obligation to participate in The Human Record.
+
+If THR actively asks you, as a living person able to understand and make the specific choice, to provide information about yourself voluntarily, the [living-subject encounter boundary](LIVING_SUBJECTS.md) applies. You may answer, decline, say you do not know or remember, dispute the question, keep something private, ask whether a restricted/verification-only route exists, or stop the voluntary interaction.
+
+The current GitHub and Square contribution routes are public. They are not a private-submission or restricted-custody channel. If you would answer only under a private or verification-only arrangement, do not send the material through the current public routes unless and until a suitable route is actually established and explained.
+
+A refusal is not proof of the proposition you declined to discuss. Participation in one question does not silently authorize later questions, uses, linkages or inferences.
+
+You can challenge an existing representation without agreeing to answer unrelated questions. Independently sourced claims remain separately assessable; declining to participate does not make them true and does not by itself require them to be erased.
 
 ## What helps a reviewer
 
@@ -63,7 +76,7 @@ Read [SELECTION.md](SELECTION.md) first. A useful candidate normally has a speci
 
 Also identify the strongest existing owner. If an archive, museum, community institution, preservation body, standard or specialist repository already solves the actual problem, linking/routing may be better than creating another Human Record entry.
 
-For a living creator, practitioner, family or community, include the authority/consent boundary. Risk does not create permission. Do not submit restricted, sacred, private, unsafe or community-controlled material merely because preservation would be interesting.
+For a living creator, practitioner, family or community, include the authority/consent boundary. Risk does not create permission. Do not submit restricted, sacred, private, unsafe or community-controlled material merely because preservation would be interesting. If the proposed record would require THR to question a living human about themselves, read [LIVING_SUBJECTS.md](LIVING_SUBJECTS.md) before initiating that interaction.
 
 A good new-record proposal can be very small:
 
