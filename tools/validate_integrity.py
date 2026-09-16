@@ -2,7 +2,8 @@
 """Validate Human Record cross-record integrity without network access.
 
 This script deliberately checks structure, identity uniqueness, local routing and byte
-identity. It does not decide whether historical, provenance or identity claims are true.
+identity. It does not decide whether historical, provenance, identity or assertion claims
+are true.
 """
 
 from __future__ import annotations
@@ -16,9 +17,11 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_ORIGIN = "https://thehumanrecord.net"
-ENTITY_RE = re.compile(r"^thr:entity:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$")
-SOURCE_RE = re.compile(r"^thr:source:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$")
-OBS_RE = re.compile(r"^thr:observation:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$")
+UUID = r"[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}"
+ENTITY_RE = re.compile(rf"^thr:entity:{UUID}$")
+SOURCE_RE = re.compile(rf"^thr:source:{UUID}$")
+OBS_RE = re.compile(rf"^thr:observation:{UUID}$")
+ASSERTION_RE = re.compile(rf"^thr:assertion:{UUID}$")
 
 errors: list[str] = []
 warnings: list[str] = []
@@ -71,6 +74,26 @@ def check_catalog() -> set[str]:
     catalog = load_json("records/catalog.json")
     if not isinstance(catalog, dict):
         return set()
+
+    for field in (
+        "record_contract",
+        "human_explanation",
+        "scale_architecture",
+        "technical_scale_note",
+        "identity_model",
+        "source_model",
+        "assertion_model",
+        "entity_registry",
+        "source_registry",
+        "assertion_registry",
+        "selection_orientation",
+    ):
+        value = catalog.get(field)
+        if isinstance(value, str):
+            require_local_route(value, f"records/catalog.json.{field}")
+        else:
+            error(f"records/catalog.json: missing string field {field}")
+
     records = catalog.get("records")
     if not isinstance(records, list):
         error("records/catalog.json: records must be a list")
@@ -120,14 +143,14 @@ def check_catalog() -> set[str]:
     return seen
 
 
-def check_entities() -> None:
+def check_entities() -> set[str]:
     registry = load_json("registry/entities.json")
     if not isinstance(registry, dict):
-        return
+        return set()
     entities = registry.get("entities")
     if not isinstance(entities, list):
         error("registry/entities.json: entities must be a list")
-        return
+        return set()
 
     seen: set[str] = set()
     for i, entity in enumerate(entities):
@@ -155,16 +178,17 @@ def check_entities() -> None:
             if not isinstance(rel, str) or not (ROOT / rel).exists():
                 error(f"{entity_id}: record_link does not exist: {rel!r}")
 
+    return seen
 
 
-def check_sources(record_ids: set[str]) -> None:
+def check_sources(record_ids: set[str]) -> tuple[set[str], set[str]]:
     registry = load_json("registry/sources.json")
     if not isinstance(registry, dict):
-        return
+        return set(), set()
     sources = registry.get("sources")
     if not isinstance(sources, list):
         error("registry/sources.json: sources must be a list")
-        return
+        return set(), set()
 
     source_ids: set[str] = set()
     observation_ids: set[str] = set()
@@ -227,11 +251,92 @@ def check_sources(record_ids: set[str]) -> None:
             if isinstance(target, str) and target.startswith("thr:source:") and target not in source_ids:
                 error(f"{source_id}: relation points to unknown source {target}")
 
+    return source_ids, observation_ids
+
+
+def check_assertions(
+    record_ids: set[str],
+    entity_ids: set[str],
+    source_ids: set[str],
+    observation_ids: set[str],
+) -> set[str]:
+    registry = load_json("registry/assertions.json")
+    if not isinstance(registry, dict):
+        return set()
+    assertions = registry.get("assertions")
+    if not isinstance(assertions, list):
+        error("registry/assertions.json: assertions must be a list")
+        return set()
+
+    seen: set[str] = set()
+    for i, assertion in enumerate(assertions):
+        context = f"registry/assertions.json assertions[{i}]"
+        if not isinstance(assertion, dict):
+            error(f"{context}: assertion must be an object")
+            continue
+        assertion_id = assertion.get("id")
+        if not isinstance(assertion_id, str) or not ASSERTION_RE.match(assertion_id):
+            error(f"{context}: invalid opaque assertion id {assertion_id!r}")
+            continue
+        if assertion_id in seen:
+            error(f"{context}: duplicate assertion id {assertion_id}")
+        seen.add(assertion_id)
+
+        if not isinstance(assertion.get("predicate"), str) or not assertion.get("predicate"):
+            error(f"{assertion_id}: predicate must be a non-empty string")
+        if not isinstance(assertion.get("state"), str) or not assertion.get("state"):
+            error(f"{assertion_id}: state must be a non-empty string")
+
+        for role in ("subject", "object"):
+            value = assertion.get(role)
+            if not isinstance(value, dict):
+                error(f"{assertion_id}: {role} must be an object")
+                continue
+            entity_id = value.get("entity_id")
+            if isinstance(entity_id, str) and entity_id not in entity_ids:
+                error(f"{assertion_id}: {role} refers to unknown entity {entity_id}")
+            record_id = value.get("record_id")
+            if isinstance(record_id, str) and record_id not in record_ids:
+                error(f"{assertion_id}: {role} refers to unknown record {record_id}")
+            if not any(key in value for key in ("entity_id", "record_id", "literal", "assertion_id")):
+                error(f"{assertion_id}: {role} has no recognised referent")
+
+        evidence = assertion.get("evidence")
+        if not isinstance(evidence, dict):
+            error(f"{assertion_id}: evidence must be an object")
+        else:
+            for source_id in evidence.get("source_ids", []):
+                if source_id not in source_ids:
+                    error(f"{assertion_id}: evidence refers to unknown source {source_id!r}")
+            for obs_id in evidence.get("observation_ids", []):
+                if obs_id not in observation_ids:
+                    error(f"{assertion_id}: evidence refers to unknown observation {obs_id!r}")
+
+        for rel in assertion.get("record_links", []):
+            if not isinstance(rel, str) or not (ROOT / rel).exists():
+                error(f"{assertion_id}: record_link does not exist: {rel!r}")
+
+    # Validate assertion-to-assertion references after all IDs are known.
+    for assertion in assertions:
+        if not isinstance(assertion, dict):
+            continue
+        assertion_id = assertion.get("id", "<unknown>")
+        for role in ("subject", "object"):
+            value = assertion.get(role)
+            if not isinstance(value, dict):
+                continue
+            target = value.get("assertion_id")
+            if isinstance(target, str) and target not in seen:
+                error(f"{assertion_id}: {role} refers to unknown assertion {target}")
+
+    return seen
+
 
 def main() -> int:
     record_ids = check_catalog()
-    check_entities()
-    check_sources(record_ids)
+    entity_ids = check_entities()
+    source_ids, observation_ids = check_sources(record_ids)
+    assertion_ids = check_assertions(record_ids, entity_ids, source_ids, observation_ids)
 
     for message in warnings:
         print(f"WARN: {message}")
@@ -243,7 +348,12 @@ def main() -> int:
 
     print(
         "PASS: Human Record structural integrity checks passed "
-        "(catalogue pins, local routes, entity/source/observation IDs and registry references)."
+        "(catalogue pins/routes; entity/source/observation/assertion IDs; cross-registry references)."
+    )
+    print(
+        f"INDEX: {len(record_ids)} record(s), {len(entity_ids)} entity id(s), "
+        f"{len(source_ids)} source id(s), {len(observation_ids)} observation id(s), "
+        f"{len(assertion_ids)} assertion id(s)."
     )
     print("NOTE: structural PASS does not establish truth, identity certainty or preservation completeness.")
     return 0
