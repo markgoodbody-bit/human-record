@@ -35,7 +35,7 @@
     <p class="meta-label">Mentions</p>
     <h2>A source can name someone without THR building a profile for them</h2>
     <p>The mention registry now preserves literal source references separately from persistent entity identities. A mention can resolve to an existing entity, carry several candidates, or remain unresolved.</p>
-    <p>The first live examples deliberately include both cases: the Camp Fire record resolves the owner-source mention “Winslow Homer” to its existing person entity, while the public mention “Mike Turnock” remains <code>unresolved_not_required</code> because the current craft record does not need a cross-record living-person profile.</p>
+    <p>The first examples deliberately include both cases: the Camp Fire record resolves the owner-source mention “Winslow Homer” to its existing person entity, while the public mention “Mike Turnock” remains <code>unresolved_not_required</code> because the current craft record does not need a cross-record living-person profile.</p>
     <div class="callout"><p><strong>MENTION EXISTS ≠ ENTITY PROFILE REQUIRED · BETTER MATCHING ≠ MORE SURVEILLANCE</strong></p></div>
   </section>
 
@@ -67,11 +67,12 @@
   </section>
 
   <section class="panel known">
-    <p class="meta-label">Currentness checks</p>
-    <h2>“It still loads” is useful evidence, but much weaker than “it is unchanged”</h2>
-    <p>THR now keeps an append-only source-check ledger separate from the evidence observations inside a record. A routine maintenance fetch can record that a locator was reachable without silently becoming new historical evidence.</p>
-    <p>The first currentness pass rechecked one source from each vulnerable web pattern already in the collection: the Guardian craft feature, the current Heritage Crafts page and the World War Wings article. All three were reachable from the checking aperture on 16 September 2026. No comparable byte digest was produced by that retrieval route, so the ledger does not claim the pages were unchanged.</p>
-    <div class="callout"><p><strong>SOURCE CHECK ≠ RECORD EVIDENCE · LIVE TODAY ≠ PRESERVED · RETRIEVED AGAIN ≠ UNCHANGED</strong></p></div>
+    <p class="meta-label">Retrieval and currentness checks</p>
+    <h2>“A retrieval surface can still show it” is weaker than “the live site is up”</h2>
+    <p>THR now keeps an append-only source-check ledger separate from the evidence observations inside a record. A routine maintenance check can record what a retrieval path returned without silently becoming new historical evidence.</p>
+    <p>The first pass asked for one source from each vulnerable web pattern already in the collection: the Guardian craft feature, the current Heritage Crafts page and the World War Wings article. The available retrieval surface returned content for all three, but reported cached crawl ages rather than fresh origin-server responses. A direct live-origin HTTP check was not established from this aperture. No comparable byte digest was produced.</p>
+    <p>The ledger therefore records only <em>retrieval-surface content available</em>. It does not claim that the origin site was live on 16 September 2026, that the bytes were unchanged, or that the source was preserved.</p>
+    <div class="callout"><p><strong>SOURCE CHECK ≠ RECORD EVIDENCE · RETRIEVAL SURFACE ≠ LIVE ORIGIN · CACHED CONTENT AVAILABLE ≠ LIVE TODAY · RETRIEVED AGAIN ≠ UNCHANGED</strong></p></div>
   </section>
 
   <section class="panel unknown">
@@ -83,7 +84,7 @@
 
   <section>
     <h2>The scalable shape</h2>
-    <div class="callout"><p><strong>MENTION → ENTITY CANDIDATES<br>SOURCE LOCATOR → TIMED OBSERVATION → PRESERVATION ROUTE<br>SOURCE CHECK → CURRENTNESS RECEIPT<br>ASSERTION → EVIDENCE / SOURCE ANCESTRY<br>RECORD STATE → HUMAN + MACHINE VIEWS</strong></p></div>
+    <div class="callout"><p><strong>MENTION → ENTITY CANDIDATES<br>SOURCE LOCATOR → TIMED OBSERVATION → PRESERVATION ROUTE<br>SOURCE CHECK → CURRENTNESS / RETRIEVAL RECEIPT<br>ASSERTION → EVIDENCE / SOURCE ANCESTRY<br>RECORD STATE → HUMAN + MACHINE VIEWS</strong></p></div>
     <div class="prose">
       <p>The current website is a reading surface over the records. As the collection grows, more of those pages can be generated from structured record state. The underlying identities, observations, assertions, corrections and provenance remain the durable part.</p>
       <p>This lets the storage technology change later without changing what a THR identifier means.</p>
@@ -115,6 +116,6 @@
     </div>
   </section>
 </main>
-<footer class="site-footer"><code>NAME != ENTITY · MENTION != ENTITY · URL != SOURCE · LIVE TODAY != PRESERVED · SCALE != LOSS OF CORRECTION</code></footer>
+<footer class="site-footer"><code>NAME != ENTITY · MENTION != ENTITY · URL != SOURCE · CACHED CONTENT AVAILABLE != LIVE TODAY · SCALE != LOSS OF CORRECTION</code></footer>
 </body>
 </html>
