@@ -1,0 +1,41 @@
+{
+  "format": "human-record-catalog/0.1",
+  "updated": "2026-09-16",
+  "purpose": "Discovery catalogue for current Human Record entries. This is routing metadata, not a universal record schema, evidence upgrade or certification surface.",
+  "records": [
+    {
+      "id": "camp-fire-1880",
+      "kind": "artwork_provenance",
+      "title": "Winslow Homer, Camp Fire (1880)",
+      "human_view": "https://thehumanrecord.net/records/camp-fire.html",
+      "full_human_record": "https://thehumanrecord.net/specimen.md",
+      "machine_record": "https://thehumanrecord.net/specimen.json",
+      "status": "matched_owner_attribution_not_independent_proof",
+      "observed_at": "2026-09-14T20:46:10Z",
+      "known_summary": "The Human Record reconciled eight identity fields against The Metropolitan Museum of Art public record and observed byte-identical museum/PSFH image streams at the recorded time.",
+      "unknown_summary": "Custody before 1927, independent proof of the 1880 creation event, and usefulness for contemporary human/synthetic ambiguity remain unestablished.",
+      "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
+    },
+    {
+      "id": "viral-flak-claim",
+      "kind": "claim_provenance",
+      "title": "The '80% of German flak crews died' claim",
+      "human_view": "https://thehumanrecord.net/records/flak-claim.html",
+      "full_human_record": "https://thehumanrecord.net/cases/viral-flak-claim.md",
+      "machine_record": "https://thehumanrecord.net/cases/viral-flak-claim.json",
+      "status": "unsupported_in_sources_checked",
+      "historical_truth_status": "unknown",
+      "recorded_at": "2026-09-16",
+      "known_summary": "A visible online propagation chain is partially reconstructed; downstream repetition is not independent corroboration and checked nearby historical sources do not establish the claimed aggregate German crew mortality rate.",
+      "unknown_summary": "The true rate, any earlier source for the 80% figure, and the figure's exact ancestry remain unknown in this record.",
+      "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
+    }
+  ],
+  "ceilings": [
+    "SUMMARY != SOURCE",
+    "REPETITION != CORROBORATION",
+    "HASH != TRUTH",
+    "UNKNOWN != ABSENT",
+    "BROWSEABLE != CERTIFIED"
+  ]
+}
