@@ -123,7 +123,7 @@ PUBLIC INTEREST != AUTOMATIC PUBLICATION AUTHORITY
 COMMUNITY_KNOWLEDGE != PUBLIC_DOMAIN
 ```
 
-THR may need records whose public layer says that some material exists and is deliberately not reproduced.
+THR may need records whose public layer says that some material exists and is deliberately not reproduced. For restricted or community-held material, first establish whether even that disclosure is safe and authorised by its legitimate holders. Existence, location and attribution can themselves be sensitive; if their disclosure is not authorised, do not publish them merely because the underlying content is withheld.
 
 ## Candidate quarry — not a queue
 
@@ -151,7 +151,7 @@ Every new Human Record entry should preserve its own selection provenance where 
 - what the selection does **not** imply about importance, representativeness, merit or canon;
 - what would cause the proposed record to be stopped or routed elsewhere.
 
-The first Homer specimen taught this by failure: its candidate pool and alternatives were not recorded. Future records should not silently repeat that gap.
+The first Homer specimen taught this by failure: its candidate pool and alternatives were not recorded. The flak case later required the same repair: its purpose as a provenance stress object could be recovered, but its original candidate pool and alternatives could not. Future records should not silently repeat either gap.
 
 ## Bounded candidate test
 
