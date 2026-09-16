@@ -63,8 +63,10 @@ Where material, preserve:
 - source kind;
 - observation/fetch time;
 - exact page/table/field/byte identity when available and useful;
+- what the source actually states or measures, including material population, denominator and time scope;
 - whether a source is primary, derivative, reported by another reviewer, or still uncertain;
 - known derivation or repetition relationships;
+- changes in what is claimed as material passes between sources, rather than treating every repetition as the same proposition;
 - source-independence groups where multiple endpoints or copies share one underlying owner/ancestor.
 
 Counting URLs is not counting witnesses.
