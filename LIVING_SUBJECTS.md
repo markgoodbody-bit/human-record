@@ -47,12 +47,15 @@ Do not treat a buried policy page as equivalent to an understandable explanation
 
 Do not offer a privacy, restricted-access or verification-only mode that THR cannot actually honour. The current public GitHub/Square contribution routes are not a private-submission channel. If no suitable restricted route exists, say so before asking for the material and do not invite the person to place private information into a public channel.
 
+If private or sensitive material nevertheless arrives unexpectedly through a public route, do not quote, repost or otherwise amplify it merely to create a durable receipt. Minimise further exposure and use an available authorised platform removal/redaction route where appropriate. Preserve only the minimum non-sensitive receipt needed to explain any resulting record action.
+
 If a future restricted route is created, its custody, access, retention, deletion/withdrawal limits and possible redisclosure must be explained before it is used. A channel being technically private is not by itself a complete handling policy.
 
 ```text
 ROUTE_EXISTS != ROUTE_USABLE
 PRIVACY_OPTION_CLAIMED != PRIVATE_CUSTODY_EXISTS
 PRIVATE_CHANNEL_EXISTS != HANDLING_TERMS_ESTABLISHED
+PRIVATE_MATERIAL_RECEIVED != PERMISSION_TO_REPUBLISH
 ```
 
 ## 2. Normal valid responses
@@ -77,15 +80,19 @@ A request for a restricted or verification-only arrangement is not a promise tha
 
 A refusal is an event in the interaction. It is not proof of the proposition the person declined to discuss, and it is not automatically something the record needs to retain.
 
+No response is a different state again. Silence does not establish consent, refusal, guilt, indifference or receipt.
+
 ```text
 REFUSAL_IS_AN_EVENT
 REFUSAL_ALONE != ESTABLISHMENT_OF_THE_REFUSED_CLAIM
 REFUSAL_OCCURRED != REFUSAL_MUST_BE_RECORDED
+NO_REPLY != REFUSAL
+SILENCE != CONSENT
 PRIVATE != DECEPTIVE
 WITHHELD != ABSENT
 ```
 
-Do not silently infer the refused answer merely because the person declined to provide it.
+Do not silently infer the refused or missing answer.
 
 ## 3. Consent is local to the choice
 
@@ -98,6 +105,12 @@ CAN_LINK != MAY_LINK
 ```
 
 If a proposed later use materially changes audience, purpose, sensitivity, inference, linkage or consequence, reacquire the relevant authority/consent rather than treating earlier participation as blanket permission.
+
+A nominal `YES` should not be described as voluntary when THR itself conditions an unrelated benefit, correction route or penalty on saying yes. Known material pressure from another source should remain visible rather than being erased by the word `consent`.
+
+```text
+YES_RECORDED != VOLUNTARINESS_ESTABLISHED
+```
 
 ## 4. Stopping must actually stop
 
@@ -150,10 +163,13 @@ A record about one claim, work, event or contribution does not justify construct
 
 Do not collect or infer sensitive/private attributes merely because they would improve matching, make future retrieval easier or enrich a graph.
 
+A subject can volunteer information about themselves; that does not automatically give them authority to disclose another person's private information. If an answer contains unnecessary third-party personal material, separate or omit it rather than treating the subject's consent as transferable.
+
 ```text
 MENTION_EXISTS != ENTITY_PROFILE_REQUIRED
 BETTER_MATCHING != MORE_SURVEILLANCE
 PUBLIC_FACT != PERMISSION_FOR_UNBOUNDED_AGGREGATION
+SUBJECT_CONSENT != THIRD_PARTY_CONSENT
 ```
 
 The ability to resolve more identity does not itself establish a reason to do so.
