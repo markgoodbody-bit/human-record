@@ -2,7 +2,6 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from unittest.mock import patch
 import validate_operational as validator
 
 
@@ -37,7 +36,12 @@ class OperationalRegistryTests(unittest.TestCase):
         self.write()
 
     def write(self):
-        (self.root / "records/catalog.json").write_text(json.dumps({"records": [{"id": "r1"}]}), encoding="utf-8")
+        catalog = {
+            "mention_registry": "https://thehumanrecord.net/registry/mentions.json",
+            "source_check_registry": "https://thehumanrecord.net/registry/source-checks.json",
+            "records": [{"id": "r1"}],
+        }
+        (self.root / "records/catalog.json").write_text(json.dumps(catalog), encoding="utf-8")
         (self.root / "registry/entities.json").write_text(json.dumps({"entities": [{"id": self.entity}]}), encoding="utf-8")
         (self.root / "registry/sources.json").write_text(json.dumps({"sources": [{"id": self.source, "observations": [{"id": self.observation}]}]}), encoding="utf-8")
         (self.root / "registry/mentions.json").write_text(json.dumps({"mentions": [self.mention]}), encoding="utf-8")
@@ -76,6 +80,11 @@ class OperationalRegistryTests(unittest.TestCase):
 
     def test_bad_json_root_rejected(self):
         (self.root / "registry/mentions.json").write_text("[]", encoding="utf-8")
+        self.assertTrue(validator.validate(self.root)[0])
+
+    def test_missing_catalog_route_rejected(self):
+        catalog = {"records": [{"id": "r1"}]}
+        (self.root / "records/catalog.json").write_text(json.dumps(catalog), encoding="utf-8")
         self.assertTrue(validator.validate(self.root)[0])
 
 
