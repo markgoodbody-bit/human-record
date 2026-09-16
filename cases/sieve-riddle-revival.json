@@ -1,6 +1,6 @@
 {
   "record_type": "transmission_lineage_case",
-  "record_version": "0.1.1",
+  "record_version": "0.1.2",
   "recorded_at": "2026-09-16",
   "title": "Sieve and riddle making returns from extinction",
   "subject": "Public evidence about how UK sieve and riddle making moved from a reported last maker and later extinction classification into renewed practice, and what remains unknown about the actual transmission of tacit skill.",
@@ -68,6 +68,16 @@
       "boundary": "The Human Record defers current status and practitioner-count claims to Heritage Crafts rather than independently verifying them."
     },
     {
+      "id": "homo-faber-overthrow-interview",
+      "kind": "published_practitioner_interview",
+      "title": "Steve Overthrow",
+      "publisher": "Homo Faber Guide / Michelangelo Foundation",
+      "url": "https://2022.homofaber.com/en/discover/discover-steve-overthrow",
+      "observed_at": "2026-09-16",
+      "role": "Overthrow reports learning partly from Mike Turnock and receiving knowledge he could not find through research.",
+      "boundary": "Published first-person account, not independent verification or a THR interview. Interview and teaching dates are not established. Does not establish exact teaching content, completeness, or Colin Davies's learning route."
+    },
+    {
       "id": "steve-overthrow-process-site",
       "kind": "practitioner_website_linked_by_owner",
       "title": "Sieve and riddle maker website / process page",
@@ -117,11 +127,12 @@
     "Heritage Crafts reports that the craft was listed extinct in 2017 and had been revived by two new makers by March 2019.",
     "Heritage Crafts currently identifies Steve Overthrow's discovery of the Red List and Colin Davies's viewing of a Countryfile feature as pathways into making.",
     "These public-attention pathways do not establish how the tacit making skill itself was transmitted.",
+    "In a published Homo Faber interview, Steve Overthrow reports learning partly from Mike Turnock. This supports a reported direct-learning route, not complete reconstruction of the skill transfer.",
     "Heritage Crafts currently classifies the practice as critically endangered rather than extinct."
   ],
   "unknowns": [
     "What was transmitted, what was reconstructed or newly learned, and through which routes.",
-    "Exactly what practical knowledge, if any, passed directly from Mike Turnock to later makers.",
+    "Exactly what knowledge passed through the Turnock-to-Overthrow learning route reported in the Homo Faber interview, and what other transmission occurred.",
     "The relative roles of direct teaching, observation, experimentation, published material, surviving tools, prior adjacent skills or other routes in each maker's learning.",
     "Which parts of the older Hill & Sons practice survive unchanged and which have been adapted.",
     "Whether all materially important tacit knowledge survived the extinction interval.",
@@ -131,7 +142,7 @@
     "The current general availability and contents of the practitioner process website linked by Heritage Crafts."
   ],
   "not_checked": [
-    "Direct interviews with Mike Turnock, Steve Overthrow, Colin Davies or the current trainee.",
+    "Interviews conducted by THR with Mike Turnock, Steve Overthrow, Colin Davies or the current trainee; the published Homo Faber interview with Overthrow was checked.",
     "The BBC Countryfile episode described by Heritage Crafts.",
     "Steve Overthrow's process website content, because it was not retrieved in this research aperture.",
     "Surviving Hill & Sons tools, patterns, workshop records or business archives.",
@@ -157,6 +168,15 @@
     "warning": "Two Heritage Crafts pages are separate publications but one institutional evidence family. The current Heritage Crafts page also cites the Guardian feature; different publisher groups do not prove claim-level independence. The citation alone does not establish which individual claims depend on that feature. The practitioner site was not inspected and is not evidence for current findings."
   },
   "corrections": [
+    {
+      "date": "2026-09-16",
+      "by": "Codex",
+      "basis": "https://2022.homofaber.com/en/discover/discover-steve-overthrow",
+      "discovery_credit": "Dola's ELITISM lead, relayed by Mark, led Codex to the published Homo Faber interview. No independent corroboration between the publications is claimed.",
+      "change": "Added Overthrow's published account of learning partly from Turnock. Precise content, dates and completeness remain unknown.",
+      "practitioner_contact_added": false,
+      "reported_status_counts_changed": false
+    },
     {
       "date": "2026-09-16",
       "by": "Codex",

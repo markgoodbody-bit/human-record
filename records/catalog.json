@@ -70,10 +70,10 @@
       "machine_record": "https://thehumanrecord.net/cases/sieve-riddle-revival.json",
       "view_basis": {
         "aligned_at": "2026-09-16",
-        "source_record_version": "0.1.1",
+        "source_record_version": "0.1.2",
         "source_git_blobs": {
-          "cases/sieve-riddle-revival.md": "00cdd257906132d6c9fc9d2a76c4d3f0bbea64b3",
-          "cases/sieve-riddle-revival.json": "fa12d6213335f0733a4979361597bc0c806f0fad"
+          "cases/sieve-riddle-revival.md": "ea4b8a71677fdf7cbd97c8f287c77ff264a89d35",
+          "cases/sieve-riddle-revival.json": "01bd1190bf1e255f96ec69c6b6f100c407047e7f"
         }
       },
       "status": "public_lineage_partially_reconstructed",

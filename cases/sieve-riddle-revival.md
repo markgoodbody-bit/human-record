@@ -109,7 +109,18 @@ READING ABOUT A CRAFT != LEARNING THE CRAFT
 REVIVAL != VIABILITY
 ```
 
-### 4. Current state — alive, but still fragile
+### 4. A published account of direct learning
+
+In a published Homo Faber interview, Steve Overthrow says he learned partly from Mike Turnock and received knowledge he could not find through research. This is a first-person account as published by Homo Faber, not an interview conducted by The Human Record or independent verification of the teaching.
+
+Source, read 16 September 2026:
+- Homo Faber Guide, *Steve Overthrow*, question “How did you manage to learn the extinct craft of riddle making?”: https://2022.homofaber.com/en/discover/discover-steve-overthrow
+
+The interview and teaching dates are not established here; the 2022 site address is not proof of either. This supports a reported Turnock-to-Overthrow learning route, but not the precise content or completeness of transmission, nor Colin Davies's learning route.
+
+Discovery credit: Mark relayed a Dola reading pointing to an [ELITISM article dated 26 August 2026](https://elitismstyle.com/the-craft-that-read-its-own-obituary). Following that lead, Codex located the Homo Faber interview. The publications are not counted as independent corroboration; their claim-level source relationship has not been established.
+
+### 5. Current state — alive, but still fragile
 
 The current Heritage Crafts page no longer treats the craft as extinct. It treats it as **critically endangered**, with the small practitioner/trainee counts recorded above.
 
@@ -131,6 +142,7 @@ As of the checked public sources:
 - its current page identifies Steve Overthrow's discovery of the Red List and Colin Davies's viewing of a *Countryfile* feature as pathways into making;
 - Heritage Crafts currently classifies the craft as critically endangered and reports 0 main-income professionals, 1 side-income professional and 1 trainee;
 - the exact skill-transmission chain is **not fully reconstructed by this record**.
+- Overthrow reports learning partly from Turnock in the published Homo Faber interview; the reported route is no longer wholly unresolved.
 
 ## What remains unknown
 
@@ -164,7 +176,7 @@ No claim in this record depends on unseen content from that site.
 
 ## What was not checked
 
-- direct interviews with Mike Turnock, Steve Overthrow, Colin Davies or the current trainee;
+- interviews conducted by THR with Mike Turnock, Steve Overthrow, Colin Davies or the current trainee (the published Homo Faber interview with Overthrow was checked);
 - the relevant BBC *Countryfile* episode;
 - Steve Overthrow's process website content;
 - surviving Hill & Sons tools, patterns, workshop records or business archives;
@@ -240,6 +252,8 @@ That question remains open.
 ## Dated correction
 
 16 September 2026, Codex: made reconstruction and new learning explicit alternatives to transmission, recorded the Heritage Crafts citation of the Guardian feature, and distinguished the source-read date from the page's named review cycle. Basis: [source review](https://github.com/markgoodbody-bit/human-record/pull/9#issuecomment-5700699961). Reported status, counts and historical events are unchanged. This is a source-relationship and framing correction, not a new practitioner observation.
+
+16 September 2026, Codex: added the published Homo Faber interview following Dola's lead relayed by Mark. A reported direct-learning route is now supported; exact teaching content and completeness remain unknown. No new practitioner contact, endorsement, status assessment or headcount is claimed.
 
 ## Correction route
 
