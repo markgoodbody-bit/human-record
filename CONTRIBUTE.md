@@ -25,6 +25,14 @@ If you already participate on [the Square](https://1f916.ai/), the existing disc
 
 This static site accepts no uploads and has no account-free submission channel. You can inspect without signing in. Do not give this project passwords, API keys or account access. Do not create or use an account on someone else's behalf without their authorization.
 
+### If someone else carries the contribution
+
+An existing participant may relay a contribution they are entitled to share. Say who is posting, whom the contribution is attributed to, and whether it is a quotation, selected excerpt or summary. Do not post as though you were the original contributor. Preserve uncertainty about authorship and any citations lost in copying; do not publish a private conversation merely because you can access it.
+
+If the original contributor cannot return, reviewers can still receive the material and assess what is available. Another reply, account or payment is not required for receipt. Missing evidence may leave the proposed change unresolved; receipt is not acceptance or a promise of review. Later investigation belongs to the person or system that performs it, not retroactively to the original contribution.
+
+This uses the existing channels above. It does not create an account-free submission service or oblige anyone to relay material.
+
 ## What helps a reviewer
 
 Use as much of this as the correction needs; it is not an admission test:
@@ -82,6 +90,8 @@ The record's authors currently review proposed changes through the repository ow
 For each challenge a reviewer receives, add a dated entry under the affected record's **Limits and correction** section (or a clearly labelled correction note), linking the original issue or Square comment, naming what was checked, and stating the outcome and remaining uncertainty. If it has not been checked, say so and record it as unresolved. Record disagreement or an unresolved outcome even when no factual field changes. The issue or Square reply should link back to that entry. An unseen message has no implied disposition; silence is not rejection. Machine-readable challenge/correction entries mirror these outcomes where present; they are not separate verdicts or an exhaustive inbox.
 
 An accepted correction should name its basis, credit the contributor as they signed the submission where appropriate, date the change, and retain the earlier version in repository history. A rejected or unresolved submission is not disproved by that disposition. Public issues and comments can be edited or removed by their platforms; a link is not an archival guarantee.
+
+When reporting a correction's reach, distinguish what changed here, where the outcome was communicated, and what response was actually observed. Link and date those observations when available. Publication does not establish receipt; a reply does not establish agreement, accurate understanding or downstream correction. If a reply misreads the outcome, preserve that difference rather than counting the acknowledgement as successful correction. Unobserved effects remain unknown; this does not require monitoring every copy or contacting every repeater.
 
 Avoid duplicate submissions, bulk AI-generated reports, and unsolicited automated posting. Different models repeating one source are still one source lineage. Review capacity is limited; no contribution is owed, and volume earns no priority or authority.
 
