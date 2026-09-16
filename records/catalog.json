@@ -1,11 +1,12 @@
 {
-  "format": "human-record-catalog/0.3",
+  "format": "human-record-catalog/0.4",
   "updated": "2026-09-16",
   "purpose": "Discovery catalogue for current Human Record entries. This is routing metadata, not a universal record schema, evidence upgrade or certification surface.",
   "record_contract": "https://thehumanrecord.net/RECORD_CONTRACT.md",
   "human_explanation": "https://thehumanrecord.net/records/about.html",
   "selection_orientation": "https://thehumanrecord.net/SELECTION.md",
   "source_repository": "https://github.com/markgoodbody-bit/human-record",
+  "view_basis_policy": "Each human view is a derived reading surface. source_git_blobs identify the exact Markdown/JSON record bytes the view was aligned to. If either underlying source blob changes without a corresponding view-basis update, view freshness is unestablished. A blob match establishes byte identity, not truth.",
   "records": [
     {
       "id": "camp-fire-1880",
@@ -14,6 +15,14 @@
       "human_view": "https://thehumanrecord.net/records/camp-fire.html",
       "full_human_record": "https://thehumanrecord.net/specimen.md",
       "machine_record": "https://thehumanrecord.net/specimen.json",
+      "view_basis": {
+        "aligned_at": "2026-09-16",
+        "source_record_format": "human-record-specimen/0.1",
+        "source_git_blobs": {
+          "specimen.md": "833141f935e88a08e9d3caf3ef85e44687f7badb",
+          "specimen.json": "0447ea7e7060b070e11e6e9397c5017766f0a21f"
+        }
+      },
       "status": "matched_owner_attribution_not_independent_proof",
       "observed_at": "2026-09-14T20:46:10Z",
       "known_summary": "The Human Record reconciled eight identity fields against The Metropolitan Museum of Art public record and observed byte-identical museum/PSFH image streams at the recorded time.",
@@ -27,6 +36,14 @@
       "human_view": "https://thehumanrecord.net/records/flak-claim.html",
       "full_human_record": "https://thehumanrecord.net/cases/viral-flak-claim.md",
       "machine_record": "https://thehumanrecord.net/cases/viral-flak-claim.json",
+      "view_basis": {
+        "aligned_at": "2026-09-16",
+        "source_record_version": "0.2.4",
+        "source_git_blobs": {
+          "cases/viral-flak-claim.md": "3ac968ccf89da2a0c9c48c178dec643bf8703c80",
+          "cases/viral-flak-claim.json": "9ce2f825b4b928d8d408af830793ab7220ac3d5f"
+        }
+      },
       "status": "unsupported_in_sources_checked",
       "historical_truth_status": "unknown",
       "recorded_at": "2026-09-16",
@@ -41,6 +58,14 @@
       "human_view": "https://thehumanrecord.net/records/sieve-riddle-revival.html",
       "full_human_record": "https://thehumanrecord.net/cases/sieve-riddle-revival.md",
       "machine_record": "https://thehumanrecord.net/cases/sieve-riddle-revival.json",
+      "view_basis": {
+        "aligned_at": "2026-09-16",
+        "source_record_version": "0.1",
+        "source_git_blobs": {
+          "cases/sieve-riddle-revival.md": "9ef2728e58b134d984aa4002d9a83134e9169b9d",
+          "cases/sieve-riddle-revival.json": "8d572af6d9c4a0ae6c4a110fb6969c7206c31f4c"
+        }
+      },
       "status": "public_lineage_partially_reconstructed",
       "living_practice_status": "critically_endangered_as_reported_by_heritage_crafts",
       "recorded_at": "2026-09-16",
@@ -53,6 +78,7 @@
   ],
   "ceilings": [
     "SUMMARY != SOURCE",
+    "DERIVED_VIEW != CURRENT_RECORD_UNLESS_BASIS_MATCHES",
     "REPETITION != CORROBORATION",
     "HASH != TRUTH",
     "UNKNOWN != ABSENT",
