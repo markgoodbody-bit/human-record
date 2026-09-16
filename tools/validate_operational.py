@@ -54,6 +54,14 @@ def validate(root: Path = ROOT) -> tuple[list[str], dict[str, int]]:
     except (OSError, json.JSONDecodeError, ValueError) as exc:
         return [str(exc)], counts
 
+    expected_routes = {
+        "mention_registry": "https://thehumanrecord.net/registry/mentions.json",
+        "source_check_registry": "https://thehumanrecord.net/registry/source-checks.json",
+    }
+    for field, expected in expected_routes.items():
+        if catalog.get(field) != expected:
+            errors.append(f"records/catalog.json: {field} must be {expected}")
+
     record_ids = {r.get("id") for r in catalog.get("records", []) if isinstance(r, dict) and isinstance(r.get("id"), str)}
     entity_ids = {e.get("id") for e in entities.get("entities", []) if isinstance(e, dict) and isinstance(e.get("id"), str)}
     source_ids: set[str] = set()
