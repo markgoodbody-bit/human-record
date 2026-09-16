@@ -9,9 +9,15 @@ current custody, [LICENSE.md](LICENSE.md) for the bounded scope of the CC0
 dedication, and [CONTINUE.md](CONTINUE.md) for non-founder recovery/serving
 instructions.
 
+The project is built collaboratively with artificial-intelligence apertures, but the
+public record is intended as a gift for humans as well as machine readers. The normal
+human route is now [`records/`](records/): a browseable catalogue and readable views
+of the current records. Those pages are derived reading surfaces, not new evidence and
+not replacements for the Markdown/JSON records or Git history.
+
 Related wider project entrance: [Please Start From Here](https://pleasestartfromhere.com/). It is a separate public object and is not part of this record, its evidence, or its stewardship offer.
 
-The public door now carries two deliberately different objects:
+The public door currently carries two deliberately different record objects:
 
 - the original human-made artwork provenance specimen;
 - a provenance case tracing the viral “80% of German flak crews died” claim without replacing uncertainty with another unsupported number.
@@ -19,15 +25,21 @@ The public door now carries two deliberately different objects:
 Neither is a detector, certification authority, historical oracle or claim of canon.
 
 Contents:
-- `index.html` — human-readable entrance and current record routes;
-- `specimen.md` — exact human-readable artwork specimen copied from COM after PR #328;
-- `specimen.json` — exact machine-readable artwork specimen copied from COM after PR #328;
+- `index.html` — human-facing public entrance;
+- `records/index.html` — human-facing record catalogue;
+- `records/camp-fire.html` — readable view of the artwork specimen;
+- `records/flak-claim.html` — readable view of the historical claim-provenance case;
+- `records/catalog.json` — small discovery/currentness catalogue, not a universal schema;
+- `records/style.css` — shared presentation for the human record browser;
+- `specimen.md` — exact human-readable artwork record copied from COM after PR #328 and later corrected here;
+- `specimen.json` — machine-readable artwork record;
 - `cases/viral-flak-claim.md` — human-readable provenance reconstruction of the viral historical claim;
 - `cases/viral-flak-claim.json` — machine-readable provenance reconstruction;
 - `llms.txt` — compact machine entrance and boundaries;
 - `robots.txt` — explicit public crawler route and sitemap pointer; not a rights grant;
 - `sitemap.xml` — first-party public discovery map;
 - `STEWARDSHIP.md` — public stewardship offer, current custody and limits;
+- `CONTRIBUTE.md` — public inspection/challenge/contribution route;
 - `LICENSE` — standard CC0 1.0 legal code;
 - `LICENSE.md` — bounded scope notice explaining which rights Mark actually purports to dedicate and third-party boundaries;
 - `CONTINUE.md` — operational continuation/recovery note for a future non-founder operator;
@@ -38,7 +50,28 @@ Canonical specimen source used for the original artwork copy:
 
 `d117594e3718bd3df613f82d53b9dc9971860caf`
 
-The public-door copy must not silently outrun canonical records. Corrections should be dated and preserve what changed.
+The public-door copy must not silently outrun canonical records. Corrections should be dated and preserve what changed. Human browser pages must likewise stay bounded to what the underlying records support.
+
+## Human-interface boundary
+
+The human browser exists to make records legible without requiring readers to navigate raw
+Markdown, JSON, GitHub history or governance files first.
+
+It should make visible, in ordinary language:
+
+- what the record is about;
+- what can currently be said from the checked evidence;
+- what remains unknown or unexamined;
+- how source ancestry/independence bears on the claim;
+- which corrections materially changed the record;
+- where to inspect the full record and machine form.
+
+```text
+HUMAN_VIEW != NEW_EVIDENCE
+SUMMARY != SOURCE
+BROWSEABLE != CERTIFIED
+AI_BUILT != AI_FACING_ONLY
+```
 
 ## Provenance-case boundary
 
@@ -66,7 +99,7 @@ markgoodbody-bit/human-record repository root
 -> custom domain thehumanrecord.net
 -> Namecheap DNS to the GitHub Pages site
 -> HTTPS
--> verify index.html + specimen.md + specimen.json + llms.txt + cases/*
+-> verify index.html + records/* + specimen.* + llms.txt + cases/*
 -> stop and observe
 ```
 
@@ -89,4 +122,5 @@ CC0_GRANT != THIRD_PARTY_RIGHTS_GRANT
 INDEPENDENT_COPY != INDEPENDENT_GOVERNANCE
 PLUMBING_SPECIMEN != SYNTHETIC_ERA_PURPOSE_TEST
 PUBLICATION != VALIDATION
+SUMMARY != SOURCE
 ```
