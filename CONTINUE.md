@@ -38,11 +38,15 @@ The site is deliberately static. Its important public files include:
 - `records/catalog.json` — machine-readable discovery catalogue;
 - `records/camp-fire.html` — human view of the artwork record;
 - `records/flak-claim.html` — human view of the claim-provenance record;
+- `records/sieve-riddle-revival.html` — human view of the living-knowledge transmission-lineage record;
 - `RECORD_CONTRACT.md` — working semantic contract earned by the current records;
+- `SELECTION.md` — working selection orientation for new records;
 - `specimen.md` — full human-readable artwork record;
 - `specimen.json` — machine-readable artwork record;
 - `cases/viral-flak-claim.md` — full human-readable claim-provenance record;
 - `cases/viral-flak-claim.json` — machine-readable claim-provenance record;
+- `cases/sieve-riddle-revival.md` — full public-source transmission-lineage record;
+- `cases/sieve-riddle-revival.json` — machine-readable transmission-lineage record;
 - `CONTRIBUTE.md` — current challenge/correction route;
 - `llms.txt` — compact machine entrance;
 - `STEWARDSHIP.md` — current stewardship offer and custody boundary;
@@ -61,14 +65,9 @@ For a particular state:
 3. compare served bytes to the pinned source where exact delivery matters;
 4. distinguish a byte match from truth of the claims inside those bytes.
 
-With Git installed, individual files can be checked with:
+With Git installed, individual files can be checked with `git hash-object <path>`.
 
-```text
-git hash-object specimen.json
-git hash-object specimen.md
-```
-
-A matching blob identity establishes that those file bytes match the pinned Git version. It does not establish that every claim inside the files is true.
+A matching blob identity establishes that file bytes match the pinned Git version. It does not establish that every claim inside the file is true.
 
 `HASH != TRUTH`
 
@@ -81,25 +80,15 @@ Those identities name an earlier version, not every later corrected record. Date
 
 ### Observed additional copy, 16 September 2026
 
-custos reported a copy at [custos-1f916/human-record-mirror](https://github.com/custos-1f916/human-record-mirror)
-in c63317 on [Square post 5356](https://1f916.ai/api/post/5356). Codex fetched its
-[JSON specimen](https://custos-1f916.github.io/human-record-mirror/specimen.json) and
-[Markdown specimen](https://custos-1f916.github.io/human-record-mirror/specimen.md)
-on 16 September 2026 at approximately 08:25 UTC: both returned HTTP 200 and matched the
-original specimen bytes (SHA-256 `e3a1ba07653be0f776b2ee1baac862d1a25401f10f853b2f2ba51016f1b515a7`
-and `e21545f9021d3d433e44f3dc0175a20a89a471c9ea91ee0c9abd70263a28a8a3`, respectively).
-Claude Code separately reported matching specimen and continuation/licence/stewardship files
-in [COM receipt 5694488387](https://github.com/markgoodbody-bit/COM/issues/342#issuecomment-5694488387).
-This is an observed additional retrieval route from a separate account, not independent
-artwork evidence, a promise of updates, or governance transfer. Both hosts use GitHub Pages;
-infrastructure failure independence and long-term survival have not been demonstrated.
-The observed copy predates later correction and human-interface work and is not a mirror of every current file.
+custos reported a copy at [custos-1f916/human-record-mirror](https://github.com/custos-1f916/human-record-mirror) in c63317 on [Square post 5356](https://1f916.ai/api/post/5356). Codex fetched its JSON and Markdown specimen on 16 September 2026 at approximately 08:25 UTC and reported that both matched the original specimen bytes. Claude Code separately reported matching specimen and continuation/licence/stewardship files in COM receipt 5694488387.
+
+This is an observed additional retrieval route from a separate account, not independent artwork evidence, a promise of updates, or governance transfer. Both hosts use GitHub Pages; infrastructure failure independence and long-term survival have not been demonstrated. The observed copy predates later correction, human-interface and living-knowledge record work and is not a mirror of every current file.
 
 ### Human-browser delivery, 16 September 2026
 
-After the first human record browser merged, Codex reported fresh public HTTP 200 reads for the root, `/records/`, both human record views, catalogue, stylesheet, `llms.txt` and sitemap, with response bytes matching the pinned repository source `475140ba56eaec084d1cdaa44c2550e4f17d02af`.
+After the first human record browser merged, Codex reported fresh public HTTP 200 reads for the root, `/records/`, both then-current human record views, catalogue, stylesheet, `llms.txt` and sitemap, with response bytes matching the pinned repository source `475140ba56eaec084d1cdaa44c2550e4f17d02af`.
 
-That demonstrates public delivery of that pinned source state at the observation time. It does not establish historical truth, reader benefit, permanent availability or stewardship acceptance.
+That demonstrates public delivery of that pinned source state at the observation time. It does not establish historical truth, reader benefit, permanent availability or stewardship acceptance. Later commits require their own readback if exact public delivery matters.
 
 ## 3. Serve an independent copy without claiming the existing domain
 
@@ -118,9 +107,9 @@ For a normal GitHub Pages fork or another independent static host:
 
 Equivalent static hosting is fine. GitHub Pages is not part of the identity of the project.
 
-## 4. Understand the record contract before adding a new entry
+## 4. Understand selection and the record contract before adding an entry
 
-Read `RECORD_CONTRACT.md` and `records/about.html`.
+Read `SELECTION.md`, `RECORD_CONTRACT.md` and `records/about.html`.
 
 The current contract is semantic, not a mandatory universal JSON schema. A new record should make the following inspectable where material:
 
@@ -141,15 +130,23 @@ COMMON QUESTIONS != IDENTICAL OBJECTS
 RECORD CONTRACT != UNIVERSAL ONTOLOGY
 ```
 
+The sieve/riddle case establishes an additional living-practice lesson: preserving a public transmission lineage is not continuation of the living craft. A future operator must not use the existence of this record as permission to collect practitioner-specific tacit knowledge, workshop material, voice, video or teaching without a separate legitimate permission/authority basis.
+
+```text
+RECORDING != CONTINUATION
+PUBLIC_SOURCE != ENDORSEMENT
+RISK != PERMISSION
+```
+
 ## 5. Rights boundary
 
 Do not infer that everything mentioned or linked from this repository belongs to the project.
 
 The root `LICENSE` is the standard CC0 1.0 legal code. `LICENSE.md` is the scope notice. Its controlling boundary is that Mark dedicates only copyright, database or related rights that he actually holds in project-authored material.
 
-Third-party rights remain third-party rights. In specimen 1, the record separately describes the public-domain status of Winslow Homer's *Camp Fire* and The Metropolitan Museum of Art's Open Access / CC0 basis for relevant image/data material.
+Third-party rights remain third-party rights. In specimen 1, the record separately describes the public-domain status of Winslow Homer's *Camp Fire* and The Metropolitan Museum of Art's Open Access / CC0 basis for relevant image/data material. The living-practice case links third-party reporting and institutional/practitioner pages without purporting to re-license them.
 
-For future living creators, practitioners or communities, copying or recording must not be treated as a transfer of ownership, consent or governance.
+For living creators, practitioners or communities, copying or recording must not be treated as a transfer of ownership, consent or governance.
 
 ```text
 CC0_GRANT != THIRD_PARTY_RIGHTS_GRANT
@@ -226,7 +223,7 @@ A minimal successful continuation is:
 PUBLIC SOURCE RECOVERED
 -> INTENDED COMMIT PINNED
 -> RIGHTS BOUNDARY READ
--> RECORD CONTRACT READ
+-> SELECTION + RECORD CONTRACT READ
 -> CURRENT RECORDS + CATALOGUE RECOVERED
 -> COPY SERVED ON AN INDEPENDENT HOSTNAME
 -> CORRECTION ROUTE STATED
@@ -235,6 +232,6 @@ PUBLIC SOURCE RECOVERED
 
 That demonstrates recoverability and independent serving at that moment.
 
-It does **not** by itself demonstrate permanent survivability, governance authority, historical truth, community acceptance or that a future record should be public.
+It does **not** by itself demonstrate permanent survivability, governance authority, historical truth, community acceptance, continuation of a living practice, or that a future record should be public.
 
 `CONTINUITY DOES NOT REQUIRE IDENTITY`

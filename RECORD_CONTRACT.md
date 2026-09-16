@@ -2,7 +2,7 @@
 
 Status: **WORKING INTEROPERABILITY NOTE / DERIVED FROM CURRENT RECORDS / NOT A UNIVERSAL SCHEMA / NOT CANON**
 
-This document describes the smallest common structure currently earned by the two Human Record entries that already exist.
+This document describes the smallest common structure currently earned by the three Human Record entries that exist.
 
 It is not a claim that every kind of human knowledge or creativity can be represented in one JSON shape. It is not a certification standard, a truth oracle, an authorship detector, or a requirement that future records use identical field names.
 
@@ -33,7 +33,7 @@ At minimum:
 
 A record must say what it is actually about.
 
-For an artefact this may be an identified work and the attribution/provenance assertions being checked. For a claim-provenance case it may be the exact proposition whose source ancestry is being reconstructed.
+For an artefact this may be an identified work and the attribution/provenance assertions being checked. For a claim-provenance case it may be the exact proposition whose source ancestry is being reconstructed. For a living-knowledge lineage case it may be the bounded public evidence for how a practice or skill was transmitted, interrupted or revived.
 
 Do not widen the subject silently when evidence only supports a narrower statement.
 
@@ -82,9 +82,12 @@ The record should separate what the checked evidence supports from interpretatio
 
 A finding should be narrow enough that another reader can inspect the cited basis and disagree with it.
 
-Where the record only establishes agreement with an institutional record, say that. Where it only reconstructs a visible propagation chain, say that.
+Where the record only establishes agreement with an institutional record, say that. Where it only reconstructs a visible propagation chain, say that. Where it only shows a public attention or transmission pathway, do not silently turn that into evidence that tacit skill itself was transmitted.
 
-`EVIDENCE != INFERENCE`
+```text
+EVIDENCE != INFERENCE
+ATTENTION_PATHWAY != SKILL_TRANSMISSION
+```
 
 ## 6. Unknowns and unexamined material
 
@@ -134,17 +137,19 @@ Preserve the relevant boundary between:
 - public evidence and restricted/community-held knowledge;
 - ability to copy and authority to govern;
 - contributor participation and stewardship;
-- provenance labels and legal authorship determinations.
+- provenance labels and legal authorship determinations;
+- public reporting about a living practitioner and that practitioner's participation or endorsement.
 
 ```text
 RECORDING != OWNING
 PRESERVATION != EXTRACTION
 CUSTODY != GOVERNANCE
 COMMUNITY_KNOWLEDGE != PUBLIC_DOMAIN
+PUBLIC_SOURCE != ENDORSEMENT
 CC0_GRANT != THIRD_PARTY_RIGHTS_GRANT
 ```
 
-For living communities, practitioners or creators, consent and legitimate control can be part of the evidence structure rather than an obstacle to preservation.
+For living communities, practitioners or creators, consent and legitimate control can be part of the evidence structure rather than an obstacle to preservation. A public-source record can remain public-source only; recording practitioner-specific tacit knowledge can require a separate permission decision.
 
 ## 9. Human and machine routes
 
@@ -175,26 +180,28 @@ Different record types may need very different additional structures.
 Examples already present:
 
 - the artwork specimen needs artefact identity, owner-source reconciliation, image-byte comparison, rights layers and selection provenance;
-- the flak-claim case needs propagation nodes, claim relations, source ancestry, nearby-but-different evidence, research leads and unresolved origin hypotheses.
+- the flak-claim case needs propagation nodes, claim relations, source ancestry, nearby-but-different evidence, research leads and unresolved origin hypotheses;
+- the sieve-and-riddle case needs living-practice status with an explicit external status owner, selection/strongest-owner reasoning, lineage events, source-independence groups, authority/consent boundaries, and a separation between public attention pathways and actual skill transmission.
 
-Future records involving crafts, oral knowledge, audiovisual carriers, software-dependent works or living creators may require consent, practitioner lineage, dependency graphs, carrier condition, access restrictions, environment capture, or other fields not earned by the current two records.
+Future records involving oral history, audiovisual carriers, software-dependent works, living creators or community-held knowledge may require carrier condition, environment/dependency capture, consent, access restrictions, community authority, or other fields not earned by the current three records.
 
 Do not add those fields globally until a real record requires them.
 
 ## Current field mapping
 
-The two existing machine records do not yet use identical field names. That is acceptable if their semantics remain inspectable.
+The three existing machine records do not use identical field names. That is acceptable if their semantics remain inspectable.
 
-| Common question | Artwork specimen | Flak claim case |
-| --- | --- | --- |
-| identity/type | `format`, `artefact` | `record_type`, `record_version`, `title` |
-| current state | `status`, observation fields | `status`, `historical_truth_status`, `recorded_at` |
-| evidence | `owner_sources`, `reconciliation` | `nodes`, `review_receipts` |
-| source relationship | `epistemic_boundaries.source_independence` | node `role` / `claim_relation` |
-| findings | reconciliation + bounded prose | `current_findings` |
-| unknowns | `not_established`, epistemic boundaries | `unknowns`, `not_checked` |
-| correction history | `corrections` | `challenges`, revision notes |
-| correction route | `correction_route` | `correction_rule` + public contribution route |
+| Common question | Artwork specimen | Flak claim case | Sieve/riddle lineage case |
+| --- | --- | --- | --- |
+| identity/type | `format`, `artefact` | `record_type`, `record_version`, `title` | `record_type`, `record_version`, `title` |
+| current state | `status`, observation fields | `status`, `historical_truth_status`, `recorded_at` | `status`, `living_practice_status`, `recorded_at` |
+| evidence | `owner_sources`, `reconciliation` | `nodes`, `review_receipts` | `nodes`, `lineage_events` |
+| source relationship | `epistemic_boundaries.source_independence` | node `role` / `claim_relation` | `source_independence` |
+| findings | reconciliation + bounded prose | `current_findings` | `current_findings` |
+| unknowns | `not_established`, epistemic boundaries | `unknowns`, `not_checked` | `unknowns`, `not_checked` |
+| correction history | `corrections` | `challenges`, revision notes | Git history + future challenge entries; `correction_rule` defines current practice |
+| rights / authority | `rights_layers`, epistemic boundaries | contribution/rights boundary in full record | `authority_and_consent` |
+| correction route | `correction_route` | `correction_rule` + public contribution route | `correction_route`, `correction_rule` |
 
 This table is a migration aid, not a command to rename mature fields merely for symmetry.
 
@@ -214,6 +221,14 @@ ARE RIGHTS / CONSENT / CUSTODY BOUNDARIES HONEST?
 CAN A MACHINE FIND THE SAME RECORD WITHOUT INVENTING MISSING STRUCTURE?
 ```
 
+For a living practice, creator or community, add:
+
+```text
+DOES THE RECORD DISTINGUISH DOCUMENTATION FROM LIVING CONTINUATION?
+DOES PUBLIC SOURCE USE AVOID IMPLYING ENDORSEMENT?
+WOULD DEEPER RECORDING REQUIRE A SEPARATE CONSENT / AUTHORITY DECISION?
+```
+
 If not, improve the record before multiplying the collection.
 
 ## Current authority
@@ -225,3 +240,7 @@ The current public Human Record source is:
 Earlier COM material remains useful build provenance and historical source lineage. It is not required as the operational correction or continuation surface for current Human Record entries.
 
 Stewardship remains separately **offered to 1F916 / not accepted / not community-owned**. This contract does not alter that status.
+
+```text
+RECORDING != CONTINUATION
+```
