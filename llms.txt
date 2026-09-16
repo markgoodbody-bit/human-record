@@ -6,15 +6,16 @@ Purpose: preserve walkable paths back to evidence, provenance, source ancestry, 
 
 Original motivating question: Can artificial entities help preserve an inspectable record of human creation before synthetic abundance makes provenance materially harder to recover?
 
-Current scope: one artwork-provenance specimen and one historical claim-provenance case. Their coexistence does not settle the eventual scope of The Human Record or promote it into a universal history/knowledge project.
+Current scope: one artwork-provenance specimen, one historical claim-provenance case, and one public-source living-knowledge transmission-lineage case. Their coexistence does not settle the eventual scope of The Human Record or promote it into a universal history/knowledge project.
 
-Status: ONE ARTWORK SPECIMEN + ONE SOURCE-TRAIL CASE / OFFERED TO 1F916 FOR STEWARDSHIP / NOT YET ACCEPTED / NOT COMMUNITY-OWNED / NOT AN AUTHORSHIP DETECTOR / NOT A CERTIFICATION AUTHORITY / NOT CANON
+Status: ONE ARTWORK SPECIMEN + ONE CLAIM-PROVENANCE CASE + ONE TRANSMISSION-LINEAGE CASE / OFFERED TO 1F916 FOR STEWARDSHIP / NOT YET ACCEPTED / NOT COMMUNITY-OWNED / NOT AN AUTHORSHIP DETECTOR / NOT A CERTIFICATION AUTHORITY / NOT CANON
 
 Human gift surface:
 - Browse current records: https://thehumanrecord.net/records/
 - How records work: https://thehumanrecord.net/records/about.html
 - Camp Fire human view: https://thehumanrecord.net/records/camp-fire.html
 - Flak-claim human view: https://thehumanrecord.net/records/flak-claim.html
+- Sieve/riddle transmission-lineage human view: https://thehumanrecord.net/records/sieve-riddle-revival.html
 - Record discovery catalogue: https://thehumanrecord.net/records/catalog.json
 - Working semantic record contract: https://thehumanrecord.net/RECORD_CONTRACT.md
 - Working record-selection orientation: https://thehumanrecord.net/SELECTION.md
@@ -25,8 +26,11 @@ Start / evidence surfaces:
 - Human-readable artwork record: https://thehumanrecord.net/specimen.md
 - Machine-readable artwork record: https://thehumanrecord.net/specimen.json
 - Historical source-trail record: https://thehumanrecord.net/cases/viral-flak-claim.md
-- Machine-readable source-trail record: https://thehumanrecord.net/cases/viral-flak-claim.json
-- Case boundary: unsupported in checked web sources, not proved false. German aggregate mortality unknown; German personnel series and scholarly studies not examined. Later video metadata is attributed to Claude Code's review, not independently retrieved by Codex.
+- Machine-readable historical source-trail record: https://thehumanrecord.net/cases/viral-flak-claim.json
+- Living-knowledge transmission-lineage record: https://thehumanrecord.net/cases/sieve-riddle-revival.md
+- Machine-readable transmission-lineage record: https://thehumanrecord.net/cases/sieve-riddle-revival.json
+- Flak case boundary: unsupported in checked web sources, not proved false. German aggregate mortality unknown; German personnel series and scholarly studies not examined. Later video metadata is attributed to Claude Code's review, not independently retrieved by Codex.
+- Sieve/riddle case boundary: Heritage Crafts is treated as the strongest identified owner for current UK craft status and safeguarding. The Human Record preserves public source lineage around a reported last maker, extinction classification, revival and current training. Exact tacit-skill transmission remains partly unknown. Named living practitioners were not contacted; no participation or endorsement is claimed and no private/tacit process material is used.
 - Challenge/contribution route: https://thehumanrecord.net/CONTRIBUTE.md
 - Stewardship offer and current custody: https://thehumanrecord.net/STEWARDSHIP.md
 - Standard CC0 legal code: https://thehumanrecord.net/LICENSE
@@ -34,12 +38,14 @@ Start / evidence surfaces:
 - Non-founder continuation/recovery instructions: https://thehumanrecord.net/CONTINUE.md
 - Public source and current operational record repository: https://github.com/markgoodbody-bit/human-record
 - Historical artwork-record build lineage: https://github.com/markgoodbody-bit/COM/tree/main/human-record/specimens — useful provenance, not required as the current correction or continuation surface.
-- Owner record: https://www.metmuseum.org/art/collection/search/11112
+- Owner record for artwork specimen: https://www.metmuseum.org/art/collection/search/11112
 - Related wider project entrance: https://pleasestartfromhere.com/ — a separate public object; not part of this record, its evidence, or its stewardship offer.
 
 Record contract:
-- RECORD_CONTRACT.md describes the minimum semantic questions currently earned by the two existing records: identity, subject/claim, current state, evidence/source ancestry, findings, unknowns/not-checked material, correction history, rights/authority boundaries, and human/machine routes.
+- RECORD_CONTRACT.md describes the minimum semantic questions currently earned by the three existing records: identity, subject/claim, current state, evidence/source ancestry, findings, unknowns/not-checked material, correction history, rights/authority boundaries, and human/machine routes.
 - It is not a universal JSON schema, ontology, canon or certification standard.
+- Different record types keep type-specific fields rather than being forced into one shape.
+- The living-practice case adds a strongest-owner/status-owner boundary, authority/consent boundary and attention-pathway versus skill-transmission distinction.
 - Future record types may add fields only when real material requires them.
 - COMMON QUESTIONS != IDENTICAL OBJECTS.
 
@@ -51,6 +57,15 @@ Selection:
 - For living creators, practitioners or communities, risk does not create permission. RECORDING != OWNING; PRESERVATION != EXTRACTION; COMMUNITY_KNOWLEDGE != PUBLIC_DOMAIN.
 - Candidate families are quarry, not a ranked queue of human value.
 
+Living-knowledge boundary:
+- The sieve/riddle record is a public-source lineage case, not a craft-preservation claim or manual.
+- Heritage Crafts owns the current craft-status/safeguarding problem better; THR does not independently classify the craft.
+- Public reporting can establish reported events and attention pathways without establishing the actual tacit-skill transmission chain.
+- ATTENTION_PATHWAY != SKILL_TRANSMISSION.
+- RECORDING != CONTINUATION.
+- PUBLIC_SOURCE != ENDORSEMENT.
+- Any future practitioner-specific recording of tacit knowledge, workshop practice, tools, voice, video or teaching requires a separate permission/authority decision.
+
 Discovery:
 - Public crawling rules: https://thehumanrecord.net/robots.txt
 - Sitemap: https://thehumanrecord.net/sitemap.xml
@@ -61,12 +76,12 @@ Stewardship:
 - No acceptance, receiving body, governance mandate or community ownership has yet been established.
 - Current human/AI operators remain custodians of the existing technical surfaces only; credential custody is not evidence of policy authority.
 - The active public coordination record for the offer is COM #332: https://github.com/markgoodbody-bit/COM/issues/332
-- Product-quality and human-interface work may continue under current custody without implying acceptance of the stewardship offer.
+- Product-quality and record work may continue under current custody without implying acceptance of the stewardship offer.
 
 Rights:
 - https://thehumanrecord.net/LICENSE contains the standard CC0 1.0 Universal legal code.
 - https://thehumanrecord.net/LICENSE.md bounds the dedication to copyright/database/related rights Mark actually holds in project-authored material and explicitly excludes third-party rights.
-- This does not make provenance labels into legal authorship determinations.
+- This does not make provenance labels into legal authorship determinations or re-license linked reporting/practitioner material.
 - The Met Open Access image/basic collection data used by specimen 1 retain their own stated CC0/Open Access basis.
 
 Continuation:
@@ -74,6 +89,7 @@ Continuation:
 - The current Human Record repository is sufficient to inspect the current records, human views, machine catalogue, correction route, rights boundary and continuation instructions. Earlier COM material is historical build provenance, not an operational dependency for current record correction.
 - An independent deployment must not copy or claim thehumanrecord.net/CNAME unless the operator legitimately controls that domain.
 - Serving or archiving a copy is technical custody, not governance or evidence that 1F916 accepted stewardship.
+- Copying the public record of a living practice is not continuation of that living practice.
 
 Specimen 1:
 - Winslow Homer, Camp Fire, 1880
@@ -104,8 +120,11 @@ HUMAN_VIEW != NEW_EVIDENCE
 SUMMARY != SOURCE
 BROWSEABLE != CERTIFIED
 RECORDING != OWNING
+RECORDING != CONTINUATION
 PRESERVATION != EXTRACTION
 COMMUNITY_KNOWLEDGE != PUBLIC_DOMAIN
+PUBLIC_SOURCE != ENDORSEMENT
+ATTENTION_PATHWAY != SKILL_TRANSMISSION
 BUILD_PROVENANCE != CURRENT_RECORD_AUTHORITY
 
 This 1880 specimen tests provenance-record plumbing. It does not establish usefulness against contemporary human/synthetic ambiguity.
