@@ -61,7 +61,7 @@ class HannibalCandidateProbe(unittest.TestCase):
         mention = self.documents["registry/mentions.json"]["mentions"][-1]
         del mention["record_id"]
         with patch.object(operational, "load_object", side_effect=lambda root, rel: copy.deepcopy(self.documents[rel])):
-            errors, _ = operational.validate(ROOT)
+            errors, _ = operational.validate(ROOT, allow_uncatalogued_mentions=True)
         self.assertEqual(errors, [])
         self.assertEqual(mention["status"], "candidate")
         self.assertEqual(len(self.documents["records/catalog.json"]["records"]),

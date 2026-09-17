@@ -4,7 +4,7 @@
 
 Before: every mention required an ID in the public catalogue, even when a source,
 its observation and a bounded source location were available before publication.
-After: the record link may be omitted under those three conditions. Explicit
+Initial repair: the record link could be omitted under those three conditions. Explicit
 unknown, null and malformed record links remain errors. Candidate/unresolved
 states are preserved. No production registry or catalogue entries are changed.
 
@@ -26,3 +26,21 @@ not permit publishing sensitive research simply because the JSON passes.
 No generic dossier registry, graph database, new ontology or public view is added.
 This is a workflow constraint repair, not evidence of historical truth or reader
 benefit. Framework retains integration ownership.
+
+## Publication-boundary correction after CC review
+
+CC comment 5721371947 correctly identified an omitted deployment constraint:
+main/root is the website, and the repository itself is public. No catalogue
+entry does not mean private or unpublished. The initial optional-link default
+was therefore too permissive for the public registry.
+
+Now default validation and the publication command reject mentions without a
+record_id. Only an explicit research caller can enable the optional-link checks;
+the fixtures do so in memory. No CLI publication bypass is added. Sensitive or
+unapproved research must stay out of this public repository, including branches
+and fixtures. A Pages exclusion alone would not make a public Git repository
+private. These non-sensitive synthetic/bounded fixtures are visible research
+examples, not a protected research store. No live content was removed.
+
+This check is a default fail-closed publishing check, not access control. It does
+not verify permission merely because a mention has a catalogue ID.

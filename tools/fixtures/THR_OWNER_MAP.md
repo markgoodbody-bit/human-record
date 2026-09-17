@@ -111,7 +111,9 @@ Follow-up: JFK_PROBE.md records the contested-event fixture and narrow provenanc
 repair. RESEARCH_MENTION_REPAIR.md records the later optional-link implementation.
 Both original fixtures still reject their fabricated record IDs; additional tests
 omit that field and accept a source-owned observation with non-empty locator
-context. Locator accuracy remains a review obligation, not a validator result.
+context in explicitly enabled in-memory research mode. Default/public validation
+still requires a catalogue link following CC's publication-boundary review.
+Locator accuracy remains a review obligation, not a validator result.
 
 ## Review of the owner-subtraction review
 

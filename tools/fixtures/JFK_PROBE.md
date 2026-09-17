@@ -68,3 +68,11 @@ fail. The repair derives observation ownership from the source registry and
 requires that owner among the assertion's cited sources. The assertion model
 now states this constraint explicitly. The catalogue failure remains expected;
 no historical assertion or production registry is changed.
+
+CC review 5721371947 additionally demonstrated that changing a reported custody
+assertion to state observed still passes. This is an unresolved semantic check,
+not fixed by observation ownership. A blanket ban on observed/reconciled evidence
+from web pages would also reject legitimate inspection of a page's own contents
+or reconciliation of two representations. Source medium does not determine the
+object of observation. No such ban is implemented; typed observation-target and
+claim-scope enforcement require a separate bounded design and counterexamples.

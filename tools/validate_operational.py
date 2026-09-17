@@ -41,7 +41,7 @@ def load_object(root: Path, rel: str) -> dict:
     return value
 
 
-def validate(root: Path = ROOT) -> tuple[list[str], dict[str, int]]:
+def validate(root: Path = ROOT, *, allow_uncatalogued_mentions: bool = False) -> tuple[list[str], dict[str, int]]:
     root = Path(root).resolve()
     errors: list[str] = []
     counts = {"mentions": 0, "source_checks": 0}
@@ -115,8 +115,10 @@ def validate(root: Path = ROOT) -> tuple[list[str], dict[str, int]]:
                 if not isinstance(rid, str) or rid not in record_ids:
                     errors.append(f"{mid}: unknown record_id {rid!r}")
             else:
-                # Research need not manufacture a public catalogue entry.
-                # Existing checks above still enforce source/observation ownership.
+                # Main/root is the public site. Opt-in is for isolated research
+                # callers only, not a privacy boundary or a publication permit.
+                if not allow_uncatalogued_mentions:
+                    errors.append(f"{mid}: public registry mention requires record_id")
                 if oid is None:
                     errors.append(f"{mid}: mention without record_id requires observation_id")
                 location = mention.get("context")
