@@ -64,3 +64,7 @@ Three probe tests cover structure accepted, catalogue dependency exposed, and
 candidate/source-report status retained. Existing eleven vocabulary warnings
 remain unrelated and unresolved. Structural acceptance is not historical truth,
 identity certainty, preservation adequacy or standards interoperability.
+
+Later follow-up: RESEARCH_MENTION_REPAIR.md documents the optional record-link
+repair. The original fabricated-link rejection remains tested; a separate test
+omits that link and accepts the source-anchored candidate without publication.

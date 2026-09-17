@@ -57,6 +57,16 @@ class HannibalCandidateProbe(unittest.TestCase):
         self.assertNotIn(self.fixture["mention"]["record_id"],
                          {record["id"] for record in self.documents["records/catalog.json"]["records"]})
 
+    def test_source_anchored_candidate_without_public_record(self):
+        mention = self.documents["registry/mentions.json"]["mentions"][-1]
+        del mention["record_id"]
+        with patch.object(operational, "load_object", side_effect=lambda root, rel: copy.deepcopy(self.documents[rel])):
+            errors, _ = operational.validate(ROOT)
+        self.assertEqual(errors, [])
+        self.assertEqual(mention["status"], "candidate")
+        self.assertEqual(len(self.documents["records/catalog.json"]["records"]),
+                         len(json.loads((ROOT / "records/catalog.json").read_text(encoding="utf-8"))["records"]))
+
 
 if __name__ == "__main__":
     unittest.main()

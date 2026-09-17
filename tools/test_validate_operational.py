@@ -52,6 +52,50 @@ class OperationalRegistryTests(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(counts, {"mentions": 1, "source_checks": 1})
 
+    def make_research_mention(self):
+        del self.mention["record_id"]
+        self.mention["context"] = "Report, section 4, named-subject paragraph"
+
+    def test_source_anchored_mention_does_not_require_public_record(self):
+        self.make_research_mention()
+        self.write()
+        self.assertEqual(validator.validate(self.root)[0], [])
+
+    def test_research_mention_requires_observation(self):
+        self.make_research_mention()
+        del self.mention["observation_id"]
+        self.write()
+        self.assertTrue(any("requires observation_id" in e for e in validator.validate(self.root)[0]))
+
+    def test_research_mention_requires_locator_context(self):
+        self.make_research_mention()
+        for context in (None, "", "   ", {}, 42):
+            with self.subTest(context=context):
+                self.mention["context"] = context
+                self.write()
+                self.assertTrue(any("requires non-empty context" in e for e in validator.validate(self.root)[0]))
+
+    def test_research_mention_rejects_foreign_observation(self):
+        self.make_research_mention()
+        self.mention["observation_id"] = "thr:observation:11111111-1111-4111-8111-111111111111"
+        self.write()
+        self.add_unrelated_observation()
+        self.assertTrue(any("different source" in e for e in validator.validate(self.root)[0]))
+
+    def test_explicit_bad_record_is_not_treated_as_omitted(self):
+        self.mention["context"] = "Report, section 4"
+        for record in (None, "", "missing", [], {}):
+            with self.subTest(record=record):
+                self.mention["record_id"] = record
+                self.write()
+                self.assertTrue(any("unknown record_id" in e for e in validator.validate(self.root)[0]))
+
+    def test_research_mention_rejects_unknown_source(self):
+        self.make_research_mention()
+        self.mention["source_id"] = "thr:source:11111111-1111-4111-8111-111111111111"
+        self.write()
+        self.assertTrue(any("unknown source_id" in e for e in validator.validate(self.root)[0]))
+
     def test_unknown_entity_rejected(self):
         self.mention["candidates"][0]["entity_id"] = "thr:entity:11111111-1111-4111-8111-111111111111"
         self.write()

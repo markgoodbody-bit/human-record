@@ -124,6 +124,21 @@ A mention should preserve, where useful:
 
 The mention is evidence that a string or description occurred. It is not proof that the intended referent has been identified.
 
+### Research mentions and public views
+
+In the operational registry, the identifier field is `id` (the conceptual
+`mention_id` above). A mention may omit `record_id` while research is being
+prepared. In that case it must name a known `source_id`, an `observation_id`
+belonging to that source, and a non-blank `context` describing the bounded
+quotation location or structural locator. A supplied `record_id` must still
+resolve to the public catalogue; null or a made-up candidate name is not omission.
+
+The validator checks references and presence of context, not whether that
+location is accurate or whether the observation actually supports the literal.
+Those remain review questions. No new entity, public page, identity resolution,
+or permission to publish follows from accepting a source-anchored mention.
+Existing record-linked mentions retain their current requirements.
+
 ## 5. Candidate resolution
 
 A mention may have zero, one or many candidate entities.

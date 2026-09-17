@@ -86,7 +86,7 @@ This decomposition is already conceptually supported. The current validator
 instead requires a catalogue identity at step 4's mention stage. That is a local
 workflow/reference constraint, not a missing world category.
 
-## Smallest repair proposal, not implemented here
+## Initial repair proposal (implementation follow-up below)
 
 Make `record_id` optional only when a mention remains independently anchored by
 an existing source, its owned observation and a non-empty structural locator.
@@ -108,5 +108,7 @@ now. No ontology importer, graph database or RDF dependency follows from this no
   check and documented constraint are described in JFK_PROBE.md.
 
 Follow-up: JFK_PROBE.md records the contested-event fixture and narrow provenance
-repair. Both mention fixtures still fail without a catalogue record; preserve
-that failure until a reviewed optional-link repair earns a different expectation.
+repair. RESEARCH_MENTION_REPAIR.md records the later optional-link implementation.
+Both original fixtures still reject their fabricated record IDs; additional tests
+omit that field and accept a source-owned observation with non-empty locator
+context. Locator accuracy remains a review obligation, not a validator result.

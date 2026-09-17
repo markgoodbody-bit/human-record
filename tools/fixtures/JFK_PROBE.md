@@ -49,7 +49,8 @@ narrows structural acceptance, not historical interpretation.
 
 The optional record-link proposal in THR_OWNER_MAP.md survives both examples as
 a candidate workflow repair. It still needs an explicit source-owned observation
-and locator contract, and adversarial tests. It is not implemented in this probe.
+and locator contract, and adversarial tests. It was not implemented in this probe's
+initial commit; the later implementation is recorded in RESEARCH_MENTION_REPAIR.md.
 No new causal ontology or database layer is justified by these examples.
 
 ## Reproduce

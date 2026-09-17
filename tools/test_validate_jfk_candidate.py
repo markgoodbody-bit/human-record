@@ -64,6 +64,15 @@ class JFKCandidateProbe(unittest.TestCase):
             target["id"] + ": evidence observation belongs to a source not cited in source_ids: "
             + repr(target["evidence"]["observation_ids"][0])])
 
+    def test_unresolved_source_mention_without_public_record(self):
+        mention = self.documents["registry/mentions.json"]["mentions"][-1]
+        del mention["record_id"]
+        with patch.object(operational, "load_object", side_effect=lambda root, rel: copy.deepcopy(self.documents[rel])):
+            errors, _ = operational.validate(ROOT)
+        self.assertEqual(errors, [])
+        self.assertEqual(mention["candidates"], [])
+        self.assertEqual(mention["status"], "unresolved_not_required")
+
     def test_multiple_cited_sources_may_supply_observations(self):
         target = self.documents["registry/assertions.json"]["assertions"][-6]
         target["evidence"]["source_ids"].append(self.fixture["sources"][2]["id"])
