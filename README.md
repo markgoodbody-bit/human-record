@@ -2,43 +2,38 @@
 
 Status: **PUBLIC STATIC SITE / STEWARDSHIP OFFERED TO 1F916 — NOT YET ACCEPTED**
 
-Read [The Human Record](https://thehumanrecord.net/). Ordinary HTTPS access was
-verified on 15 September 2026; the first human-browser deployment was subsequently
-verified against its pinned repository source on 16 September 2026. Publication does
-not establish provenance claims or community ownership. See
-[STEWARDSHIP.md](STEWARDSHIP.md) for the offer and current custody,
-[LICENSE.md](LICENSE.md) for the bounded scope of the CC0 dedication, and
-[CONTINUE.md](CONTINUE.md) for non-founder recovery/serving instructions.
+Read [The Human Record](https://thehumanrecord.net/). Ordinary HTTPS access was verified on 15 September 2026; the first human-browser deployment was subsequently verified against its pinned repository source on 16 September 2026. Publication does not establish provenance claims or community ownership.
 
-The project is built collaboratively with artificial-intelligence apertures, but the
-public record is intended as a gift for humans as well as machine readers. The normal
-human route is [`records/`](records/): a browseable catalogue and readable views of the
-current records. [`records/about.html`](records/about.html) explains the common anatomy
-of a record in ordinary language, including [who builds and checks it](records/about.html#who-builds-this).
-[`records/architecture.html`](records/architecture.html)
-explains how the same discipline can scale when human names collide and web sources
-change or disappear. Those pages are derived reading surfaces, not new evidence and not
-replacements for the Markdown/JSON records or Git history.
+## This is an open build
 
-The smallest common structure earned by the existing records is described in
-[`RECORD_CONTRACT.md`](RECORD_CONTRACT.md). It is a semantic interoperability note,
-not a universal schema, canon, certification standard or claim that every kind of human
-knowledge can be represented identically.
+The Human Record is not intended to remain a private project belonging to one human and a small set of artificial collaborators.
 
-[`SELECTION.md`](SELECTION.md) carries the working rule for choosing future records: look
-for a specific recoverability/provenance gap, check stronger preservation owners first,
-and do not turn risk into permission to extract or publish living/community knowledge.
-It is a selection orientation, not a ranked queue of human importance.
+The current implementation is the best structure the present builders have managed so far. It is incomplete, expected to contain mistakes, and explicitly open to challenge by humans and artificial systems.
 
-The first scale layer is documented in [`SCALE.md`](SCALE.md),
-[`IDENTITY_MODEL.md`](IDENTITY_MODEL.md) and [`SOURCE_MODEL.md`](SOURCE_MODEL.md).
-Cross-record opaque identifiers and source-currentness/preservation state live in the
-small [`registry/`](registry/) index. They are working interoperability machinery, not a
-universal ontology or a database of everyone.
+Read [`OPEN_BUILD.md`](OPEN_BUILD.md) for the current architecture hypothesis, known vulnerabilities, stronger existing standards we are trying to interoperate with rather than reinvent, destructive test objects, and the specific kinds of criticism that would improve or shrink the project.
 
-Related wider project entrance: [Please Start From Here](https://pleasestartfromhere.com/).
-It is a separate public object and is not part of this record, its evidence, or its
-stewardship offer.
+Read [`CONTRIBUTE.md`](CONTRIBUTE.md) to inspect, challenge, correct or contribute without accepting this project's vocabulary or any related framework.
+
+```text
+PUBLIC != CORRECT
+OPEN != COMPLETE
+AGREEMENT != VALIDATION
+RECORD != FUNDAMENTAL_UNIT
+RECORDING != OWNING
+PRESERVATION != EXTRACTION
+```
+
+See [`STEWARDSHIP.md`](STEWARDSHIP.md) for the offer and current custody, [`LICENSE.md`](LICENSE.md) for the bounded scope of the CC0 dedication, and [`CONTINUE.md`](CONTINUE.md) for non-founder recovery/serving instructions.
+
+The project is built collaboratively with artificial-intelligence apertures, but the public record is intended as a gift for humans as well as machine readers. The normal human route is [`records/`](records/): a browseable catalogue and readable views of the current records. [`records/about.html`](records/about.html) explains the common anatomy of a record in ordinary language, including [who builds and checks it](records/about.html#who-builds-this). [`records/architecture.html`](records/architecture.html) explains how the same discipline can scale when human names collide and web sources change or disappear. Those pages are derived reading surfaces, not new evidence and not replacements for the Markdown/JSON records or Git history.
+
+The smallest common structure earned by the existing records is described in [`RECORD_CONTRACT.md`](RECORD_CONTRACT.md). It is a semantic interoperability note, not a universal schema, canon, certification standard or claim that every kind of human knowledge can be represented identically.
+
+[`SELECTION.md`](SELECTION.md) carries the working rule for choosing future records: look for a specific recoverability/provenance gap, check stronger preservation owners first, and do not turn risk into permission to extract or publish living/community knowledge. It is a selection orientation, not a ranked queue of human importance.
+
+The first scale layer is documented in [`SCALE.md`](SCALE.md), [`IDENTITY_MODEL.md`](IDENTITY_MODEL.md) and [`SOURCE_MODEL.md`](SOURCE_MODEL.md). Cross-record opaque identifiers and source-currentness/preservation state live in the small [`registry/`](registry/) index. They are working interoperability machinery, not a universal ontology or a database of everyone.
+
+Related wider project entrance: [Please Start From Here](https://pleasestartfromhere.com/). It is a separate public object and is not part of this record, its evidence, or its stewardship offer.
 
 The public door currently carries three deliberately different record objects:
 
@@ -48,80 +43,30 @@ The public door currently carries three deliberately different record objects:
 
 None is a detector, certification authority, historical oracle or claim of canon. The living-practice case is not a craft manual and does not imply practitioner participation or endorsement.
 
-Contents:
-- `index.html` — human-facing public entrance;
-- `records/index.html` — human-facing record catalogue;
-- `records/about.html` — human explanation of the common record anatomy;
-- `records/architecture.html` — human explanation of scale, identity collisions and source survival;
-- `records/camp-fire.html` — readable view of the artwork specimen;
-- `records/flak-claim.html` — readable view of the historical claim-provenance case;
-- `records/sieve-riddle-revival.html` — readable view of the living-knowledge transmission-lineage case;
-- `records/catalog.json` — small discovery/currentness catalogue, not a universal schema;
-- `records/style.css` — shared presentation for the human record browser;
-- `RECORD_CONTRACT.md` — minimum semantic contract earned by the current records;
-- `SELECTION.md` — working selection discipline for future records;
-- `SCALE.md` — current scale architecture and incremental migration path;
-- `IDENTITY_MODEL.md` — opaque entity IDs, mentions and unresolved identity handling;
-- `SOURCE_MODEL.md` — source/locator/observation/preservation separation;
-- `registry/entities.json` — sparse cross-record entity index;
-- `registry/sources.json` — cross-record source/observation/preservation-state index;
-- `registry/README.md` — registry growth and privacy boundaries;
-- `tools/validate_integrity.py` — local structural/view-pin/registry validator;
-- `.github/workflows/validate-integrity.yml` — CI execution of the validator;
-- `specimen.md` — current human-readable artwork record;
-- `specimen.json` — current machine-readable artwork record;
-- `cases/viral-flak-claim.md` — human-readable provenance reconstruction of the viral historical claim;
-- `cases/viral-flak-claim.json` — machine-readable provenance reconstruction;
-- `cases/sieve-riddle-revival.md` — full human-readable public-source transmission-lineage record;
-- `cases/sieve-riddle-revival.json` — machine-readable transmission-lineage record;
-- `llms.txt` — compact machine entrance and boundaries;
-- `robots.txt` — explicit public crawler route and sitemap pointer; not a rights grant;
-- `sitemap.xml` — first-party public discovery map;
-- `STEWARDSHIP.md` — public stewardship offer, current custody and limits;
-- `CONTRIBUTE.md` — public inspection/challenge/contribution route;
-- `LICENSE` — standard CC0 1.0 legal code;
-- `LICENSE.md` — bounded scope notice explaining which rights Mark actually purports to dedicate and third-party boundaries;
-- `CONTINUE.md` — operational continuation/recovery note for a future non-founder operator;
-- `CNAME` — configured custom domain;
-- `.nojekyll` — serve files without Jekyll processing.
+Current working stress objects, not yet promoted as public records, include Hannibal Barca, the assassination of John F. Kennedy, and the Sunjata epic tradition. They are being used to attack the current model around historical-human identity, asymmetric source survival, contested causal models, evidence custody, oral transmission, legitimate variation and community/performer authority.
+
+Contents include the human browser under `records/`, full Markdown/JSON cases under `cases/`, working semantic and scale notes, sparse cross-record registries, validators, machine entrances, contribution/stewardship/licence/continuation routes, and the new [`OPEN_BUILD.md`](OPEN_BUILD.md) vulnerability ledger and invitation.
 
 ## Current source and historical lineage
 
-The current operational source for Human Record records, corrections, human views and
-continuation is this repository:
+The current operational source for Human Record records, corrections, human views and continuation is this repository:
 
 `https://github.com/markgoodbody-bit/human-record`
 
-The first artwork specimen entered the public Human Record from earlier project work in
-COM; the original specimen merge lineage includes:
-
-`d117594e3718bd3df613f82d53b9dc9971860caf`
-
-That older COM material remains useful build provenance. It is not required as the
-operational record store or correction route for current Human Record entries.
+The first artwork specimen entered the public Human Record from earlier project work in COM. Older COM material remains useful build provenance. It is not required as the operational record store or correction route for current Human Record entries.
 
 ```text
 BUILD_PROVENANCE != CURRENT_RECORD_AUTHORITY
 HISTORICAL_SOURCE_LINEAGE != OPERATIONAL_DEPENDENCY
 ```
 
-The current full record files in this repository own their present state. Human browser
-pages must not silently outrun those underlying records. Corrections should be dated and
-preserve what changed.
+The current full record files in this repository own their present state. Human browser pages must not silently outrun those underlying records. Corrections should be dated and preserve what changed.
 
 ## Human-interface boundary
 
-The human browser exists to make records legible without requiring readers to navigate raw
-Markdown, JSON, GitHub history or governance files first.
+The human browser exists to make records legible without requiring readers to navigate raw Markdown, JSON, GitHub history or governance files first.
 
-It should make visible, in ordinary language:
-
-- what the record is about;
-- what can currently be said from the checked evidence;
-- what remains unknown or unexamined;
-- how source ancestry/independence bears on the claim;
-- which corrections materially changed the record;
-- where to inspect the full record and machine form.
+It should make visible, in ordinary language, what the record is about; what can currently be said from checked evidence; what remains unknown or unexamined; how source ancestry/independence bears on the claim; which corrections materially changed the record; and where to inspect the full record and machine form.
 
 ```text
 HUMAN_VIEW != NEW_EVIDENCE
@@ -150,53 +95,17 @@ Opaque entity IDs let a label change without changing the referent. A source ID 
 
 The scale layer is intentionally incremental. Existing record formats are not being flattened into one schema. Add shared entity/source references when a real repeated-identity, source-ancestry, currentness or preservation problem makes them useful.
 
-AI is particularly useful for the repeated work: reconciling aliases and source relations, detecting proposition drift, fingerprinting observations, finding archived states, checking currentness, surfacing ambiguity and regenerating human views. That comparative advantage does not confer truth or governance authority.
+AI is particularly useful for repeated work: reconciling aliases and source relations, detecting proposition drift, fingerprinting observations, finding archived states, checking currentness, surfacing ambiguity and regenerating human views. That comparative advantage does not confer truth or governance authority.
 
 ```text
 AI_MATCH != SILENT_IDENTITY_FACT
 STORAGE_BACKEND != RECORD_MEANING
-COMPREHENSIVE PURPOSE != COLLECT EVERYTHING NOW
+COMPREHENSIVE_PURPOSE != COLLECT_EVERYTHING_NOW
 ```
-
-## Living-knowledge boundary
-
-The sieve-and-riddle case is the first current Human Record entry about a living practice.
-
-Heritage Crafts is treated as the strongest identified owner for current UK craft status, practitioner counts, viability and safeguarding. The Human Record does not independently classify the craft or replace that work.
-
-The THR contribution is narrower: preserve public-source lineage around the reported last maker, extinction classification, revival and current training, while keeping the central missing question visible — what was transmitted, reconstructed or newly learned, and through which routes.
-
-The record uses already-public reporting. It does not claim contact, consent, participation or endorsement from the named living practitioners, and it does not reproduce a detailed craft manual or private teaching material.
-
-```text
-RECORDING != CONTINUATION
-ATTENTION_PATHWAY != SKILL_TRANSMISSION
-PUBLIC_SOURCE != ENDORSEMENT
-RISK != PERMISSION
-PRESERVATION != EXTRACTION
-```
-
-## Provenance-case boundary
-
-The viral flak case records a visible source/repetition/correction chain. Its current claim status is:
-
-```text
-CLAIM: roughly 80% of German anti-aircraft crew members died during WWII
-STATUS: UNSUPPORTED IN SOURCES CHECKED
-TRUE AGGREGATE RATE: UNKNOWN
-```
-
-`UNSUPPORTED_IN_SOURCES_CHECKED != PROVED_FALSE`.
-
-The case exists to make the evidence ancestry walkable: original presentation, downstream
-repetition, community challenge, a later video's contradictory assertions, historical
-sources for nearby facts, and remaining unknowns. No German personnel series or scholarly
-study of German flak has been examined for this case.
 
 ## Hosting boundary
 
-Do **not** deploy this directory by replacing COM's existing `gh-pages` branch. That branch
-serves Please Start From Here and is a separate public object.
+Do **not** deploy this directory by replacing COM's existing `gh-pages` branch. That branch serves Please Start From Here and is a separate public object.
 
 Current deployment path:
 
@@ -204,32 +113,23 @@ Current deployment path:
 markgoodbody-bit/human-record repository root
 -> GitHub Pages from main/root
 -> custom domain thehumanrecord.net
--> Namecheap DNS to the GitHub Pages site
 -> HTTPS
--> verify index.html + records/* + registry/* + specimen.* + llms.txt + cases/*
+-> verify public source and derived views
 -> stop and observe
 ```
 
-An independent operator should follow `CONTINUE.md`; in particular, do not copy or claim
-the existing `CNAME`/custom-domain association without legitimate control of that domain.
-
-No framework, database, JavaScript, analytics, login, token or CMS is required for this
-public object.
+No framework, database, JavaScript, analytics, login, token or CMS is required for this public object.
 
 ## Ceilings
 
 ```text
 PROVENANCE != AUTHORSHIP_DETECTOR
 SELECTION != SIGNIFICANCE
-WORK_RIGHTS != REPRODUCTION_RIGHTS
 SOURCE_LINK != SOURCE_PRESERVED
 HASH != TRUTH
 REPETITION != CORROBORATION
 UNSUPPORTED != PROVED_FALSE
 OFFERED != ACCEPTED
-CC0_GRANT != THIRD_PARTY_RIGHTS_GRANT
-INDEPENDENT_COPY != INDEPENDENT_GOVERNANCE
-PLUMBING_SPECIMEN != SYNTHETIC_ERA_PURPOSE_TEST
 PUBLICATION != VALIDATION
 SUMMARY != SOURCE
 RECORDING != OWNING
@@ -243,4 +143,5 @@ SOURCE != OBSERVATION
 OBSERVATION != PRESERVED COPY
 PRESERVED COPY != TRUTH
 IDENTITY_RESOLUTION != IDENTITY_CERTAINTY
+THR_SURVIVAL != PURPOSE
 ```
