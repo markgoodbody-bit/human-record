@@ -1,0 +1,69 @@
+"""Contested-event probe; real bounded report attributions, synthetic mutations.
+
+No production object is written. Passing syntax does not adjudicate JFK.
+"""
+import copy
+import json
+from pathlib import Path
+import unittest
+from unittest.mock import patch
+
+import validate_integrity as integrity
+import validate_operational as operational
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class JFKCandidateProbe(unittest.TestCase):
+    def setUp(self):
+        self.fixture = json.loads((ROOT / "tools/fixtures/jfk-contested-candidate.json").read_text(encoding="utf-8"))
+        self.documents = {rel: json.loads((ROOT / rel).read_text(encoding="utf-8")) for rel in (
+            "records/catalog.json", "registry/entities.json", "registry/sources.json",
+            "registry/mentions.json", "registry/source-checks.json", "registry/assertions.json")}
+        for kind in ("entities", "sources", "assertions"):
+            self.documents[f"registry/{kind}.json"][kind].extend(copy.deepcopy(self.fixture[kind]))
+        self.documents["registry/mentions.json"]["mentions"].append(copy.deepcopy(self.fixture["mention"]))
+        integrity.errors.clear()
+        integrity.warnings.clear()
+        integrity._vocabulary_cache.clear()
+        self.addCleanup(integrity.errors.clear)
+        self.addCleanup(integrity.warnings.clear)
+        self.addCleanup(integrity._vocabulary_cache.clear)
+
+    def check_integrity(self):
+        with patch.object(integrity, "ROOT", ROOT), patch.object(
+                integrity, "load_json", side_effect=lambda rel: copy.deepcopy(self.documents[rel])):
+            records = integrity.check_catalog()
+            entities = integrity.check_entities()
+            sources, observations = integrity.check_sources(records)
+            return integrity.check_assertions(records, entities, sources, observations)
+
+    def test_reports_shared_referent_and_custody_fit_existing_envelopes(self):
+        assertions = self.check_integrity()
+        self.assertEqual(integrity.errors, [])
+        self.assertTrue({a["id"] for a in self.fixture["assertions"]} <= assertions)
+        a, b, film_a, film_b, custody, materials = self.fixture["assertions"]
+        self.assertEqual(a["subject"], b["subject"])
+        self.assertNotEqual(a["object"], b["object"])
+        self.assertNotEqual(a["evidence"], b["evidence"])
+        self.assertEqual(film_a["object"], film_b["object"])
+        self.assertEqual({x["state"] for x in self.fixture["assertions"]}, {"reported_by_source"})
+        self.assertEqual(len(self.fixture["sources"]), 4)  # Report pages only, no fake film observation.
+
+    def test_unpublished_mention_has_same_catalogue_failure_as_hannibal(self):
+        with patch.object(operational, "load_object", side_effect=lambda root, rel: copy.deepcopy(self.documents[rel])):
+            errors, _ = operational.validate(ROOT)
+        self.assertEqual(errors, [
+            self.fixture["mention"]["id"] + ": unknown record_id 'jfk-candidate-not-published'"])
+
+    def test_foreign_observation_exposes_integrity_gap(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-6]
+        target["evidence"]["observation_ids"] = [self.fixture["sources"][2]["observations"][0]["id"]]
+        self.check_integrity()
+        # Baseline witness: both IDs exist, but the observation belongs to a source NOT cited.
+        # This green test documents an unsafe acceptance, not successful provenance validation.
+        self.assertEqual(integrity.errors, [])
+
+
+if __name__ == "__main__":
+    unittest.main()

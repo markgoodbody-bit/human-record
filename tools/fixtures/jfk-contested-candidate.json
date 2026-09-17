@@ -1,0 +1,334 @@
+{
+  "status": "RESEARCH_FIXTURE_NOT_REGISTERED_OR_PUBLIC_CATALOGUED",
+  "basis": "Bounded passages of four NARA-hosted report pages read 17 September 2026. Historical findings are selected to test representation, not to survey present scholarship or assign equal credibility. Later acoustic reassessments and the underlying recordings/film were not reviewed.",
+  "entities": [
+    {
+      "id": "thr:entity:c763bf10-8b36-4cad-907a-000000000001",
+      "type": "event",
+      "labels": [
+        {
+          "text": "Assassination of John F. Kennedy, Dallas, 22 November 1963",
+          "kind": "candidate_display_label"
+        }
+      ],
+      "status": "candidate",
+      "record_links": [],
+      "notes": [
+        "Fixture referent, not a registered entity, causal verdict or identification of a particular carrier."
+      ]
+    },
+    {
+      "id": "thr:entity:c763bf10-8b36-4cad-907a-000000000002",
+      "type": "information_object",
+      "labels": [
+        {
+          "text": "Zapruder film, work-level referent only",
+          "kind": "candidate_display_label"
+        }
+      ],
+      "status": "candidate",
+      "record_links": [],
+      "notes": [
+        "Fixture referent, not a registered entity, causal verdict or identification of a particular carrier."
+      ]
+    },
+    {
+      "id": "thr:entity:c763bf10-8b36-4cad-907a-000000000003",
+      "type": "evidence_material_group",
+      "labels": [
+        {
+          "text": "Dallas police dispatch recordings and tapes described by HSCA, page 67",
+          "kind": "candidate_display_label"
+        }
+      ],
+      "status": "candidate",
+      "record_links": [],
+      "notes": [
+        "Fixture referent, not a registered entity, causal verdict or identification of a particular carrier."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "thr:source:c763bf10-8b36-4cad-907a-000000000001",
+      "kind": "web_page",
+      "title": "Warren Commission chapter 1",
+      "publisher": "National Archives (web host; report authorship retained in each assertion)",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://www.archives.gov/research/jfk/warren-commission-report/chapter-1"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:c763bf10-8b36-4cad-907a-000000000001",
+          "observed_at": "2026-09-17",
+          "outcome": "partial",
+          "observer": "Codex",
+          "scope": "Web-reader text: Conclusions: Oswald acted alone. Not a full-report review, physical evidence inspection, or byte-preserved capture."
+        }
+      ],
+      "relations": [],
+      "used_by_records": [],
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": []
+      }
+    },
+    {
+      "id": "thr:source:c763bf10-8b36-4cad-907a-000000000002",
+      "kind": "web_page",
+      "title": "Warren Commission chapter 3",
+      "publisher": "National Archives (web host; report authorship retained in each assertion)",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://www.archives.gov/research/jfk/warren-commission-report/chapter-3.html"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:c763bf10-8b36-4cad-907a-000000000002",
+          "observed_at": "2026-09-17",
+          "outcome": "partial",
+          "observer": "Codex",
+          "scope": "Web-reader text: Films and Tests, page 97. Not a full-report review, physical evidence inspection, or byte-preserved capture."
+        }
+      ],
+      "relations": [],
+      "used_by_records": [],
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": []
+      }
+    },
+    {
+      "id": "thr:source:c763bf10-8b36-4cad-907a-000000000003",
+      "kind": "web_page",
+      "title": "HSCA summary of findings",
+      "publisher": "National Archives (web host; report authorship retained in each assertion)",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://www.archives.gov/research/jfk/select-committee-report/summary.html"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:c763bf10-8b36-4cad-907a-000000000003",
+          "observed_at": "2026-09-17",
+          "outcome": "partial",
+          "observer": "Codex",
+          "scope": "Web-reader text: Findings I.2 and I.3. Not a full-report review, physical evidence inspection, or byte-preserved capture."
+        }
+      ],
+      "relations": [],
+      "used_by_records": [],
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": []
+      }
+    },
+    {
+      "id": "thr:source:c763bf10-8b36-4cad-907a-000000000004",
+      "kind": "web_page",
+      "title": "HSCA findings part I.B",
+      "publisher": "National Archives (web host; report authorship retained in each assertion)",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://www.archives.gov/research/jfk/select-committee-report/part-1b.html"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:c763bf10-8b36-4cad-907a-000000000004",
+          "observed_at": "2026-09-17",
+          "outcome": "partial",
+          "observer": "Codex",
+          "scope": "Web-reader text: Pages 67 and 79: dispatch material custody and film correlation. Not a full-report review, physical evidence inspection, or byte-preserved capture."
+        }
+      ],
+      "relations": [],
+      "used_by_records": [],
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": []
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "thr:assertion:c763bf10-8b36-4cad-907a-000000000001",
+      "subject": {
+        "entity_id": "thr:entity:c763bf10-8b36-4cad-907a-000000000001"
+      },
+      "predicate": "reported_causal_conclusion",
+      "object": {
+        "literal": "The Warren Commission concluded on its available evidence that Oswald acted alone."
+      },
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": [
+          "thr:source:c763bf10-8b36-4cad-907a-000000000001"
+        ],
+        "observation_ids": [
+          "thr:observation:c763bf10-8b36-4cad-907a-000000000001"
+        ]
+      },
+      "scope": {
+        "locator": "Chapter 1, Conclusions",
+        "ceiling": "Attribution to this report, not independent confirmation or a current historical verdict."
+      },
+      "record_links": [],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:c763bf10-8b36-4cad-907a-000000000002",
+      "subject": {
+        "entity_id": "thr:entity:c763bf10-8b36-4cad-907a-000000000001"
+      },
+      "predicate": "reported_causal_conclusion",
+      "object": {
+        "literal": "HSCA considered conspiracy probable on its available evidence, without identifying another gunman or its extent."
+      },
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": [
+          "thr:source:c763bf10-8b36-4cad-907a-000000000003"
+        ],
+        "observation_ids": [
+          "thr:observation:c763bf10-8b36-4cad-907a-000000000003"
+        ]
+      },
+      "scope": {
+        "locator": "Summary, I.2 and I.3",
+        "ceiling": "Attribution to this report, not independent confirmation or a current historical verdict."
+      },
+      "record_links": [],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:c763bf10-8b36-4cad-907a-000000000003",
+      "subject": {
+        "entity_id": "thr:entity:c763bf10-8b36-4cad-907a-000000000001"
+      },
+      "predicate": "reported_use_of_evidence",
+      "object": {
+        "entity_id": "thr:entity:c763bf10-8b36-4cad-907a-000000000002"
+      },
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": [
+          "thr:source:c763bf10-8b36-4cad-907a-000000000002"
+        ],
+        "observation_ids": [
+          "thr:observation:c763bf10-8b36-4cad-907a-000000000002"
+        ]
+      },
+      "scope": {
+        "locator": "Chapter 3, Films and Tests, page 97",
+        "ceiling": "Attribution to this report, not independent confirmation or a current historical verdict.",
+        "report_author": "Warren Commission",
+        "identity_ceiling": "Shared film referent; not proof that both reports inspected identical carriers, frames or bytes."
+      },
+      "record_links": [],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:c763bf10-8b36-4cad-907a-000000000004",
+      "subject": {
+        "entity_id": "thr:entity:c763bf10-8b36-4cad-907a-000000000001"
+      },
+      "predicate": "reported_use_of_evidence",
+      "object": {
+        "entity_id": "thr:entity:c763bf10-8b36-4cad-907a-000000000002"
+      },
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": [
+          "thr:source:c763bf10-8b36-4cad-907a-000000000004"
+        ],
+        "observation_ids": [
+          "thr:observation:c763bf10-8b36-4cad-907a-000000000004"
+        ]
+      },
+      "scope": {
+        "locator": "Part I.B, page 79, film correlation discussion",
+        "ceiling": "Attribution to this report, not independent confirmation or a current historical verdict.",
+        "report_author": "HSCA",
+        "identity_ceiling": "Shared film referent; not an independently inspected film or full inference chain."
+      },
+      "record_links": [],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:c763bf10-8b36-4cad-907a-000000000005",
+      "subject": {
+        "entity_id": "thr:entity:c763bf10-8b36-4cad-907a-000000000003"
+      },
+      "predicate": "reported_custody_transfer",
+      "object": {
+        "literal": "HSCA reports McCaghren retained the dispatch materials from 1969 until giving them to its investigator in 1978."
+      },
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": [
+          "thr:source:c763bf10-8b36-4cad-907a-000000000004"
+        ],
+        "observation_ids": [
+          "thr:observation:c763bf10-8b36-4cad-907a-000000000004"
+        ]
+      },
+      "scope": {
+        "locator": "Part I.B, page 67, references 8-9",
+        "ceiling": "Attribution to this report, not independent confirmation or a current historical verdict."
+      },
+      "record_links": [],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:c763bf10-8b36-4cad-907a-000000000006",
+      "subject": {
+        "entity_id": "thr:entity:c763bf10-8b36-4cad-907a-000000000003"
+      },
+      "predicate": "reported_analysis_materials",
+      "object": {
+        "literal": "HSCA describes original channel-1 Dictabelts and tape copies among materials supplied to BBN."
+      },
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": [
+          "thr:source:c763bf10-8b36-4cad-907a-000000000004"
+        ],
+        "observation_ids": [
+          "thr:observation:c763bf10-8b36-4cad-907a-000000000004"
+        ]
+      },
+      "scope": {
+        "locator": "Part I.B, page 67, reference 7 and footnote 3",
+        "ceiling": "Attribution to this report, not independent confirmation or a current historical verdict."
+      },
+      "record_links": [],
+      "corrections": []
+    }
+  ],
+  "mention": {
+    "id": "thr:mention:c763bf10-8b36-4cad-907a-000000000001",
+    "literal": "President John F. Kennedy",
+    "source_id": "thr:source:c763bf10-8b36-4cad-907a-000000000003",
+    "observation_id": "thr:observation:c763bf10-8b36-4cad-907a-000000000003",
+    "context": "HSCA summary, heading I and finding I.3; literal person mention, not automatically resolved to the event.",
+    "record_id": "jfk-candidate-not-published",
+    "status": "unresolved_not_required",
+    "candidates": []
+  },
+  "inspection_boundary": {
+    "underlying_film": "not_inspected_in_this_probe",
+    "underlying_recordings": "not_inspected_in_this_probe",
+    "present_custody": "not_established_by_this_probe",
+    "availability": "not_checked; absence of an observation is not unavailability or nonexistence"
+  },
+  "synthetic_mutation": "The test deliberately attaches the HSCA observation to a Warren-only source citation. This is a hostile test, never evidence."
+}
