@@ -112,3 +112,68 @@ repair. RESEARCH_MENTION_REPAIR.md records the later optional-link implementatio
 Both original fixtures still reject their fabricated record IDs; additional tests
 omit that field and accept a source-owned observation with non-empty locator
 context. Locator accuracy remains a review obligation, not a validator result.
+
+## Review of the owner-subtraction review
+
+17 September follow-up to CC's PR28 comment 5721039060. These are narrower
+interpretations and unresolved design questions, not additional project primitives.
+
+### Wikibase belongs in the comparison; avoid a false contrast
+
+[Wikidata ranking guidance](https://www.wikidata.org/wiki/Help:Ranking) assigns
+normal rank by default and permits multiple values at the same rank, including
+preferred. It also supports a reason for deprecation and warns that private
+personal information is not made acceptable by marking it deprecated. This
+weakens both the claimed mandatory single-winner contrast and the claimed
+absence of existing correction-reason machinery.
+
+[Wikibase RDF documentation](https://www.mediawiki.org/wiki/Wikibase/Indexing/RDF_Dump_Format#Truthy_statements)
+distinguishes best-rank direct/truthy properties from full statement nodes with
+qualifiers and references. A consumer choosing the former can hide alternatives;
+it is not a limitation of every query or the stored representation. THR should
+make selection visible, not claim a unique ability to retain disagreement.
+No deployment or migration to Wikibase is proposed here.
+
+### Reading and rejecting is not automatically quotation
+
+[PROV-O](https://www.w3.org/TR/prov-o/#wasQuotedFrom) uses quotation for repeated
+content. Merely reading and rejecting a source does not establish quotation or
+primary-source status. Separate the evidenced relationship from its evaluative
+stance; map each only when its semantics fit. Generic provenance links alone
+do not encode rejection. An edge labelled independent also needs evidence and
+scope; its presence is not proof of independence.
+
+### Minimal graph is a practice, not a universal existence axiom
+
+CC proposes no entity without an assertion and no assertion without an observed
+source. The aim of preventing decorative graph growth is useful. The absolute
+rule is not yet earned: research questions, failed checks and explicit unknowns
+must remain representable without manufacturing positive support. Existing THR
+assertion states include unknown and unsupported-in-sources-checked. Prefer
+documented investigative/evidential need over pretending every retained object
+is a positively supported historical proposition. No new validator rule follows.
+
+### Correction trace is not compulsory retention of all content
+
+CC's never-deletion rule conflicts if read as retaining withdrawn sensitive
+material indefinitely. LIVING_SUBJECTS.md section 5 already requires stopping
+controlled withdrawn uses and permits a minimal non-sensitive correction trace.
+Preserve the reason and accountable change where appropriate, not automatically
+the withdrawn payload. No deletion, retention-policy change or new collection
+is made by this note. Nor has anyone established that this practice is unique.
+
+### JFK coverage remains deliberately incomplete
+
+The current fixture already avoids official-versus-conspiracy classes: it holds
+two official report attributions without assigning a winner. It does not model
+the later acoustic reassessment, reconstruct full causal premises, or test an
+actual restricted-evidence access attempt. Holding two conclusion strings is not
+proof of complete causal-model representation. These gaps remain open, not
+completed by the passing reference tests.
+
+### Integration recommendation
+
+Keep the concrete reference repairs. Shrink broad novelty and owner-deficiency
+claims. Do not adopt an absolute graph-existence or never-deletion rule from relay
+agreement. A usable, carefully curated application can be worthwhile without a
+new ontology or a demonstrated unique data layer.
