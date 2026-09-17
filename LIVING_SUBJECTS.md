@@ -134,9 +134,15 @@ A person can withdraw permission for future collection or uses that remain under
 
 Material already published, copied, quoted, cached, archived or relied upon elsewhere may not be retractable by THR alone.
 
+What remains under THR's control can still be stopped. Inability to recall outside copies does not excuse continuing a withdrawn use on THR-controlled pages or in THR-controlled processing. Distinguish the two: what THR can stop or restrict here, and what it cannot recover elsewhere.
+
+Preserving a correction trail (section 6) does not require publicly repeating the withdrawn sensitive material. Keep the minimum non-sensitive trace that explains the change, as section 1 already requires for material that arrives unexpectedly. Where something is retained after withdrawal, state the basis for retaining it; provenance is not permission.
+
 ```text
 WITHDRAWAL_OF_PERMISSION != REVERSAL_OF_PRIOR_TRANSITION
 RECORD_CORRECTED != WORLD_RESTORED
+CANNOT_RECALL_ELSEWHERE != MAY_CONTINUE_HERE
+CORRECTION_TRAIL != REPUBLICATION_OF_THE_WITHDRAWN
 ```
 
 Say this before publication where it is material to the person's choice.
