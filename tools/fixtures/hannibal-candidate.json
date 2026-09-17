@@ -1,0 +1,60 @@
+{
+  "status": "RESEARCH_FIXTURE_NOT_REGISTERED_OR_PUBLIC_CATALOGUED",
+  "basis": "Nepos Hannibal 13.3, Dickinson College Commentaries; Codex inspected rendered text 2026-09-17. No manuscript inspection, independent event verification or source-byte preservation claimed.",
+  "entity": {
+    "id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0",
+    "type": "person",
+    "labels": [{"text": "Hannibal Barca", "kind": "candidate_display_label"}],
+    "status": "candidate",
+    "record_links": [],
+    "external_identifiers": [],
+    "notes": ["Reuses the candidate UUID in PR29, not a claim of registry adoption."]
+  },
+  "source": {
+    "id": "thr:source:8d40b5c1-3eb6-47d3-86e2-48e95853e930",
+    "kind": "web_page",
+    "title": "Dickinson College Commentaries: Nepos, Life of Hannibal, chapter 13",
+    "publisher": "Dickinson College Commentaries",
+    "locators": [{"scheme": "url", "value": "https://dcc.dickinson.edu/nepos-hannibal/chapter-13"}],
+    "observations": [{
+      "id": "thr:observation:6483e31f-7d60-488b-a4ce-1c15155a01cc",
+      "observed_at": "2026-09-17",
+      "outcome": "partial",
+      "scope": "Web reader text of chapter 13, especially Latin 13.3; not raw response bytes or ancient manuscript.",
+      "observer": "Codex",
+      "notes": ["Ancient text and modern editorial commentary are distinct evidential layers on this page."]
+    }],
+    "relations": [],
+    "used_by_records": [],
+    "preservation": {"status": "not_yet_checked", "copies": []}
+  },
+  "mention": {
+    "id": "thr:mention:beee588e-f706-40ab-95b3-5d46c097c687",
+    "literal": "Hannibal",
+    "source_id": "thr:source:8d40b5c1-3eb6-47d3-86e2-48e95853e930",
+    "observation_id": "thr:observation:6483e31f-7d60-488b-a4ce-1c15155a01cc",
+    "context": "Latin text, chapter 13.3, sentence naming Sosylus as Hannibal's Greek teacher",
+    "record_id": "hannibal-candidate-not-published",
+    "status": "candidate",
+    "candidates": [{
+      "entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0",
+      "state": "candidate",
+      "basis": ["Named subject of the Life of Hannibal; candidate resolution retained pending review."],
+      "conflicts": []
+    }]
+  },
+  "assertion": {
+    "id": "thr:assertion:23bfb7a2-1f36-4a7a-9f75-7b2427366636",
+    "subject": {"entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0"},
+    "predicate": "reported_greek_teacher",
+    "object": {"literal": "Sosylus"},
+    "state": "reported_by_source",
+    "evidence": {
+      "source_ids": ["thr:source:8d40b5c1-3eb6-47d3-86e2-48e95853e930"],
+      "observation_ids": ["thr:observation:6483e31f-7d60-488b-a4ce-1c15155a01cc"]
+    },
+    "scope": {"locator": "Nepos, Hannibal 13.3, Latin text on DCC", "ceiling": "Source reports relationship; candidate subject resolution and historical truth not independently established."},
+    "record_links": [],
+    "corrections": []
+  }
+}
