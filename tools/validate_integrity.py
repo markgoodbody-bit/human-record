@@ -436,6 +436,19 @@ def check_assertions(
         error("registry/assertions.json: assertions must be a list")
         return set()
 
+    # Existence alone permits an assertion to borrow another source's observation.
+    # Build ownership from the registry, never from the assertion being checked.
+    source_registry = load_json("registry/sources.json")
+    observation_sources: dict[str, str] = {}
+    source_items = source_registry.get("sources", []) if isinstance(source_registry, dict) else []
+    for source in source_items if isinstance(source_items, list) else []:
+        if not isinstance(source, dict) or not isinstance(source.get("id"), str):
+            continue
+        observations = source.get("observations", [])
+        for observation in observations if isinstance(observations, list) else []:
+            if isinstance(observation, dict) and isinstance(observation.get("id"), str):
+                observation_sources[observation["id"]] = source["id"]
+
     seen: set[str] = set()
     for i, assertion in enumerate(assertions):
         context = f"registry/assertions.json assertions[{i}]"
@@ -481,6 +494,8 @@ def check_assertions(
             for obs_id in evidence.get("observation_ids", []):
                 if obs_id not in observation_ids:
                     error(f"{assertion_id}: evidence refers to unknown observation {obs_id!r}")
+                elif observation_sources.get(obs_id) not in evidence.get("source_ids", []):
+                    error(f"{assertion_id}: evidence observation belongs to a source not cited in source_ids: {obs_id!r}")
 
         for rel in assertion.get("record_links", []):
             if not isinstance(rel, str) or not (ROOT / rel).exists():

@@ -103,9 +103,10 @@ now. No ontology importer, graph database or RDF dependency follows from this no
 - No export, namespace crosswalk, round-trip or standards-conformance test exists.
 - No claim that humane navigation or visible uncertainty is unique to THR.
 - No evidence yet that a graph UI improves reading or contribution.
-- No completed JFK fixture or causal/custody adjudication.
-- No production registry/schema/public-view change in this pass.
+- The later JFK fixture tests bounded report attributions, not causal/custody adjudication.
+- No production registry/public-view change. The follow-up assertion ownership
+  check and documented constraint are described in JFK_PROBE.md.
 
-Next: one bounded contested-event fixture, then decide whether the proposed
-source-anchored optional record link survives it. Preserve the existing failure
-test until a reviewed repair earns a different expectation.
+Follow-up: JFK_PROBE.md records the contested-event fixture and narrow provenance
+repair. Both mention fixtures still fail without a catalogue record; preserve
+that failure until a reviewed optional-link repair earns a different expectation.

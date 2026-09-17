@@ -57,3 +57,13 @@ No new causal ontology or database layer is justified by these examples.
 Run `python -B -m unittest discover -s tools -p test_validate_jfk_candidate.py -v`.
 The initial three tests distinguish representable content, catalogue rejection,
 and unsafe provenance acceptance. No source data is fetched during testing.
+
+## Repair follow-up
+
+The baseline witness is preserved in commit `7834bb7`. The follow-up changes the
+unsafe-acceptance test to require rejection and adds missing-owner, multi-source
+and source-only cases. Before the validator repair, the first two negative cases
+fail. The repair derives observation ownership from the source registry and
+requires that owner among the assertion's cited sources. The assertion model
+now states this constraint explicitly. The catalogue failure remains expected;
+no historical assertion or production registry is changed.

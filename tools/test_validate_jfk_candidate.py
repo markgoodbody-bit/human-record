@@ -56,12 +56,32 @@ class JFKCandidateProbe(unittest.TestCase):
         self.assertEqual(errors, [
             self.fixture["mention"]["id"] + ": unknown record_id 'jfk-candidate-not-published'"])
 
-    def test_foreign_observation_exposes_integrity_gap(self):
+    def test_foreign_observation_is_rejected(self):
         target = self.documents["registry/assertions.json"]["assertions"][-6]
         target["evidence"]["observation_ids"] = [self.fixture["sources"][2]["observations"][0]["id"]]
         self.check_integrity()
-        # Baseline witness: both IDs exist, but the observation belongs to a source NOT cited.
-        # This green test documents an unsafe acceptance, not successful provenance validation.
+        self.assertEqual(integrity.errors, [
+            target["id"] + ": evidence observation belongs to a source not cited in source_ids: "
+            + repr(target["evidence"]["observation_ids"][0])])
+
+    def test_multiple_cited_sources_may_supply_observations(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-6]
+        target["evidence"]["source_ids"].append(self.fixture["sources"][2]["id"])
+        target["evidence"]["observation_ids"].append(self.fixture["sources"][2]["observations"][0]["id"])
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [])
+
+    def test_observation_without_cited_owner_is_rejected(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-6]
+        target["evidence"]["source_ids"] = []
+        self.check_integrity()
+        self.assertEqual(len(integrity.errors), 1)
+        self.assertIn("source not cited", integrity.errors[0])
+
+    def test_source_only_evidence_remains_allowed(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-6]
+        target["evidence"]["observation_ids"] = []
+        self.check_integrity()
         self.assertEqual(integrity.errors, [])
 
 

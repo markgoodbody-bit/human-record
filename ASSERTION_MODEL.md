@@ -120,6 +120,11 @@ Evidence can include:
 
 A source can support one part of an assertion and not another. Keep those boundaries visible.
 
+For registry integrity, every evidence observation must belong to a source named
+in that assertion's evidence `source_ids`. Multiple sources and observations are
+allowed; citing a source without an observation remains allowed. This ownership
+check prevents mismatched references, not misinterpretation of source content.
+
 ## 7. Source statement versus record finding
 
 THR must distinguish:
