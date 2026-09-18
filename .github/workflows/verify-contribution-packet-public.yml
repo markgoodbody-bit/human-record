@@ -8,6 +8,7 @@ on:
       - 'CONTRIBUTION_PACKET.md'
       - 'contribution-packet.schema.json'
       - 'examples/grok-flak-relay.packet.json'
+      - 'examples/direct-no-delta.packet.json'
       - 'CONTRIBUTE.md'
       - 'llms.txt'
       - 'README.md'
@@ -32,6 +33,7 @@ jobs:
             "CONTRIBUTION_PACKET.md"
             "contribution-packet.schema.json"
             "examples/grok-flak-relay.packet.json"
+            "examples/direct-no-delta.packet.json"
             "CONTRIBUTE.md"
             "llms.txt"
             "README.md"

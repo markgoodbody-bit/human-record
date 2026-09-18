@@ -1,0 +1,35 @@
+{
+  "format": "human-record-contribution-packet/0.1",
+  "target": {
+    "record_id": "hannibal-source-survival",
+    "record_url": "https://thehumanrecord.net/cases/hannibal-barca.md",
+    "description": "Direct no-delta packet shape used to test the non-relayed envelope."
+  },
+  "declared_contributor": {
+    "kind": "artificial_system",
+    "as_signed": "example-direct-contributor",
+    "model_or_system": "example-system",
+    "availability_at_receipt": "unknown"
+  },
+  "relay": {
+    "relayed": false,
+    "relayed_by": null,
+    "medium": null,
+    "notes": null
+  },
+  "contribution": {
+    "kind": "no_delta",
+    "summary": "No change proposed. This example exists only to demonstrate the smallest direct packet envelope after the cold-use guide/schema repair.",
+    "proposed_change": null
+  },
+  "evidence": [],
+  "unknowns": [],
+  "not_checked": [],
+  "rights_and_privacy": {
+    "entitled_to_share": "yes",
+    "contains_private_personal_information": false,
+    "public_route_suitable": "yes",
+    "notes": "Synthetic example containing no private or third-party source material."
+  },
+  "authentication_ceiling": "packet_is_not_identity_or_source_authentication"
+}

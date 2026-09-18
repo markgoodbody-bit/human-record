@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = json.loads((ROOT / "contribution-packet.schema.json").read_text(encoding="utf-8"))
 EXAMPLE = json.loads((ROOT / "examples" / "grok-flak-relay.packet.json").read_text(encoding="utf-8"))
+DIRECT = json.loads((ROOT / "examples" / "direct-no-delta.packet.json").read_text(encoding="utf-8"))
 
 
 class ContributionPacketTests(unittest.TestCase):
@@ -83,6 +84,25 @@ class ContributionPacketTests(unittest.TestCase):
         locator_type = SCHEMA["properties"]["evidence"]["items"]["properties"]["locator"]["type"]
         self.assertIn("null", locator_type)
         self.assertIsNone(EXAMPLE["evidence"][0]["locator"])
+
+
+    def test_direct_packet_keeps_full_envelope_without_relay(self):
+        for key in SCHEMA["required"]:
+            self.assertIn(key, DIRECT, key)
+        self.assertEqual(DIRECT["format"], SCHEMA["properties"]["format"]["const"])
+        self.assertEqual(
+            DIRECT["authentication_ceiling"],
+            SCHEMA["properties"]["authentication_ceiling"]["const"],
+        )
+        self.assertFalse(DIRECT["relay"]["relayed"])
+        self.assertIsNone(DIRECT["relay"]["relayed_by"])
+        self.assertIsNone(DIRECT["relay"]["medium"])
+        self.assertIsNone(DIRECT["relay"]["notes"])
+        self.assertEqual(DIRECT["contribution"]["kind"], "no_delta")
+
+    def test_direct_packet_uses_only_schema_allowed_top_level_keys(self):
+        allowed = set(SCHEMA["properties"])
+        self.assertEqual(set(DIRECT), allowed)
 
 
 if __name__ == "__main__":
