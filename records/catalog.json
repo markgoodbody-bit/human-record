@@ -47,18 +47,18 @@
       "full_human_record": "https://thehumanrecord.net/cases/viral-flak-claim.md",
       "machine_record": "https://thehumanrecord.net/cases/viral-flak-claim.json",
       "view_basis": {
-        "aligned_at": "2026-09-16",
-        "source_record_version": "0.2.4",
+        "aligned_at": "2026-09-18",
+        "source_record_version": "0.2.5",
         "source_git_blobs": {
-          "cases/viral-flak-claim.md": "37b5bfc9b3b988577d32027ce25e4521dfe7f41b",
-          "cases/viral-flak-claim.json": "9ce2f825b4b928d8d408af830793ab7220ac3d5f"
+          "cases/viral-flak-claim.md": "161984610a7a4274215cc5dd68ee70ec4baf62e0",
+          "cases/viral-flak-claim.json": "751c95967267232db0641c18f08f21bcbd1c980e"
         }
       },
       "status": "unsupported_in_sources_checked",
       "historical_truth_status": "unknown",
       "recorded_at": "2026-09-16",
-      "known_summary": "A visible online propagation chain is partially reconstructed; downstream repetition is not independent corroboration and checked nearby historical sources do not establish the claimed aggregate German crew mortality rate.",
-      "unknown_summary": "The true rate, any earlier source for the 80% figure, and the figure's exact ancestry remain unknown in this record.",
+      "known_summary": "A visible online propagation chain is partially reconstructed; downstream repetition is not independent corroboration. A selected Westermann 1940 campaign passage adds bounded German flak personnel-loss context but does not establish the claimed aggregate mortality rate.",
+      "unknown_summary": "The true aggregate rate, any earlier source for the 80% figure, the figure's exact ancestry, and authentication/underlying archive support for the selected Westermann OCR passage remain unresolved in this record.",
       "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
     },
     {

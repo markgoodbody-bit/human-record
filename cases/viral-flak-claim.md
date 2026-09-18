@@ -43,7 +43,7 @@ Source:
 
 The Human Record does not currently know a primary German casualty record, Luftwaffe personnel series, or post-war scholarly study that establishes that overall 80% crew-mortality figure.
 
-That statement is deliberately narrower than “the figure is false”. No German personnel series or scholarly study of German flak was examined for this record. The condition of the relevant archives has not been verified here; the later video's claim about destroyed records is not adopted as fact. This is an unresolved source trail, not a negative archival finding.
+That statement is deliberately narrower than “the figure is false”. A selected passage in Edward B. Westermann's scholarly study has now been inspected through an accessible third-party OCR reproduction, but the full authenticated edition, the book-wide casualty evidence and the underlying cited archival documents have not been checked. The condition/completeness of the relevant archives has not been established here; the later video's claim about destroyed records is not adopted as fact. This is an unresolved source trail, not a negative archival finding.
 
 ## A visible propagation chain
 
@@ -96,6 +96,39 @@ Source:
 
 Those figures concern casualties **caused by flak among Allied aircrew**. They are not evidence that 80% of German flak crews died.
 
+### A selected Westermann passage now narrows the source boundary
+
+A Grok contribution relayed by Mark pointed this record toward Edward B. Westermann's *Flak: German Anti-Aircraft Defenses, 1914–1945*. Codex recovered the publisher entry and then located a specific passage in a third-party OCR reproduction. Framework independently re-ran that lead against current catalog/archive surfaces.
+
+The accessible OCR reproduction's western-campaign section reports that, between **10 May and 22 June 1940**, casualties among German flak forces — explicitly including personnel listed as **dead, wounded or missing** — totalled **60 officers and 890 enlisted men**. Westermann's note 75 cites material in the Walther von Axthelm papers (`N 529/Folder 7`) and Flak-Regiment 102 (`RL 12/Folder 457`) at the Bundesarchiv-Militärarchiv, plus Koch.
+
+This is useful German flak-personnel context, but it does **not** support the viral claim:
+
+- `casualty` here combines dead, wounded and missing; it is not a death count;
+- the window is one western campaign in 1940, not the whole Second World War;
+- no denominator for all German flak personnel in that campaign is supplied by this checked passage;
+- the full book has not been reviewed for an aggregate whole-war mortality estimate;
+- the accessible OCR reproduction has not been authenticated against the access-restricted publisher-edition scan;
+- the underlying `N 529/7` and `RL 12/457` casualty documents were not inspected by THR.
+
+University Press of Kansas, Google Books, Smithsonian Libraries and Internet Archive independently catalogue the 2001 book/edition family. Internet Archive holds an access-restricted scan; THR did not bypass that restriction. The Bundesarchiv independently identifies `N 529` as Axthelm's papers, and Deutsche Digitale Bibliothek/Bundesarchiv identifies `RL 12/457` as Flak-Regiment 102 material with May/July 1940 provenance. Those catalogue facts make the citation route more recoverable without authenticating the OCR text or its casualty number.
+
+Sources/routes:
+- https://kansaspress.ku.edu/9780700614202/
+- https://books.google.com/books?id=XOxmAAAAMAAJ
+- https://www.si.edu/object/flak-german-anti-aircraft-defenses-1914-1945-edward-b-westermann%3Asiris_sil_717196
+- https://archive.org/details/flakgermanantiai0000west
+- https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf
+- https://www.bundesarchiv.de/im-archiv-recherchieren/archivgut-recherchieren/nach-themen/unternehmen-barbarossa-der-deutsche-ueberfall-auf-die-sowjetunion-in-den-quellen-der-luftwaffe/
+- https://www.deutsche-digitale-bibliothek.de/item/P566IIEOXIPS7EH4E5RHISTZMBUX3CFT
+
+```text
+CASUALTY != DEATH
+SELECTED PASSAGE != WHOLE BOOK
+CATALOGUED EDITION != OCR COPY AUTHENTICATED
+ARCHIVAL CITATION ROUTE IDENTIFIED != ARCHIVAL CONTENT INSPECTED
+```
+
 The National Archives page below is a finding aid for United States Strategic Bombing Survey records, not a casualty study. Relevant Survey reports were not examined in this check. It is a research lead, not evidence of an unsuccessful search through those reports.
 
 Archival orientation:
@@ -116,6 +149,7 @@ As of this record:
 - commenters alleged an imagery mismatch which this record has not independently authenticated;
 - a later video's metadata, as reported by Claude Code, both asserts the figure and calls it untraceable without a stated search method;
 - the Army study documents flak-caused casualties within specified Allied samples; the Middlebrook quotation concerns a particular crew, not German aggregate mortality;
+- a selected Westermann passage reports 60 officer and 890 enlisted flak casualties (dead, wounded or missing) in the May–June 1940 western campaign; that is neither a death count nor a whole-war mortality rate, and the inspected OCR copy remains unauthenticated;
 - the true aggregate mortality rate for German flak crews remains **UNKNOWN in this record**.
 
 ```text
@@ -154,6 +188,8 @@ Future humans and artificial entities should be able to walk back down the strat
 
 ## Limits and correction
 
+Revision 0.2.5, 18 September 2026: **Grok research-lead / Westermann selected-passage repair.** A user-relayed Grok contribution pointed to Westermann and related personnel-loss literature. Codex recovered an exact bibliographic route and selected passage; Framework independently triangulated the book identity, passage wording and parts of Westermann's archive citation route. The record now treats one May–June 1940 passage as partially checked through a third-party OCR reproduction while explicitly preserving that the OCR copy, full authenticated edition and underlying archive documents were not inspected/authenticated. The passage reports casualties (dead, wounded or missing), not deaths, and does not change the unresolved whole-war 80% claim.
+
 Revision 0.2.4, 16 September 2026: **selection-provenance repair.** Recovered the bounded selection history from Human Record PR #2 and the later COM #342 stress-use direction. The initial candidate pool and alternatives considered were not preserved and are now explicitly recorded as missing rather than reconstructed after the fact. No historical source, mortality finding, propagation node or challenge disposition changed; this is not a fresh external witness.
 
 Revision 0.2.3, 16 September 2026: **custos, c63214 on [Square post 5356](https://1f916.ai/api/post/5356), unresolved hypothesis recorded.** Compared the suggestion against the existing Allied-aircrew source node and unknowns. A transposition from Allied aircrew flak-causation shares to German flak-crew mortality is now a named candidate in the machine record's unknowns. Numerical resemblance and shared subject matter do not establish transmission or make this the most likely ancestor. No new transmission evidence or German personnel sources were examined; no mortality finding changed. An assertion that supporting archives are absent is not itself proof that the claim is untestable.
@@ -170,13 +206,13 @@ This is an initial reconstruction from public web sources on 15 September 2026. 
 
 ### Not checked by this record
 
-- Edward B. Westermann, *Flak: German Anti-Aircraft Defenses, 1914–1945*;
+- Edward B. Westermann, *Flak: German Anti-Aircraft Defenses, 1914–1945*: full authenticated edition/book-wide casualty evidence not checked; one selected 1940 western-campaign passage checked only through an accessible third-party OCR reproduction;
 - Rüdiger Overmans, *Deutsche militärische Verluste im Zweiten Weltkrieg*;
 - MGFA, *Das Deutsche Reich und der Zweite Weltkrieg*, volume 7;
 - relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings;
 - the linked newsreel frames against the original video's frames.
 
-These are research leads, not sources credited with results here. No replacement mortality figure or arithmetic bound is inferred from secondhand summaries of unread books.
+These remain research leads except for the specifically bounded Westermann passage described above. No replacement mortality figure or arithmetic bound is inferred from a selected passage, an unauthenticated OCR reproduction, catalogue metadata or secondhand summaries.
 
 A stronger German archival source, personnel study, unit-level casualty compilation, scholarly work, or evidence that predates the identified viral chain may materially change this record.
 

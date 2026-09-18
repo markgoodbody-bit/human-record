@@ -1,6 +1,6 @@
 {
   "record_type": "provenance_case",
-  "record_version": "0.2.4",
+  "record_version": "0.2.5",
   "recorded_at": "2026-09-16",
   "title": "The viral '80% of German flak crews died' claim",
   "status": "unsupported_in_sources_checked",
@@ -75,6 +75,13 @@
       "url": "https://anzacportal.dva.gov.au/resources/bild-183-h27779",
       "role": "quotes Martin Middlebrook, The Berlin Raids, pp. 153–154; particular crew recollection, not aggregate mortality evidence",
       "claim_relation": "context_not_support"
+    },
+    {
+      "id": "westermann-2001-selected-passage",
+      "kind": "scholarly_book_selected_passage_via_third_party_ocr",
+      "url": "https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf",
+      "role": "Accessible third-party OCR reproduction of Edward B. Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945. A selected passage for the May 10–June 22, 1940 western campaign reports flak-force casualties, explicitly dead, wounded or missing, as 60 officers and 890 enlisted men. Book identity is independently catalogued by University Press of Kansas / Google Books / Smithsonian / Internet Archive, but this OCR copy itself was not authenticated against the restricted publisher-edition scan and the underlying archival documents were not inspected.",
+      "claim_relation": "bounded_campaign_personnel_casualty_context_not_support"
     }
   ],
   "current_findings": [
@@ -82,17 +89,30 @@
     "The linked article and summary restate the video claim with changed scope and are not independent corroboration.",
     "Commenters alleged an imagery mismatch; this record has not authenticated the footage.",
     "Claude Code reports that the later video asserts the figure while calling it untraceable without stating its search method; this is not an independent research check.",
-    "Authoritative sources support nearby facts about flak danger and Allied casualties but do not, in the sources checked for this record, establish the claimed aggregate German crew mortality rate."
+    "Authoritative sources support nearby facts about flak danger and Allied casualties but do not, in the sources checked for this record, establish the claimed aggregate German crew mortality rate.",
+    "A selected passage in an accessible third-party OCR reproduction of Westermann's 2001 Flak reports 60 officer and 890 enlisted flak-force casualties, explicitly combining dead, wounded and missing, for the May 10–June 22, 1940 western campaign. This is a campaign-bounded casualty count, not a death count, aggregate mortality rate or whole-war estimate; the OCR reproduction itself has not been authenticated against the restricted publisher-edition scan."
   ],
   "unknowns": [
     "The true aggregate mortality rate of German anti-aircraft crews.",
     "Whether an earlier source predating the identified online chain contains the 80% figure.",
     "Whether the 80% figure arose by mutation from a different casualty statistic.",
     "Specifically, whether Allied aircrew flak-causation shares were transposed into a German flak-crew mortality claim, as proposed by custos (Square c63214). Numerical resemblance does not establish this transmission or rank it as the most likely ancestor.",
-    "The completeness of surviving late-war German personnel and casualty records relevant to this question."
+    "The completeness of surviving late-war German personnel and casualty records relevant to this question.",
+    "Whether the selected Westermann OCR passage is byte/text faithful to an authenticated print or restricted scan at that passage, and whether the cited underlying archival documents independently support the reproduced casualty numbers."
   ],
-  "not_checked": ["Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945", "Overmans, Deutsche militärische Verluste im Zweiten Weltkrieg", "MGFA, Das Deutsche Reich und der Zweite Weltkrieg, volume 7", "Relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings", "Relevant USSBS reports", "Newsreel frame comparison"],
-  "review_receipts": ["https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685586260", "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685646260", "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685653216"],
+  "not_checked": [
+    "Westermann, full authenticated edition and book-wide casualty evidence; one selected 1940 western-campaign passage has been checked only through an accessible third-party OCR reproduction",
+    "Overmans, Deutsche militärische Verluste im Zweiten Weltkrieg",
+    "MGFA, Das Deutsche Reich und der Zweite Weltkrieg, volume 7",
+    "Relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings",
+    "Relevant USSBS reports",
+    "Newsreel frame comparison"
+  ],
+  "review_receipts": [
+    "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685586260",
+    "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685646260",
+    "https://github.com/markgoodbody-bit/human-record/pull/2#issuecomment-5685653216"
+  ],
   "challenges": [
     {
       "url": "https://1f916.ai/api/post/5356",
@@ -108,6 +128,14 @@
       "received": "2026-09-15",
       "checked": "Claude Code's editorial source review: later-video independence, archive-loss assertion, imagery attribution, unread research scope, downstream wording and Allied-aircrew denominators. Repairs recorded in revisions 0.2 and 0.2.1; this does not establish the German mortality rate.",
       "disposition": "accepted"
+    },
+    {
+      "url": "https://github.com/markgoodbody-bit/human-record/issues/20",
+      "by": "Grok contribution relayed by Mark; follow-up by Codex and Framework",
+      "received": "2026-09-16",
+      "checked": "Recovered official/catalogue metadata for Westermann; located a selected western-campaign passage in an accessible third-party OCR reproduction; confirmed that the passage reports 60 officer and 890 enlisted casualties including dead, wounded and missing; independently confirmed the book's 2001 University Press of Kansas identity and parts of the cited Bundesarchiv route. The OCR copy itself and the underlying archival casualty evidence were not authenticated/inspected.",
+      "disposition": "partially_accepted_research_lead",
+      "reason": "The lead materially improved the checked-source boundary but does not establish, disprove or replace the viral 80% aggregate mortality claim."
     }
   ],
   "challenges_scope": "Recorded review outcomes, not an exhaustive inbox. Absence from this list does not imply rejection or absence of a submission. Editorial review is not independent governance.",
@@ -117,6 +145,8 @@
     "UNSUPPORTED_IN_SOURCES_CHECKED != PROVED_FALSE",
     "UNKNOWN != ABSENT",
     "CORRECTION != REPLACEMENT_WITH_ANOTHER_UNSOURCED_NUMBER",
-    "SELECTION != SIGNIFICANCE"
+    "SELECTION != SIGNIFICANCE",
+    "CASUALTY != DEATH",
+    "SELECTED PASSAGE != WHOLE BOOK"
   ]
 }

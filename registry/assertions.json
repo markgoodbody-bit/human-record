@@ -78,20 +78,22 @@
           "thr:source:49067461-b413-47a3-b554-fa0ed639db58",
           "thr:source:5de43bc3-cf94-40c3-b312-1217d37dd812",
           "thr:source:0b87b7bd-7673-4183-bfbe-03f316efffb0",
-          "thr:source:f2d4cff8-d1bd-49a6-b19b-d177326ad620"
+          "thr:source:f2d4cff8-d1bd-49a6-b19b-d177326ad620",
+          "thr:source:5c1e8a9f-6b72-4e21-ae4f-24d8731f9b70"
         ],
         "observation_ids": [
           "thr:observation:b10adb22-8832-4337-97f8-d61854b5bf98",
           "thr:observation:e8987ae5-9762-4deb-a1f5-d85b1154f802",
           "thr:observation:5a6bc6b4-305a-45d7-9d1e-ad73a6649688",
-          "thr:observation:99b0c704-115b-4286-9748-43cf2add0e67"
+          "thr:observation:99b0c704-115b-4286-9748-43cf2add0e67",
+          "thr:observation:ab27e9a4-13cf-4a46-9cc6-01e1b3c8f5d2"
         ]
       },
       "scope": {
-        "record_version": "0.2.4",
+        "record_version": "0.2.5",
         "historical_truth_status": "unknown",
-        "meaning": "The bounded sources checked by the current record do not establish the claimed aggregate German flak-crew mortality rate.",
-        "not_established": "That the claim is false, that the archive search is exhaustive, or that no earlier source contains the figure."
+        "meaning": "The bounded sources checked by the current record, now including one selected Westermann 1940 campaign passage inspected through an unauthenticated third-party OCR reproduction, do not establish the claimed aggregate German flak-crew mortality rate.",
+        "not_established": "That the claim is false, that the archive/book search is exhaustive, that the selected OCR is authenticated against the publisher edition, or that no earlier source contains the figure."
       },
       "record_links": [
         "cases/viral-flak-claim.json",
