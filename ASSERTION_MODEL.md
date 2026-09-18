@@ -248,6 +248,13 @@ A correction may:
 
 Preserve the earlier assertion ID/state or a durable supersession relation where practical.
 
+When supplied, `corrections` is a list of objects. An entry may include prose;
+explicit `assertion_id` and `superseded_by` fields must name an assertion in the
+registry. Forward references are allowed. This checks reference integrity only:
+it does not establish that the correction is justified, that supersession is
+acyclic, or that prior states were preserved across revisions. Omitting the
+optional list remains allowed and does not prove that no correction occurred.
+
 ```text
 CORRECTION != RETROACTIVE ORIGINAL CERTAINTY
 ```

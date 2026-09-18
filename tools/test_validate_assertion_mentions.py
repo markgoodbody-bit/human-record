@@ -99,6 +99,35 @@ class AssertionMentionReferentTests(unittest.TestCase):
         self.check()
         self.assertEqual(integrity.errors, [])
 
+    def test_correction_container_is_checked(self):
+        for value in (None, "whatever", {}, ["text"], [42], [None]):
+            with self.subTest(value=value):
+                integrity.errors.clear()
+                self.assertion["corrections"] = value
+                self.check()
+                self.assertTrue(any("corrections" in e for e in integrity.errors))
+
+    def test_correction_assertion_references_are_checked(self):
+        for field in ("assertion_id", "superseded_by"):
+            for target in (None, 42, [], {}, "", "thr:assertion:77777777-7777-4777-8777-777777777777"):
+                with self.subTest(field=field, target=target):
+                    integrity.errors.clear()
+                    self.assertion["corrections"] = [{field: target}]
+                    self.check()
+                    self.assertTrue(any("corrections[0]" in e for e in integrity.errors))
+
+    def test_correction_forward_reference_and_prose_are_allowed(self):
+        later = copy.deepcopy(self.assertion)
+        later["id"] = "thr:assertion:77777777-7777-4777-8777-777777777777"
+        self.documents["registry/assertions.json"]["assertions"].append(later)
+        self.assertion["corrections"] = [
+            {"superseded_by": later["id"], "note": "Narrowed, not directly observed."},
+            {"assertion_id": later["id"]},
+            {"note": "A prose-only correction is not a typed supersession."},
+        ]
+        self.check()
+        self.assertEqual(integrity.errors, [])
+
     def test_unknown_mention_is_rejected(self):
         self.assertion["subject"] = {"mention_id": UNKNOWN_MENTION_ID}
         self.check()

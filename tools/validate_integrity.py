@@ -628,6 +628,24 @@ def check_assertions(
             if isinstance(target, str) and target not in seen:
                 error(f"{assertion_id}: {role} refers to unknown assertion {target}")
 
+        corrections = assertion.get("corrections", [])
+        if not isinstance(corrections, list):
+            error(f"{assertion_id}: corrections must be a list")
+            continue
+        for index, correction in enumerate(corrections):
+            context = f"{assertion_id}: corrections[{index}]"
+            if not isinstance(correction, dict):
+                error(f"{context} must be an object")
+                continue
+            for field in ("assertion_id", "superseded_by"):
+                if field not in correction:
+                    continue
+                target = correction[field]
+                if not isinstance(target, str) or not target.strip():
+                    error(f"{context}.{field} must be a non-empty string")
+                elif target not in seen:
+                    error(f"{context}.{field} refers to unknown assertion {target}")
+
     return seen
 
 
