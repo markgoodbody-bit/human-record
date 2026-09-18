@@ -488,14 +488,45 @@ def check_assertions(
         if not isinstance(evidence, dict):
             error(f"{assertion_id}: evidence must be an object")
         else:
-            for source_id in evidence.get("source_ids", []):
+            evidence_sources = evidence.get("source_ids", [])
+            evidence_observations = evidence.get("observation_ids", [])
+
+            for source_id in evidence_sources if isinstance(evidence_sources, list) else []:
                 if source_id not in source_ids:
                     error(f"{assertion_id}: evidence refers to unknown source {source_id!r}")
-            for obs_id in evidence.get("observation_ids", []):
+            for obs_id in evidence_observations if isinstance(evidence_observations, list) else []:
                 if obs_id not in observation_ids:
                     error(f"{assertion_id}: evidence refers to unknown observation {obs_id!r}")
-                elif observation_sources.get(obs_id) not in evidence.get("source_ids", []):
+                elif observation_sources.get(obs_id) not in (evidence_sources if isinstance(evidence_sources, list) else []):
                     error(f"{assertion_id}: evidence observation belongs to a source not cited in source_ids: {obs_id!r}")
+
+            if assertion.get("state") == "unsupported_in_sources_checked":
+                if not isinstance(evidence_sources, list) or not evidence_sources:
+                    error(
+                        f"{assertion_id}: unsupported_in_sources_checked requires a non-empty "
+                        "evidence.source_ids list"
+                    )
+                if not isinstance(evidence_observations, list) or not evidence_observations:
+                    error(
+                        f"{assertion_id}: unsupported_in_sources_checked requires a non-empty "
+                        "evidence.observation_ids list"
+                    )
+                if (isinstance(evidence_sources, list) and evidence_sources
+                        and isinstance(evidence_observations, list) and evidence_observations):
+                    observed_sources = {
+                        observation_sources.get(obs_id)
+                        for obs_id in evidence_observations
+                        if obs_id in observation_sources
+                    }
+                    unchecked_sources = [
+                        source_id for source_id in evidence_sources
+                        if source_id not in observed_sources
+                    ]
+                    if unchecked_sources:
+                        error(
+                            f"{assertion_id}: unsupported_in_sources_checked counts source(s) "
+                            f"without an owned evidence observation as checked: {unchecked_sources!r}"
+                        )
 
         for rel in assertion.get("record_links", []):
             if not isinstance(rel, str) or not (ROOT / rel).exists():
