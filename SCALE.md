@@ -212,7 +212,7 @@ Current records do not need to be rewritten all at once.
 
 ### Now
 
-- keep the three existing record types intact;
+- keep the four existing record types intact;
 - introduce identity and source models;
 - introduce small cross-record registries;
 - automate integrity checks;

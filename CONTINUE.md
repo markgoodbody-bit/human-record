@@ -39,6 +39,7 @@ The site is deliberately static. Its important public files include:
 - `records/camp-fire.html` — human view of the artwork record;
 - `records/flak-claim.html` — human view of the claim-provenance record;
 - `records/sieve-riddle-revival.html` — human view of the living-knowledge transmission-lineage record;
+- `records/hannibal.html` — human view of the historical-person source-survival record;
 - `RECORD_CONTRACT.md` — working semantic contract earned by the current records;
 - `SELECTION.md` — working selection orientation for new records;
 - `specimen.md` — full human-readable artwork record;
@@ -47,6 +48,13 @@ The site is deliberately static. Its important public files include:
 - `cases/viral-flak-claim.json` — machine-readable claim-provenance record;
 - `cases/sieve-riddle-revival.md` — full public-source transmission-lineage record;
 - `cases/sieve-riddle-revival.json` — machine-readable transmission-lineage record;
+- `cases/hannibal-barca.md` — full historical-person source-survival record;
+- `cases/hannibal-barca.json` — machine-readable historical-person source-survival record;
+- `IDENTITY_MODEL.md` — entity/mention identity boundary;
+- `ASSERTION_MODEL.md` — evidence-bearing assertion and correction-reference boundary;
+- `registry/mentions.json` — source-literal mention resolution state;
+- `registry/source-checks.json` — operational locator/currentness receipts;
+- `registry/assertions.json` — cross-record evidence-bearing propositions;
 - `CONTRIBUTE.md` — current challenge/correction route;
 - `llms.txt` — compact machine entrance;
 - `STEWARDSHIP.md` — current stewardship offer and custody boundary;
@@ -132,10 +140,15 @@ RECORD CONTRACT != UNIVERSAL ONTOLOGY
 
 The sieve/riddle case establishes an additional living-practice lesson: preserving a public transmission lineage is not continuation of the living craft. A future operator must not use the existence of this record as permission to collect practitioner-specific tacit knowledge, workshop material, voice, video or teaching without a separate legitimate permission/authority basis.
 
+The Hannibal case establishes an additional historical-person lesson: preserving a route through surviving accounts is not preserving the person, and recording what an ancient source reports is not direct observation or global historical adjudication. Translation and source-language claims must remain separate when only one has actually been inspected.
+
 ```text
 RECORDING != CONTINUATION
 PUBLIC_SOURCE != ENDORSEMENT
 RISK != PERMISSION
+HISTORICAL_PERSON != SURVIVING_BIOGRAPHY
+SOURCE_REPORT != DIRECT_OBSERVATION
+TRANSLATION_LITERAL != CHECKED_SOURCE_LANGUAGE_LITERAL
 ```
 
 ## 5. Rights boundary
