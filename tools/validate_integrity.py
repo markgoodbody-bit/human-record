@@ -455,6 +455,12 @@ def check_assertions(
                 observation_sources[observation["id"]] = source["id"]
 
     direct_evidence_states = model_vocabulary(*DIRECT_EVIDENCE_STATES_MODEL)
+    if not direct_evidence_states:
+        error(
+            "direct-evidence boundary section missing or empty in ASSERTION_MODEL.md; "
+            "fail-closed state guard cannot be evaluated"
+        )
+        direct_evidence_states = set()
 
     seen: set[str] = set()
     for i, assertion in enumerate(assertions):
@@ -476,7 +482,7 @@ def check_assertions(
             error(f"{assertion_id}: state must be a non-empty string")
         else:
             check_vocabulary(assertion["state"], *VOCABULARIES[3][:3], VOCABULARIES[3][3], assertion_id)
-            if direct_evidence_states is not None and assertion["state"] in direct_evidence_states:
+            if assertion["state"] in direct_evidence_states:
                 error(
                     f"{assertion_id}: state {assertion['state']!r} requires typed "
                     "observation/reconciliation target support; current source observations "
