@@ -30,6 +30,36 @@ class HannibalCandidateV2Probe(unittest.TestCase):
                 "registry/assertions.json",
             )
         }
+        # The fixture is pre-publication lineage. Once the same reviewed objects
+        # are present in the public registries, remove those public copies before
+        # re-injecting the historical candidate shape; otherwise this probe tests
+        # duplicate-ID handling instead of the candidate contract it was written for.
+        fixture_entity_id = self.fixture["entity"]["id"]
+        fixture_source_ids = {row["id"] for row in self.fixture["sources"]}
+        fixture_mention_id = self.fixture["mention"]["id"]
+        fixture_assertion_ids = {row["id"] for row in self.fixture["assertions"]}
+
+        self.documents["registry/entities.json"]["entities"] = [
+            row for row in self.documents["registry/entities.json"]["entities"]
+            if row.get("id") != fixture_entity_id
+        ]
+        self.documents["registry/sources.json"]["sources"] = [
+            row for row in self.documents["registry/sources.json"]["sources"]
+            if row.get("id") not in fixture_source_ids
+        ]
+        self.documents["registry/mentions.json"]["mentions"] = [
+            row for row in self.documents["registry/mentions.json"]["mentions"]
+            if row.get("id") != fixture_mention_id
+        ]
+        self.documents["registry/assertions.json"]["assertions"] = [
+            row for row in self.documents["registry/assertions.json"]["assertions"]
+            if row.get("id") not in fixture_assertion_ids
+        ]
+        self.documents["registry/source-checks.json"]["checks"] = [
+            row for row in self.documents["registry/source-checks.json"]["checks"]
+            if row.get("source_id") not in fixture_source_ids
+        ]
+
         self.documents["registry/entities.json"]["entities"].append(copy.deepcopy(self.fixture["entity"]))
         self.documents["registry/sources.json"]["sources"].extend(copy.deepcopy(self.fixture["sources"]))
         self.documents["registry/mentions.json"]["mentions"].append(copy.deepcopy(self.fixture["mention"]))
