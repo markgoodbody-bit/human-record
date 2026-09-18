@@ -1,6 +1,6 @@
 {
   "format": "human-record-source-registry/0.1",
-  "updated": "2026-09-16",
+  "updated": "2026-09-18",
   "purpose": "Cross-record source identity, observation and preservation-status index. A source ID is not a truth certificate and a URL is not the source identity.",
   "model": "https://thehumanrecord.net/SOURCE_MODEL.md",
   "sources": [
@@ -10,7 +10,11 @@
       "title": "Camp Fire — The Metropolitan Museum of Art object page",
       "publisher": "The Metropolitan Museum of Art",
       "locators": [
-        {"scheme": "url", "value": "https://www.metmuseum.org/art/collection/search/11112", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://www.metmuseum.org/art/collection/search/11112",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -23,11 +27,23 @@
         }
       ],
       "relations": [
-        {"type": "same_institutional_owner", "target": "thr:source:fb6063f7-6e0d-4f87-9a9c-c5e5d001d724"},
-        {"type": "same_institutional_owner", "target": "thr:source:c775687c-bab3-4769-833b-5b88a3299029"}
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:fb6063f7-6e0d-4f87-9a9c-c5e5d001d724"
+        },
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:c775687c-bab3-4769-833b-5b88a3299029"
+        }
       ],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["camp-fire-1880"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "camp-fire-1880"
+      ]
     },
     {
       "id": "thr:source:fb6063f7-6e0d-4f87-9a9c-c5e5d001d724",
@@ -35,7 +51,11 @@
       "title": "The Met public object API — object 11112",
       "publisher": "The Metropolitan Museum of Art",
       "locators": [
-        {"scheme": "url", "value": "https://collectionapi.metmuseum.org/public/collection/v1/objects/11112", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://collectionapi.metmuseum.org/public/collection/v1/objects/11112",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -44,13 +64,22 @@
           "precision": "instant",
           "outcome": "retrieved",
           "record_basis": "specimen.json owner_sources[0]",
-          "digest": {"algorithm": "sha256", "value": "ac9523985b49a6e8a6e9b0dc18987eee84162802d0cce6b09581d102d0df891a"},
+          "digest": {
+            "algorithm": "sha256",
+            "value": "ac9523985b49a6e8a6e9b0dc18987eee84162802d0cce6b09581d102d0df891a"
+          },
           "preserved_bytes_in_thr": false
         }
       ],
       "relations": [
-        {"type": "same_institutional_owner", "target": "thr:source:24f10634-c5da-48d2-9475-8d2e096d5cd6"},
-        {"type": "same_institutional_owner", "target": "thr:source:c775687c-bab3-4769-833b-5b88a3299029"}
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:24f10634-c5da-48d2-9475-8d2e096d5cd6"
+        },
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:c775687c-bab3-4769-833b-5b88a3299029"
+        }
       ],
       "preservation": {
         "status": "preservation_unknown",
@@ -58,7 +87,9 @@
         "last_checked_at": null,
         "note": "The response digest is recorded but the response bytes are not preserved by the current specimen."
       },
-      "used_by_records": ["camp-fire-1880"]
+      "used_by_records": [
+        "camp-fire-1880"
+      ]
     },
     {
       "id": "thr:source:c775687c-bab3-4769-833b-5b88a3299029",
@@ -66,7 +97,11 @@
       "title": "The Met primary image for Camp Fire",
       "publisher": "The Metropolitan Museum of Art",
       "locators": [
-        {"scheme": "url", "value": "https://images.metmuseum.org/CRDImages/ad/original/DT2829.jpg", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://images.metmuseum.org/CRDImages/ad/original/DT2829.jpg",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -76,12 +111,22 @@
           "outcome": "retrieved",
           "record_basis": "specimen.json owner_sources[1]",
           "bytes": 2350423,
-          "digest": {"algorithm": "sha256", "value": "7b02049468877e8e69b2faf183e7842ecb6577b08edc2a3f4a594d1bbeb577e1"}
+          "digest": {
+            "algorithm": "sha256",
+            "value": "7b02049468877e8e69b2faf183e7842ecb6577b08edc2a3f4a594d1bbeb577e1"
+          }
         }
       ],
       "relations": [
-        {"type": "same_institutional_owner", "target": "thr:source:fb6063f7-6e0d-4f87-9a9c-c5e5d001d724"},
-        {"type": "byte_identical_observed_copy", "target": "thr:source:341eaaf7-6393-4ea8-a787-ced32f2b97e5", "basis": "specimen.json our_copy and reconciliation at 2026-09-14T20:46:10Z"}
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:fb6063f7-6e0d-4f87-9a9c-c5e5d001d724"
+        },
+        {
+          "type": "byte_identical_observed_copy",
+          "target": "thr:source:341eaaf7-6393-4ea8-a787-ced32f2b97e5",
+          "basis": "specimen.json our_copy and reconciliation at 2026-09-14T20:46:10Z"
+        }
       ],
       "preservation": {
         "status": "related_copy_observed",
@@ -96,7 +141,9 @@
         "last_checked_at": "2026-09-14T20:46:10Z",
         "note": "The record observed a related byte-identical project copy and separately records the Met Open Access basis; this status is not a general legal adjudication or permanence claim."
       },
-      "used_by_records": ["camp-fire-1880"]
+      "used_by_records": [
+        "camp-fire-1880"
+      ]
     },
     {
       "id": "thr:source:341eaaf7-6393-4ea8-a787-ced32f2b97e5",
@@ -104,7 +151,11 @@
       "title": "Please Start From Here copy of Camp Fire image",
       "publisher": "Please Start From Here",
       "locators": [
-        {"scheme": "url", "value": "https://pleasestartfromhere.com/art/camp-fire.jpg", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://pleasestartfromhere.com/art/camp-fire.jpg",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -114,11 +165,18 @@
           "outcome": "retrieved",
           "record_basis": "specimen.json our_copy",
           "bytes": 2350423,
-          "digest": {"algorithm": "sha256", "value": "7b02049468877e8e69b2faf183e7842ecb6577b08edc2a3f4a594d1bbeb577e1"}
+          "digest": {
+            "algorithm": "sha256",
+            "value": "7b02049468877e8e69b2faf183e7842ecb6577b08edc2a3f4a594d1bbeb577e1"
+          }
         }
       ],
       "relations": [
-        {"type": "byte_identical_observed_copy_of", "target": "thr:source:c775687c-bab3-4769-833b-5b88a3299029", "basis": "specimen.json at 2026-09-14T20:46:10Z"}
+        {
+          "type": "byte_identical_observed_copy_of",
+          "target": "thr:source:c775687c-bab3-4769-833b-5b88a3299029",
+          "basis": "specimen.json at 2026-09-14T20:46:10Z"
+        }
       ],
       "preservation": {
         "status": "related_copy_observed",
@@ -126,7 +184,9 @@
         "last_checked_at": "2026-09-14T20:46:10Z",
         "note": "This records the observed relationship and availability of the project-hosted copy, not a universal legal or permanence claim."
       },
-      "used_by_records": ["camp-fire-1880"]
+      "used_by_records": [
+        "camp-fire-1880"
+      ]
     },
     {
       "id": "thr:source:42323361-c56e-43b0-89bc-f33231668e42",
@@ -134,7 +194,11 @@
       "title": "Please Start From Here Camp Fire provenance record",
       "publisher": "Please Start From Here",
       "locators": [
-        {"scheme": "url", "value": "https://pleasestartfromhere.com/art/camp-fire.json", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://pleasestartfromhere.com/art/camp-fire.json",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -147,8 +211,14 @@
         }
       ],
       "relations": [],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["camp-fire-1880"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "camp-fire-1880"
+      ]
     },
     {
       "id": "thr:source:49067461-b413-47a3-b554-fa0ed639db58",
@@ -156,21 +226,35 @@
       "title": "Why 80% of FLAK Gun Crews Died",
       "publisher": "YouTube-hosted source; channel identity retained in the full record where observed",
       "locators": [
-        {"scheme": "url", "value": "https://www.youtube.com/watch?v=v9-k2DMNHFg", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://www.youtube.com/watch?v=v9-k2DMNHFg",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
           "id": "thr:observation:b10adb22-8832-4337-97f8-d61854b5bf98",
           "observed_at": "2026-09-15",
           "precision": "date",
-          "outcome": "referenced_by_record",
+          "outcome": "partial",
           "record_basis": "cases/viral-flak-claim.json node viral-video-2025-08",
-          "digest": null
+          "digest": null,
+          "scope": "Video claim wording used by the flak provenance record; not a preserved full transcript or complete audiovisual analysis.",
+          "notes": [
+            "Reclassified from legacy referenced_by_record after the 18 September checked-source validator review; scope is taken from the existing flak record's documented inspection."
+          ]
         }
       ],
       "relations": [],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["viral-flak-claim"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "viral-flak-claim"
+      ]
     },
     {
       "id": "thr:source:037c5c1a-bddc-442e-8140-a0bcdca0841f",
@@ -178,7 +262,11 @@
       "title": "MilitaryHistory discussion of the flak video claim and imagery",
       "publisher": "Reddit / r/MilitaryHistory",
       "locators": [
-        {"scheme": "url", "value": "https://www.reddit.com/r/MilitaryHistory/comments/1mpe448/80_mortality_for_german_flak_crews/", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://www.reddit.com/r/MilitaryHistory/comments/1mpe448/80_mortality_for_german_flak_crews/",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -191,8 +279,14 @@
         }
       ],
       "relations": [],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["viral-flak-claim"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "viral-flak-claim"
+      ]
     },
     {
       "id": "thr:source:5de43bc3-cf94-40c3-b312-1217d37dd812",
@@ -200,23 +294,41 @@
       "title": "Why an Estimated 80% of WWII FLAK Gun Crews Lost Their Lives",
       "publisher": "World War Wings",
       "locators": [
-        {"scheme": "url", "value": "https://worldwarwings.com/wwii-flak-gun-crews-casualties/", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://worldwarwings.com/wwii-flak-gun-crews-casualties/",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
           "id": "thr:observation:e8987ae5-9762-4deb-a1f5-d85b1154f802",
           "observed_at": "2026-09-15",
           "precision": "date",
-          "outcome": "referenced_by_record",
+          "outcome": "partial",
           "record_basis": "cases/viral-flak-claim.json node world-war-wings-2025-08-19",
-          "digest": null
+          "digest": null,
+          "scope": "Article passages establishing its 80% wording, changed scope, and explicit dependence on the YouTube material; not a byte-preserved full capture.",
+          "notes": [
+            "Reclassified from legacy referenced_by_record after the 18 September checked-source validator review; scope is taken from the existing flak record's documented inspection."
+          ]
         }
       ],
       "relations": [
-        {"type": "derives_from", "target": "thr:source:49067461-b413-47a3-b554-fa0ed639db58", "basis": "current flak record says the article credits and links the video material"}
+        {
+          "type": "derives_from",
+          "target": "thr:source:49067461-b413-47a3-b554-fa0ed639db58",
+          "basis": "current flak record says the article credits and links the video material"
+        }
       ],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["viral-flak-claim"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "viral-flak-claim"
+      ]
     },
     {
       "id": "thr:source:0b87b7bd-7673-4183-bfbe-03f316efffb0",
@@ -224,23 +336,40 @@
       "title": "Automated summary of the viral flak video",
       "publisher": "YouTubeSummary",
       "locators": [
-        {"scheme": "url", "value": "https://youtubesummary.com/summary/v9-k2DMNHFg", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://youtubesummary.com/summary/v9-k2DMNHFg",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
           "id": "thr:observation:5a6bc6b4-305a-45d7-9d1e-ad73a6649688",
           "observed_at": "2026-09-15",
           "precision": "date",
-          "outcome": "referenced_by_record",
+          "outcome": "partial",
           "record_basis": "cases/viral-flak-claim.json node automated-summary",
-          "digest": null
+          "digest": null,
+          "scope": "Automated-summary passages restating the 80% claim in altered form; not a complete audit of the summary service.",
+          "notes": [
+            "Reclassified from legacy referenced_by_record after the 18 September checked-source validator review; scope is taken from the existing flak record's documented inspection."
+          ]
         }
       ],
       "relations": [
-        {"type": "machine_summarizes", "target": "thr:source:49067461-b413-47a3-b554-fa0ed639db58"}
+        {
+          "type": "machine_summarizes",
+          "target": "thr:source:49067461-b413-47a3-b554-fa0ed639db58"
+        }
       ],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["viral-flak-claim"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "viral-flak-claim"
+      ]
     },
     {
       "id": "thr:source:f19a98dc-8ab1-41eb-8e27-be76dfac4b0e",
@@ -248,7 +377,11 @@
       "title": "Later Historical Notes video asserting the 80% figure",
       "publisher": "YouTube-hosted source / Historical Notes as reported by reviewer",
       "locators": [
-        {"scheme": "url", "value": "https://www.youtube.com/watch?v=7KSKZyJ3nZw", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://www.youtube.com/watch?v=7KSKZyJ3nZw",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -262,8 +395,14 @@
         }
       ],
       "relations": [],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["viral-flak-claim"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "viral-flak-claim"
+      ]
     },
     {
       "id": "thr:source:f2d4cff8-d1bd-49a6-b19b-d177326ad620",
@@ -271,21 +410,35 @@
       "title": "US Army Medical Department WWII wound ballistics chapter 9",
       "publisher": "US Army Medical Department / Office of Medical History",
       "locators": [
-        {"scheme": "url", "value": "https://achh.army.mil/history/book-wwii-woundblstcs-chapter9/", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://achh.army.mil/history/book-wwii-woundblstcs-chapter9/",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
           "id": "thr:observation:99b0c704-115b-4286-9748-43cf2add0e67",
           "observed_at": "2026-09-15",
           "precision": "date",
-          "outcome": "referenced_by_record",
+          "outcome": "partial",
           "record_basis": "cases/viral-flak-claim.json node us-army-medical-flak-casualties",
-          "digest": null
+          "digest": null,
+          "scope": "Chapter 9 material and tables 183 and 223 used for the bounded Allied-aircrew comparison; not a complete review of the book or German personnel evidence.",
+          "notes": [
+            "Reclassified from legacy referenced_by_record after the 18 September checked-source validator review; scope is taken from the existing flak record's documented inspection."
+          ]
         }
       ],
       "relations": [],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["viral-flak-claim"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "viral-flak-claim"
+      ]
     },
     {
       "id": "thr:source:076b452d-284a-4708-aaf8-190a7c1380a7",
@@ -293,7 +446,11 @@
       "title": "Records of the United States Strategic Bombing Survey",
       "publisher": "US National Archives",
       "locators": [
-        {"scheme": "url", "value": "https://www.archives.gov/research/guide-fed-records/groups/243.html", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://www.archives.gov/research/guide-fed-records/groups/243.html",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -312,7 +469,9 @@
         "last_checked_at": null,
         "note": "The locator is a National Archives finding aid identifying an institutional archival route. This does not establish preservation of the current web page, completeness of the holdings for the claim, or that the relevant reports were examined by THR."
       },
-      "used_by_records": ["viral-flak-claim"]
+      "used_by_records": [
+        "viral-flak-claim"
+      ]
     },
     {
       "id": "thr:source:11f91d4b-2404-421c-87da-bbb525b8c014",
@@ -320,7 +479,11 @@
       "title": "ANZAC Portal Flakhelfer photograph/caption",
       "publisher": "Australian Government Department of Veterans' Affairs / ANZAC Portal",
       "locators": [
-        {"scheme": "url", "value": "https://anzacportal.dva.gov.au/resources/bild-183-h27779", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://anzacportal.dva.gov.au/resources/bild-183-h27779",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -333,10 +496,21 @@
         }
       ],
       "relations": [
-        {"type": "quotes", "target_label": "Martin Middlebrook, The Berlin Raids, pp. 153–154", "target_source_id": null, "basis": "current flak record"}
+        {
+          "type": "quotes",
+          "target_label": "Martin Middlebrook, The Berlin Raids, pp. 153–154",
+          "target_source_id": null,
+          "basis": "current flak record"
+        }
       ],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["viral-flak-claim"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "viral-flak-claim"
+      ]
     },
     {
       "id": "thr:source:47f0817a-3cae-4ded-98eb-320332a72bd5",
@@ -344,7 +518,11 @@
       "title": "How to make a sieve and riddle",
       "publisher": "The Guardian",
       "locators": [
-        {"scheme": "url", "value": "https://www.theguardian.com/money/2009/nov/28/how-to-make-sieve-riddle", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://www.theguardian.com/money/2009/nov/28/how-to-make-sieve-riddle",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -357,8 +535,14 @@
         }
       ],
       "relations": [],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["sieve-riddle-revival"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "sieve-riddle-revival"
+      ]
     },
     {
       "id": "thr:source:b9ff9b05-94cc-4f33-b876-015d84aecd14",
@@ -366,7 +550,11 @@
       "title": "Craft skills under threat with 37 additions to the Red List of Endangered Crafts",
       "publisher": "Heritage Crafts",
       "locators": [
-        {"scheme": "url", "value": "https://heritagecrafts.org.uk/our-stories/announcements/craft-skills-under-threat-with-37-additions-to-the-red-list-of-endangered-crafts/", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://heritagecrafts.org.uk/our-stories/announcements/craft-skills-under-threat-with-37-additions-to-the-red-list-of-endangered-crafts/",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -379,10 +567,19 @@
         }
       ],
       "relations": [
-        {"type": "same_institutional_owner", "target": "thr:source:2790ee98-28a4-4fca-bd80-b5b5484c47ef"}
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:2790ee98-28a4-4fca-bd80-b5b5484c47ef"
+        }
       ],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["sieve-riddle-revival"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "sieve-riddle-revival"
+      ]
     },
     {
       "id": "thr:source:2790ee98-28a4-4fca-bd80-b5b5484c47ef",
@@ -390,7 +587,11 @@
       "title": "Sieve and riddle making",
       "publisher": "Heritage Crafts",
       "locators": [
-        {"scheme": "url", "value": "https://heritagecrafts.org.uk/craft/sieve-and-riddle-making/", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://heritagecrafts.org.uk/craft/sieve-and-riddle-making/",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -404,11 +605,24 @@
         }
       ],
       "relations": [
-        {"type": "same_institutional_owner", "target": "thr:source:b9ff9b05-94cc-4f33-b876-015d84aecd14"},
-        {"type": "cites", "target": "thr:source:47f0817a-3cae-4ded-98eb-320332a72bd5", "basis": "v0.1.1 source-relationship correction; claim-level dependence remains unresolved"}
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:b9ff9b05-94cc-4f33-b876-015d84aecd14"
+        },
+        {
+          "type": "cites",
+          "target": "thr:source:47f0817a-3cae-4ded-98eb-320332a72bd5",
+          "basis": "v0.1.1 source-relationship correction; claim-level dependence remains unresolved"
+        }
       ],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["sieve-riddle-revival"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "sieve-riddle-revival"
+      ]
     },
     {
       "id": "thr:source:8782978a-3773-42b5-abf1-45cd688e2234",
@@ -416,8 +630,16 @@
       "title": "Sieve and riddle maker website / process page",
       "publisher": "Steve Overthrow",
       "locators": [
-        {"scheme": "url", "value": "https://www.sievesandriddles.co.uk/", "status": "recorded"},
-        {"scheme": "url", "value": "https://www.sievesandriddles.co.uk/sievesandriddles", "status": "recorded"}
+        {
+          "scheme": "url",
+          "value": "https://www.sievesandriddles.co.uk/",
+          "status": "recorded"
+        },
+        {
+          "scheme": "url",
+          "value": "https://www.sievesandriddles.co.uk/sievesandriddles",
+          "status": "recorded"
+        }
       ],
       "observations": [
         {
@@ -431,8 +653,14 @@
         }
       ],
       "relations": [],
-      "preservation": {"status": "not_yet_checked", "copies": [], "last_checked_at": null},
-      "used_by_records": ["sieve-riddle-revival"]
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "sieve-riddle-revival"
+      ]
     }
   ],
   "ceilings": [
