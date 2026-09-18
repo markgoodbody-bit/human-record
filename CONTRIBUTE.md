@@ -12,7 +12,7 @@ Human entry points:
 
 ## Start with one object
 
-- [The flak claim](cases/viral-flak-claim.md): follow a historical claim through videos, an article and a summary. The aggregate mortality rate remains unknown here. Relevant German personnel studies have not been examined by this record.
+- [The flak claim](cases/viral-flak-claim.md): follow a historical claim through videos, an article and a summary. The aggregate mortality rate remains unknown here. One bounded Westermann 1940 campaign passage has now been partially checked through a third-party OCR route; it reports casualties (dead, wounded and missing), not an aggregate crew mortality rate. The full study and relevant German personnel series remain unexamined.
 - [The artwork specimen](specimen.md): inspect the attribution, source and limits of one museum record. Matching copies of an institutional record do not make independent witnesses.
 - [Sieve and riddle making](cases/sieve-riddle-revival.md): follow public evidence from a reported last maker through an extinction classification and revival while keeping the actual tacit-skill transmission gap open. The record is not a craft manual and does not imply practitioner endorsement.
 - [Hannibal](cases/hannibal-barca.md): follow a bounded route through checked Nepos and Polybius reading surfaces while keeping source reports, translation layers, identity links and uninspected material distinct from historical fact.
@@ -81,7 +81,7 @@ For the flak case, specify whose casualties, which period, what population and w
 
 For the sieve/riddle case, distinguish evidence that public attention reached a later maker from evidence that practical skill was transmitted. A Red List, news feature or process description can be part of a learning pathway without establishing the person-to-person or tacit transmission chain. Public reporting about a living practitioner does not imply that practitioner endorses this record.
 
-For the Hannibal case, distinguish an ancient author's report from direct observation, a modern translation rendering from the source-language literal, and one ancient author's criticism of another source from THR's own adjudication. Name the exact passage, edition or reading surface you checked where possible; do not upgrade a translation, commentary or source-critical judgement beyond what it establishes.
+For the Hannibal case, distinguish an ancient author's report from direct observation, a modern translation rendering from the source-language literal, and one ancient author's criticism of another source from THR's own adjudication. Name the exact passage, edition or reading surface you checked where possible; do not upgrade a translation, commentary or source-critical judgement beyond what it establishes. If machine-searching a source, check orthography, diacritics, transliteration and edition before treating a failed literal match as evidence of absence.
 
 Link rather than reproduce copyrighted books, articles, footage or process material. Do not submit private personal information. Share only material you are entitled to share; the project's CC0 notice does not license third-party works. Do not send private practitioner knowledge or unpublished training material without a legitimate right to share it.
 
