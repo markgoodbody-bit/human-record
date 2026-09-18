@@ -465,6 +465,29 @@ def check_assertions(
         )
         direct_evidence_states = set()
 
+    # Load the mention registry only if an assertion actually uses a mention
+    # referent. This keeps existing assertion-only callers independent of the
+    # identity registry while making ASSERTION_MODEL §3's "unresolved referent"
+    # executable when a real source-literal mention already exists.
+    mention_ids: set[str] | None = None
+
+    def known_mention_ids() -> set[str]:
+        nonlocal mention_ids
+        if mention_ids is not None:
+            return mention_ids
+        mention_registry = load_json("registry/mentions.json")
+        mention_ids = set()
+        if not isinstance(mention_registry, dict):
+            return mention_ids
+        mentions = mention_registry.get("mentions")
+        if not isinstance(mentions, list):
+            error("registry/mentions.json: mentions must be a list")
+            return mention_ids
+        for mention in mentions:
+            if isinstance(mention, dict) and isinstance(mention.get("id"), str):
+                mention_ids.add(mention["id"])
+        return mention_ids
+
     seen: set[str] = set()
     for i, assertion in enumerate(assertions):
         context = f"registry/assertions.json assertions[{i}]"
@@ -503,7 +526,13 @@ def check_assertions(
             record_id = value.get("record_id")
             if isinstance(record_id, str) and record_id not in record_ids:
                 error(f"{assertion_id}: {role} refers to unknown record {record_id}")
-            if not any(key in value for key in ("entity_id", "record_id", "literal", "assertion_id")):
+            if "mention_id" in value:
+                mention_id = value.get("mention_id")
+                if not isinstance(mention_id, str) or not mention_id:
+                    error(f"{assertion_id}: {role}.mention_id must be a non-empty string")
+                elif mention_id not in known_mention_ids():
+                    error(f"{assertion_id}: {role} refers to unknown mention {mention_id}")
+            if not any(key in value for key in ("entity_id", "record_id", "literal", "assertion_id", "mention_id")):
                 error(f"{assertion_id}: {role} has no recognised referent")
 
         evidence = assertion.get("evidence")
