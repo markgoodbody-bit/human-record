@@ -122,7 +122,8 @@
         "ceiling": "Nepos reports that Silenus and Sosylus were with Hannibal and wrote about the war; THR has not inspected their complete works."
       },
       "record_links": [
-        "hannibal-source-survival"
+        "cases/hannibal-barca.json",
+        "cases/hannibal-barca.md"
       ],
       "corrections": []
     },
@@ -149,7 +150,8 @@
         "ceiling": "This is Polybius' evaluation of another historian, not THR's adjudication of Sosylus."
       },
       "record_links": [
-        "hannibal-source-survival"
+        "cases/hannibal-barca.json",
+        "cases/hannibal-barca.md"
       ],
       "corrections": []
     },
@@ -176,7 +178,8 @@
         "ceiling": "Polybius reports finding and using the bronze tablet described at 3.33.17-18. THR has not observed that ancient carrier or an independently preserved copy, and this fixture does not establish that it is physically identical to the column/inscription described at 3.56.4."
       },
       "record_links": [
-        "hannibal-source-survival"
+        "cases/hannibal-barca.json",
+        "cases/hannibal-barca.md"
       ],
       "corrections": []
     },
@@ -203,7 +206,8 @@
         "ceiling": "This records Polybius' own account of his evidence-gathering method. THR did not observe the reported interviews, route inspection, travel, or ancient investigation."
       },
       "record_links": [
-        "hannibal-source-survival"
+        "cases/hannibal-barca.json",
+        "cases/hannibal-barca.md"
       ],
       "corrections": []
     },
@@ -230,7 +234,8 @@
         "ceiling": "Attribution to Polybius' surviving account; exact pass and complete source ancestry are not established by this fixture."
       },
       "record_links": [
-        "hannibal-source-survival"
+        "cases/hannibal-barca.json",
+        "cases/hannibal-barca.md"
       ],
       "corrections": []
     }
