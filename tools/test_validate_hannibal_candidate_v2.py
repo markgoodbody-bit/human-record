@@ -62,6 +62,27 @@ class HannibalCandidateV2Probe(unittest.TestCase):
             {"reported_by_source"},
         )
 
+    def test_malformed_evidence_lists_fail_without_exception(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-4]
+        original = copy.deepcopy(target["evidence"])
+        for field in ("source_ids", "observation_ids"):
+            for malformed in ("made-up-id", None, {}, [{}], [None], [""]):
+                with self.subTest(field=field, malformed=malformed):
+                    integrity.errors.clear()
+                    target["evidence"] = copy.deepcopy(original)
+                    target["evidence"][field] = malformed
+                    self.check_integrity()
+                    self.assertIn(
+                        target["id"] + f": evidence.{field} must be a list of non-empty strings",
+                        integrity.errors,
+                    )
+
+    def test_source_only_attribution_remains_allowed(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-4]
+        target["evidence"]["observation_ids"] = []
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [])
+
     def test_uninspected_attested_historians_are_not_fake_source_objects(self):
         titles = {s["title"] for s in self.fixture["sources"]}
         self.assertFalse(any("Sosylus" in title or "Silenus" in title for title in titles))

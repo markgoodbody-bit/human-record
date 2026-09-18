@@ -513,6 +513,23 @@ def check_assertions(
             evidence_sources = evidence.get("source_ids", [])
             evidence_observations = evidence.get("observation_ids", [])
 
+            # Reject malformed containers before membership/ownership checks.
+            # Missing optional lists remain allowed; a string is not an ID list.
+            for field, values in (("source_ids", evidence_sources),
+                                  ("observation_ids", evidence_observations)):
+                if not isinstance(values, list) or any(
+                    not isinstance(value, str) or not value for value in values
+                ):
+                    error(f"{assertion_id}: evidence.{field} must be a list of non-empty strings")
+            if not isinstance(evidence_sources, list) or any(
+                not isinstance(value, str) or not value for value in evidence_sources
+            ):
+                evidence_sources = []
+            if not isinstance(evidence_observations, list) or any(
+                not isinstance(value, str) or not value for value in evidence_observations
+            ):
+                evidence_observations = []
+
             for source_id in evidence_sources if isinstance(evidence_sources, list) else []:
                 if source_id not in source_ids:
                     error(f"{assertion_id}: evidence refers to unknown source {source_id!r}")
