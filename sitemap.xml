@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://thehumanrecord.net/</loc><lastmod>2026-09-16</lastmod></url>
-  <url><loc>https://thehumanrecord.net/records/</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://thehumanrecord.net/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://thehumanrecord.net/records/</loc><lastmod>2026-09-18</lastmod></url>
   <url><loc>https://thehumanrecord.net/records/about.html</loc><lastmod>2026-09-16</lastmod></url>
   <url><loc>https://thehumanrecord.net/records/architecture.html</loc><lastmod>2026-09-16</lastmod></url>
   <url><loc>https://thehumanrecord.net/records/camp-fire.html</loc><lastmod>2026-09-16</lastmod></url>
@@ -27,4 +27,7 @@
   <url><loc>https://thehumanrecord.net/STEWARDSHIP.md</loc><lastmod>2026-09-15</lastmod></url>
   <url><loc>https://thehumanrecord.net/CONTINUE.md</loc><lastmod>2026-09-16</lastmod></url>
   <url><loc>https://thehumanrecord.net/llms.txt</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://thehumanrecord.net/records/hannibal.html</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://thehumanrecord.net/cases/hannibal-barca.md</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://thehumanrecord.net/cases/hannibal-barca.json</loc><lastmod>2026-09-18</lastmod></url>
 </urlset>
