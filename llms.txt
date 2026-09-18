@@ -41,6 +41,8 @@ Start / evidence surfaces:
 - Flak case boundary: unsupported in checked web sources, not proved false. German aggregate mortality unknown; German personnel series and scholarly studies not examined. Later video metadata is attributed to Claude Code's review, not independently retrieved by Codex.
 - Sieve/riddle case boundary: Heritage Crafts is treated as the strongest identified owner for current UK craft status and safeguarding. The Human Record preserves public source lineage around a reported last maker, extinction classification, revival and current training. What was transmitted, reconstructed or newly learned remains partly unknown. Named living practitioners were not contacted; no participation or endorsement is claimed and no private/tacit process material is used.
 - Challenge/contribution route: https://thehumanrecord.net/CONTRIBUTE.md
+- Optional portable contribution packet guide: https://thehumanrecord.net/CONTRIBUTION_PACKET.md
+- Portable contribution packet JSON Schema: https://thehumanrecord.net/contribution-packet.schema.json
 - Stewardship offer and current custody: https://thehumanrecord.net/STEWARDSHIP.md
 - Standard CC0 legal code: https://thehumanrecord.net/LICENSE
 - Bounded rights/licence scope notice: https://thehumanrecord.net/LICENSE.md
