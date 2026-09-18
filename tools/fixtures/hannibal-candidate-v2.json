@@ -1,0 +1,163 @@
+{
+  "status": "RESEARCH_FIXTURE_NOT_REGISTERED_OR_PUBLIC_CATALOGUED",
+  "basis": "Bounded inspection of Polybius Histories Book 3 on the LacusCurtius/Thayer reading surface and Nepos Hannibal 13.3 on Dickinson College Commentaries, checked 18 September 2026. No manuscript inspection, no direct observation of Hannibal, and no complete source genealogy claimed.",
+  "entity": {
+    "id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0",
+    "type": "person",
+    "labels": [
+      {"text": "Hannibal Barca", "kind": "candidate_display_label"}
+    ],
+    "status": "candidate",
+    "record_links": [],
+    "external_identifiers": [],
+    "notes": [
+      "Thin routing anchor only; exact dates, appearance and biographical details are not identity-key material."
+    ]
+  },
+  "sources": [
+    {
+      "id": "thr:source:8d40b5c1-3eb6-47d3-86e2-48e95853e930",
+      "kind": "web_page",
+      "title": "Dickinson College Commentaries: Nepos, Life of Hannibal, chapter 13",
+      "publisher": "Dickinson College Commentaries",
+      "locators": [
+        {"scheme": "url", "value": "https://dcc.dickinson.edu/nepos-hannibal/chapter-13"}
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:6483e31f-7d60-488b-a4ce-1c15155a01cc",
+          "observed_at": "2026-09-18",
+          "outcome": "partial",
+          "scope": "Chapter 13, especially Latin paragraph 13.3 and its commentary on Silenus and Sosylus; not manuscript evidence or a complete audit of DCC.",
+          "observer": "Framework",
+          "notes": [
+            "Ancient text and modern editorial commentary are separate evidential layers."
+          ]
+        }
+      ],
+      "relations": [],
+      "used_by_records": [],
+      "preservation": {"status": "not_yet_checked", "copies": []}
+    },
+    {
+      "id": "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2",
+      "kind": "web_page",
+      "title": "Polybius, Histories Book 3 — LacusCurtius/Thayer",
+      "publisher": "LacusCurtius / University of Chicago-hosted reading surface",
+      "locators": [
+        {"scheme": "url", "value": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html"}
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:1ea96911-3e2c-42f8-b55e-63b45a9ad2d0",
+          "observed_at": "2026-09-18",
+          "outcome": "partial",
+          "scope": "Book 3 passages 3.20.5, 3.33.17-18, 3.48.12 and 3.56.3-4 on source criticism, the Lacinium tablet, Alpine inquiry/inspection and force totals; not a full-book critical edition review.",
+          "observer": "Framework",
+          "notes": [
+            "This is a modern web reading surface for an ancient text, not the ancient carrier."
+          ]
+        }
+      ],
+      "relations": [],
+      "used_by_records": [],
+      "preservation": {"status": "not_yet_checked", "copies": []}
+    }
+  ],
+  "mention": {
+    "id": "thr:mention:beee588e-f706-40ab-95b3-5d46c097c687",
+    "literal": "Hannibal",
+    "source_id": "thr:source:8d40b5c1-3eb6-47d3-86e2-48e95853e930",
+    "observation_id": "thr:observation:6483e31f-7d60-488b-a4ce-1c15155a01cc",
+    "context": "Nepos, Hannibal 13.3, sentence identifying Sosylus as Hannibal's Greek teacher.",
+    "record_id": "hannibal-candidate-not-published",
+    "status": "candidate",
+    "candidates": [
+      {
+        "entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0",
+        "state": "candidate",
+        "basis": [
+          "Named subject within the Life of Hannibal; retained as candidate resolution because this fixture is not a public identity adjudication."
+        ],
+        "conflicts": []
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "id": "thr:assertion:23bfb7a2-1f36-4a7a-9f75-7b2427366636",
+      "subject": {"entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0"},
+      "predicate": "reported_companion_historians",
+      "object": {"literal": "Silenus and Sosylus"},
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": ["thr:source:8d40b5c1-3eb6-47d3-86e2-48e95853e930"],
+        "observation_ids": ["thr:observation:6483e31f-7d60-488b-a4ce-1c15155a01cc"]
+      },
+      "scope": {
+        "locator": "Nepos, Hannibal 13.3",
+        "ceiling": "Nepos reports that Silenus and Sosylus were with Hannibal and wrote about the war; THR has not inspected their complete works."
+      },
+      "record_links": [],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:72388414-cbc8-47b2-99af-51b639b14472",
+      "subject": {"literal": "Sosylus' historical account"},
+      "predicate": "reported_source_evaluation",
+      "object": {"literal": "Polybius dismisses the authority of Sosylus and Chaereas."},
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": ["thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2"],
+        "observation_ids": ["thr:observation:1ea96911-3e2c-42f8-b55e-63b45a9ad2d0"]
+      },
+      "scope": {
+        "locator": "Polybius, Histories 3.20.5",
+        "ceiling": "This is Polybius' evaluation of another historian, not THR's adjudication of Sosylus."
+      },
+      "record_links": [],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:3e38d580-5c88-463c-8a3a-9eeab8074fea",
+      "subject": {"entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0"},
+      "predicate": "reported_documentary_source",
+      "object": {"literal": "A bronze tablet at the Lacinian promontory carrying Hannibal's troop lists."},
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": ["thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2"],
+        "observation_ids": ["thr:observation:1ea96911-3e2c-42f8-b55e-63b45a9ad2d0"]
+      },
+      "scope": {
+        "locator": "Polybius, Histories 3.33.17-18; compare 3.56.4",
+        "ceiling": "Polybius reports finding and using the tablet. THR has not observed the ancient tablet or an independently preserved copy."
+      },
+      "record_links": [],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:ace95214-7288-414b-9982-78c65cfdf088",
+      "subject": {"entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0"},
+      "predicate": "reported_alpine_crossing",
+      "object": {"literal": "Hannibal crossed the Alps into Italy."},
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": ["thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2"],
+        "observation_ids": ["thr:observation:1ea96911-3e2c-42f8-b55e-63b45a9ad2d0"]
+      },
+      "scope": {
+        "locator": "Polybius, Histories 3.48-56",
+        "ceiling": "Attribution to Polybius' surviving account; exact pass and complete source ancestry are not established by this fixture."
+      },
+      "record_links": [],
+      "corrections": []
+    }
+  ],
+  "inspection_boundary": {
+    "sosylus_complete_work": "not_inspected_and_not_represented_as_a_source_object",
+    "silenus_complete_work": "not_inspected_and_not_represented_as_a_source_object",
+    "livy": "not_counted_as_independent_witness_in_this_fixture",
+    "punic_or_carthaginian_archives": "not_established_absent",
+    "ancient_tablet": "reported_by_polybius_not_directly_observed_by_thr"
+  }
+}
