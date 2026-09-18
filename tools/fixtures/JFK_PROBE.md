@@ -70,9 +70,22 @@ now states this constraint explicitly. The catalogue failure remains expected;
 no historical assertion or production registry is changed.
 
 CC review 5721371947 additionally demonstrated that changing a reported custody
-assertion to state observed still passes. This is an unresolved semantic check,
-not fixed by observation ownership. A blanket ban on observed/reconciled evidence
-from web pages would also reject legitimate inspection of a page's own contents
-or reconciliation of two representations. Source medium does not determine the
-object of observation. No such ban is implemented; typed observation-target and
-claim-scope enforcement require a separate bounded design and counterexamples.
+assertion to state observed still passed at PR30 head 341d598 / 7618bc0. This was
+a real semantic acceptance gap, not fixed by observation ownership.
+
+The 18 September follow-up takes the smallest fail-closed route instead of adding
+a speculative target ontology. Current source observations are retrieval /
+inspection events and do not type the observed entity/situation/proposition.
+Accordingly, cross-record assertion states `observed` and `reconciled` are
+rejected until an earned typed observation/reconciliation relation exists.
+
+This is deliberately **not** a ban based on source medium. A web page can
+legitimately be directly observed *as a page*. The missing information is what
+the observation was of. CRMsci 3.2 is the stronger owner for that semantic
+relation. The one-word custody mutation and a parallel `reconciled` mutation
+are now red-before / green-after regression cases.
+
+```text
+SOURCE_MEDIUM != OBSERVED_OBJECT
+FAIL_CLOSED_NOW != PERMANENT_SCHEMA_DECISION
+```
