@@ -513,13 +513,31 @@ def check_assertions(
             evidence_sources = evidence.get("source_ids", [])
             evidence_observations = evidence.get("observation_ids", [])
 
-            for source_id in evidence_sources if isinstance(evidence_sources, list) else []:
+            # Validate evidence containers before membership/ownership checks.
+            # Missing optional lists still default to [], but strings/dicts and
+            # empty/non-string list items must not be treated as iterable ID lists.
+            for field, values in (("source_ids", evidence_sources),
+                                  ("observation_ids", evidence_observations)):
+                if not isinstance(values, list) or any(
+                    not isinstance(value, str) or not value for value in values
+                ):
+                    error(f"{assertion_id}: evidence.{field} must be a list of non-empty strings")
+            if not isinstance(evidence_sources, list) or any(
+                not isinstance(value, str) or not value for value in evidence_sources
+            ):
+                evidence_sources = []
+            if not isinstance(evidence_observations, list) or any(
+                not isinstance(value, str) or not value for value in evidence_observations
+            ):
+                evidence_observations = []
+
+            for source_id in evidence_sources:
                 if source_id not in source_ids:
                     error(f"{assertion_id}: evidence refers to unknown source {source_id!r}")
-            for obs_id in evidence_observations if isinstance(evidence_observations, list) else []:
+            for obs_id in evidence_observations:
                 if obs_id not in observation_ids:
                     error(f"{assertion_id}: evidence refers to unknown observation {obs_id!r}")
-                elif observation_sources.get(obs_id) not in (evidence_sources if isinstance(evidence_sources, list) else []):
+                elif observation_sources.get(obs_id) not in evidence_sources:
                     error(f"{assertion_id}: evidence observation belongs to a source not cited in source_ids: {obs_id!r}")
 
             if assertion.get("state") == "unsupported_in_sources_checked":
