@@ -12,9 +12,10 @@ Canonical schema:
 
 [contribution-packet.schema.json](contribution-packet.schema.json)
 
-Example:
+Examples:
 
-[examples/grok-flak-relay.packet.json](examples/grok-flak-relay.packet.json)
+- [real relayed Grok packet](examples/grok-flak-relay.packet.json);
+- [small direct no-delta envelope](examples/direct-no-delta.packet.json) — shows the required ten-key shape when `relay.relayed` is `false`.
 
 ## What the packet preserves
 
