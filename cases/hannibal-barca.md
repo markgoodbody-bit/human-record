@@ -65,7 +65,13 @@ Polybius is both:
 
 Nepos, writing later, attests Hannibal-entourage historians whose works are not preserved here as complete inspected source objects.
 
-Modern scholarship also treats later Hannibal narratives as source-dependent. Livy is therefore **not counted as an independent corroborating witness by default** in this candidate. A later source can be added when its relation to earlier material is itself evidenced.
+Modern scholarship also treats later Hannibal narratives as source-dependent. A current source-criticism orientation checked for this candidate is the Cambridge *Libyan Studies* article “Generals and judges: command, constitution and the fate of Carthage”:
+
+`https://www.cambridge.org/core/journals/libyan-studies/article/generals-and-judges-command-constitution-and-the-fate-of-carthage/757F46BAE0CA1A08373A15D1E497198F`
+
+It notes Polybius' use of Carthaginian documentary/informant material, Sosylus in Hannibal's entourage, and heavy later reliance on Polybius while preserving the existence of additional sources and interpretive lenses. This is orientation for source ancestry, not a substitute for reading the ancient passages.
+
+Livy is therefore **not counted as an independent corroborating witness by default** in this candidate. A later source can be added when its relation to earlier material is itself evidenced.
 
 ```text
 LATER_SOURCE != INDEPENDENT_WITNESS
