@@ -112,8 +112,24 @@ class JFKCandidateProbe(unittest.TestCase):
         # Deliberately do not add second_source's observation.
         self.check_integrity()
         self.assertEqual(integrity.errors, [
-            target["id"] + ": unsupported_in_sources_checked counts source(s) without an owned "
+            target["id"] + ": unsupported_in_sources_checked counts source(s) without an inspected "
             "evidence observation as checked: " + repr([second_source["id"]])
+        ])
+
+    def test_unsupported_in_sources_checked_rejects_failed_retrieval_as_check(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-6]
+        target["state"] = "unsupported_in_sources_checked"
+        source_id = target["evidence"]["source_ids"][0]
+        obs_id = target["evidence"]["observation_ids"][0]
+        for source in self.documents["registry/sources.json"]["sources"]:
+            if source["id"] == source_id:
+                for observation in source["observations"]:
+                    if observation["id"] == obs_id:
+                        observation["outcome"] = "failed"
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [
+            target["id"] + ": unsupported_in_sources_checked counts source(s) without an inspected "
+            "evidence observation as checked: " + repr([source_id])
         ])
 
     def test_unsupported_in_sources_checked_accepts_bounded_observed_source_set(self):
