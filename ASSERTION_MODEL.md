@@ -129,8 +129,15 @@ One assertion state is intentionally stricter:
 
 `unsupported_in_sources_checked` means a bounded source set was actually
 examined. It therefore requires a non-empty evidence source set and at least one
-owned observation for every source counted as checked. An empty list cannot
-support that state.
+owned **inspected** observation for every source counted as checked. An empty list
+cannot support that state. In the current structural implementation,
+`retrieved`, `partial`, and `reported_by_reviewer` observations can witness a
+checked source; `metadata_only`, `not_retrieved`, `failed`,
+`access_restricted`, and citation-only/open-vocabulary outcomes cannot.
+
+This is still a structural proxy rather than claim-level semantic proof. The
+observation scope must remain inspectable, and a later typed claim-inspection
+model may narrow this further.
 
 This structural rule still does **not** make the checked set exhaustive. The
 record should preserve the selection/search boundary and material unexamined
