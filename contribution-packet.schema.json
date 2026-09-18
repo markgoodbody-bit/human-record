@@ -54,7 +54,7 @@
         "kind",
         "as_signed",
         "model_or_system",
-        "availability"
+        "availability_at_receipt"
       ],
       "properties": {
         "kind": {
@@ -75,7 +75,7 @@
             "null"
           ]
         },
-        "availability": {
+        "availability_at_receipt": {
           "enum": [
             "available",
             "unavailable",
@@ -157,7 +157,7 @@
           "label",
           "locator",
           "relationship",
-          "checked_by_contributor",
+          "source_check_status",
           "checked_at",
           "notes"
         ],
@@ -184,9 +184,6 @@
               "unknown"
             ]
           },
-          "checked_by_contributor": {
-            "type": "boolean"
-          },
           "checked_at": {
             "type": [
               "string",
@@ -198,6 +195,14 @@
               "string",
               "null"
             ]
+          },
+          "source_check_status": {
+            "enum": [
+              "reported_checked",
+              "reported_not_checked",
+              "unknown"
+            ],
+            "description": "What the contribution reports about whether the original contributor inspected this source. This field is not independent verification of that activity."
           }
         }
       }
