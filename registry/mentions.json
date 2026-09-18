@@ -59,7 +59,7 @@
       "literal": "Hannibal",
       "source_id": "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2",
       "observation_id": "thr:observation:1ea96911-3e2c-42f8-b55e-63b45a9ad2d0",
-      "context": "Polybius, Histories Book 3 passages used by this record, where Hannibal is the narrative subject.",
+      "context": "Polybius, Histories 3.33.17-18 on the checked 1922 Loeb English reading surface, where Paton's translation renders the narrative subject as 'Hannibal'.",
       "record_id": "hannibal-source-survival",
       "status": "candidate",
       "candidates": [
@@ -67,7 +67,7 @@
           "entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0",
           "state": "candidate",
           "basis": [
-            "Book 3 names Hannibal as the campaign subject; linked only as a candidate to the same conventional modern entity anchor used by this record, not as independent identity proof."
+            "The checked English reading surface at Polybius 3.33.17-18 renders the campaign subject as 'Hannibal'; linked only as a candidate to the conventional modern Hannibal Barca anchor, not as independent identity proof. The Greek source literal was not inspected in this record."
           ],
           "conflicts": []
         }
