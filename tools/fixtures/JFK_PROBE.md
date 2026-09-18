@@ -53,6 +53,28 @@ and locator contract, and adversarial tests. It was not implemented in this prob
 initial commit; the later implementation is recorded in RESEARCH_MENTION_REPAIR.md.
 No new causal ontology or database layer is justified by these examples.
 
+A separate 18 September hidden-completeness pressure test targets the assertion
+state `unsupported_in_sources_checked`. The baseline validator accepts that state
+even when the evidence source/observation lists are empty, because it validates
+only references that are present. That is a false structural pass: an empty
+checked set cannot support a finding whose state says sources were checked.
+
+The bounded repair requires:
+- at least one cited source;
+- at least one evidence observation;
+- every source counted as checked must own at least one listed observation.
+
+It does **not** claim the checked set is exhaustive or require a universal search
+schema. Record-level selection/search boundaries and material unexamined leads
+remain necessary context. PRISMA / PRISMA-S are stronger owners for fully
+reproducible systematic-search reporting; THR only borrows the narrower
+non-completeness discipline here.
+
+```text
+EMPTY_CHECKED_SET != UNSUPPORTED_FINDING
+SOURCES_CHECKED != ALL_POSSIBLE_SOURCES
+```
+
 ## Reproduce
 
 Run `python -B -m unittest discover -s tools -p test_validate_jfk_candidate.py -v`.
