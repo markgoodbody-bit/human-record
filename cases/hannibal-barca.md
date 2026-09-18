@@ -33,9 +33,11 @@ The entity anchor deliberately carries no exact birth/death date, portrait, Alpi
 The opaque candidate entity ID is a routing handle only. It is not evidence.
 
 The full display string **Hannibal Barca** is used here as a conventional modern
-routing label. The checked ancient passages in this fixture attest the literal
-name **Hannibal**; this record does not claim that the full modern display
-string is itself source-attested by those passages.
+routing label. The checked Nepos Latin passage attests the literal name **Hannibal**. The
+checked Polybius web surface is an English translation that renders the name as
+**Hannibal**; this record did not inspect the Greek source literal. The full
+modern display string is a conventional routing label, not a claim that both
+checked surfaces attest the same source-language string.
 
 ```text
 CONVENTIONAL_DISPLAY_LABEL != SOURCE_ATTESTED_STRING
@@ -49,7 +51,7 @@ tested artwork provenance, repeated-claim ancestry, and living-practice
 transmission.
 
 The selection-time candidate pool and alternatives considered were not preserved
-for this candidate. That gap does not establish that no alternatives were considered;
+from the pre-publication selection process. That gap does not establish that no alternatives were considered;
 it means this record cannot honestly reconstruct them after the fact.
 
 Selection does not establish representativeness, historical priority, importance,
