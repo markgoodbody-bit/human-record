@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ASSERTION_ID = "thr:assertion:11111111-1111-4111-8111-111111111111"
 MENTION_ID = "thr:mention:22222222-2222-4222-8222-222222222222"
 UNKNOWN_MENTION_ID = "thr:mention:33333333-3333-4333-8333-333333333333"
+MALFORMED_MENTION_ID = "mention-not-opaque"
 SOURCE_ID = "thr:source:44444444-4444-4444-8444-444444444444"
 OBS_ID = "thr:observation:55555555-5555-4555-8555-555555555555"
 
@@ -99,6 +100,28 @@ class AssertionMentionReferentTests(unittest.TestCase):
         self.assertEqual(
             integrity.errors,
             [ASSERTION_ID + ": subject.mention_id must be a non-empty string"],
+        )
+
+    def test_malformed_registry_mention_id_cannot_satisfy_reference(self):
+        self.assertion["subject"] = {"mention_id": MALFORMED_MENTION_ID}
+        self.documents["registry/mentions.json"]["mentions"][0]["id"] = MALFORMED_MENTION_ID
+        self.check()
+        self.assertEqual(
+            integrity.errors,
+            [
+                "registry/mentions.json mentions[0]: invalid opaque mention id "
+                + repr(MALFORMED_MENTION_ID),
+                ASSERTION_ID + ": subject refers to unknown mention " + MALFORMED_MENTION_ID,
+            ],
+        )
+
+    def test_duplicate_registry_mention_id_is_rejected(self):
+        duplicate = copy.deepcopy(self.documents["registry/mentions.json"]["mentions"][0])
+        self.documents["registry/mentions.json"]["mentions"].append(duplicate)
+        self.check()
+        self.assertEqual(
+            integrity.errors,
+            ["registry/mentions.json mentions[1]: duplicate mention id " + MENTION_ID],
         )
 
 
