@@ -1,0 +1,65 @@
+name: Verify contribution packet public delivery
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/verify-contribution-packet-public.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare current source bytes with public domain
+        shell: bash
+        run: |
+          set -euo pipefail
+          paths=(
+            "CONTRIBUTION_PACKET.md"
+            "contribution-packet.schema.json"
+            "examples/grok-flak-relay.packet.json"
+            "CONTRIBUTE.md"
+            "llms.txt"
+            "README.md"
+            "sitemap.xml"
+          )
+          failures=0
+          for path in "${paths[@]}"; do
+            url="https://thehumanrecord.net/${path}"
+            out="/tmp/thr-$(printf '%s' "$path" | tr '/.' '__')"
+            ok=0
+            for attempt in 1 2 3 4 5; do
+              if curl --fail --silent --show-error --location \
+                --connect-timeout 10 --max-time 30 \
+                --output "$out" "$url"; then
+                ok=1
+                break
+              fi
+              sleep $((attempt * 2))
+            done
+            if [[ "$ok" != 1 ]]; then
+              echo "::error file=$path::public retrieval failed for $url"
+              failures=$((failures + 1))
+              continue
+            fi
+            if cmp --silent "$path" "$out"; then
+              bytes="$(wc -c < "$path" | tr -d ' ')"
+              sha="$(sha256sum "$path" | awk '{print $1}')"
+              echo "MATCH $path bytes=$bytes sha256=$sha"
+            else
+              source_sha="$(sha256sum "$path" | awk '{print $1}')"
+              public_sha="$(sha256sum "$out" | awk '{print $1}')"
+              echo "::error file=$path::byte mismatch source=$source_sha public=$public_sha"
+              failures=$((failures + 1))
+            fi
+          done
+          if [[ "$failures" -ne 0 ]]; then
+            echo "PUBLIC_DELIVERY_FAIL failures=$failures"
+            exit 1
+          fi
+          echo "PUBLIC_DELIVERY_VERIFIED files=${#paths[@]}"
