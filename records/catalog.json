@@ -1,6 +1,6 @@
 {
   "format": "human-record-catalog/0.6",
-  "updated": "2026-09-16",
+  "updated": "2026-09-18",
   "purpose": "Discovery catalogue for current Human Record entries. This is routing metadata, not a universal record schema, evidence upgrade or certification surface.",
   "record_contract": "https://thehumanrecord.net/RECORD_CONTRACT.md",
   "human_explanation": "https://thehumanrecord.net/records/about.html",
@@ -84,6 +84,29 @@
       "strongest_owner": "Heritage Crafts for current UK craft status and safeguarding.",
       "consent_boundary": "Public-source lineage only; named living practitioners were not contacted and no endorsement or private/tacit process material is claimed.",
       "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
+    },
+    {
+      "id": "hannibal-source-survival",
+      "kind": "historical_person_source_survival",
+      "title": "Hannibal: the person and the accounts that remain",
+      "human_view": "https://thehumanrecord.net/records/hannibal.html",
+      "full_human_record": "https://thehumanrecord.net/cases/hannibal-barca.md",
+      "machine_record": "https://thehumanrecord.net/cases/hannibal-barca.json",
+      "view_basis": {
+        "aligned_at": "2026-09-18",
+        "source_record_version": "0.1.0",
+        "source_git_blobs": {
+          "cases/hannibal-barca.md": "929d2f28ed5c0a20c92d1c07f44e63686faf398f",
+          "cases/hannibal-barca.json": "39e3cf02cac268be594af3611446cf3475909a1e"
+        }
+      },
+      "status": "public_bounded_source_survival_record",
+      "historical_truth_status": "attributed_source_reports_not_global_adjudication",
+      "recorded_at": "2026-09-18",
+      "known_summary": "Two checked ancient-text reading surfaces preserve attributed claims and source-critical boundaries without treating the surviving accounts as the historical person or as independent corroboration by count.",
+      "unknown_summary": "Complete source genealogy, much Carthaginian/Punic evidence, manuscript/critical-edition verification, the exact Alpine pass and many biographical disputes remain outside this bounded record.",
+      "strongest_owner": "Classical source criticism, critical editions and specialist ancient-history scholarship own historical reconstruction; THR preserves a cross-record evidence route and correction surface only.",
+      "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
     }
   ],
   "ceilings": [
@@ -105,6 +128,7 @@
     "BROWSEABLE != CERTIFIED",
     "RECORDING != OWNING",
     "RECORDING != CONTINUATION",
-    "ATTENTION PATHWAY != SKILL_TRANSMISSION"
+    "ATTENTION PATHWAY != SKILL_TRANSMISSION",
+    "HISTORICAL_PERSON != SURVIVING_BIOGRAPHY"
   ]
 }
