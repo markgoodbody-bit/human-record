@@ -142,6 +142,28 @@ def validate(root: Path = ROOT, *, allow_uncatalogued_mentions: bool = False) ->
                 state = candidate.get("state")
                 if state not in CANDIDATE_STATES:
                     errors.append(f"{mid}: invalid candidate state {state!r}")
+
+                basis = candidate.get("basis")
+                if not isinstance(basis, list) or not basis or any(
+                    not isinstance(item, str) or not item.strip() for item in basis
+                ):
+                    errors.append(
+                        f"{mid}: candidates[{j}] basis must be a non-empty list "
+                        "of non-empty strings"
+                    )
+
+                # Candidate links are current resolution summaries, not a second
+                # assertion/evidence/history system. Issue #40 demonstrated that
+                # accepting these fields silently makes unsupported say-so,
+                # evidence-bearing correction and direct-observation language
+                # structurally indistinguishable.
+                for unsupported in ("evidence", "evidence_state", "history"):
+                    if unsupported in candidate:
+                        errors.append(
+                            f"{mid}: candidates[{j}] unsupported field {unsupported!r}; "
+                            "route evidence/correction semantics through assertions"
+                        )
+
                 if state == "resolved_as":
                     resolved_count += 1
             if status == "resolved" and resolved_count != 1:

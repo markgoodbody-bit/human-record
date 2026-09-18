@@ -22,7 +22,12 @@ class OperationalRegistryTests(unittest.TestCase):
             "observation_id": self.observation,
             "record_id": "r1",
             "status": "resolved",
-            "candidates": [{"entity_id": self.entity, "state": "resolved_as"}],
+            "candidates": [{
+                "entity_id": self.entity,
+                "state": "resolved_as",
+                "basis": ["bounded fixture identity basis"],
+                "conflicts": [],
+            }],
         }
         self.check = {
             "id": "thr:source-check:25463bdb-35a4-4744-a1ba-d0f047b2e482",
@@ -106,6 +111,37 @@ class OperationalRegistryTests(unittest.TestCase):
         self.mention["candidates"][0]["entity_id"] = "thr:entity:11111111-1111-4111-8111-111111111111"
         self.write()
         self.assertTrue(validator.validate(self.root)[0])
+
+    def test_candidate_requires_non_empty_basis(self):
+        candidate = self.mention["candidates"][0]
+        for basis in (None, [], [""], ["   "], "prose", [42]):
+            with self.subTest(basis=basis):
+                if basis is None:
+                    candidate.pop("basis", None)
+                else:
+                    candidate["basis"] = basis
+                self.write()
+                self.assertTrue(any(
+                    "basis must be a non-empty list" in e
+                    for e in validator.validate(self.root)[0]
+                ))
+                candidate["basis"] = ["bounded fixture identity basis"]
+
+    def test_candidate_rejects_parallel_evidence_semantics(self):
+        candidate = self.mention["candidates"][0]
+        for field, value in (
+            ("evidence_state", "observed"),
+            ("evidence", {"source_ids": [self.source]}),
+            ("history", [{"state": "candidate"}]),
+        ):
+            with self.subTest(field=field):
+                candidate[field] = value
+                self.write()
+                self.assertTrue(any(
+                    f"unsupported field {field!r}" in e
+                    for e in validator.validate(self.root)[0]
+                ))
+                candidate.pop(field)
 
     def test_resolved_requires_exactly_one_resolved_candidate(self):
         self.mention["candidates"] = []

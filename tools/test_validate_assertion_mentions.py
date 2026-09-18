@@ -14,6 +14,7 @@ import validate_integrity as integrity
 ROOT = Path(__file__).resolve().parents[1]
 ASSERTION_ID = "thr:assertion:11111111-1111-4111-8111-111111111111"
 MENTION_ID = "thr:mention:22222222-2222-4222-8222-222222222222"
+SECOND_MENTION_ID = "thr:mention:66666666-6666-4666-8666-666666666666"
 UNKNOWN_MENTION_ID = "thr:mention:33333333-3333-4333-8333-333333333333"
 MALFORMED_MENTION_ID = "mention-not-opaque"
 SOURCE_ID = "thr:source:44444444-4444-4444-8444-444444444444"
@@ -83,6 +84,18 @@ class AssertionMentionReferentTests(unittest.TestCase):
             )
 
     def test_existing_unresolved_mention_is_a_valid_assertion_referent(self):
+        self.check()
+        self.assertEqual(integrity.errors, [])
+
+    def test_source_claim_can_address_two_unresolved_mentions(self):
+        second = copy.deepcopy(self.documents["registry/mentions.json"]["mentions"][0])
+        second["id"] = SECOND_MENTION_ID
+        second["literal"] = "R. Vale — Harbour Study, 2024 (catalogue B)"
+        second["context"] = "synthetic issue #40 counterpart"
+        self.documents["registry/mentions.json"]["mentions"].append(second)
+        self.assertion["subject"] = {"mention_id": MENTION_ID}
+        self.assertion["object"] = {"mention_id": SECOND_MENTION_ID}
+        self.assertion["predicate"] = "reported_distinct_referents"
         self.check()
         self.assertEqual(integrity.errors, [])
 
