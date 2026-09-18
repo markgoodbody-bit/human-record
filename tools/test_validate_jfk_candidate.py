@@ -93,6 +93,26 @@ class JFKCandidateProbe(unittest.TestCase):
         self.check_integrity()
         self.assertEqual(integrity.errors, [])
 
+    def test_report_page_observation_cannot_be_upgraded_to_observed_by_state_word(self):
+        # The custody assertion is backed by an observation of an HSCA report page.
+        # Changing only its state must not turn that into direct observation of custody.
+        target = self.documents["registry/assertions.json"]["assertions"][-2]
+        target["state"] = "observed"
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [
+            target["id"] + ": state 'observed' requires typed observation/reconciliation "
+            "target support; current source observations record retrieval/inspection only"
+        ])
+
+    def test_report_page_observation_cannot_be_upgraded_to_reconciled_by_state_word(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-2]
+        target["state"] = "reconciled"
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [
+            target["id"] + ": state 'reconciled' requires typed observation/reconciliation "
+            "target support; current source observations record retrieval/inspection only"
+        ])
+
 
 if __name__ == "__main__":
     unittest.main()
