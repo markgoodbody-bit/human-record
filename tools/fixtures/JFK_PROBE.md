@@ -53,6 +53,28 @@ and locator contract, and adversarial tests. It was not implemented in this prob
 initial commit; the later implementation is recorded in RESEARCH_MENTION_REPAIR.md.
 No new causal ontology or database layer is justified by these examples.
 
+A separate 18 September hidden-completeness pressure test targets the assertion
+state `unsupported_in_sources_checked`. The baseline validator accepts that state
+even when the evidence source/observation lists are empty, because it validates
+only references that are present. That is a false structural pass: an empty
+checked set cannot support a finding whose state says sources were checked.
+
+The bounded repair requires:
+- at least one cited source;
+- at least one evidence observation;
+- every source counted as checked must own at least one listed observation.
+
+It does **not** claim the checked set is exhaustive or require a universal search
+schema. Record-level selection/search boundaries and material unexamined leads
+remain necessary context. PRISMA / PRISMA-S are stronger owners for fully
+reproducible systematic-search reporting; THR only borrows the narrower
+non-completeness discipline here.
+
+```text
+EMPTY_CHECKED_SET != UNSUPPORTED_FINDING
+SOURCES_CHECKED != ALL_POSSIBLE_SOURCES
+```
+
 ## Reproduce
 
 Run `python -B -m unittest discover -s tools -p test_validate_jfk_candidate.py -v`.
@@ -70,9 +92,22 @@ now states this constraint explicitly. The catalogue failure remains expected;
 no historical assertion or production registry is changed.
 
 CC review 5721371947 additionally demonstrated that changing a reported custody
-assertion to state observed still passes. This is an unresolved semantic check,
-not fixed by observation ownership. A blanket ban on observed/reconciled evidence
-from web pages would also reject legitimate inspection of a page's own contents
-or reconciliation of two representations. Source medium does not determine the
-object of observation. No such ban is implemented; typed observation-target and
-claim-scope enforcement require a separate bounded design and counterexamples.
+assertion to state observed still passed at PR30 head 341d598 / 7618bc0. This was
+a real semantic acceptance gap, not fixed by observation ownership.
+
+The 18 September follow-up takes the smallest fail-closed route instead of adding
+a speculative target ontology. Current source observations are retrieval /
+inspection events and do not type the observed entity/situation/proposition.
+Accordingly, cross-record assertion states `observed` and `reconciled` are
+rejected until an earned typed observation/reconciliation relation exists.
+
+This is deliberately **not** a ban based on source medium. A web page can
+legitimately be directly observed *as a page*. The missing information is what
+the observation was of. CRMsci 3.2 is the stronger owner for that semantic
+relation. The one-word custody mutation and a parallel `reconciled` mutation
+are now red-before / green-after regression cases.
+
+```text
+SOURCE_MEDIUM != OBSERVED_OBJECT
+FAIL_CLOSED_NOW != PERMANENT_SCHEMA_DECISION
+```
