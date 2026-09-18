@@ -2,7 +2,7 @@
 
 Status: **WORKING INTEROPERABILITY NOTE / DERIVED FROM CURRENT RECORDS / NOT A UNIVERSAL SCHEMA / NOT CANON**
 
-This document describes the smallest common structure currently earned by the three Human Record entries that exist.
+This document describes the smallest common structure currently earned by the four Human Record entries that exist.
 
 It is not a claim that every kind of human knowledge or creativity can be represented in one JSON shape. It is not a certification standard, a truth oracle, an authorship detector, or a requirement that future records use identical field names.
 
@@ -33,7 +33,7 @@ At minimum:
 
 A record must say what it is actually about.
 
-For an artefact this may be an identified work and the attribution/provenance assertions being checked. For a claim-provenance case it may be the exact proposition whose source ancestry is being reconstructed. For a living-knowledge lineage case it may be the bounded public evidence for how a practice or skill was transmitted, interrupted or revived.
+For an artefact this may be an identified work and the attribution/provenance assertions being checked. For a claim-provenance case it may be the exact proposition whose source ancestry is being reconstructed. For a living-knowledge lineage case it may be the bounded public evidence for how a practice or skill was transmitted, interrupted or revived. For a historical-person source-survival case it may be the bounded route from present-day labels and source mentions back through surviving attributed reports without turning those reports into the person.
 
 Do not widen the subject silently when evidence only supports a narrower statement.
 
@@ -198,29 +198,30 @@ Examples already present:
 
 - the artwork specimen needs artefact identity, owner-source reconciliation, image-byte comparison, rights layers and selection provenance;
 - the flak-claim case needs propagation nodes, claim relations, source ancestry, nearby-but-different evidence, research leads and unresolved origin hypotheses;
-- the sieve-and-riddle case needs living-practice status with an explicit external status owner, selection/strongest-owner reasoning, lineage events, source-independence groups, authority/consent boundaries, and a separation between public attention pathways and actual skill transmission.
+- the sieve-and-riddle case needs living-practice status with an explicit external status owner, selection/strongest-owner reasoning, lineage events, source-independence groups, authority/consent boundaries, and a separation between public attention pathways and actual skill transmission;
+- the Hannibal source-survival case needs source-literal mentions, candidate identity links, attributed assertions, explicit source/translation boundaries, incomplete source genealogy, inspection ceilings, and a separation between the historical person and the surviving accounts.
 
-Future records involving oral history, audiovisual carriers, software-dependent works, living creators or community-held knowledge may require carrier condition, environment/dependency capture, consent, access restrictions, community authority, or other fields not earned by the current three records.
+Future records involving oral history, audiovisual carriers, software-dependent works, living creators or community-held knowledge may require carrier condition, environment/dependency capture, consent, access restrictions, community authority, or other fields not earned by the current four records.
 
 Do not add those fields globally until a real record requires them.
 
 ## Current field mapping
 
-The three existing machine records do not use identical field names. That is acceptable if their semantics remain inspectable.
+The four existing machine records do not use identical field names. That is acceptable if their semantics remain inspectable.
 
-| Common question | Artwork specimen | Flak claim case | Sieve/riddle lineage case |
-| --- | --- | --- | --- |
-| identity/type | `format`, `artefact` | `record_type`, `record_version`, `title` | `record_type`, `record_version`, `title` |
-| current state | `status`, observation fields | `status`, `historical_truth_status`, `recorded_at` | `status`, `living_practice_status`, `recorded_at` |
-| selection | `selection` | `selection` | `selection` |
-| evidence | `owner_sources`, `reconciliation` | `nodes`, `review_receipts` | `nodes`, `lineage_events` |
-| source relationship | `epistemic_boundaries.source_independence` | node `role` / `claim_relation` | `source_independence` |
-| findings | reconciliation + bounded prose | `current_findings` | `current_findings` |
-| unknowns | `not_established`, epistemic boundaries | `unknowns`, `not_checked` | `unknowns`, `not_checked` |
-| correction history | `corrections` | `challenges`, revision notes | Git history + future challenge entries; `correction_rule` defines current practice |
-| rights / authority | `rights_layers`, epistemic boundaries | contribution/rights boundary in full record | `authority_and_consent` |
-| correction route | `correction_route` | `correction_rule` + public contribution route | `correction_route`, `correction_rule` |
-| human-view freshness | `records/catalog.json` view basis | `records/catalog.json` view basis | `records/catalog.json` view basis |
+| Common question | Artwork specimen | Flak claim case | Sieve/riddle lineage case | Hannibal source-survival case |
+| --- | --- | --- | --- | --- |
+| identity/type | `format`, `artefact` | `record_type`, `record_version`, `title` | `record_type`, `record_version`, `title` | `format`, `record_id`, `record_type`, `record_version`, `subject`, `entity` |
+| current state | `status`, observation fields | `status`, `historical_truth_status`, `recorded_at` | `status`, `living_practice_status`, `recorded_at` | `status`, `recorded_at`, `publication_boundary` |
+| selection | `selection` | `selection` | `selection` | `selection` |
+| evidence | `owner_sources`, `reconciliation` | `nodes`, `review_receipts` | `nodes`, `lineage_events` | `sources`, `mentions`, `assertions` |
+| source relationship | `epistemic_boundaries.source_independence` | node `role` / `claim_relation` | `source_independence` | `source_relationships`, assertion evidence/scope |
+| findings | reconciliation + bounded prose | `current_findings` | `current_findings` | `current_findings` |
+| unknowns | `not_established`, epistemic boundaries | `unknowns`, `not_checked` | `unknowns`, `not_checked` | `unknowns`, `inspection_boundary` |
+| correction history | `corrections` | `challenges`, revision notes | Git history + future challenge entries; `correction_rule` defines current practice | assertion `corrections`, `correction_rule`, Git history |
+| rights / authority | `rights_layers`, epistemic boundaries | contribution/rights boundary in full record | `authority_and_consent` | `rights_and_custody` |
+| correction route | `correction_route` | `correction_rule` + public contribution route | `correction_route`, `correction_rule` | `correction_rule` |
+| human-view freshness | `records/catalog.json` view basis | `records/catalog.json` view basis | `records/catalog.json` view basis | `records/catalog.json` view basis |
 
 This table is a migration aid, not a command to rename mature fields merely for symmetry.
 
