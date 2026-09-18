@@ -1,6 +1,6 @@
 {
   "format": "human-record-source-check-registry/0.1",
-  "updated": "2026-09-16",
+  "updated": "2026-09-18",
   "purpose": "Append-only operational receipts for rechecking source locators and preservation routes. A source check is not record evidence unless separately promoted into an evidence observation.",
   "model": "https://thehumanrecord.net/SOURCE_MODEL.md",
   "checks": [
@@ -54,6 +54,28 @@
       "preservation_action": "none",
       "record_evidence_promoted": false,
       "note": "The retrieval surface returned the cited World War Wings article. This does not establish current origin-server availability, source independence, unchanged bytes, historical truth or archival preservation."
+    },
+    {
+      "id": "thr:source-check:9f583a46-5d61-4b6d-8b6c-2e3f7e8b01c2",
+      "source_id": "thr:source:8d40b5c1-3eb6-47d3-86e2-48e95853e930",
+      "checked_at": "2026-09-18",
+      "locator": "https://dcc.dickinson.edu/nepos-hannibal/chapter-13",
+      "method": "fresh_public_retrieval_before_record4_promotion",
+      "outcome": "live_locator_retrieved",
+      "fingerprint": null,
+      "record_evidence_promoted": false,
+      "note": "Fresh currentness check observed the DCC Chapter 13 reading surface. This check does not upgrade Nepos' propositions into direct observation or establish preservation."
+    },
+    {
+      "id": "thr:source-check:b19c62b0-ae2c-4f93-8c64-2dc3841f9d26",
+      "source_id": "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2",
+      "checked_at": "2026-09-18",
+      "locator": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html",
+      "method": "fresh_public_retrieval_before_record4_promotion",
+      "outcome": "live_locator_retrieved",
+      "fingerprint": null,
+      "record_evidence_promoted": false,
+      "note": "Fresh currentness check observed the Polybius Book 3 reading surface, including its 1922 Loeb / not-yet-proofread notice. Live retrieval is not manuscript verification, a critical-edition check or preservation."
     }
   ],
   "ceilings": [
