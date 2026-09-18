@@ -84,6 +84,16 @@ The record should separate what the checked evidence supports from interpretatio
 
 A finding should be narrow enough that another reader can inspect the cited basis and disagree with it.
 
+Where a finding depends on **not finding support** in checked material, preserve
+the bounded aperture that produced that result: what source set was actually
+checked, and enough of the selection/search boundary and material unexamined
+leads for a reader not to mistake the list for completeness. This is especially
+important when a machine-readable state says `unsupported_in_sources_checked`.
+
+Systematic-review standards such as PRISMA / PRISMA-S are stronger owners for
+fully reproducible search reporting. THR should not duplicate that machinery
+unless a record really is doing systematic evidence synthesis.
+
 Where the record only establishes agreement with an institutional record, say that. Where it only reconstructs a visible propagation chain, say that. Where it only shows a public attention or transmission pathway, do not silently turn that into evidence that tacit skill itself was transmitted.
 
 ```text

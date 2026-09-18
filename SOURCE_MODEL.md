@@ -87,6 +87,26 @@ Working form:
 
 Not every historical or manually consulted source will have exact bytes. Record what was actually observed rather than inventing a fingerprint after the fact.
 
+The current `registry/sources.json` observation envelope is deliberately about
+the bounded retrieval/inspection of **this source representation**. Its
+`scope`, `outcome`, observer and digest can say what part of the representation
+was inspected and what happened during retrieval. They do not currently encode
+a typed observable situation/proposition in the world described by the source.
+
+CRMsci 3.2 is the stronger semantic owner for observations that explicitly bind
+an observation to an observed entity/situation/proposition:
+https://cidoc-crm.org/extensions/crmsci/html/CRMsci_v3.2.html
+
+Therefore a source observation ID must not be treated as sufficient structural
+support for a cross-record assertion state of `observed` or `reconciled`.
+Those states need an explicit typed observation/reconciliation relation that THR
+does not yet implement.
+
+```text
+OBSERVED_SOURCE_REPRESENTATION != OBSERVED_WORLD_STATE
+SCOPE_TEXT != TYPED_OBSERVATION_TARGET
+```
+
 Possible outcomes include:
 
 - `retrieved`
