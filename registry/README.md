@@ -28,7 +28,7 @@ URL != SOURCE ID
 
 ## Why registries exist
 
-At three records, repeated identity and source references can be read manually.
+At four records, repeated identity and source references can still be read manually.
 
 At thousands or millions of records, that becomes dangerous:
 
