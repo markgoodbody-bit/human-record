@@ -13,16 +13,6 @@ on:
       - 'README.md'
       - 'sitemap.xml'
       - '.github/workflows/verify-contribution-packet-public.yml'
-  pull_request:
-    paths:
-      - 'CONTRIBUTION_PACKET.md'
-      - 'contribution-packet.schema.json'
-      - 'examples/grok-flak-relay.packet.json'
-      - 'CONTRIBUTE.md'
-      - 'llms.txt'
-      - 'README.md'
-      - 'sitemap.xml'
-      - '.github/workflows/verify-contribution-packet-public.yml'
   workflow_dispatch:
 
 permissions:
