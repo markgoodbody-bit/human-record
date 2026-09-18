@@ -83,6 +83,49 @@ These are not a complete epistemology.
 STATE LABEL != UNIVERSAL TRUTH VALUE
 ```
 
+## 4a. Direct-evidence implementation boundary
+
+The source registry's current observation envelope records a bounded retrieval or
+inspection of a source representation. It does **not** yet carry a typed relation
+to the entity, observable situation, or proposition that a cross-record assertion
+claims was directly observed.
+
+This distinction is owned rather than invented here. CRMsci 3.2 gives an
+observation explicit relations to what was observed, including observable
+situations/entities/propositions. THR does not yet implement an equivalent typed
+target relation.
+
+Official owner reference:
+https://cidoc-crm.org/extensions/crmsci/html/CRMsci_v3.2.html
+
+Until a concrete THR case earns and tests such a representation, the
+cross-record assertion validator must fail closed on direct-evidence states that
+would otherwise be asserted by changing only the state word.
+
+Working direct-evidence states requiring typed target/reconciliation support:
+
+- `observed`
+- `reconciled`
+
+`reported_by_source` remains appropriate where the record inspected a source
+that states the proposition. A source retrieval/inspection observation is
+evidence that THR inspected the representation at a bounded time and scope; it
+is not by itself evidence that THR directly observed the world-state described
+inside that representation.
+
+```text
+SOURCE_OBSERVATION != DIRECT_WORLD_OBSERVATION
+SOURCE_MEDIUM != OBSERVED_OBJECT
+STATE_WORD != EVIDENCE_RELATION
+FAIL_CLOSED_NOW != PERMANENT_SCHEMA_DECISION
+```
+
+This is an implementation boundary, not a claim that direct observation or
+reconciliation can never be represented. A later repair should add the smallest
+typed observation/reconciliation relation justified by real records and owner
+semantics, then remove this temporary fail-closed guard with red-before /
+green-after tests.
+
 ## 5. Scope is part of the assertion
 
 Population, denominator, time window, place, version and other qualifiers can change the proposition materially.
