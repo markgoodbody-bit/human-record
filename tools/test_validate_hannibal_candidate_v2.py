@@ -105,13 +105,16 @@ class HannibalCandidateV2Probe(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(mention["status"], "candidate")
 
-    def test_candidate_does_not_change_public_catalogue_count(self):
-        public_count = len(json.loads((ROOT / "records/catalog.json").read_text(encoding="utf-8"))["records"])
+    def test_candidate_fixture_does_not_mutate_public_catalogue(self):
+        public_records = json.loads((ROOT / "records/catalog.json").read_text(encoding="utf-8"))["records"]
         self.assertEqual(
             len(self.documents["records/catalog.json"]["records"]),
-            public_count,
+            len(public_records),
         )
-        self.assertEqual(public_count, 3)
+        self.assertNotIn(
+            self.fixture["mention"]["record_id"],
+            {record["id"] for record in public_records},
+        )
 
 
 if __name__ == "__main__":
