@@ -77,6 +77,11 @@ VOCABULARIES = (
     ("ASSERTION_MODEL.md", "## 4. Assertion state", "assertion.state", False),
 )
 
+DIRECT_EVIDENCE_STATES_MODEL = (
+    "ASSERTION_MODEL.md",
+    "## 4a. Direct-evidence implementation boundary",
+)
+
 
 _vocabulary_cache: dict[tuple[str, str], set[str] | None] = {}
 
@@ -449,6 +454,8 @@ def check_assertions(
             if isinstance(observation, dict) and isinstance(observation.get("id"), str):
                 observation_sources[observation["id"]] = source["id"]
 
+    direct_evidence_states = model_vocabulary(*DIRECT_EVIDENCE_STATES_MODEL)
+
     seen: set[str] = set()
     for i, assertion in enumerate(assertions):
         context = f"registry/assertions.json assertions[{i}]"
@@ -469,6 +476,12 @@ def check_assertions(
             error(f"{assertion_id}: state must be a non-empty string")
         else:
             check_vocabulary(assertion["state"], *VOCABULARIES[3][:3], VOCABULARIES[3][3], assertion_id)
+            if direct_evidence_states is not None and assertion["state"] in direct_evidence_states:
+                error(
+                    f"{assertion_id}: state {assertion['state']!r} requires typed "
+                    "observation/reconciliation target support; current source observations "
+                    "record retrieval/inspection only"
+                )
 
         for role in ("subject", "object"):
             value = assertion.get(role)
