@@ -57,7 +57,10 @@ This candidate records that **Nepos reports this relationship**. It does not cre
 
 ## Source-survival pressure
 
-The checked evidence already breaks a simple “two ancient sources = two witnesses” account.
+These two checked texts do not establish two independent witnesses to the same
+event. They support different attributed propositions; their number is not a
+corroboration count. This candidate does not establish direct dependence between
+Nepos and Polybius either.
 
 Polybius is both:
 - a surviving narrative source for Hannibal's campaign; and
