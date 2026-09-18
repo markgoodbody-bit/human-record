@@ -93,6 +93,16 @@ class JFKCandidateProbe(unittest.TestCase):
         self.check_integrity()
         self.assertEqual(integrity.errors, [])
 
+    def test_missing_direct_evidence_boundary_fails_closed(self):
+        with patch.object(
+                integrity, "DIRECT_EVIDENCE_STATES_MODEL",
+                ("ASSERTION_MODEL.md", "## 99. Missing direct-evidence boundary")):
+            self.check_integrity()
+        self.assertTrue(any(
+            "direct-evidence boundary section missing or empty" in item
+            for item in integrity.errors
+        ))
+
     def test_report_page_observation_cannot_be_upgraded_to_observed_by_state_word(self):
         # The custody assertion is backed by an observation of an HSCA report page.
         # Changing only its state must not turn that into direct observation of custody.
