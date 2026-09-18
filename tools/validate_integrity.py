@@ -77,6 +77,11 @@ VOCABULARIES = (
     ("ASSERTION_MODEL.md", "## 4. Assertion state", "assertion.state", False),
 )
 
+DIRECT_EVIDENCE_STATES_MODEL = (
+    "ASSERTION_MODEL.md",
+    "## 4a. Direct-evidence implementation boundary",
+)
+
 
 _vocabulary_cache: dict[tuple[str, str], set[str] | None] = {}
 
@@ -436,6 +441,30 @@ def check_assertions(
         error("registry/assertions.json: assertions must be a list")
         return set()
 
+    # Existence alone permits an assertion to borrow another source's observation.
+    # Build ownership from the registry, never from the assertion being checked.
+    source_registry = load_json("registry/sources.json")
+    observation_sources: dict[str, str] = {}
+    observation_outcomes: dict[str, str] = {}
+    source_items = source_registry.get("sources", []) if isinstance(source_registry, dict) else []
+    for source in source_items if isinstance(source_items, list) else []:
+        if not isinstance(source, dict) or not isinstance(source.get("id"), str):
+            continue
+        observations = source.get("observations", [])
+        for observation in observations if isinstance(observations, list) else []:
+            if isinstance(observation, dict) and isinstance(observation.get("id"), str):
+                observation_sources[observation["id"]] = source["id"]
+                if isinstance(observation.get("outcome"), str):
+                    observation_outcomes[observation["id"]] = observation["outcome"]
+
+    direct_evidence_states = model_vocabulary(*DIRECT_EVIDENCE_STATES_MODEL)
+    if not direct_evidence_states:
+        error(
+            "direct-evidence boundary section missing or empty in ASSERTION_MODEL.md; "
+            "fail-closed state guard cannot be evaluated"
+        )
+        direct_evidence_states = set()
+
     seen: set[str] = set()
     for i, assertion in enumerate(assertions):
         context = f"registry/assertions.json assertions[{i}]"
@@ -456,6 +485,12 @@ def check_assertions(
             error(f"{assertion_id}: state must be a non-empty string")
         else:
             check_vocabulary(assertion["state"], *VOCABULARIES[3][:3], VOCABULARIES[3][3], assertion_id)
+            if assertion["state"] in direct_evidence_states:
+                error(
+                    f"{assertion_id}: state {assertion['state']!r} requires typed "
+                    "observation/reconciliation target support; current source observations "
+                    "record retrieval/inspection only"
+                )
 
         for role in ("subject", "object"):
             value = assertion.get(role)
@@ -475,12 +510,49 @@ def check_assertions(
         if not isinstance(evidence, dict):
             error(f"{assertion_id}: evidence must be an object")
         else:
-            for source_id in evidence.get("source_ids", []):
+            evidence_sources = evidence.get("source_ids", [])
+            evidence_observations = evidence.get("observation_ids", [])
+
+            for source_id in evidence_sources if isinstance(evidence_sources, list) else []:
                 if source_id not in source_ids:
                     error(f"{assertion_id}: evidence refers to unknown source {source_id!r}")
-            for obs_id in evidence.get("observation_ids", []):
+            for obs_id in evidence_observations if isinstance(evidence_observations, list) else []:
                 if obs_id not in observation_ids:
                     error(f"{assertion_id}: evidence refers to unknown observation {obs_id!r}")
+                elif observation_sources.get(obs_id) not in (evidence_sources if isinstance(evidence_sources, list) else []):
+                    error(f"{assertion_id}: evidence observation belongs to a source not cited in source_ids: {obs_id!r}")
+
+            if assertion.get("state") == "unsupported_in_sources_checked":
+                if not isinstance(evidence_sources, list) or not evidence_sources:
+                    error(
+                        f"{assertion_id}: unsupported_in_sources_checked requires a non-empty "
+                        "evidence.source_ids list"
+                    )
+                if not isinstance(evidence_observations, list) or not evidence_observations:
+                    error(
+                        f"{assertion_id}: unsupported_in_sources_checked requires a non-empty "
+                        "evidence.observation_ids list"
+                    )
+                if (isinstance(evidence_sources, list) and evidence_sources
+                        and isinstance(evidence_observations, list) and evidence_observations):
+                    checked_outcomes = {"retrieved", "partial", "reported_by_reviewer"}
+                    inspected_sources = {
+                        observation_sources.get(obs_id)
+                        for obs_id in evidence_observations
+                        if (
+                            obs_id in observation_sources
+                            and observation_outcomes.get(obs_id) in checked_outcomes
+                        )
+                    }
+                    unchecked_sources = [
+                        source_id for source_id in evidence_sources
+                        if source_id not in inspected_sources
+                    ]
+                    if unchecked_sources:
+                        error(
+                            f"{assertion_id}: unsupported_in_sources_checked counts source(s) "
+                            f"without an inspected evidence observation as checked: {unchecked_sources!r}"
+                        )
 
         for rel in assertion.get("record_links", []):
             if not isinstance(rel, str) or not (ROOT / rel).exists():
