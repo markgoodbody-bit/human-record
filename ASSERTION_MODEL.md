@@ -125,6 +125,27 @@ in that assertion's evidence `source_ids`. Multiple sources and observations are
 allowed; citing a source without an observation remains allowed. This ownership
 check prevents mismatched references, not misinterpretation of source content.
 
+One assertion state is intentionally stricter:
+
+`unsupported_in_sources_checked` means a bounded source set was actually
+examined. It therefore requires a non-empty evidence source set and at least one
+owned observation for every source counted as checked. An empty list cannot
+support that state.
+
+This structural rule still does **not** make the checked set exhaustive. The
+record should preserve the selection/search boundary and material unexamined
+sources where they affect interpretation. Mature systematic-review reporting
+owners such as PRISMA / PRISMA-S require detailed reporting of sources searched,
+dates and search methods for claims that depend on search completeness. THR does
+not inherit that whole review schema; it borrows the narrower discipline that a
+negative/unsupported finding must expose its bounded evidence aperture.
+
+```text
+SOURCES_CHECKED != ALL_POSSIBLE_SOURCES
+EMPTY_CHECKED_SET != UNSUPPORTED_FINDING
+NOT_FOUND_IN_BOUND != ABSENT_FROM_WORLD
+```
+
 ## 7. Source statement versus record finding
 
 THR must distinguish:
