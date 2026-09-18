@@ -726,6 +726,56 @@
         "status": "not_yet_checked",
         "copies": []
       }
+    },
+    {
+      "id": "thr:source:5c1e8a9f-6b72-4e21-ae4f-24d8731f9b70",
+      "kind": "book",
+      "title": "Flak: German Anti-Aircraft Defenses, 1914–1945",
+      "publisher": "Edward B. Westermann / University Press of Kansas; selected passage inspected through a third-party OCR reproduction",
+      "locators": [
+        {
+          "scheme": "isbn",
+          "value": "9780700611362",
+          "status": "catalogued_2001_hardcover"
+        },
+        {
+          "scheme": "url",
+          "value": "https://archive.org/details/flakgermanantiai0000west",
+          "status": "restricted_scan_catalogued"
+        },
+        {
+          "scheme": "url",
+          "value": "https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf",
+          "status": "third_party_ocr_reproduction_inspected"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:ab27e9a4-13cf-4a46-9cc6-01e1b3c8f5d2",
+          "observed_at": "2026-09-18",
+          "precision": "date",
+          "outcome": "partial",
+          "record_basis": "cases/viral-flak-claim.json node westermann-2001-selected-passage; issue #20 follow-up",
+          "digest": null,
+          "scope": "Selected OCR passage covering the May 10–June 22, 1940 western campaign and its note 75; not a full-book review, authenticated-edition comparison, or inspection of the cited archival documents.",
+          "observer": "Framework, following Codex recovery of the passage",
+          "notes": [
+            "The selected OCR passage reports casualties among flak forces as 60 officers and 890 enlisted men and explicitly defines those casualties as dead, wounded or missing.",
+            "University Press of Kansas / Google Books / Smithsonian / Internet Archive metadata independently establish the book/edition family; the inspected OCR representation itself is not authenticated as byte-identical to the publisher edition.",
+            "Westermann note 75 cites N 529/Folder 7 and RL 12/Folder 457 at BA-MA plus Koch. The Bundesarchiv independently identifies N 529 as Walther von Axthelm's papers, and Deutsche Digitale Bibliothek/Bundesarchiv identifies RL 12/457 as Flak-Regiment 102 material from May/July 1940. The underlying casualty documents were not inspected."
+          ]
+        }
+      ],
+      "relations": [],
+      "preservation": {
+        "status": "restricted_archive",
+        "copies": [],
+        "last_checked_at": "2026-09-18",
+        "note": "Internet Archive catalogues an access-restricted scan of the 2001 University Press of Kansas edition. THR did not bypass access controls. The accessible third-party OCR representation is not treated as an authenticated preservation copy."
+      },
+      "used_by_records": [
+        "viral-flak-claim"
+      ]
     }
   ],
   "ceilings": [
