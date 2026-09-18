@@ -30,6 +30,32 @@ The entity anchor deliberately carries no exact birth/death date, portrait, Alpi
 
 The opaque candidate entity ID is a routing handle only. It is not evidence.
 
+The full display string **Hannibal Barca** is used here as a conventional modern
+routing label. The checked ancient passages in this fixture attest the literal
+name **Hannibal**; this candidate does not claim that the full modern display
+string is itself source-attested by those passages.
+
+```text
+CONVENTIONAL_DISPLAY_LABEL != SOURCE_ATTESTED_STRING
+```
+
+## Why this case was selected
+
+Hannibal was selected deliberately as a **historical-person / source-survival
+stress case** after the first three public Human Record entries had already
+tested artwork provenance, repeated-claim ancestry, and living-practice
+transmission.
+
+Selection does not establish representativeness, historical priority, importance,
+or entitlement to become record 4.
+
+```text
+SELECTED_AS_STRESS_CASE
+!= REPRESENTATIVE_SAMPLE
+!= MOST_IMPORTANT_PERSON
+!= RECORD_4_ENTITLEMENT
+```
+
 ## Checked source apertures
 
 ### Polybius, *Histories* Book 3
@@ -38,12 +64,17 @@ Public reading surface:
 
 `https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html`
 
+The host presents the English text as the 1922 Loeb translation and warns that
+the web page has not yet been proofread. THR therefore treats it as a convenient
+modern reading surface for bounded passage inspection, **not** as a manuscript
+witness or a checked critical edition.
+
 This candidate uses four bounded passages:
 
 - **3.20.5** — Polybius names Chaereas and Sosylus and dismisses their authority sharply. This establishes that Polybius knew a Sosylus tradition; it does not make Polybius' evaluation neutral or final.
 - **3.33.17–18** — Polybius says his unusually detailed troop figures came from a bronze tablet on the Lacinian promontory on which Hannibal had made out the lists. THR has not observed that tablet and does not convert Polybius' report into a surviving inscription object.
 - **3.48.12** — Polybius says he inquired from men present at the crossing and personally inspected the country and crossed the Alps himself. This is evidence about Polybius' claimed method, not automatic proof of every detail in his reconstruction.
-- **3.56.3–4** — Polybius reports Hannibal's post-crossing force totals and again attributes them to the inscription at Lacinium.
+- **3.56.3–4** — Polybius reports Hannibal's post-crossing force totals and attributes them to an inscription/column at Lacinium. This candidate does **not** establish that the carrier described here is physically identical to the bronze tablet described at 3.33.17–18.
 
 ### Cornelius Nepos, *Life of Hannibal* 13.3
 
@@ -57,7 +88,10 @@ This candidate records that **Nepos reports this relationship**. It does not cre
 
 ## Source-survival pressure
 
-The checked evidence already breaks a simple “two ancient sources = two witnesses” account.
+These two checked texts do not establish two independent witnesses to the same
+event. They support different attributed propositions; their number is not a
+corroboration count. This candidate does not establish direct dependence between
+Nepos and Polybius either.
 
 Polybius is both:
 - a surviving narrative source for Hannibal's campaign; and
