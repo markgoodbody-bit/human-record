@@ -440,6 +440,7 @@ def check_assertions(
     # Build ownership from the registry, never from the assertion being checked.
     source_registry = load_json("registry/sources.json")
     observation_sources: dict[str, str] = {}
+    observation_outcomes: dict[str, str] = {}
     source_items = source_registry.get("sources", []) if isinstance(source_registry, dict) else []
     for source in source_items if isinstance(source_items, list) else []:
         if not isinstance(source, dict) or not isinstance(source.get("id"), str):
@@ -448,6 +449,8 @@ def check_assertions(
         for observation in observations if isinstance(observations, list) else []:
             if isinstance(observation, dict) and isinstance(observation.get("id"), str):
                 observation_sources[observation["id"]] = source["id"]
+                if isinstance(observation.get("outcome"), str):
+                    observation_outcomes[observation["id"]] = observation["outcome"]
 
     seen: set[str] = set()
     for i, assertion in enumerate(assertions):
@@ -513,19 +516,23 @@ def check_assertions(
                     )
                 if (isinstance(evidence_sources, list) and evidence_sources
                         and isinstance(evidence_observations, list) and evidence_observations):
-                    observed_sources = {
+                    checked_outcomes = {"retrieved", "partial", "reported_by_reviewer"}
+                    inspected_sources = {
                         observation_sources.get(obs_id)
                         for obs_id in evidence_observations
-                        if obs_id in observation_sources
+                        if (
+                            obs_id in observation_sources
+                            and observation_outcomes.get(obs_id) in checked_outcomes
+                        )
                     }
                     unchecked_sources = [
                         source_id for source_id in evidence_sources
-                        if source_id not in observed_sources
+                        if source_id not in inspected_sources
                     ]
                     if unchecked_sources:
                         error(
                             f"{assertion_id}: unsupported_in_sources_checked counts source(s) "
-                            f"without an owned evidence observation as checked: {unchecked_sources!r}"
+                            f"without an inspected evidence observation as checked: {unchecked_sources!r}"
                         )
 
         for rel in assertion.get("record_links", []):
