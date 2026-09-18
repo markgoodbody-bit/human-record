@@ -10,6 +10,12 @@ follow a few passages about Hannibal, rather than try to fit a whole life onto
 one page. The question is simple: when we read about him now, whose account are
 we reading?
 
+These accounts come from different generations. Dickinson College's commentary
+dates [Polybius to about 200–118 BC](https://dcc.dickinson.edu/nepos-hannibal/chapter-13).
+Its [introduction places Nepos around 100–27 BC](https://dcc.dickinson.edu/nepos-hannibal/preface),
+writing more than a century after the Second Punic War. Polybius says he could
+question people who had been present; Nepos writes from a greater distance.
+
 Polybius describes Hannibal's descent from the Alps into Italy. He also tells
 readers how he obtained some of his information. In one passage, he says he
 spoke with people who had been present and crossed the Alps himself to examine
@@ -38,10 +44,13 @@ The page separates the Latin text from modern commentary.
 Polybius, meanwhile, sharply criticises Sosylus and Chaereas in
 [3.20.5](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html#20.5).
 That criticism belongs to Polybius. Recording it is different from adopting
-his judgment. Counting these two ancient authors would not establish two
-independent witnesses to the same event: the passages make different claims.
+his judgment. The passages tell us different things, rather than offering two
+accounts of the same event.
 
 ## What this small record leaves open
+
+The person is not the account that survives of him. This page follows two
+surviving accounts and shows where our inspection of them stops.
 
 The reading path here is through Greek and Roman accounts. It does not offer
 a balanced collection of Carthaginian testimony or a complete account of how
