@@ -40,13 +40,14 @@ Related wider project entrance: [Please Start From Here](https://pleasestartfrom
 It is a separate public object and is not part of this record, its evidence, or its
 stewardship offer.
 
-The public door currently carries three deliberately different record objects:
+The public door currently carries four deliberately different record objects:
 
 - the original human-made artwork provenance specimen;
 - a provenance case tracing the viral “80% of German flak crews died” claim without replacing uncertainty with another unsupported number;
-- a public-source transmission-lineage case tracing sieve and riddle making from a reported last maker, through an extinction classification, into renewed practice while leaving open what was transmitted, reconstructed or newly learned.
+- a public-source transmission-lineage case tracing sieve and riddle making from a reported last maker, through an extinction classification, into renewed practice while leaving open what was transmitted, reconstructed or newly learned;
+- a historical-person source-survival record tracing a bounded route from the modern label “Hannibal Barca” back through checked Nepos and Polybius reading surfaces while preserving mediation, attribution and source limits.
 
-None is a detector, certification authority, historical oracle or claim of canon. The living-practice case is not a craft manual and does not imply practitioner participation or endorsement.
+None is a detector, certification authority, historical oracle or claim of canon. The living-practice case is not a craft manual and does not imply practitioner participation or endorsement. The historical-person case is not a complete biography or a substitute for classical source criticism.
 
 Contents:
 - `index.html` — human-facing public entrance;
@@ -56,6 +57,7 @@ Contents:
 - `records/camp-fire.html` — readable view of the artwork specimen;
 - `records/flak-claim.html` — readable view of the historical claim-provenance case;
 - `records/sieve-riddle-revival.html` — readable view of the living-knowledge transmission-lineage case;
+- `records/hannibal.html` — readable view of the historical-person source-survival case;
 - `records/catalog.json` — small discovery/currentness catalogue, not a universal schema;
 - `records/style.css` — shared presentation for the human record browser;
 - `RECORD_CONTRACT.md` — minimum semantic contract earned by the current records;
@@ -63,8 +65,12 @@ Contents:
 - `SCALE.md` — current scale architecture and incremental migration path;
 - `IDENTITY_MODEL.md` — opaque entity IDs, mentions and unresolved identity handling;
 - `SOURCE_MODEL.md` — source/locator/observation/preservation separation;
+- `ASSERTION_MODEL.md` — sparse evidence-bearing assertion and correction-reference model;
 - `registry/entities.json` — sparse cross-record entity index;
+- `registry/mentions.json` — source-literal mentions and unresolved/candidate identity state;
 - `registry/sources.json` — cross-record source/observation/preservation-state index;
+- `registry/source-checks.json` — operational currentness receipts kept separate from record evidence;
+- `registry/assertions.json` — cross-record evidence-bearing propositions and correction references;
 - `registry/README.md` — registry growth and privacy boundaries;
 - `tools/validate_integrity.py` — local structural/view-pin/registry validator;
 - `.github/workflows/validate-integrity.yml` — CI execution of the validator;
@@ -74,6 +80,8 @@ Contents:
 - `cases/viral-flak-claim.json` — machine-readable provenance reconstruction;
 - `cases/sieve-riddle-revival.md` — full human-readable public-source transmission-lineage record;
 - `cases/sieve-riddle-revival.json` — machine-readable transmission-lineage record;
+- `cases/hannibal-barca.md` — full historical-person source-survival record;
+- `cases/hannibal-barca.json` — machine-readable historical-person source-survival record;
 - `llms.txt` — compact machine entrance and boundaries;
 - `robots.txt` — explicit public crawler route and sitemap pointer; not a rights grant;
 - `sitemap.xml` — first-party public discovery map;
