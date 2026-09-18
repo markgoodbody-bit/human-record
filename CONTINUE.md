@@ -56,6 +56,7 @@ The site is deliberately static. Its important public files include:
 - `registry/source-checks.json` — operational locator/currentness receipts;
 - `registry/assertions.json` — cross-record evidence-bearing propositions;
 - `CONTRIBUTE.md` — current challenge/correction route;
+- `CONTRIBUTION_PACKET.md` + `contribution-packet.schema.json` — optional relay envelope for contributions that cannot be posted directly; not an authentication or acceptance mechanism.
 - `llms.txt` — compact machine entrance;
 - `STEWARDSHIP.md` — current stewardship offer and custody boundary;
 - `LICENSE` — standard CC0 1.0 legal code;
