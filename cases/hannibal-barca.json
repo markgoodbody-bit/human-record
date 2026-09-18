@@ -1,0 +1,343 @@
+{
+  "format": "human-record-historical-person-source-survival/0.1",
+  "record_id": "hannibal-source-survival",
+  "record_version": "0.1.0",
+  "title": "Hannibal: the person and the accounts that remain",
+  "record_type": "historical_person_source_survival",
+  "recorded_at": "2026-09-18",
+  "status": "public_bounded_source_survival_record",
+  "purpose": "Preserve a walkable path from a famous historical-person label back to bounded surviving source reports while keeping mediation, source dependence and unknowns visible.",
+  "subject": {
+    "entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0",
+    "display_label": "Hannibal Barca",
+    "source_literal": "Hannibal",
+    "identity_ceiling": "The entity is a thin routing anchor. Source-literal mentions remain separately inspectable and candidate-linked; the record does not turn the surviving biography into the person."
+  },
+  "selection": {
+    "selected_for": "Historical-person source-survival and source-dependence stress case after the first three public records tested artwork provenance, repeated-claim ancestry and living-practice transmission.",
+    "boundary": "Selection did not establish representativeness, historical priority, importance or entitlement. Publication followed bounded source/reader review and current-validator compatibility checks; reader benefit remains unestablished.",
+    "candidate_pool_status": "not_preserved",
+    "alternatives_considered_status": "not_preserved",
+    "selection_history_ceiling": "No selection-time candidate pool or alternatives list is preserved for this candidate; do not reconstruct one after the fact."
+  },
+  "entity": {
+    "id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0",
+    "type": "person",
+    "labels": [
+      {
+        "text": "Hannibal Barca",
+        "language": "en",
+        "kind": "conventional_modern_display_label",
+        "preferred_for_current_view": true
+      },
+      {
+        "text": "Hannibal",
+        "language": "en",
+        "kind": "source_literal_name",
+        "preferred_for_current_view": false
+      }
+    ],
+    "status": "current",
+    "record_links": [
+      "cases/hannibal-barca.json",
+      "cases/hannibal-barca.md",
+      "records/hannibal.html"
+    ],
+    "external_identifiers": [],
+    "notes": [
+      "Thin routing anchor for the historical human conventionally called Hannibal Barca; exact dates, appearance, routes and biographical details are not identity-key material.",
+      "The checked ancient passages used by this record attest the literal string 'Hannibal'. The fuller modern display label is not claimed as the source-attested string.",
+      "Two public source-literal mentions remain candidate-linked rather than silently upgraded into identity certainty."
+    ]
+  },
+  "sources": [
+    {
+      "id": "thr:source:8d40b5c1-3eb6-47d3-86e2-48e95853e930",
+      "kind": "web_page",
+      "title": "Dickinson College Commentaries: Nepos, Life of Hannibal, chapter 13",
+      "publisher": "Dickinson College Commentaries",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://dcc.dickinson.edu/nepos-hannibal/chapter-13"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:6483e31f-7d60-488b-a4ce-1c15155a01cc",
+          "observed_at": "2026-09-18",
+          "outcome": "partial",
+          "scope": "Chapter 13, especially Latin paragraph 13.3 and its commentary on Silenus and Sosylus; not manuscript evidence or a complete audit of DCC.",
+          "observer": "Framework",
+          "notes": [
+            "Ancient text and modern editorial commentary are separate evidential layers."
+          ]
+        }
+      ],
+      "relations": [],
+      "used_by_records": [
+        "hannibal-source-survival"
+      ],
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": []
+      }
+    },
+    {
+      "id": "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2",
+      "kind": "web_page",
+      "title": "Polybius, Histories Book 3 — LacusCurtius/Thayer",
+      "publisher": "LacusCurtius / University of Chicago-hosted reading surface",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:1ea96911-3e2c-42f8-b55e-63b45a9ad2d0",
+          "observed_at": "2026-09-18",
+          "outcome": "partial",
+          "scope": "Book 3 passages 3.20.5, 3.33.17-18, 3.48.12 and 3.56.3-4 on source criticism, the Lacinium tablet, Alpine inquiry/inspection and force totals; not a full-book critical edition review.",
+          "observer": "Framework",
+          "notes": [
+            "This is a modern web reading surface for an ancient text, not the ancient carrier.",
+            "The host presents the English text as the 1922 Loeb translation and warns that the web page has not yet been proofread; this fixture does not treat it as a checked critical edition."
+          ]
+        }
+      ],
+      "relations": [],
+      "used_by_records": [
+        "hannibal-source-survival"
+      ],
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": []
+      }
+    }
+  ],
+  "mentions": [
+    {
+      "id": "thr:mention:beee588e-f706-40ab-95b3-5d46c097c687",
+      "literal": "Hannibal",
+      "source_id": "thr:source:8d40b5c1-3eb6-47d3-86e2-48e95853e930",
+      "observation_id": "thr:observation:6483e31f-7d60-488b-a4ce-1c15155a01cc",
+      "context": "Nepos, Hannibal 13.3, sentence identifying Sosylus as Hannibal's Greek teacher.",
+      "record_id": "hannibal-source-survival",
+      "status": "candidate",
+      "candidates": [
+        {
+          "entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0",
+          "state": "candidate",
+          "basis": [
+            "The source is Nepos' Life of Hannibal chapter 13 and the literal occurs inside that named subject context; linked only as a candidate to the conventional modern Hannibal Barca anchor, not as identity proof."
+          ],
+          "conflicts": []
+        }
+      ]
+    },
+    {
+      "id": "thr:mention:4fae4e8f-71c1-4eb0-8f62-6c63ae9e9a71",
+      "literal": "Hannibal",
+      "source_id": "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2",
+      "observation_id": "thr:observation:1ea96911-3e2c-42f8-b55e-63b45a9ad2d0",
+      "context": "Polybius, Histories Book 3 passages used by this record, where Hannibal is the narrative subject.",
+      "record_id": "hannibal-source-survival",
+      "status": "candidate",
+      "candidates": [
+        {
+          "entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0",
+          "state": "candidate",
+          "basis": [
+            "Book 3 names Hannibal as the campaign subject; linked only as a candidate to the same conventional modern entity anchor used by this record, not as independent identity proof."
+          ],
+          "conflicts": []
+        }
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "thr:assertion:23bfb7a2-1f36-4a7a-9f75-7b2427366636",
+      "subject": {
+        "mention_id": "thr:mention:beee588e-f706-40ab-95b3-5d46c097c687"
+      },
+      "predicate": "reported_companion_historians",
+      "object": {
+        "literal": "Silenus and Sosylus"
+      },
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": [
+          "thr:source:8d40b5c1-3eb6-47d3-86e2-48e95853e930"
+        ],
+        "observation_ids": [
+          "thr:observation:6483e31f-7d60-488b-a4ce-1c15155a01cc"
+        ]
+      },
+      "scope": {
+        "locator": "Nepos, Hannibal 13.3",
+        "ceiling": "Nepos reports that Silenus and Sosylus were with Hannibal and wrote about the war; THR has not inspected their complete works."
+      },
+      "record_links": [
+        "hannibal-source-survival"
+      ],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:72388414-cbc8-47b2-99af-51b639b14472",
+      "subject": {
+        "literal": "Sosylus' historical account"
+      },
+      "predicate": "reported_source_evaluation",
+      "object": {
+        "literal": "Polybius dismisses the authority of Sosylus and Chaereas."
+      },
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": [
+          "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2"
+        ],
+        "observation_ids": [
+          "thr:observation:1ea96911-3e2c-42f8-b55e-63b45a9ad2d0"
+        ]
+      },
+      "scope": {
+        "locator": "Polybius, Histories 3.20.5",
+        "ceiling": "This is Polybius' evaluation of another historian, not THR's adjudication of Sosylus."
+      },
+      "record_links": [
+        "hannibal-source-survival"
+      ],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:3e38d580-5c88-463c-8a3a-9eeab8074fea",
+      "subject": {
+        "mention_id": "thr:mention:4fae4e8f-71c1-4eb0-8f62-6c63ae9e9a71"
+      },
+      "predicate": "reported_documentary_source",
+      "object": {
+        "literal": "A bronze tablet at the Lacinian promontory carrying Hannibal's troop lists."
+      },
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": [
+          "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2"
+        ],
+        "observation_ids": [
+          "thr:observation:1ea96911-3e2c-42f8-b55e-63b45a9ad2d0"
+        ]
+      },
+      "scope": {
+        "locator": "Polybius, Histories 3.33.17-18",
+        "ceiling": "Polybius reports finding and using the bronze tablet described at 3.33.17-18. THR has not observed that ancient carrier or an independently preserved copy, and this fixture does not establish that it is physically identical to the column/inscription described at 3.56.4."
+      },
+      "record_links": [
+        "hannibal-source-survival"
+      ],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:de8cb921-d655-46ba-8543-6ad14f6249ca",
+      "subject": {
+        "literal": "Polybius' claimed investigation of the Alpine crossing"
+      },
+      "predicate": "reported_investigative_method",
+      "object": {
+        "literal": "Polybius says he questioned men who had been present, inspected the country, and crossed the Alps himself."
+      },
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": [
+          "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2"
+        ],
+        "observation_ids": [
+          "thr:observation:1ea96911-3e2c-42f8-b55e-63b45a9ad2d0"
+        ]
+      },
+      "scope": {
+        "locator": "Polybius, Histories 3.48.12",
+        "ceiling": "This records Polybius' own account of his evidence-gathering method. THR did not observe the reported interviews, route inspection, travel, or ancient investigation."
+      },
+      "record_links": [
+        "hannibal-source-survival"
+      ],
+      "corrections": []
+    },
+    {
+      "id": "thr:assertion:ace95214-7288-414b-9982-78c65cfdf088",
+      "subject": {
+        "mention_id": "thr:mention:4fae4e8f-71c1-4eb0-8f62-6c63ae9e9a71"
+      },
+      "predicate": "reported_alpine_crossing",
+      "object": {
+        "literal": "Hannibal crossed the Alps into Italy."
+      },
+      "state": "reported_by_source",
+      "evidence": {
+        "source_ids": [
+          "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2"
+        ],
+        "observation_ids": [
+          "thr:observation:1ea96911-3e2c-42f8-b55e-63b45a9ad2d0"
+        ]
+      },
+      "scope": {
+        "locator": "Polybius, Histories 3.56.3-4",
+        "ceiling": "Attribution to Polybius' surviving account; exact pass and complete source ancestry are not established by this fixture."
+      },
+      "record_links": [
+        "hannibal-source-survival"
+      ],
+      "corrections": []
+    }
+  ],
+  "source_relationships": {
+    "checked_text_count": 2,
+    "independence_status": "not_counted_as_two_independent_witnesses_to_one_event",
+    "direct_dependence_between_checked_surfaces": "not_established_by_this_record",
+    "current_aperture": "Greek/Roman-mediated and incomplete",
+    "ceiling": "SURVIVING_SOURCE != COMPLETE_HISTORY"
+  },
+  "current_findings": [
+    "Two bounded ancient-text reading surfaces make attributed reports about Hannibal and their own source world inspectable.",
+    "Polybius' reports about a Lacinium tablet and his own investigative method remain reports by Polybius, not direct THR observations.",
+    "Nepos attests Silenus and Sosylus as companions/historians; their complete works are not represented as inspected THR source objects.",
+    "The checked aperture is asymmetric and incomplete; later repetition is not counted as independent corroboration by default."
+  ],
+  "unknowns": [
+    "A complete source genealogy among Polybius, Livy and other surviving writers.",
+    "The full Punic/Carthaginian documentary aperture and all surviving fragments.",
+    "Whether the Lacinium tablet described at 3.33 and column/inscription at 3.56 are the same physical carrier.",
+    "The exact Alpine pass and many other biographical/historical disputes outside this record.",
+    "Manuscript-level or checked critical-edition verification of the quoted web reading surfaces.",
+    "Reader benefit from this encounter."
+  ],
+  "inspection_boundary": {
+    "sosylus_complete_work": "not_inspected_and_not_represented_as_a_source_object",
+    "silenus_complete_work": "not_inspected_and_not_represented_as_a_source_object",
+    "livy": "not_counted_as_independent_witness_in_this_fixture",
+    "punic_or_carthaginian_archives": "not_established_absent",
+    "ancient_tablet": "reported_by_polybius_not_directly_observed_by_thr",
+    "lacinium_carrier_identity": "The relationship or physical identity between the bronze tablet described at 3.33.17-18 and the column/inscription described at 3.56.4 is not established by this fixture."
+  },
+  "strongest_owner": "Classical source criticism, critical editions and specialist ancient-history scholarship own historical reconstruction. THR adds only a cross-record public evidence route and correction surface.",
+  "rights_and_custody": {
+    "project_record": "Project-authored record material is governed by the repository's stated CC0 scope only to the extent the project holds those rights.",
+    "third_party_sources": "Linked ancient-text/editorial/scholarly source surfaces retain their own rights and custody; THR does not re-license them.",
+    "subject_liveness": "Historical deceased subject; this record makes no claim about descendants, communities or cultural authority beyond the cited public evidence."
+  },
+  "correction_rule": {
+    "route": "https://thehumanrecord.net/CONTRIBUTE.md",
+    "repository_issue_route": "https://github.com/markgoodbody-bit/human-record/issues/new",
+    "rule": "Material corrections should identify the affected proposition/source, preserve the prior repository state, state what was checked and distinguish fresh evidence from reinterpretation."
+  },
+  "publication_boundary": {
+    "public_record_number": 4,
+    "reader_benefit": "not_established",
+    "outside_reader_break_request": "no_reader_specific_outside_falsifier_observed_before_promotion",
+    "ceiling": "PUBLICATION != VALIDATION"
+  }
+}
