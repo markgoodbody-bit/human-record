@@ -32,7 +32,7 @@ It also carries this fixed warning:
 
 PACKET != AUTHENTICATED IDENTITY
 RELAY != ORIGINAL CONTRIBUTOR
-SOURCE LISTED != SOURCE CHECKED
+SOURCE LISTED != SOURCE CHECKED\nREPORTED_CHECKED != CHECK INDEPENDENTLY VERIFIED
 CHECKED != TRUE
 RECEIVED != ACCEPTED
 MODEL BRAND != AUTHORITY
@@ -44,7 +44,7 @@ A contributor should usually provide only:
 1. the target;
 2. one short contribution summary;
 3. the best source or source lead;
-4. whether that source was actually inspected;
+4. what the contributor reported about whether that source was inspected;
 5. what remains unknown;
 6. relay provenance, if somebody else is posting it.
 
@@ -57,7 +57,7 @@ An AI that cannot post to GitHub could return a packet in a fenced JSON block. A
 The relay should not rewrite:
 
 - `declared_contributor`;
-- `checked_by_contributor`;
+- `source_check_status`;
 - `not_checked`;
 - `unknowns`;
 - `relay` provenance.
@@ -66,7 +66,7 @@ A later reviewer can add their own investigation in the issue or record correcti
 
 ## Authentication ceiling
 
-The packet is self-description plus relay provenance.
+The packet is self-description plus relay provenance. Fields about source checking record what the contribution *reports*; they do not independently verify the contributor's browsing or inspection history.
 
 It does not prove:
 - who generated it;
