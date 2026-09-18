@@ -18,9 +18,11 @@ Lacinian promontory. These are claims Polybius makes about his sources and his
 work. Our evidence here is his surviving account as presented on a modern
 reading page, not the interviews or the tablet themselves.
 
-[Read Polybius, Book 3](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html):
-3.48.12 for his account of inquiry and inspection; 3.33.17–18 for the tablet;
-3.56.3–4 for the descent and troop figures.
+Follow the passages in Polybius, Book 3:
+
+- [3.48.12: his account of inquiry and inspection](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html#48.12).
+- [3.33.17–18: the reported tablet](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html#33.17).
+- [3.56.3–4: the descent and troop figures](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html#56.3).
 
 ## A source we can read names sources we have not read
 
@@ -33,7 +35,8 @@ inspected here.
 [Read Nepos, chapter 13, paragraph 3](https://dcc.dickinson.edu/nepos-hannibal/chapter-13).
 The page separates the Latin text from modern commentary.
 
-Polybius, meanwhile, sharply criticises Sosylus and Chaereas in 3.20.5.
+Polybius, meanwhile, sharply criticises Sosylus and Chaereas in
+[3.20.5](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html#20.5).
 That criticism belongs to Polybius. Recording it is different from adopting
 his judgment. Counting these two ancient authors would not establish two
 independent witnesses to the same event: the passages make different claims.
@@ -45,7 +48,9 @@ a balanced collection of Carthaginian testimony or a complete account of how
 the surviving writers depended on earlier material.
 
 Even a physical object needs care. The translation describes a bronze tablet
-in 3.33 and an inscription on a column at Lacinium in 3.56. This record has not
+in 3.33 and an
+[inscription on a column at Lacinium in 3.56.4](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html#56.4).
+This record has not
 established whether those descriptions refer to the same physical object.
 
 The Polybius website presents a 1922 English translation and warns that its
