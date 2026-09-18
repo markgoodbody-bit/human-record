@@ -1,16 +1,18 @@
-# Human Record candidate — Hannibal Barca through surviving evidence
+# Human Record — Hannibal through surviving evidence
 
-Status: **WORKING HISTORICAL-HUMAN CANDIDATE / PUBLIC SOURCES / NOT PUBLIC RECORD 4 / NOT BIOGRAPHICAL CANON / OPEN TO CORRECTION**
+Status: **PUBLIC RECORD 4 / HISTORICAL-PERSON SOURCE-SURVIVAL / PUBLIC SOURCES / NOT BIOGRAPHICAL CANON / OPEN TO CORRECTION**
 
+Record ID: `hannibal-source-survival`  
+Record version: **0.1.0**  
 Recorded: 18 September 2026.
 
 ## Purpose
 
-This candidate asks a narrow Human Record question:
+This record asks a narrow Human Record question:
 
 > What is the smallest inspectable evidence path by which the historical human conventionally called Hannibal Barca remains reachable now, without turning surviving literary tradition into the person himself?
 
-The candidate does **not** attempt a definitive biography, settle the Alpine route, reconstruct Hannibal's appearance, rank commanders, or treat every later retelling as an independent witness.
+The record does **not** attempt a definitive biography, settle the Alpine route, reconstruct Hannibal's appearance, rank commanders, or treat every later retelling as an independent witness.
 
 ```text
 NAME != ENTITY
@@ -31,9 +33,11 @@ The entity anchor deliberately carries no exact birth/death date, portrait, Alpi
 The opaque candidate entity ID is a routing handle only. It is not evidence.
 
 The full display string **Hannibal Barca** is used here as a conventional modern
-routing label. The checked ancient passages in this fixture attest the literal
-name **Hannibal**; this candidate does not claim that the full modern display
-string is itself source-attested by those passages.
+routing label. The checked Nepos Latin passage attests the literal name **Hannibal**. The
+checked Polybius web surface is an English translation that renders the name as
+**Hannibal**; this record did not inspect the Greek source literal. The full
+modern display string is a conventional routing label, not a claim that both
+checked surfaces attest the same source-language string.
 
 ```text
 CONVENTIONAL_DISPLAY_LABEL != SOURCE_ATTESTED_STRING
@@ -47,7 +51,7 @@ tested artwork provenance, repeated-claim ancestry, and living-practice
 transmission.
 
 The selection-time candidate pool and alternatives considered were not preserved
-for this candidate. That gap does not establish that no alternatives were considered;
+from the pre-publication selection process. That gap does not establish that no alternatives were considered;
 it means this record cannot honestly reconstruct them after the fact.
 
 Selection does not establish representativeness, historical priority, importance,
@@ -74,12 +78,12 @@ the web page has not yet been proofread. THR therefore treats it as a convenient
 modern reading surface for bounded passage inspection, **not** as a manuscript
 witness or a checked critical edition.
 
-This candidate uses four bounded passages:
+This record uses four bounded passages:
 
 - **3.20.5** — Polybius names Chaereas and Sosylus and dismisses their authority sharply. This establishes that Polybius knew a Sosylus tradition; it does not make Polybius' evaluation neutral or final.
 - **3.33.17–18** — Polybius says his unusually detailed troop figures came from a bronze tablet on the Lacinian promontory on which Hannibal had made out the lists. THR has not observed that tablet and does not convert Polybius' report into a surviving inscription object.
 - **3.48.12** — Polybius says he inquired from men present at the crossing and personally inspected the country and crossed the Alps himself. This is evidence about Polybius' claimed method, not automatic proof of every detail in his reconstruction.
-- **3.56.3–4** — Polybius reports Hannibal's post-crossing force totals and attributes them to an inscription/column at Lacinium. This candidate does **not** establish that the carrier described here is physically identical to the bronze tablet described at 3.33.17–18.
+- **3.56.3–4** — Polybius reports Hannibal's post-crossing force totals and attributes them to an inscription/column at Lacinium. This record does **not** establish that the carrier described here is physically identical to the bronze tablet described at 3.33.17–18.
 
 ### Cornelius Nepos, *Life of Hannibal* 13.3
 
@@ -89,13 +93,13 @@ Public Latin/commentary surface:
 
 Nepos reports that Silenus and Sosylus lived with Hannibal in camp and wrote about the war, and identifies Sosylus as Hannibal's teacher of Greek literature.
 
-This candidate records that **Nepos reports this relationship**. It does not create Silenus' or Sosylus' lost/fragmentary works as inspected THR sources merely because later authors attest them.
+This record records that **Nepos reports this relationship**. It does not create Silenus' or Sosylus' lost/fragmentary works as inspected THR sources merely because later authors attest them.
 
 ## Source-survival pressure
 
 These two checked texts do not establish two independent witnesses to the same
 event. They support different attributed propositions; their number is not a
-corroboration count. This candidate does not establish direct dependence between
+corroboration count. This record does not establish direct dependence between
 Nepos and Polybius either.
 
 Polybius is both:
@@ -104,13 +108,13 @@ Polybius is both:
 
 Nepos, writing later, attests Hannibal-entourage historians whose works are not preserved here as complete inspected source objects.
 
-Modern scholarship also treats later Hannibal narratives as source-dependent. A current source-criticism orientation checked for this candidate is the Cambridge *Libyan Studies* article “Generals and judges: command, constitution and the fate of Carthage”:
+Modern scholarship also treats later Hannibal narratives as source-dependent. A current source-criticism orientation checked for this record is the Cambridge *Libyan Studies* article “Generals and judges: command, constitution and the fate of Carthage”:
 
 `https://www.cambridge.org/core/journals/libyan-studies/article/generals-and-judges-command-constitution-and-the-fate-of-carthage/757F46BAE0CA1A08373A15D1E497198F`
 
 It notes Polybius' use of Carthaginian documentary/informant material, Sosylus in Hannibal's entourage, and heavy later reliance on Polybius while preserving the existence of additional sources and interpretive lenses. This is orientation for source ancestry, not a substitute for reading the ancient passages.
 
-Livy is therefore **not counted as an independent corroborating witness by default** in this candidate. A later source can be added when its relation to earlier material is itself evidenced.
+Livy is therefore **not counted as an independent corroborating witness by default** in this record. A later source can be added when its relation to earlier material is itself evidenced.
 
 ```text
 LATER_SOURCE != INDEPENDENT_WITNESS
@@ -121,9 +125,28 @@ MISSING_CARTHAGINIAN_APERTURE != CARTHAGINIAN_HISTORY_DID_NOT_EXIST
 
 The current checked narrative aperture is Greek/Roman-mediated. That asymmetry is part of the record, not a footnote to hide.
 
+## Public machine route
+
+The public machine record is:
+
+`https://thehumanrecord.net/cases/hannibal-barca.json`
+
+It keeps two source-literal `Hannibal` mentions separate — one from Nepos and one
+from Polybius — and candidate-links both to the same thin entity anchor. That
+allows later evidence to split or revise the mappings without rewriting either
+source literal.
+
+```text
+SAME_LITERAL_ACROSS_SOURCES != IDENTITY_PROVED
+CANDIDATE_LINK != ENTITY_CERTAINTY
+```
+
+The earlier research fixture remains in the repository as build/test lineage. It
+is not the public machine record.
+
 ## What the executable fixture represents
 
-The fixture attached to this candidate contains only:
+The preserved pre-publication research fixture contains only:
 
 - one candidate person entity;
 - one literal Hannibal mention;
@@ -135,23 +158,23 @@ The fixture attached to this candidate contains only:
 
 It deliberately tests the current production validators after the 18 September semantic repairs.
 
-Default/public validation must continue to reject the fabricated unpublished `record_id`.
+Default/public validation continues to reject the research fixture's fabricated unpublished `record_id`; the public machine record uses `hannibal-source-survival`.
 
 Explicit isolated research validation may omit `record_id` while retaining source + owned observation + context. That is workflow permission, not privacy or publication.
 
 ## Current bounded findings
 
-1. The existing entity/source/assertion envelopes can carry a thin historical-human candidate without adding a new entity type or truth scale.
+1. The existing entity/source/assertion envelopes can carry this thin historical-human record without adding a new entity type or truth scale.
 2. A source can report a claim about Hannibal without the entity anchor absorbing that claim as identity.
 3. A later source can attest an earlier source tradition without THR pretending to have inspected the earlier work.
 4. Polybius' claimed investigative method and documentary source can be recorded as **claims by Polybius** without becoming direct THR observations.
-5. The current source set is asymmetrical and incomplete. The candidate should show that asymmetry rather than multiply later repetitions.
+5. The current source set is asymmetrical and incomplete. The record shows that asymmetry rather than multiplying later repetitions.
 
 None of these findings establishes the historical truth of every underlying event.
 
 ## What remains unknown or deliberately unclaimed
 
-This candidate does not establish:
+This record does not establish:
 
 - exact birth or death dates;
 - the exact Alpine pass;
@@ -169,6 +192,24 @@ UNKNOWN != EMPTY_FIELD_TO_FILL
 NO_SURVIVING_WHOLE != NO_FRAGMENT
 ```
 
+## Publication boundary
+
+Publication makes this a fourth Human Record encounter. It does not establish:
+- reader benefit;
+- historical authority over specialist scholarship;
+- completeness of the source genealogy;
+- identity certainty merely because the record has an entity handle.
+
+The record was exposed as a non-catalogued reader proposal before promotion. No
+reader-specific outside falsifier arrived in that interval. That null result is
+recorded as a null result, not as approval.
+
+```text
+PUBLICATION != VALIDATION
+NO_OUTSIDE_READER_REPLY != ENDORSEMENT
+RECORD_4 != FOURTH_MOST_IMPORTANT_HUMAN_RECORD
+```
+
 ## Strong-owner boundary
 
 THR does not need a new historical ontology for this case.
@@ -182,22 +223,35 @@ Relevant owners already include:
 
 The Human Record residue being tested is smaller: make source ancestry, unknowns, disagreement and correction visible to ordinary human and machine readers without pretending the sparse graph is the world.
 
-## Promotion gate
+## Publication decision
 
-This candidate does **not** become public record 4 merely because it validates structurally.
+Before promotion, the candidate was required to preserve direct-source locators,
+show the Greek/Roman survival asymmetry, survive source-dependence and biography-fact
+attacks, retain a correction route and explicit unexamined material, and remain
+useful without claiming to outperform specialist historical owners.
 
-Before any catalogue promotion:
-
-1. preserve direct-source locators and the Greek/Roman survival asymmetry;
-2. hostile-review source dependence and any statement that reads like biography fact;
-3. check whether the candidate adds human/public value beyond existing owner systems;
-4. ensure the readable encounter does not flatten source reports into historical truth;
-5. retain a correction route and explicit unexamined material;
-6. decide whether publication adds more recoverability than noise.
+Those checks justified publication as a fourth THR encounter. They did not establish
+historical truth, reader benefit, or a general method advantage.
 
 ```text
-CANDIDATE != RECORD_4
 STRUCTURAL_PASS != HISTORICAL_TRUTH
 PUBLICATION != VALIDATION
+PUBLICATION_DECISION != OWNER_SUPERIORITY
 THR_SURVIVAL != PURPOSE
+```
+
+
+## Public routes
+
+- Human view: https://thehumanrecord.net/records/hannibal.html
+- Machine record: https://thehumanrecord.net/cases/hannibal-barca.json
+- Catalogue: https://thehumanrecord.net/records/catalog.json
+- Correction route: https://thehumanrecord.net/CONTRIBUTE.md
+
+The repository history preserves the earlier candidate state and the issue #40
+identity-model repairs that preceded publication.
+
+```text
+PUBLIC_RECORD != HISTORICAL_ORACLE
+CORRECTED_RECORD != ORIGINAL_EVENT_CHANGED
 ```

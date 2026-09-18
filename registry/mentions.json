@@ -1,6 +1,6 @@
 {
   "format": "human-record-mention-registry/0.1",
-  "updated": "2026-09-16",
+  "updated": "2026-09-18",
   "purpose": "Source-literal mentions and their bounded identity-resolution state. A mention records what appeared in context; it does not force creation or resolution of an entity.",
   "model": "https://thehumanrecord.net/IDENTITY_MODEL.md",
   "mentions": [
@@ -34,6 +34,44 @@
       "status": "unresolved_not_required",
       "candidates": [],
       "boundary": "The current record does not need a cross-record person identity for this living practitioner. No entity profile is created merely because the public source names him. A future record may resolve this mention if a real cross-record need earns it."
+    },
+    {
+      "id": "thr:mention:beee588e-f706-40ab-95b3-5d46c097c687",
+      "literal": "Hannibal",
+      "source_id": "thr:source:8d40b5c1-3eb6-47d3-86e2-48e95853e930",
+      "observation_id": "thr:observation:6483e31f-7d60-488b-a4ce-1c15155a01cc",
+      "context": "Nepos, Hannibal 13.3, sentence identifying Sosylus as Hannibal's Greek teacher.",
+      "record_id": "hannibal-source-survival",
+      "status": "candidate",
+      "candidates": [
+        {
+          "entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0",
+          "state": "candidate",
+          "basis": [
+            "The source is Nepos' Life of Hannibal chapter 13 and the literal occurs inside that named subject context; linked only as a candidate to the conventional modern Hannibal Barca anchor, not as identity proof."
+          ],
+          "conflicts": []
+        }
+      ]
+    },
+    {
+      "id": "thr:mention:4fae4e8f-71c1-4eb0-8f62-6c63ae9e9a71",
+      "literal": "Hannibal",
+      "source_id": "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2",
+      "observation_id": "thr:observation:1ea96911-3e2c-42f8-b55e-63b45a9ad2d0",
+      "context": "Polybius, Histories 3.33.17-18 on the checked 1922 Loeb English reading surface, where Paton's translation renders the narrative subject as 'Hannibal'.",
+      "record_id": "hannibal-source-survival",
+      "status": "candidate",
+      "candidates": [
+        {
+          "entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0",
+          "state": "candidate",
+          "basis": [
+            "The checked English reading surface at Polybius 3.33.17-18 renders the campaign subject as 'Hannibal'; linked only as a candidate to the conventional modern Hannibal Barca anchor, not as independent identity proof. The Greek source literal was not inspected in this record."
+          ],
+          "conflicts": []
+        }
+      ]
     }
   ],
   "ceilings": [
