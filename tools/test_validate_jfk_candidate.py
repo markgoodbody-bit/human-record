@@ -94,5 +94,82 @@ class JFKCandidateProbe(unittest.TestCase):
         self.assertEqual(integrity.errors, [])
 
 
+    def test_missing_direct_evidence_boundary_fails_closed(self):
+        with patch.object(
+                integrity, "DIRECT_EVIDENCE_STATES_MODEL",
+                ("ASSERTION_MODEL.md", "## 99. Missing direct-evidence boundary")):
+            self.check_integrity()
+        self.assertTrue(any(
+            "direct-evidence boundary section missing or empty" in item
+            for item in integrity.errors
+        ))
+
+    def test_report_page_observation_cannot_be_upgraded_to_observed_by_state_word(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-2]
+        target["state"] = "observed"
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [
+            target["id"] + ": state 'observed' requires typed observation/reconciliation "
+            "target support; current source observations record retrieval/inspection only"
+        ])
+
+    def test_report_page_observation_cannot_be_upgraded_to_reconciled_by_state_word(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-2]
+        target["state"] = "reconciled"
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [
+            target["id"] + ": state 'reconciled' requires typed observation/reconciliation "
+            "target support; current source observations record retrieval/inspection only"
+        ])
+
+    def test_unsupported_in_sources_checked_rejects_empty_checked_set(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-6]
+        target["state"] = "unsupported_in_sources_checked"
+        target["evidence"]["source_ids"] = []
+        target["evidence"]["observation_ids"] = []
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [
+            target["id"] + ": unsupported_in_sources_checked requires a non-empty evidence.source_ids list",
+            target["id"] + ": unsupported_in_sources_checked requires a non-empty evidence.observation_ids list",
+        ])
+
+    def test_unsupported_in_sources_checked_requires_observation_for_every_counted_source(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-6]
+        target["state"] = "unsupported_in_sources_checked"
+        second_source = self.fixture["sources"][2]
+        target["evidence"]["source_ids"].append(second_source["id"])
+        # Deliberately do not add second_source's observation.
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [
+            target["id"] + ": unsupported_in_sources_checked counts source(s) without an inspected "
+            "evidence observation as checked: " + repr([second_source["id"]])
+        ])
+
+    def test_unsupported_in_sources_checked_rejects_failed_retrieval_as_check(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-6]
+        target["state"] = "unsupported_in_sources_checked"
+        source_id = target["evidence"]["source_ids"][0]
+        obs_id = target["evidence"]["observation_ids"][0]
+        for source in self.documents["registry/sources.json"]["sources"]:
+            if source["id"] == source_id:
+                for observation in source["observations"]:
+                    if observation["id"] == obs_id:
+                        observation["outcome"] = "failed"
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [
+            target["id"] + ": unsupported_in_sources_checked counts source(s) without an inspected "
+            "evidence observation as checked: " + repr([source_id])
+        ])
+
+    def test_unsupported_in_sources_checked_accepts_bounded_observed_source_set(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-6]
+        target["state"] = "unsupported_in_sources_checked"
+        second_source = self.fixture["sources"][2]
+        target["evidence"]["source_ids"].append(second_source["id"])
+        target["evidence"]["observation_ids"].append(second_source["observations"][0]["id"])
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [])
+
+
 if __name__ == "__main__":
     unittest.main()
