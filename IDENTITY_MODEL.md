@@ -159,7 +159,9 @@ Working relation states:
 - `excluded` — evidence currently rules this candidate out;
 - `unresolved` — no adequate resolution yet.
 
-Each proposed link should carry a basis rather than only a score.
+Each proposed link should carry a non-empty human-inspectable `basis` rather than only a score. The basis explains why the current resolution state is being carried; it is not itself proof that the resolution is historically correct.
+
+Candidate links are current resolution summaries. They do not carry a second evidence-state or correction-history system. Source-attributed propositions about a mention belong in the assertion layer, which can now refer directly to a `mention_id`. Until a concrete use earns a typed candidate-history contract, do not add candidate-local `evidence`, `evidence_state`, or `history` fields and treat them as validated semantics.
 
 ```json
 {
@@ -174,6 +176,13 @@ Each proposed link should carry a basis rather than only a score.
     "another contemporary person shares the same name"
   ]
 }
+```
+
+```text
+BASIS != PROOF
+CURRENT_CANDIDATE_SUMMARY != EVIDENCE_OBJECT
+CURRENT_CANDIDATE_SUMMARY != DECISION_HISTORY
+SOURCE_CLAIM_ABOUT_MENTION -> ASSERTION_LAYER
 ```
 
 Numerical confidence is optional, not required. Do not manufacture precision merely because a machine can emit a decimal.
