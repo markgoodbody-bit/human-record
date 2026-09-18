@@ -24,6 +24,7 @@ UUID = r"[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}
 ENTITY_RE = re.compile(rf"^thr:entity:{UUID}$")
 SOURCE_RE = re.compile(rf"^thr:source:{UUID}$")
 OBS_RE = re.compile(rf"^thr:observation:{UUID}$")
+MENTION_RE = re.compile(rf"^thr:mention:{UUID}$")
 ASSERTION_RE = re.compile(rf"^thr:assertion:{UUID}$")
 
 errors: list[str] = []
@@ -465,6 +466,38 @@ def check_assertions(
         )
         direct_evidence_states = set()
 
+    # Load the mention registry only if an assertion actually uses a mention
+    # referent. This keeps existing assertion-only callers independent of the
+    # identity registry while making ASSERTION_MODEL §3's "unresolved referent"
+    # executable when a real source-literal mention already exists.
+    mention_ids: set[str] | None = None
+
+    def known_mention_ids() -> set[str]:
+        nonlocal mention_ids
+        if mention_ids is not None:
+            return mention_ids
+        mention_registry = load_json("registry/mentions.json")
+        mention_ids = set()
+        if not isinstance(mention_registry, dict):
+            return mention_ids
+        mentions = mention_registry.get("mentions")
+        if not isinstance(mentions, list):
+            error("registry/mentions.json: mentions must be a list")
+            return mention_ids
+        for i, mention in enumerate(mentions):
+            context = f"registry/mentions.json mentions[{i}]"
+            if not isinstance(mention, dict):
+                error(f"{context}: mention must be an object")
+                continue
+            mention_id = mention.get("id")
+            if not isinstance(mention_id, str) or not MENTION_RE.match(mention_id):
+                error(f"{context}: invalid opaque mention id {mention_id!r}")
+                continue
+            if mention_id in mention_ids:
+                error(f"{context}: duplicate mention id {mention_id}")
+            mention_ids.add(mention_id)
+        return mention_ids
+
     seen: set[str] = set()
     for i, assertion in enumerate(assertions):
         context = f"registry/assertions.json assertions[{i}]"
@@ -503,7 +536,13 @@ def check_assertions(
             record_id = value.get("record_id")
             if isinstance(record_id, str) and record_id not in record_ids:
                 error(f"{assertion_id}: {role} refers to unknown record {record_id}")
-            if not any(key in value for key in ("entity_id", "record_id", "literal", "assertion_id")):
+            if "mention_id" in value:
+                mention_id = value.get("mention_id")
+                if not isinstance(mention_id, str) or not mention_id:
+                    error(f"{assertion_id}: {role}.mention_id must be a non-empty string")
+                elif mention_id not in known_mention_ids():
+                    error(f"{assertion_id}: {role} refers to unknown mention {mention_id}")
+            if not any(key in value for key in ("entity_id", "record_id", "literal", "assertion_id", "mention_id")):
                 error(f"{assertion_id}: {role} has no recognised referent")
 
         evidence = assertion.get("evidence")

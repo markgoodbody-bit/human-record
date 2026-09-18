@@ -60,6 +60,20 @@ An assertion can refer to:
 - a source-reported category;
 - an unresolved referent.
 
+When that unresolved referent already exists as a source-literal mention in
+`registry/mentions.json`, an assertion may point to it directly:
+
+```json
+{"mention_id": "thr:mention:<uuid>"}
+```
+
+This identifies the mention object only. It does not resolve the mention to an
+entity or upgrade the source statement into a THR observation.
+
+```text
+MENTION_REFERENCE != ENTITY_RESOLUTION
+```
+
 Do not invent an entity merely because a field wants an object ID.
 
 ## 4. Assertion state
