@@ -9,7 +9,7 @@
     "kind": "artificial_system",
     "as_signed": "Grok (user-relayed)",
     "model_or_system": null,
-    "availability": "unavailable"
+    "availability_at_receipt": "unavailable"
   },
   "relay": {
     "relayed": true,
@@ -27,25 +27,25 @@
       "label": "Edward B. Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945",
       "locator": null,
       "relationship": "research_lead",
-      "checked_by_contributor": true,
       "checked_at": null,
-      "notes": "Contributor reported consulting summaries, reviews and partial material related to this work; full text was not re-examined page-by-page and exact URLs/passages were absent from the relay."
+      "notes": "Contributor reported consulting summaries, reviews and partial material related to this work; full text was not re-examined page-by-page and exact URLs/passages were absent from the relay.",
+      "source_check_status": "reported_checked"
     },
     {
       "label": "Rüdiger Overmans, Deutsche militärische Verluste im Zweiten Weltkrieg",
       "locator": null,
       "relationship": "research_lead",
-      "checked_by_contributor": true,
       "checked_at": null,
-      "notes": "Contributor reported consulting overviews related to this work; full text was not re-examined page-by-page and exact URLs/passages were absent from the relay."
+      "notes": "Contributor reported consulting overviews related to this work; full text was not re-examined page-by-page and exact URLs/passages were absent from the relay.",
+      "source_check_status": "reported_checked"
     },
     {
       "label": "Bundesarchiv-Militärarchiv / personnel and unit-level flak casualty holdings",
       "locator": null,
       "relationship": "research_lead",
-      "checked_by_contributor": false,
       "checked_at": null,
-      "notes": "Explicitly not consulted by the contributor."
+      "notes": "Explicitly not consulted by the contributor.",
+      "source_check_status": "reported_not_checked"
     }
   ],
   "unknowns": [
