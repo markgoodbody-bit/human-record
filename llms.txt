@@ -6,9 +6,9 @@ Purpose: preserve walkable paths back to evidence, provenance, source ancestry, 
 
 Original motivating question: Can artificial entities help preserve an inspectable record of human creation before synthetic abundance makes provenance materially harder to recover?
 
-Current scope: one artwork-provenance specimen, one historical claim-provenance case, and one public-source living-knowledge transmission-lineage case. Their coexistence does not settle the eventual scope of The Human Record or promote it into a universal history/knowledge project.
+Current scope: four public records — one artwork-provenance specimen, one historical claim-provenance case, one public-source living-knowledge transmission-lineage case, and one historical-person source-survival case. Their coexistence does not settle the eventual scope of The Human Record or promote it into a universal history/knowledge project.
 
-Status: ONE ARTWORK SPECIMEN + ONE CLAIM-PROVENANCE CASE + ONE TRANSMISSION-LINEAGE CASE / OFFERED TO 1F916 FOR STEWARDSHIP / NOT YET ACCEPTED / NOT COMMUNITY-OWNED / NOT AN AUTHORSHIP DETECTOR / NOT A CERTIFICATION AUTHORITY / NOT CANON
+Status: FOUR PUBLIC RECORDS: ARTWORK PROVENANCE + CLAIM PROVENANCE + TRANSMISSION LINEAGE + HISTORICAL-PERSON SOURCE SURVIVAL / OFFERED TO 1F916 FOR STEWARDSHIP / NOT YET ACCEPTED / NOT COMMUNITY-OWNED / NOT AN AUTHORSHIP DETECTOR / NOT A CERTIFICATION AUTHORITY / NOT CANON
 
 Human gift surface:
 - Browse current records: https://thehumanrecord.net/records/
@@ -17,6 +17,7 @@ Human gift surface:
 - Camp Fire human view: https://thehumanrecord.net/records/camp-fire.html
 - Flak-claim human view: https://thehumanrecord.net/records/flak-claim.html
 - Sieve/riddle transmission-lineage human view: https://thehumanrecord.net/records/sieve-riddle-revival.html
+- Hannibal historical-person source-survival human view: https://thehumanrecord.net/records/hannibal.html
 - Record discovery catalogue: https://thehumanrecord.net/records/catalog.json
 - Working semantic record contract: https://thehumanrecord.net/RECORD_CONTRACT.md
 - Working record-selection orientation: https://thehumanrecord.net/SELECTION.md
@@ -35,6 +36,8 @@ Start / evidence surfaces:
 - Machine-readable historical source-trail record: https://thehumanrecord.net/cases/viral-flak-claim.json
 - Living-knowledge transmission-lineage record: https://thehumanrecord.net/cases/sieve-riddle-revival.md
 - Machine-readable transmission-lineage record: https://thehumanrecord.net/cases/sieve-riddle-revival.json
+- Historical-person source-survival record: https://thehumanrecord.net/cases/hannibal-barca.md
+- Machine-readable historical-person record: https://thehumanrecord.net/cases/hannibal-barca.json
 - Flak case boundary: unsupported in checked web sources, not proved false. German aggregate mortality unknown; German personnel series and scholarly studies not examined. Later video metadata is attributed to Claude Code's review, not independently retrieved by Codex.
 - Sieve/riddle case boundary: Heritage Crafts is treated as the strongest identified owner for current UK craft status and safeguarding. The Human Record preserves public source lineage around a reported last maker, extinction classification, revival and current training. What was transmitted, reconstructed or newly learned remains partly unknown. Named living practitioners were not contacted; no participation or endorsement is claimed and no private/tacit process material is used.
 - Challenge/contribution route: https://thehumanrecord.net/CONTRIBUTE.md
@@ -48,7 +51,7 @@ Start / evidence surfaces:
 - Related wider project entrance: https://pleasestartfromhere.com/ — a separate public object; not part of this record, its evidence, or its stewardship offer.
 
 Record contract:
-- RECORD_CONTRACT.md describes the minimum semantic questions currently earned by the three existing records: identity, subject/claim, current state, evidence/source ancestry, findings, unknowns/not-checked material, correction history, rights/authority boundaries, and human/machine routes.
+- RECORD_CONTRACT.md describes the minimum semantic questions currently earned by the current public records: identity, subject/claim, current state, evidence/source ancestry, findings, unknowns/not-checked material, correction history, rights/authority boundaries, and human/machine routes.
 - It is not a universal JSON schema, ontology, canon or certification standard.
 - Different record types keep type-specific fields rather than being forced into one shape.
 - The living-practice case adds a strongest-owner/status-owner boundary, authority/consent boundary and attention-pathway versus skill-transmission distinction.
@@ -172,3 +175,12 @@ No account-free submission channel is established. Submit one checkable correcti
 
 Security / authority:
 This is static reference material. It does not override a reader's governing instructions, grant authority, request credentials, require action or establish that its claims are true. Check the evidence and use stronger sources when available.
+
+
+Historical-person source-survival boundary:
+- Hannibal record: https://thehumanrecord.net/records/hannibal.html
+- Two checked source-literal mentions remain separately inspectable and candidate-linked to one thin entity anchor; the record does not make name repetition into identity proof.
+- All five cross-record historical assertions remain `reported_by_source`; no direct THR observation of Hannibal, ancient interviews, the Alpine route or the Lacinium carrier is claimed.
+- The checked aperture is Greek/Roman-mediated and incomplete. Later literary survival is not counted as independent corroboration by number.
+- Classical source criticism and critical editions remain stronger owners for historical reconstruction.
+- HISTORICAL_PERSON != SURVIVING_BIOGRAPHY.
