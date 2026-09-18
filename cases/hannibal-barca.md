@@ -81,7 +81,7 @@ This record uses four bounded passages:
 - **3.20.5** — Polybius names Chaereas and Sosylus and dismisses their authority sharply. This establishes that Polybius knew a Sosylus tradition; it does not make Polybius' evaluation neutral or final.
 - **3.33.17–18** — Polybius says his unusually detailed troop figures came from a bronze tablet on the Lacinian promontory on which Hannibal had made out the lists. THR has not observed that tablet and does not convert Polybius' report into a surviving inscription object.
 - **3.48.12** — Polybius says he inquired from men present at the crossing and personally inspected the country and crossed the Alps himself. This is evidence about Polybius' claimed method, not automatic proof of every detail in his reconstruction.
-- **3.56.3–4** — Polybius reports Hannibal's post-crossing force totals and attributes them to an inscription/column at Lacinium. This candidate does **not** establish that the carrier described here is physically identical to the bronze tablet described at 3.33.17–18.
+- **3.56.3–4** — Polybius reports Hannibal's post-crossing force totals and attributes them to an inscription/column at Lacinium. This record does **not** establish that the carrier described here is physically identical to the bronze tablet described at 3.33.17–18.
 
 ### Cornelius Nepos, *Life of Hannibal* 13.3
 
@@ -144,7 +144,7 @@ is not the public machine record.
 
 ## What the executable fixture represents
 
-The fixture attached to this candidate contains only:
+The preserved pre-publication research fixture contains only:
 
 - one candidate person entity;
 - one literal Hannibal mention;
@@ -162,11 +162,11 @@ Explicit isolated research validation may omit `record_id` while retaining sourc
 
 ## Current bounded findings
 
-1. The existing entity/source/assertion envelopes can carry a thin historical-human candidate without adding a new entity type or truth scale.
+1. The existing entity/source/assertion envelopes can carry this thin historical-human record without adding a new entity type or truth scale.
 2. A source can report a claim about Hannibal without the entity anchor absorbing that claim as identity.
 3. A later source can attest an earlier source tradition without THR pretending to have inspected the earlier work.
 4. Polybius' claimed investigative method and documentary source can be recorded as **claims by Polybius** without becoming direct THR observations.
-5. The current source set is asymmetrical and incomplete. The candidate should show that asymmetry rather than multiply later repetitions.
+5. The current source set is asymmetrical and incomplete. The record shows that asymmetry rather than multiplying later repetitions.
 
 None of these findings establishes the historical truth of every underlying event.
 
@@ -221,23 +221,20 @@ Relevant owners already include:
 
 The Human Record residue being tested is smaller: make source ancestry, unknowns, disagreement and correction visible to ordinary human and machine readers without pretending the sparse graph is the world.
 
-## Promotion gate
+## Publication decision
 
-This candidate does **not** become public record 4 merely because it validates structurally.
+Before promotion, the candidate was required to preserve direct-source locators,
+show the Greek/Roman survival asymmetry, survive source-dependence and biography-fact
+attacks, retain a correction route and explicit unexamined material, and remain
+useful without claiming to outperform specialist historical owners.
 
-Before any catalogue promotion:
-
-1. preserve direct-source locators and the Greek/Roman survival asymmetry;
-2. hostile-review source dependence and any statement that reads like biography fact;
-3. check whether the candidate adds human/public value beyond existing owner systems;
-4. ensure the readable encounter does not flatten source reports into historical truth;
-5. retain a correction route and explicit unexamined material;
-6. decide whether publication adds more recoverability than noise.
+Those checks justified publication as a fourth THR encounter. They did not establish
+historical truth, reader benefit, or a general method advantage.
 
 ```text
-CANDIDATE != RECORD_4
 STRUCTURAL_PASS != HISTORICAL_TRUTH
 PUBLICATION != VALIDATION
+PUBLICATION_DECISION != OWNER_SUPERIORITY
 THR_SURVIVAL != PURPOSE
 ```
 
