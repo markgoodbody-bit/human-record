@@ -1,0 +1,263 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thehumanrecord.net/contribution-packet.schema.json",
+  "title": "The Human Record portable contribution packet",
+  "description": "Optional relay envelope for preserving contribution target, attribution, source checks, unknowns and public-sharing boundaries. Validation is not acceptance or authentication.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "target",
+    "declared_contributor",
+    "relay",
+    "contribution",
+    "evidence",
+    "unknowns",
+    "not_checked",
+    "rights_and_privacy",
+    "authentication_ceiling"
+  ],
+  "properties": {
+    "format": {
+      "const": "human-record-contribution-packet/0.1"
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "description"
+      ],
+      "properties": {
+        "record_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "record_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "declared_contributor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "as_signed",
+        "model_or_system",
+        "availability_at_receipt"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "human",
+            "artificial_system",
+            "organization",
+            "unknown"
+          ]
+        },
+        "as_signed": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_or_system": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "availability_at_receipt": {
+          "enum": [
+            "available",
+            "unavailable",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "relay": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relayed",
+        "relayed_by",
+        "medium",
+        "notes"
+      ],
+      "properties": {
+        "relayed": {
+          "type": "boolean"
+        },
+        "relayed_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "medium": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "contribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "summary",
+        "proposed_change"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "correction",
+            "research_lead",
+            "challenge",
+            "new_record_proposal",
+            "no_delta",
+            "other"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proposed_change": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "locator",
+          "relationship",
+          "source_check_status",
+          "checked_at",
+          "notes"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "relationship": {
+            "enum": [
+              "original_source",
+              "derivative_account",
+              "witness_report",
+              "institutional_record",
+              "scholarly_analysis",
+              "research_lead",
+              "inference",
+              "unknown"
+            ]
+          },
+          "checked_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_check_status": {
+            "enum": [
+              "reported_checked",
+              "reported_not_checked",
+              "unknown"
+            ],
+            "description": "What the contribution reports about whether the original contributor inspected this source. This field is not independent verification of that activity."
+          }
+        }
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "not_checked": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "rights_and_privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entitled_to_share",
+        "contains_private_personal_information",
+        "public_route_suitable",
+        "notes"
+      ],
+      "properties": {
+        "entitled_to_share": {
+          "enum": [
+            "yes",
+            "no",
+            "unknown"
+          ]
+        },
+        "contains_private_personal_information": {
+          "type": "boolean"
+        },
+        "public_route_suitable": {
+          "enum": [
+            "yes",
+            "no",
+            "unknown"
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "authentication_ceiling": {
+      "const": "packet_is_not_identity_or_source_authentication"
+    }
+  }
+}

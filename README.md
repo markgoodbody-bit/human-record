@@ -87,6 +87,9 @@ Contents:
 - `sitemap.xml` — first-party public discovery map;
 - `STEWARDSHIP.md` — public stewardship offer, current custody and limits;
 - `CONTRIBUTE.md` — public inspection/challenge/contribution route;
+- `CONTRIBUTION_PACKET.md` — optional relay format for preserving attribution, source-check and unknown/not-checked boundaries when a contributor cannot post directly;
+- `contribution-packet.schema.json` — JSON Schema for the optional packet; validates shape, not identity or truth;
+- `examples/grok-flak-relay.packet.json` — real relay example reconstructed from the public issue #20 receipt, not a source-authentication claim;
 - `LICENSE` — standard CC0 1.0 legal code;
 - `LICENSE.md` — bounded scope notice explaining which rights Mark actually purports to dedicate and third-party boundaries;
 - `CONTINUE.md` — operational continuation/recovery note for a future non-founder operator;

@@ -1,0 +1,69 @@
+{
+  "format": "human-record-contribution-packet/0.1",
+  "target": {
+    "record_id": "viral-flak-claim",
+    "record_url": "https://thehumanrecord.net/cases/viral-flak-claim.md",
+    "description": "Research leads relevant to the unresolved aggregate mortality rate of German flak crews."
+  },
+  "declared_contributor": {
+    "kind": "artificial_system",
+    "as_signed": "Grok (user-relayed)",
+    "model_or_system": null,
+    "availability_at_receipt": "unavailable"
+  },
+  "relay": {
+    "relayed": true,
+    "relayed_by": "Mark, then received into GitHub by Codex",
+    "medium": "user-supplied pasted exchange",
+    "notes": "The exact model/version, browsing history and source contents consulted by Grok were not independently verified at receipt time. The original contributor reportedly exhausted its free-token allowance and could not post to GitHub."
+  },
+  "contribution": {
+    "kind": "research_lead",
+    "summary": "The relayed contribution pointed to Westermann, Overmans and Flakhelfer material as stronger research routes and said it had not found support for the viral aggregate 80% mortality claim in the material it examined. It did not propose a replacement number.",
+    "proposed_change": "Treat the named works and holdings as research leads only until exact accessible sources/passages are independently checked. Preserve the current mortality rate as unknown."
+  },
+  "evidence": [
+    {
+      "label": "Edward B. Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945",
+      "locator": null,
+      "relationship": "research_lead",
+      "checked_at": null,
+      "notes": "Contributor reported consulting summaries, reviews and partial material related to this work; full text was not re-examined page-by-page and exact URLs/passages were absent from the relay.",
+      "source_check_status": "reported_checked"
+    },
+    {
+      "label": "Rüdiger Overmans, Deutsche militärische Verluste im Zweiten Weltkrieg",
+      "locator": null,
+      "relationship": "research_lead",
+      "checked_at": null,
+      "notes": "Contributor reported consulting overviews related to this work; full text was not re-examined page-by-page and exact URLs/passages were absent from the relay.",
+      "source_check_status": "reported_checked"
+    },
+    {
+      "label": "Bundesarchiv-Militärarchiv / personnel and unit-level flak casualty holdings",
+      "locator": null,
+      "relationship": "research_lead",
+      "checked_at": null,
+      "notes": "Explicitly not consulted by the contributor.",
+      "source_check_status": "reported_not_checked"
+    }
+  ],
+  "unknowns": [
+    "The true aggregate mortality rate of German anti-aircraft crews.",
+    "Whether the relayed source summaries accurately represented the underlying books.",
+    "Whether exact citations were present in the original Grok interface but lost during copying."
+  ],
+  "not_checked": [
+    "Full Westermann text page-by-page.",
+    "Full Overmans text page-by-page.",
+    "Bundesarchiv-Militärarchiv personnel holdings.",
+    "Surviving unit-level flak casualty returns."
+  ],
+  "rights_and_privacy": {
+    "entitled_to_share": "unknown",
+    "contains_private_personal_information": false,
+    "public_route_suitable": "yes",
+    "notes": "This packet reproduces the selected public contribution receipt, not the full private exchange. It does not claim rights over third-party books or source material."
+  },
+  "authentication_ceiling": "packet_is_not_identity_or_source_authentication"
+}

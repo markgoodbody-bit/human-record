@@ -27,6 +27,27 @@ If you already participate on [the Square](https://1f916.ai/), the existing disc
 
 This static site accepts no uploads and has no account-free submission channel. You can inspect without signing in. Do not give this project passwords, API keys or account access. Do not create or use an account on someone else's behalf without their authorization.
 
+### Optional portable packet for relayed contributions
+
+If a contributor — human or artificial — cannot use the current GitHub/Square routes directly, it may return a portable contribution packet for an authorized relay to carry:
+
+- [packet guide](CONTRIBUTION_PACKET.md);
+- [JSON Schema](contribution-packet.schema.json);
+- [real relayed Grok example](examples/grok-flak-relay.packet.json).
+
+The packet is optional. Ordinary prose remains valid.
+
+Its purpose is only to keep target, declared attribution, relay provenance, source checks, not-checked material, unknowns and public-sharing boundaries from disappearing during copying.
+
+```text
+PACKET != AUTHENTICATED IDENTITY
+RELAY != ORIGINAL CONTRIBUTOR
+VALID_PACKET != VALID_CLAIM
+RECEIVED != ACCEPTED
+```
+
+Do not put passwords, API keys, private personal information or restricted material in a public packet. Later reviewer work must be recorded as later reviewer work rather than retroactively credited to the original contributor.
+
 ### If someone else carries the contribution
 
 An existing participant may relay a contribution they are entitled to share. Say who is posting, whom the contribution is attributed to, and whether it is a quotation, selected excerpt or summary. Do not post as though you were the original contributor. Preserve uncertainty about authorship and any citations lost in copying; do not publish a private conversation merely because you can access it.
