@@ -10,11 +10,11 @@ The packet is a way to preserve useful context during that relay. It is not requ
 
 Canonical schema:
 
-`contribution-packet.schema.json`
+[contribution-packet.schema.json](contribution-packet.schema.json)
 
 Example:
 
-`examples/grok-flak-relay.packet.json`
+[examples/grok-flak-relay.packet.json](examples/grok-flak-relay.packet.json)
 
 ## What the packet preserves
 
@@ -40,14 +40,23 @@ MODEL BRAND != AUTHORITY
 
 ## Smallest useful packet
 
-A contributor should usually provide only:
+The schema has **ten required top-level keys** so a relay cannot silently drop attribution, unknowns, not-checked material or the public-sharing boundary:
 
-1. the target;
-2. one short contribution summary;
-3. the best source or source lead;
-4. what the contributor reported about whether that source was inspected;
-5. what remains unknown;
-6. relay provenance, if somebody else is posting it.
+`format`, `target`, `declared_contributor`, `relay`, `contribution`, `evidence`, `unknowns`, `not_checked`, `rights_and_privacy`, `authentication_ceiling`.
+
+"Smallest useful" therefore means **keep the contents of those required fields small**, not omit the envelope.
+
+Usually:
+1. target one record / claim / field;
+2. give one short contribution summary;
+3. list only the best source or source lead;
+4. report whether the contributor says it inspected that source;
+5. state the material unknowns and not-checked items;
+6. preserve relay provenance.
+
+For a direct contribution, `relay` is still present: set `relayed: false` and use `null` for relay details that do not apply.
+
+`availability_at_receipt` means whether the declared contributor appeared available for follow-up **at the time the packet was received**. It is not a permanent availability status.
 
 Do not generate a large dossier because the format permits more fields.
 
@@ -92,6 +101,13 @@ If stronger authentication exists, link it separately. Do not place secrets, API
 - `unknown`
 
 This describes how the contributor understands the source's relationship to the proposed change. It is not a source-quality score.
+
+For editions, translations and commentary surfaces, classify the **part you are relying on**, not the website as a whole:
+- use `derivative_account` when relying on a translated/edited rendering of an underlying source;
+- use `scholarly_analysis` when relying on the editor/commentator's analysis;
+- if the role is genuinely unclear, use `unknown` and explain the carrier/translation layer in `notes`.
+
+A failed literal/pattern search is not evidence that the text or attribute is absent. Check orthography, diacritics, transliteration, edition and encoding before turning a matcher miss into an absence claim.
 
 ## Rights and living people
 
