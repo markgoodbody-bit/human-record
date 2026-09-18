@@ -96,8 +96,8 @@
         "aligned_at": "2026-09-18",
         "source_record_version": "0.1.0",
         "source_git_blobs": {
-          "cases/hannibal-barca.md": "929d2f28ed5c0a20c92d1c07f44e63686faf398f",
-          "cases/hannibal-barca.json": "b7d1d43e43d31f15c5325949b565fe4fc2885970"
+          "cases/hannibal-barca.md": "eaecb9401b2c49c4236b459a6696ba5b670c4c6a",
+          "cases/hannibal-barca.json": "51863ad611808f217b179b4624c41e9bbfeb7238"
         }
       },
       "status": "public_bounded_source_survival_record",
