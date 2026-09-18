@@ -93,6 +93,38 @@ class JFKCandidateProbe(unittest.TestCase):
         self.check_integrity()
         self.assertEqual(integrity.errors, [])
 
+    def test_unsupported_in_sources_checked_rejects_empty_checked_set(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-6]
+        target["state"] = "unsupported_in_sources_checked"
+        target["evidence"]["source_ids"] = []
+        target["evidence"]["observation_ids"] = []
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [
+            target["id"] + ": unsupported_in_sources_checked requires a non-empty evidence.source_ids list",
+            target["id"] + ": unsupported_in_sources_checked requires a non-empty evidence.observation_ids list",
+        ])
+
+    def test_unsupported_in_sources_checked_requires_observation_for_every_counted_source(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-6]
+        target["state"] = "unsupported_in_sources_checked"
+        second_source = self.fixture["sources"][2]
+        target["evidence"]["source_ids"].append(second_source["id"])
+        # Deliberately do not add second_source's observation.
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [
+            target["id"] + ": unsupported_in_sources_checked counts source(s) without an owned "
+            "evidence observation as checked: " + repr([second_source["id"]])
+        ])
+
+    def test_unsupported_in_sources_checked_accepts_bounded_observed_source_set(self):
+        target = self.documents["registry/assertions.json"]["assertions"][-6]
+        target["state"] = "unsupported_in_sources_checked"
+        second_source = self.fixture["sources"][2]
+        target["evidence"]["source_ids"].append(second_source["id"])
+        target["evidence"]["observation_ids"].append(second_source["observations"][0]["id"])
+        self.check_integrity()
+        self.assertEqual(integrity.errors, [])
+
 
 if __name__ == "__main__":
     unittest.main()
