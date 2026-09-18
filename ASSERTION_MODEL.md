@@ -83,6 +83,49 @@ These are not a complete epistemology.
 STATE LABEL != UNIVERSAL TRUTH VALUE
 ```
 
+## 4a. Direct-evidence implementation boundary
+
+The source registry's current observation envelope records a bounded retrieval or
+inspection of a source representation. It does **not** yet carry a typed relation
+to the entity, observable situation, or proposition that a cross-record assertion
+claims was directly observed.
+
+This distinction is owned rather than invented here. CRMsci 3.2 gives an
+observation explicit relations to what was observed, including observable
+situations/entities/propositions. THR does not yet implement an equivalent typed
+target relation.
+
+Official owner reference:
+https://cidoc-crm.org/extensions/crmsci/html/CRMsci_v3.2.html
+
+Until a concrete THR case earns and tests such a representation, the
+cross-record assertion validator must fail closed on direct-evidence states that
+would otherwise be asserted by changing only the state word.
+
+Working direct-evidence states requiring typed target/reconciliation support:
+
+- `observed`
+- `reconciled`
+
+`reported_by_source` remains appropriate where the record inspected a source
+that states the proposition. A source retrieval/inspection observation is
+evidence that THR inspected the representation at a bounded time and scope; it
+is not by itself evidence that THR directly observed the world-state described
+inside that representation.
+
+```text
+SOURCE_OBSERVATION != DIRECT_WORLD_OBSERVATION
+SOURCE_MEDIUM != OBSERVED_OBJECT
+STATE_WORD != EVIDENCE_RELATION
+FAIL_CLOSED_NOW != PERMANENT_SCHEMA_DECISION
+```
+
+This is an implementation boundary, not a claim that direct observation or
+reconciliation can never be represented. A later repair should add the smallest
+typed observation/reconciliation relation justified by real records and owner
+semantics, then remove this temporary fail-closed guard with red-before /
+green-after tests.
+
 ## 5. Scope is part of the assertion
 
 Population, denominator, time window, place, version and other qualifiers can change the proposition materially.
@@ -124,6 +167,34 @@ For registry integrity, every evidence observation must belong to a source named
 in that assertion's evidence `source_ids`. Multiple sources and observations are
 allowed; citing a source without an observation remains allowed. This ownership
 check prevents mismatched references, not misinterpretation of source content.
+
+One assertion state is intentionally stricter:
+
+`unsupported_in_sources_checked` means a bounded source set was actually
+examined. It therefore requires a non-empty evidence source set and at least one
+owned **inspected** observation for every source counted as checked. An empty list
+cannot support that state. In the current structural implementation,
+`retrieved`, `partial`, and `reported_by_reviewer` observations can witness a
+checked source; `metadata_only`, `not_retrieved`, `failed`,
+`access_restricted`, and citation-only/open-vocabulary outcomes cannot.
+
+This is still a structural proxy rather than claim-level semantic proof. The
+observation scope must remain inspectable, and a later typed claim-inspection
+model may narrow this further.
+
+This structural rule still does **not** make the checked set exhaustive. The
+record should preserve the selection/search boundary and material unexamined
+sources where they affect interpretation. Mature systematic-review reporting
+owners such as PRISMA / PRISMA-S require detailed reporting of sources searched,
+dates and search methods for claims that depend on search completeness. THR does
+not inherit that whole review schema; it borrows the narrower discipline that a
+negative/unsupported finding must expose its bounded evidence aperture.
+
+```text
+SOURCES_CHECKED != ALL_POSSIBLE_SOURCES
+EMPTY_CHECKED_SET != UNSUPPORTED_FINDING
+NOT_FOUND_IN_BOUND != ABSENT_FROM_WORLD
+```
 
 ## 7. Source statement versus record finding
 
