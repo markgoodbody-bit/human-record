@@ -88,7 +88,7 @@
       "kind": "scholarly_book_selected_passage_via_third_party_ocr",
       "url": "https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf",
       "role": "A second bounded passage in the same accessible Westermann OCR reproduction, in the 1942 Bomber Command discussion, says an Operational Research Section study found that up to 80 percent of 'flak casualties' occurred over the target area. The surrounding text concerns RAF bombers damaged by German flak and subsequent Bomber Command aircrew casualties; it is not a statement about German anti-aircraft crew mortality.",
-      "claim_relation": "specific_phrase_level_mutation_candidate_not_transmission"
+      "claim_relation": "phrase_level_analogue_relevant_to_mutation_hypothesis_not_transmission"
     },
     {
       "id": "overmans-2004-publisher-preview",
@@ -105,7 +105,7 @@
     "Claude Code reports that the later video asserts the figure while calling it untraceable without stating its search method; this is not an independent research check.",
     "Authoritative sources support nearby facts about flak danger and Allied casualties but do not, in the sources checked for this record, establish the claimed aggregate German crew mortality rate.",
     "A selected passage in an accessible third-party OCR reproduction of Westermann's 2001 Flak reports 60 officer and 890 enlisted flak-force casualties, explicitly combining dead, wounded and missing, for the May 10–June 22, 1940 western campaign. This is a campaign-bounded casualty count, not a death count, aggregate mortality rate or whole-war estimate; the OCR reproduction itself has not been authenticated against the restricted publisher-edition scan.",
-    "Westermann's 1942 Bomber Command discussion contains the phrase 'up to 80 percent of flak casualties' for RAF losses/damage associated with German flak over target areas. That phrase is a materially closer mutation candidate for the viral wording than numerical resemblance alone, but no evidence currently links it to the 2025 video or establishes transmission.",
+    "Westermann's 1942 Bomber Command discussion contains the phrase 'up to 80 percent of flak casualties' for RAF losses/damage associated with German flak over target areas. That phrase is a materially closer analogue relevant to the mutation hypothesis for the viral wording than numerical resemblance alone, but no evidence currently links it to the 2025 video or establishes transmission.",
     "A public publisher preview of Overmans' German military-loss study confirms that its empirical design uses a sample drawn from individual Deutsche Dienststelle/WASt records and that the book contains tables of losses/deaths by organisations and Wehrmacht branches, including Luftwaffe-level material. The preview does not expose the relevant table values here and does not establish a flak-crew-specific denominator or mortality rate."
   ],
   "unknowns": [
@@ -167,6 +167,6 @@
     "LUFTWAFFE-LEVEL LOSS TABLE != FLAK-CREW MORTALITY RATE",
     "SAME NUMBER != SAME CLAIM",
     "SAME PHRASE / NUMBER != TRANSMISSION",
-    "PHRASE-LEVEL MUTATION CANDIDATE != SOURCE ANCESTRY"
+    "PHRASE-LEVEL ANALOGUE != SOURCE ANCESTRY"
   ]
 }
