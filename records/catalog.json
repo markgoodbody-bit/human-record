@@ -50,14 +50,14 @@
         "aligned_at": "2026-09-19",
         "source_record_version": "0.2.6",
         "source_git_blobs": {
-          "cases/viral-flak-claim.md": "eee0129b775ce60a831f5ec6c3c57bdce4d605b0",
-          "cases/viral-flak-claim.json": "07fb4edc315bcce5aabdecebe64535bc4e3d422a"
+          "cases/viral-flak-claim.md": "f2d517361511c3f2bad5c15eb635add9a17cb4ba",
+          "cases/viral-flak-claim.json": "87f8a6ba7149de81ebfa67d57fda1ea347ea4cf9"
         }
       },
       "status": "unsupported_in_sources_checked",
       "historical_truth_status": "unknown",
       "recorded_at": "2026-09-16",
-      "known_summary": "A visible online propagation chain is partially reconstructed; downstream repetition is not independent corroboration. A selected Westermann 1940 campaign passage adds bounded German flak personnel-loss context, and an Overmans publisher preview confirms a scope-relevant person-level military-loss study with organisation/branch tables, but neither establishes the claimed aggregate mortality rate.",
+      "known_summary": "A visible online propagation chain is partially reconstructed; downstream repetition is not independent corroboration. A selected Westermann 1940 campaign passage adds bounded German flak personnel-loss context, and an Overmans publisher preview confirms a scope-relevant sample-based military-loss study drawing on individual WASt records with organisation/branch tables, but neither establishes the claimed aggregate mortality rate.",
       "unknown_summary": "The true aggregate rate, any earlier source for the 80% figure, the figure's exact ancestry, authentication/underlying archive support for the selected Westermann OCR passage, and the uninspected values/any flak-specific breakdown in Overmans remain unresolved in this record.",
       "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
     },
