@@ -124,38 +124,45 @@
       "locators": [
         {
           "scheme": "cts_urn",
-          "value": "urn:cts:greekLit:tlg0543.tlg001.perseus-grc2"
+          "value": "urn:cts:greekLit:tlg0543.tlg001.perseus-grc2",
+          "status": "digital_greek_edition_identified"
         },
         {
           "scheme": "url",
-          "value": "https://vocab.perseus.org/word-list/urn:cts:greekLit:tlg0543.tlg001.perseus-grc2:3.33.17/"
+          "value": "https://vocab.perseus.org/word-list/urn:cts:greekLit:tlg0543.tlg001.perseus-grc2:3.33.17/",
+          "status": "passage_word_list_inspected"
         },
         {
           "scheme": "url",
-          "value": "https://vocab.perseus.org/word-list/urn:cts:greekLit:tlg0543.tlg001.perseus-grc2:3.33.18/"
+          "value": "https://vocab.perseus.org/word-list/urn:cts:greekLit:tlg0543.tlg001.perseus-grc2:3.33.18/",
+          "status": "passage_word_list_inspected"
         }
       ],
       "observations": [
         {
           "id": "thr:observation:fb9a6146-9601-4a58-9b44-b97b06143d97",
           "observed_at": "2026-09-19",
+          "precision": "date",
           "outcome": "partial",
-          "scope": "Passage-specific Greek vocabulary/token lists for 3.33.17 and 3.33.18, used only to verify that 'Ἀννίβας' occurs in both cited sections; not a full Greek passage, manuscript or whole-book inspection.",
+          "record_basis": "cases/hannibal-barca.json Greek source-literal boundary for Polybius 3.33.17-18",
+          "digest": null,
+          "scope": "Passage-specific Greek vocabulary/token lists for Polybius Histories 3.33.17 and 3.33.18 in urn:cts:greekLit:tlg0543.tlg001.perseus-grc2; used only to verify that the lemma/form Ἀννίβας occurs in both cited sections. Full Greek passage text, manuscript witnesses and the other THR-cited Polybius sections were not inspected through this source.",
           "observer": "Framework",
           "notes": [
-            "The source identifies the Greek edition as urn:cts:greekLit:tlg0543.tlg001.perseus-grc2 and the passage lists contain Ἀννίβας once in 3.33.17 and once in 3.33.18.",
-            "GREEK NAME FORM ATTESTED != HISTORICAL IDENTITY PROVED."
+            "The edition is identified by Perseus as the Büttner-Wobst Greek text; the passage word lists show Ἀννίβας once in 3.33.17 and once in 3.33.18.",
+            "PASSAGE TOKEN LIST != MANUSCRIPT WITNESS; GREEK NAME FORM ATTESTED != HISTORICAL IDENTITY PROVED."
           ]
         }
       ],
       "relations": [],
-      "used_by_records": [
-        "hannibal-source-survival"
-      ],
       "preservation": {
         "status": "not_yet_checked",
-        "copies": []
-      }
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "hannibal-source-survival"
+      ]
     }
   ],
   "mentions": [
