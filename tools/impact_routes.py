@@ -19,10 +19,12 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
+CANONICAL_PUBLIC_SCHEME = "https"
+CANONICAL_PUBLIC_HOST = "thehumanrecord.net"
 
 
 def load_json(path: Path):
@@ -30,28 +32,94 @@ def load_json(path: Path):
 
 
 def repo_path(value):
-    """Convert a public THR URL or repository-relative path into a repository path."""
+    """Return a safe repository path for a THR public URL or repository-relative path.
+
+    Absolute URLs are accepted only for the canonical HTTPS THR origin, with no
+    credentials, port, query or fragment. Relative paths with query/fragment markers are
+    rejected rather than normalised because those components can change resource
+    identity. Unsupported/foreign values return None so callers can surface them as
+    unresolved instead of falsely resolving by pathname.
+    """
     if not isinstance(value, str) or not value.strip():
         return None
+
     value = value.strip()
-    parsed = urlparse(value)
-    if parsed.scheme and parsed.netloc:
-        return parsed.path.lstrip("/") or None
-    return value.lstrip("/")
+    parsed = urlsplit(value)
+
+    if parsed.scheme or parsed.netloc:
+        if parsed.scheme != CANONICAL_PUBLIC_SCHEME:
+            return None
+        if parsed.hostname != CANONICAL_PUBLIC_HOST:
+            return None
+        if parsed.username is not None or parsed.password is not None:
+            return None
+        try:
+            if parsed.port is not None:
+                return None
+        except ValueError:
+            return None
+        if parsed.query or parsed.fragment:
+            return None
+        path = parsed.path.lstrip("/")
+    else:
+        if value.startswith("//"):
+            return None
+        if parsed.query or parsed.fragment:
+            return None
+        path = parsed.path.lstrip("/")
+
+    if not path:
+        return None
+
+    parts = path.split("/")
+    if any(part in ("", ".", "..") for part in parts):
+        return None
+
+    return path
 
 
 def catalog_path_index(catalog):
-    """Map current record files/routes to their catalogue record IDs."""
+    """Map current record files/routes to catalogue record IDs, rejecting ambiguity."""
     index = {}
     for record in catalog.get("records", []):
         record_id = record.get("id")
         if not isinstance(record_id, str) or not record_id:
             continue
+
         for field in ("full_human_record", "machine_record", "human_view"):
-            path = repo_path(record.get(field))
-            if path:
-                index[path] = record_id
+            raw_value = record.get(field)
+            if raw_value is None:
+                continue
+
+            path = repo_path(raw_value)
+            if path is None:
+                raise ValueError(
+                    f"{record_id}: unsupported catalogue {field} route: {raw_value!r}"
+                )
+
+            previous = index.get(path)
+            if previous is not None and previous != record_id:
+                raise ValueError(
+                    f"catalogue path {path!r} maps to multiple records: "
+                    f"{previous!r}, {record_id!r}"
+                )
+            index[path] = record_id
+
     return index
+
+
+def _strict_string_list(container, field, context):
+    if field not in container:
+        return []
+    value = container[field]
+    if not isinstance(value, list):
+        raise ValueError(f"{context}.{field} must be a list")
+    for index, item in enumerate(value):
+        if not isinstance(item, str) or not item.strip():
+            raise ValueError(
+                f"{context}.{field}[{index}] must be a non-empty string"
+            )
+    return value
 
 
 def derive_impact_routes(root: Path, source_id: str):
@@ -70,19 +138,18 @@ def derive_impact_routes(root: Path, source_id: str):
         if isinstance(item.get("id"), str) and item.get("id")
     }
 
-    raw_direct_records = source.get("used_by_records", [])
-    if not isinstance(raw_direct_records, list):
-        raw_direct_records = []
-
+    raw_direct_records = _strict_string_list(
+        source, "used_by_records", source_id
+    )
     direct_records = sorted({
         record_id
         for record_id in raw_direct_records
-        if isinstance(record_id, str) and record_id in valid_record_ids
+        if record_id in valid_record_ids
     })
     unresolved_direct_records = sorted({
         record_id
         for record_id in raw_direct_records
-        if isinstance(record_id, str) and record_id and record_id not in valid_record_ids
+        if record_id not in valid_record_ids
     })
 
     assertion_routes = []
@@ -97,15 +164,20 @@ def derive_impact_routes(root: Path, source_id: str):
         if not isinstance(source_ids, list) or source_id not in source_ids:
             continue
 
+        assertion_id = assertion.get("id", "<unknown>")
+        raw_links = _strict_string_list(
+            assertion, "record_links", assertion_id
+        )
+
         resolved_records = set()
         unresolved = []
-        for raw_link in assertion.get("record_links", []):
+        for raw_link in raw_links:
             path = repo_path(raw_link)
             record_id = path_index.get(path) if path else None
             if record_id:
                 resolved_records.add(record_id)
                 assertion_records.add(record_id)
-            elif isinstance(raw_link, str) and raw_link:
+            else:
                 unresolved.append(raw_link)
                 unresolved_record_links.append({
                     "assertion_id": assertion.get("id"),
@@ -115,7 +187,7 @@ def derive_impact_routes(root: Path, source_id: str):
         assertion_routes.append({
             "assertion_id": assertion.get("id"),
             "predicate": assertion.get("predicate"),
-            "record_links": assertion.get("record_links", []),
+            "record_links": raw_links,
             "resolved_records": sorted(resolved_records),
             "unresolved_record_links": unresolved,
         })
@@ -159,6 +231,8 @@ def main():
         result = derive_impact_routes(args.root.resolve(), args.source_id)
     except KeyError:
         parser.error(f"unknown source_id: {args.source_id}")
+    except ValueError as exc:
+        parser.error(str(exc))
 
     print(json.dumps(result, indent=2, ensure_ascii=False))
 
