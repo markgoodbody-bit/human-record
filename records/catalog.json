@@ -50,15 +50,15 @@
         "aligned_at": "2026-09-19",
         "source_record_version": "0.2.7",
         "source_git_blobs": {
-          "cases/viral-flak-claim.md": "e1933905cb1535efc32d39485e827982402d3b45",
-          "cases/viral-flak-claim.json": "cb6b752d2759d1d36e3bbd180797a0867aecb401"
+          "cases/viral-flak-claim.md": "230261438fb39911eb641970db1405eea682fbe7",
+          "cases/viral-flak-claim.json": "29ddcf7b7b7187d1720e639d3dcebfed23b0039f"
         }
       },
       "status": "unsupported_in_sources_checked",
       "historical_truth_status": "unknown",
       "recorded_at": "2026-09-16",
-      "known_summary": "A visible online propagation chain is partially reconstructed; downstream repetition is not independent corroboration. Checked historical material includes bounded German flak-personnel context, a Westermann RAF/Bomber Command passage using 'up to 80 percent of flak casualties' as a phrase-level analogue relevant to the mutation hypothesis, and an Overmans publisher preview of a scope-relevant WASt-based military-loss study; none establishes the claimed aggregate mortality rate or a transmission path.",
-      "unknown_summary": "The true aggregate rate, any earlier source for the 80% figure, the exact transmission path into the viral claim, authentication/underlying archive support for selected Westermann passages, the uninspected values/any flak-specific breakdown in Overmans, and whether the phrase-level analogue reflects any actual source ancestry remain unresolved.",
+      "known_summary": "A visible online propagation chain is partially reconstructed; downstream repetition is not independent corroboration. Checked historical material includes bounded German flak-personnel context, a Westermann RAF/Bomber Command phrase-level analogue ('up to 80 percent of flak casualties') whose underlying ORS S-91 citation route is identified but uninspected, and an Overmans publisher preview of a scope-relevant WASt-based military-loss study; none establishes the claimed aggregate mortality rate or a transmission path.",
+      "unknown_summary": "The true aggregate rate, any earlier source for the 80% figure, the exact transmission path into the viral claim, the uninspected wording/data in ORS Report S-91, authentication/underlying archive support for selected Westermann passages, the uninspected values/any flak-specific breakdown in Overmans, and whether the phrase-level analogue reflects any actual source ancestry remain unresolved.",
       "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
     },
     {
