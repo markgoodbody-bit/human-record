@@ -93,18 +93,18 @@
       "full_human_record": "https://thehumanrecord.net/cases/hannibal-barca.md",
       "machine_record": "https://thehumanrecord.net/cases/hannibal-barca.json",
       "view_basis": {
-        "aligned_at": "2026-09-18",
-        "source_record_version": "0.1.0",
+        "aligned_at": "2026-09-19",
+        "source_record_version": "0.1.1",
         "source_git_blobs": {
-          "cases/hannibal-barca.md": "eaecb9401b2c49c4236b459a6696ba5b670c4c6a",
-          "cases/hannibal-barca.json": "51863ad611808f217b179b4624c41e9bbfeb7238"
+          "cases/hannibal-barca.md": "a9021397e34045bf2167c1779daa05fe1d4cedbe",
+          "cases/hannibal-barca.json": "29ee6b4412efce253aaadde78bdbb5fb44e7426d"
         }
       },
       "status": "public_bounded_source_survival_record",
       "historical_truth_status": "attributed_source_reports_not_global_adjudication",
       "recorded_at": "2026-09-18",
-      "known_summary": "Two checked ancient-text reading surfaces preserve attributed claims and source-critical boundaries without treating the surviving accounts as the historical person or as independent corroboration by count.",
-      "unknown_summary": "Complete source genealogy, much Carthaginian/Punic evidence, manuscript/critical-edition verification, the exact Alpine pass and many biographical disputes remain outside this bounded record.",
+      "known_summary": "Two checked ancient-text reading surfaces preserve attributed claims and source-critical boundaries without treating the surviving accounts as the historical person or as independent corroboration by count. DCC's declared Rolfe 1929 textual basis and stable Perseus CTS edition routes now make edition identity more recoverable without treating catalogue identity as manuscript verification.",
+      "unknown_summary": "Complete source genealogy, much Carthaginian/Punic evidence, manuscript-level verification, line-by-line relation between checked web surfaces and named editions, Greek source-literal inspection, the exact Alpine pass and many biographical disputes remain outside this bounded record.",
       "strongest_owner": "Classical source criticism, critical editions and specialist ancient-history scholarship own historical reconstruction; THR preserves a cross-record evidence route and correction surface only.",
       "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
     }
