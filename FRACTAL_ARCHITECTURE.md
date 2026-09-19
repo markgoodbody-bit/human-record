@@ -758,50 +758,70 @@ independence score is earned.
 
 ---
 
-## 6. Distributed survival and anti-rewrite properties
+## 6. Continuation / distributed survival is an acceptance criterion, not a THR-owned stack
 
-A future robust THR should become harder to rewrite retrospectively than a single website
-or database.
+A future robust THR should be continuable when one website, repository or operator is
+lost or compromised.
 
-This does not require inventing a blockchain.
+But stronger-owner subtraction in FRACTAL_RESIDUE_ATTACK.md shows that this does not earn
+a bespoke THR preservation stack.
 
-Candidate properties:
+Mature owners already cover important parts of the problem:
+- OAIS — long-term representation / context / provenance / reference / fixity / rights;
+- OCFL — transparent immutable versioned digital-object storage;
+- BagIt — portable file packaging and manifest verification;
+- RO-Crate — contextual human/machine-readable object packaging;
+- LOCKSS and other preservation networks — distributed preservation under independent
+  custody.
 
-1. **Portable public exports**
-   - a complete bounded record can be mirrored without the original service.
+Therefore the design target is:
 
-2. **Content-addressed checkpoints**
-   - a checkpoint identifies the exact exported bytes.
+~~~text
+CONTINUATION WITHOUT TRUSTING THR
+= ACCEPTANCE CRITERION
 
-3. **Independent witnesses / mirrors**
-   - unrelated custodians can retain or attest to a checkpoint.
+NOT
+= THR MUST OWN THE PRESERVATION STACK
+~~~
 
-4. **Append-visible correction**
-   - current state can change without deleting earlier material states.
+Candidate acceptance properties remain useful:
 
-5. **Cross-owner anchoring**
-   - where useful, a material checkpoint can be externally witnessed by stronger owners.
+1. **Portable bounded exports**
+   - a record can leave the current service with enough representation/context to be
+     interpreted.
 
-6. **No mandatory central resolver**
-   - thehumanrecord.net should be a useful entrance, not the single machine that can tell
-     the world what every THR identifier means.
+2. **Exact state identity**
+   - the exported state can be fixed/versioned using fit external mechanisms.
 
-The design target is:
+3. **Preserved correction history**
+   - current state can change without silently deleting earlier material states.
 
-```text
-COMPROMISE ONE HOST
-!=
-SILENTLY REWRITE ALL SURVIVING HISTORY
-```
+4. **External stronger-owner routes**
+   - archives / preservation systems / identifiers can be linked where they actually fit.
 
-A future federation may allow independent THR-compatible stores to exchange signed or
-hashed bundles while disagreeing about conclusions.
+5. **No mandatory central resolver for interpretation**
+   - thehumanrecord.net is an entrance, not the only machine capable of explaining the
+     exported object's meaning.
 
-```text
-SHARED PROTOCOL != SHARED GOVERNANCE
+6. **Independent custody when warranted**
+   - independent preservation may reduce single-operator rewrite risk without becoming
+     independent evidence for the underlying historical claim.
+
+Do not build by momentum:
+- a THR archive format;
+- a THR blockchain;
+- a THR fixity algorithm;
+- a THR OCFL/BagIt replacement;
+- a THR federation consensus protocol.
+
+~~~text
+PORTABLE != NEW CONTAINER REQUIRED
 MIRROR != ENDORSEMENT
 REPLICA != INDEPENDENT EVIDENCE
-```
+DISTRIBUTED != INDEPENDENT GOVERNANCE
+FIXITY != TRUTH
+ARCHIVED != INTERPRETED CORRECTLY
+~~~
 
 ---
 
