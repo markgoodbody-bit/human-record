@@ -285,3 +285,146 @@ Next real falsifier:
 
 > a genuine source/assertion reused across two or more public records whose material
 > correction cannot be routed correctly using the current sparse relations.
+
+
+---
+
+## 8. Independent registry audit — direct-route union requirement
+
+Codex review comment `5744972035` audited the public registry state pinned to:
+
+`1f5a5919938f385f43f1e2383bdfbb52807b206e`
+
+It queried:
+- all **20 registered sources**;
+- all **8 registered assertions**;
+- assertion `record_links`;
+- the four public catalogue entries.
+
+It independently confirmed:
+- the Polybius source reaches four assertions and one Hannibal record/view;
+- no current source spans multiple public records;
+- **11 of 20 sources have no assertion evidence edge**, despite each carrying a direct
+  `used_by_records` route.
+
+That exposes an important implementation rule:
+
+~~~text
+SOURCE IMPACT ROUTING
+=
+DIRECT source.used_by_records
+UNION
+ASSERTION-DERIVED record_links
+~~~
+
+Do not implement:
+
+~~~text
+SOURCE
+-> ASSERTION ONLY
+-> RECORD
+~~~
+
+because:
+
+~~~text
+NO ASSERTION EDGE
+!=
+NO RECORD DEPENDENCY
+~~~
+
+The 11 current direct-only sources are not defects. They are evidence that THR deliberately
+does not globalise every record-local claim into the assertion registry.
+
+Therefore the correct response is **not** to manufacture assertions for those sources.
+
+---
+
+## 9. Small executable safeguard
+
+The RFC branch now includes:
+
+- `tools/impact_routes.py`
+- `tools/test_validate_impact_routes.py`
+
+The tool is a read-only derived query.
+
+For one registered source it returns:
+- direct `used_by_records` routes;
+- assertion-derived record routes;
+- their union as affected review candidates;
+- unresolved assertion record links;
+- unresolved direct record IDs.
+
+It does not mutate:
+- source state;
+- assertion state;
+- record status;
+- human-view freshness.
+
+Ceilings:
+
+~~~text
+AFFECTED_RECORD != FALSE_RECORD
+REVIEW_ROUTE != CORRECTION
+NO_ASSERTION_EDGE != NO_RECORD_DEPENDENCY
+ROUTE_DERIVED != COMPLETE_DEPENDENCY_PROOF
+~~~
+
+The tests cover:
+1. direct-only route survives without any assertion edge;
+2. unresolved direct record IDs remain visible;
+3. assertion route can add a second affected record;
+4. direct + assertion routes deduplicate;
+5. assertion-only source can still route to a record;
+6. unresolved assertion record link remains visible;
+7. unknown source fails;
+8. public URL / repository path normalisation resolves to the same catalogue record.
+
+Hosted result at exact head
+`bf68bf19b5ad9a81d9c3a22408bea291a00ebdaf`:
+
+`Validate Human Record integrity — run 151 / 35466822817 — SUCCESS`
+
+This is the first executable correction-impact routing check produced by the RFC.
+
+It does **not** establish dependency completeness.
+
+The current limit remains:
+
+~~~text
+CURRENT REGISTERED RELATIONS
+-> REVIEW CANDIDATES
+
+UNREGISTERED / IMPLICIT DEPENDENCY
+-> MAY STILL BE MISSED
+~~~
+
+Codex explicitly did not exhaustively trace record-local prose, all ancestry relations or
+implicit historical-source identity.
+
+---
+
+## 10. Architectural result after the audit
+
+The new implementation evidence strengthens the narrow architecture while adding a
+ceiling:
+
+~~~text
+NEW SHARED DEPENDENCY TYPE = NOT EARNED
+
+DERIVED IMPACT QUERY = EARNED
+
+DIRECT RECORD ROUTE
+UNION
+ASSERTION-DERIVED ROUTE
+= CURRENT SMALLEST HELP
+~~~
+
+This is materially different from adding a dependency ontology.
+
+The next pressure is not to store more edges by default.
+
+It is to discover whether a **real material dependency** exists that cannot be recovered
+from current direct routes, assertion evidence, record-local structures or stronger-owner
+relations.
