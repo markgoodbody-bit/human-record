@@ -1,6 +1,6 @@
 {
   "format": "human-record-assertion-registry/0.1",
-  "updated": "2026-09-19",
+  "updated": "2026-09-20",
   "purpose": "Sparse cross-record assertions whose evidence/state need durable reference. This is not a universal truth graph and does not replace record-specific structures.",
   "model": "https://thehumanrecord.net/ASSERTION_MODEL.md",
   "assertions": [
@@ -91,10 +91,10 @@
         ]
       },
       "scope": {
-        "record_version": "0.2.7",
+        "record_version": "0.2.8",
         "historical_truth_status": "unknown",
-        "meaning": "The bounded sources checked by the current record, now including a selected Westermann 1940 campaign passage, a targeted full-text search of an unauthenticated full Westermann reproduction, and an Overmans publisher-preview scope check, do not establish the claimed aggregate German flak-crew mortality rate.",
-        "not_established": "That the claim is false, that the archive/book search is exhaustive, that the Westermann reproductions are authenticated against the publisher edition, that the relevant Overmans result tables or any flak-specific breakdown were inspected, that an 80-percent Allied flak-casualty passage is ancestral to the viral claim, or that no earlier source contains the figure."
+        "meaning": "The bounded sources checked by the current record, now including a selected Westermann 1940 campaign passage, a targeted full-text search of an unauthenticated full Westermann reproduction, an Overmans publisher-preview scope check, and a narrowed catalogue-level route to Westermann note 75's N 529/7 and RL 12/457 archival citations, do not establish the claimed aggregate German flak-crew mortality rate.",
+        "not_established": "That the claim is false; that the archive/book search is exhaustive; that the Westermann reproductions are authenticated against the publisher edition; that the N 529/7 or RL 12/457 archival pages were inspected or independently establish the 60/890 casualty figure; that the relevant Overmans result tables or any flak-specific breakdown were inspected; that an 80-percent Allied flak-casualty passage is ancestral to the viral claim; or that no earlier source contains the figure."
       },
       "record_links": [
         "cases/viral-flak-claim.json",
