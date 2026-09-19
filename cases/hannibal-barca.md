@@ -87,26 +87,29 @@ This record uses four bounded passages:
 - **3.56.3–4** — Polybius reports Hannibal's post-crossing force totals and attributes them to an inscription/column at Lacinium. This record does **not** establish that the carrier described here is physically identical to the bronze tablet described at 3.33.17–18.
 
 
-#### Greek source-literal check at 3.33.17–18
+#### Greek vocabulary-index check at 3.33.17–18
 
 Perseus identifies a Greek edition of Polybius as
 `urn:cts:greekLit:tlg0543.tlg001.perseus-grc2`, based on the Büttner-Wobst
-edition. THR inspected the passage-specific vocabulary/token lists for
-**3.33.17** and **3.33.18**. Each list contains **Ἀννίβας** once.
+edition. THR inspected the passage-specific vocabulary/lemma lists for
+**3.33.17** and **3.33.18**. Each list associates its section with the lemma
+**Ἀννίβας** once.
 
 Routes:
 - https://vocab.perseus.org/word-list/urn:cts:greekLit:tlg0543.tlg001.perseus-grc2:3.33.17/
 - https://vocab.perseus.org/word-list/urn:cts:greekLit:tlg0543.tlg001.perseus-grc2:3.33.18/
 
-This is a bounded token-level check of the named passage, not a manuscript
-inspection or a complete Greek-text audit. The Scaife full-reader route was not
-available through this aperture, and the other THR-cited Polybius passages were
-not upgraded by this check.
+This is a bounded vocabulary-index check of the named sections, not direct
+inspection of the inflected Greek source-text spelling, a manuscript inspection,
+or a complete Greek-text audit. The Scaife full-reader route was not available
+through this aperture, and the other THR-cited Polybius passages were not upgraded
+by this check.
 
 ```text
-GREEK NAME FORM ATTESTED != HISTORICAL IDENTITY PROVED
-PASSAGE TOKEN LIST != MANUSCRIPT WITNESS
-ONE PASSAGE CHECK != WHOLE BOOK VERIFIED
+VOCABULARY LEMMA != SOURCE-LITERAL SPELLING
+LEMMA ASSOCIATION != HISTORICAL IDENTITY PROVED
+PASSAGE INDEX != MANUSCRIPT WITNESS
+ONE INDEX CHECK != WHOLE BOOK VERIFIED
 ```
 
 ### Cornelius Nepos, *Life of Hannibal* 13.3
