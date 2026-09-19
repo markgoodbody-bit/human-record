@@ -118,16 +118,20 @@ The subject, denominator and event have changed completely.
 
 The Human Record does **not** currently have evidence that the 2025 video, its writer, or an intermediate source used this Westermann passage. Wording similarity, numerical similarity and chronology are not transmission evidence. This is therefore a **specific phrase-level analogue relevant to the mutation hypothesis**, not a source-ancestry finding and not a claim that Westermann is the origin of the viral statistic.
 
+Westermann's footnote 17 gives the underlying research route more precisely: **Bomber Command Operational Research Section Report S-91, _Night-Bomber Losses on German Targets, 1942_ (12 April 1943), Air Historical Branch**. THR has identified that archival citation route from Westermann's notes but has **not** inspected S-91 itself. Its exact wording, tables and analytical scope therefore remain unverified here.
+
 RAF historical material checked in parallel also uses casualties/losses due to flak for Bomber Command operations, reinforcing the category boundary: in this literature, “flak casualties” can mean casualties **caused by flak**, not casualties **among flak personnel**.
 
 Sources/routes:
 - Westermann reproduction, bounded 1942 Bomber Command passage: https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf
+- Westermann footnote 17: Bomber Command Operational Research Section Report S-91, *Night-Bomber Losses on German Targets, 1942* (12 April 1943), Air Historical Branch — citation route identified; report not inspected by THR.
 - RAF Air Historical Branch, *RAF in the Bombing Offensive Against Germany*, Vol. IV: https://www.raf.mod.uk/what-we-do/our-history/air-historical-branch/second-world-war-campaign-narratives/raf-in-the-bombing-offensive-against-germany-vol-iv-a-period-of-expansion-and-experiment-march-1942-january-1943/
 
 ```text
 SAME NUMBER != SAME CLAIM
 SAME PHRASE / NUMBER != TRANSMISSION
 PHRASE-LEVEL ANALOGUE != SOURCE ANCESTRY
+ARCHIVAL CITATION ROUTE IDENTIFIED != UNDERLYING REPORT INSPECTED
 ```
 
 ### A selected Westermann passage now narrows the source boundary
