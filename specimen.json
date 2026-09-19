@@ -1,239 +1,300 @@
 {
- "format": "human-record-specimen/0.1",
- "status": "SPECIMEN / ONE WORK / EXTERNALLY CHECKED ON ONE DAY / NOT A DETECTOR / NOT CANON",
- "artefact": {
-  "creator": "Winslow Homer",
-  "creator_dates": "1836-1910",
-  "title": "Camp Fire",
-  "date": "1880",
-  "medium": "Oil on canvas",
-  "owner": "The Metropolitan Museum of Art",
-  "accession": "27.181",
-  "credit_line": "Gift of Josephine Pomeroy Hendrick, in the name of Henry Keney Pomeroy, 1927",
-  "rights": "Public Domain; The Met Open Access (CC0)",
-  "rights_field_status": "legacy combined label; see rights_layers for separated scopes",
-  "object_url": "https://www.metmuseum.org/art/collection/search/11112",
-  "identity_assertions_observed_at": "2026-09-14T20:46:10Z",
-  "identity_assertions_basis": "The identity fields in this specimen were reconciled against The Met public object API at this time; the timestamp does not make them permanently current."
- },
- "selection": {
-  "selected_from": "not_recorded",
-  "pool_snapshot_hash": "not_recorded",
-  "not_recorded": ["the candidate pool at selection time", "alternatives considered at selection time"],
-  "date": "2026-09-14",
-  "chosen_by": "Framework direction in COM #76; Claude Code executed the first specimen build.",
-  "basis": "Camp Fire already had a maintained PSFH provenance record and retained museum image bytes, making it the lowest-burden real first specimen.",
-  "boundary": "Selection records convenience and available evidence, not significance, representativeness, aesthetic ranking or canon."
- },
- "purpose_boundary": {
-  "tested_here": "Provenance-record plumbing: owner-source reconciliation, digital byte identity, explicit unknowns, repeatability, machine/human readability and correction.",
-  "not_tested_here": "Whether the Human Record can materially help with contemporaneous human-creation provenance when synthetic and human outputs are genuinely ambiguous. An 1880 work predates that ambiguity and cannot falsify that motivating claim.",
-  "expansion_authority": "This boundary does not authorize specimen 2. A modern or living-creator case would be a separate decision if later earned."
- },
- "rights_layers": {
-  "rights_of_work": {
-   "label": "Public Domain",
-   "evidence": "The Met object API reported isPublicDomain=true at the owner-source fetch recorded below.",
-   "boundary": "This records the institution's public-domain designation; it is not an independent legal adjudication of every right or jurisdiction."
+  "format": "human-record-specimen/0.1",
+  "status": "SPECIMEN / ONE WORK / EXTERNALLY CHECKED ON ONE DAY / NOT A DETECTOR / NOT CANON",
+  "artefact": {
+    "creator": "Winslow Homer",
+    "creator_dates": "1836-1910",
+    "title": "Camp Fire",
+    "date": "1880",
+    "medium": "Oil on canvas",
+    "owner": "The Metropolitan Museum of Art",
+    "accession": "27.181",
+    "credit_line": "Gift of Josephine Pomeroy Hendrick, in the name of Henry Keney Pomeroy, 1927",
+    "rights": "Public Domain; The Met Open Access (CC0)",
+    "rights_field_status": "legacy combined label; see rights_layers for separated scopes",
+    "object_url": "https://www.metmuseum.org/art/collection/search/11112",
+    "identity_assertions_observed_at": "2026-09-14T20:46:10Z",
+    "identity_assertions_basis": "The identity fields in this specimen were reconciled against The Met public object API at this time; the timestamp does not make them permanently current."
   },
-  "rights_of_reproduction": {
-   "label": "The Met Open Access (CC0)",
-   "evidence": "The maintained PSFH source record attributes the museum-published image to The Met Open Access policy and links the museum image-resources policy. The specimen witness verified the museum image bytes against the PSFH copy, but did not independently re-adjudicate reproduction rights.",
-   "applies_to": "The museum-published image and the byte-identical PSFH copy as recorded here, not museum text, metadata, trademarks, privacy/publicity interests or unrelated material.",
-   "boundary": "Rights in the historical work and permission/status for a particular digital reproduction are different layers."
-  }
- },
- "owner_sources": [
-  {
-   "kind": "museum_api",
-   "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/11112",
-   "fetched_at": "2026-09-14T20:46:10Z",
-   "response_sha256": "ac9523985b49a6e8a6e9b0dc18987eee84162802d0cce6b09581d102d0df891a",
-   "metadata_date_reported": "2026-01-14T04:51:02.887Z"
+  "selection": {
+    "selected_from": "not_recorded",
+    "pool_snapshot_hash": "not_recorded",
+    "not_recorded": [
+      "the candidate pool at selection time",
+      "alternatives considered at selection time"
+    ],
+    "date": "2026-09-14",
+    "chosen_by": "Framework direction in COM #76; Claude Code executed the first specimen build.",
+    "basis": "Camp Fire already had a maintained PSFH provenance record and retained museum image bytes, making it the lowest-burden real first specimen.",
+    "boundary": "Selection records convenience and available evidence, not significance, representativeness, aesthetic ranking or canon."
   },
-  {
-   "kind": "museum_primary_image",
-   "url": "https://images.metmuseum.org/CRDImages/ad/original/DT2829.jpg",
-   "fetched_at": "2026-09-14T20:46:10Z",
-   "bytes": 2350423,
-   "sha256": "7b02049468877e8e69b2faf183e7842ecb6577b08edc2a3f4a594d1bbeb577e1"
-  }
- ],
- "our_copy": {
-  "url": "https://pleasestartfromhere.com/art/camp-fire.jpg",
-  "record": "https://pleasestartfromhere.com/art/camp-fire.json",
-  "bytes": 2350423,
-  "sha256": "7b02049468877e8e69b2faf183e7842ecb6577b08edc2a3f4a594d1bbeb577e1"
- },
- "reconciliation": {
-  "fields_compared": [
-   {
-    "field": "title",
-    "owner": "Camp Fire",
-    "ours": "Camp Fire",
-    "match": true
-   },
-   {
-    "field": "artist",
-    "owner": "Winslow Homer",
-    "ours": "Winslow Homer",
-    "match": true
-   },
-   {
-    "field": "date",
-    "owner": "1880",
-    "ours": "1880",
-    "match": true
-   },
-   {
-    "field": "accession",
-    "owner": "27.181",
-    "ours": "27.181",
-    "match": true
-   },
-   {
-    "field": "medium",
-    "owner": "Oil on canvas",
-    "ours": "Oil on canvas",
-    "match": true
-   },
-   {
-    "field": "credit",
-    "owner": "Gift of Josephine Pomeroy Hendrick, in the name of Henry Keney Pomeroy, 1927",
-    "ours": "Gift of Josephine Pomeroy Hendrick, in the name of Henry Keney Pomeroy, 1927",
-    "match": true
-   },
-   {
-    "field": "public domain",
-    "owner": "True",
-    "ours": "True",
-    "match": true
-   },
-   {
-    "field": "artist dates",
-    "owner": "1836-1910",
-    "ours": "1836–1910",
-    "match": false
-   }
+  "purpose_boundary": {
+    "tested_here": "Provenance-record plumbing: owner-source reconciliation, digital byte identity, explicit unknowns, repeatability, machine/human readability and correction.",
+    "not_tested_here": "Whether the Human Record can materially help with contemporaneous human-creation provenance when synthetic and human outputs are genuinely ambiguous. An 1880 work predates that ambiguity and cannot falsify that motivating claim.",
+    "expansion_authority": "This boundary does not authorize specimen 2. A modern or living-creator case would be a separate decision if later earned."
+  },
+  "rights_layers": {
+    "rights_of_work": {
+      "label": "Public Domain",
+      "evidence": "The Met object API reported isPublicDomain=true at the owner-source fetch recorded below.",
+      "boundary": "This records the institution's public-domain designation; it is not an independent legal adjudication of every right or jurisdiction."
+    },
+    "rights_of_reproduction": {
+      "label": "The Met Open Access (CC0)",
+      "evidence": "The maintained PSFH source record attributes the museum-published image to The Met Open Access policy and links the museum image-resources policy. The specimen witness verified the museum image bytes against the PSFH copy, but did not independently re-adjudicate reproduction rights.",
+      "applies_to": "The museum-published image and the byte-identical PSFH copy as recorded here, not museum text, metadata, trademarks, privacy/publicity interests or unrelated material.",
+      "boundary": "Rights in the historical work and permission/status for a particular digital reproduction are different layers."
+    }
+  },
+  "owner_sources": [
+    {
+      "kind": "museum_api",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/11112",
+      "fetched_at": "2026-09-14T20:46:10Z",
+      "response_sha256": "ac9523985b49a6e8a6e9b0dc18987eee84162802d0cce6b09581d102d0df891a",
+      "metadata_date_reported": "2026-01-14T04:51:02.887Z"
+    },
+    {
+      "kind": "museum_primary_image",
+      "url": "https://images.metmuseum.org/CRDImages/ad/original/DT2829.jpg",
+      "fetched_at": "2026-09-14T20:46:10Z",
+      "bytes": 2350423,
+      "sha256": "7b02049468877e8e69b2faf183e7842ecb6577b08edc2a3f4a594d1bbeb577e1"
+    }
   ],
-  "image_bytes_identical": true,
-  "differences": [
-   "artist_dates: en dash in ours vs two integers in the owner API (typographic)"
-  ]
- },
- "epistemic_boundaries": {
-  "human_lineage_basis": {
-   "kind": "owner_attribution_plus_present_day_reconciliation",
-   "claim": "The Met attributes this physical artwork to Winslow Homer and dates it 1880; this specimen records that attribution and a present-day reconciliation.",
-   "not_established": "Independent observation or proof of the 1880 creation event."
+  "our_copy": {
+    "url": "https://pleasestartfromhere.com/art/camp-fire.jpg",
+    "record": "https://pleasestartfromhere.com/art/camp-fire.json",
+    "bytes": 2350423,
+    "sha256": "7b02049468877e8e69b2faf183e7842ecb6577b08edc2a3f4a594d1bbeb577e1"
   },
-  "source_independence": {
-   "endpoint_count": 2,
-   "independence_group_count": 1,
-   "independence_group": "The Metropolitan Museum of Art",
-   "cross_endpoint_independent": false,
-   "reason": "The API record and primary-image endpoint are two endpoints controlled by the same institution; they are not independent witnesses."
+  "reconciliation": {
+    "fields_compared": [
+      {
+        "field": "title",
+        "owner": "Camp Fire",
+        "ours": "Camp Fire",
+        "match": true
+      },
+      {
+        "field": "artist",
+        "owner": "Winslow Homer",
+        "ours": "Winslow Homer",
+        "match": true
+      },
+      {
+        "field": "date",
+        "owner": "1880",
+        "ours": "1880",
+        "match": true
+      },
+      {
+        "field": "accession",
+        "owner": "27.181",
+        "ours": "27.181",
+        "match": true
+      },
+      {
+        "field": "medium",
+        "owner": "Oil on canvas",
+        "ours": "Oil on canvas",
+        "match": true
+      },
+      {
+        "field": "credit",
+        "owner": "Gift of Josephine Pomeroy Hendrick, in the name of Henry Keney Pomeroy, 1927",
+        "ours": "Gift of Josephine Pomeroy Hendrick, in the name of Henry Keney Pomeroy, 1927",
+        "match": true
+      },
+      {
+        "field": "public domain",
+        "owner": "True",
+        "ours": "True",
+        "match": true
+      },
+      {
+        "field": "artist dates",
+        "owner": "1836-1910",
+        "ours": "1836–1910",
+        "match": false
+      }
+    ],
+    "image_bytes_identical": true,
+    "differences": [
+      "artist_dates: en dash in ours vs two integers in the owner API (typographic)"
+    ]
   },
-  "source_preservation": {
-   "museum_api_response": "SHA-256 recorded; response bytes are not preserved by this specimen.",
-   "museum_primary_image": "A byte-identical copy was observed at the PSFH URL at fetch time; the source URL itself is not preserved or made immutable by this record.",
-   "warning": "A recorded source link or hash does not by itself preserve the source or prove its truth."
+  "epistemic_boundaries": {
+    "human_lineage_basis": {
+      "kind": "owner_attribution_plus_present_day_reconciliation",
+      "claim": "The Met attributes this physical artwork to Winslow Homer and dates it 1880; this specimen records that attribution and a present-day reconciliation.",
+      "not_established": "Independent observation or proof of the 1880 creation event."
+    },
+    "source_independence": {
+      "endpoint_count": 2,
+      "independence_group_count": 1,
+      "independence_group": "The Metropolitan Museum of Art",
+      "cross_endpoint_independent": false,
+      "reason": "The API record and primary-image endpoint are two endpoints controlled by the same institution; they are not independent witnesses."
+    },
+    "source_preservation": {
+      "museum_api_response": "SHA-256 recorded; response bytes are not preserved by this specimen.",
+      "museum_primary_image": "A byte-identical copy was observed at the PSFH URL at fetch time; the source URL itself is not preserved or made immutable by this record.",
+      "warning": "A recorded source link or hash does not by itself preserve the source or prove its truth."
+    },
+    "record_event_separation": "This record documents observations made on 2026-09-14. It is not the 1880 creation event and does not change that event."
   },
-  "record_event_separation": "This record documents observations made on 2026-09-14. It is not the 1880 creation event and does not change that event."
- },
- "not_established": [
-  "that the owner's record is correct",
-  "custody before 1927",
-  "that the bytes are the painting rather than the owner's published photograph",
-  "anything about other artefacts",
-  "that this nineteenth-century specimen demonstrates usefulness against synthetic-era provenance ambiguity"
- ],
- "witness": {
-  "by": "Claude Code / cc-relay",
-  "method": "fetch owner record and primary image; hash; compare to our record and served copy; write agreement and differences",
-  "repeat": [
-   "curl --fail --silent --show-error --location https://collectionapi.metmuseum.org/public/collection/v1/objects/11112",
-   "bash -o pipefail -c 'curl --fail --silent --show-error --location https://images.metmuseum.org/CRDImages/ad/original/DT2829.jpg | sha256sum'",
-   "bash -o pipefail -c 'curl --fail --silent --show-error --location https://pleasestartfromhere.com/art/camp-fire.jpg | sha256sum'"
-  ]
- },
- "corrections": [
-  {
-   "date": "2026-09-16",
-   "by": "Framework",
-   "kind": "operational_route_and_source_ownership_repair",
-   "change_reference": "COM #347",
-   "change": "Moved the current correction repository/path from the earlier COM specimen tree to the public Human Record repository and recorded COM as historical build/source lineage rather than an operational dependency. No 2026-09-14 evidence, attribution, hash, reconciliation or source-independence finding changed.",
-   "original_observation_changed": false,
-   "fresh_external_witness": false
+  "not_established": [
+    "that the owner's record is correct",
+    "ownership or custody before Thomas B. Clarke and the circumstances by which he reportedly acquired the work",
+    "continuous physical custody and legal title across the reported Clarke -> 1899 sale/agent -> Pomeroy -> 1927 gift route",
+    "that the bytes are the painting rather than the owner's published photograph",
+    "anything about other artefacts",
+    "that this nineteenth-century specimen demonstrates usefulness against synthetic-era provenance ambiguity"
+  ],
+  "witness": {
+    "by": "Claude Code / cc-relay",
+    "method": "fetch owner record and primary image; hash; compare to our record and served copy; write agreement and differences",
+    "repeat": [
+      "curl --fail --silent --show-error --location https://collectionapi.metmuseum.org/public/collection/v1/objects/11112",
+      "bash -o pipefail -c 'curl --fail --silent --show-error --location https://images.metmuseum.org/CRDImages/ad/original/DT2829.jpg | sha256sum'",
+      "bash -o pipefail -c 'curl --fail --silent --show-error --location https://pleasestartfromhere.com/art/camp-fire.jpg | sha256sum'"
+    ]
   },
-  {
-   "date": "2026-09-16",
-   "by": "Codex; contribution by lucykimi",
-   "kind": "selection_gap_disposition",
-   "source": "https://1f916.ai/api/post/5356",
-   "comment_id": 63242,
-   "disposition": "partially_accepted",
-   "change": "Added explicit missing selection-pool records. Preserved date, chosen_by, basis and boundary; declined replacement of the recorded selection reason with the specimen's purpose limitation.",
-   "original_observation_changed": false,
-   "fresh_external_witness": false
+  "corrections": [
+    {
+      "date": "2026-09-19",
+      "by": "Framework",
+      "kind": "reported_collection_history_boundary_repair",
+      "change": "Replaced the overbroad statement that pre-1927 custody was wholly unknown with a bounded Met-reported collection history (Clarke 1880-1899; 1899 sale/agent; Pomeroy 1899-1927; 1927 gift) plus selected 1893 and 1911 historical re-observations. The repair does not claim continuous physical custody, legal title, exact 1899 transfer mechanics, or independent proof of creation.",
+      "original_observation_changed": false,
+      "fresh_historical_source_inspection": true
+    },
+    {
+      "date": "2026-09-16",
+      "by": "Framework",
+      "kind": "operational_route_and_source_ownership_repair",
+      "change_reference": "COM #347",
+      "change": "Moved the current correction repository/path from the earlier COM specimen tree to the public Human Record repository and recorded COM as historical build/source lineage rather than an operational dependency. No 2026-09-14 evidence, attribution, hash, reconciliation or source-independence finding changed.",
+      "original_observation_changed": false,
+      "fresh_external_witness": false
+    },
+    {
+      "date": "2026-09-16",
+      "by": "Codex; contribution by lucykimi",
+      "kind": "selection_gap_disposition",
+      "source": "https://1f916.ai/api/post/5356",
+      "comment_id": 63242,
+      "disposition": "partially_accepted",
+      "change": "Added explicit missing selection-pool records. Preserved date, chosen_by, basis and boundary; declined replacement of the recorded selection reason with the specimen's purpose limitation.",
+      "original_observation_changed": false,
+      "fresh_external_witness": false
+    },
+    {
+      "date": "2026-09-16",
+      "by": "Codex; challenge by Eevee-Agent",
+      "kind": "authorship_limit_disposition",
+      "source": "https://1f916.ai/api/post/5356",
+      "comment_id": 63102,
+      "disposition": "partially_accepted_no_factual_change",
+      "change": "Accepted the already-recorded synthetic-era purpose limitation. Declined a universal checked/claimed date boundary: historical attribution is also an evidenced claim, not independent observation of creation. No new authorship evidence examined.",
+      "original_observation_changed": false,
+      "fresh_external_witness": false
+    },
+    {
+      "date": "2026-09-14",
+      "by": "Codex",
+      "kind": "recheck_procedure_and_attribution_repair",
+      "change": "Added HTTP/pipeline failure handling and narrowed hash mismatch from an asserted cause to an observed byte difference with cause unresolved.",
+      "original_observation_changed": false,
+      "fresh_external_witness": false
+    },
+    {
+      "date": "2026-09-14",
+      "by": "Build Framework",
+      "kind": "machine_readable_epistemic_and_scope_repair",
+      "change_reference": "COM PR #328",
+      "change": "Made source independence, source-preservation, record/event, selection, rights-layer, purpose-test and correction-route boundaries explicit without changing the original observation values or hashes.",
+      "original_observation_changed": false,
+      "fresh_external_witness": false
+    }
+  ],
+  "correction_route": {
+    "repository": "https://github.com/markgoodbody-bit/human-record",
+    "path": "specimen.json",
+    "human_readable_companion": "specimen.md",
+    "instructions": "https://thehumanrecord.net/CONTRIBUTE.md",
+    "issue_route": "https://github.com/markgoodbody-bit/human-record/issues/new",
+    "historical_source_lineage": "Earlier project copies and review history exist in markgoodbody-bit/COM; those are build/source provenance, not the current operational correction store.",
+    "practice": "Propose a dated correction or a fresh recheck; preserve the original observation and hashes unless evidence shows they were recorded incorrectly.",
+    "access_limit": "The direct repository proposal route is GitHub-based and may require a GitHub account. This specimen does not establish an account-free public correction channel."
   },
-  {
-   "date": "2026-09-16",
-   "by": "Codex; challenge by Eevee-Agent",
-   "kind": "authorship_limit_disposition",
-   "source": "https://1f916.ai/api/post/5356",
-   "comment_id": 63102,
-   "disposition": "partially_accepted_no_factual_change",
-   "change": "Accepted the already-recorded synthetic-era purpose limitation. Declined a universal checked/claimed date boundary: historical attribution is also an evidenced claim, not independent observation of creation. No new authorship evidence examined.",
-   "original_observation_changed": false,
-   "fresh_external_witness": false
-  },
-  {
-   "date": "2026-09-14",
-   "by": "Codex",
-   "kind": "recheck_procedure_and_attribution_repair",
-   "change": "Added HTTP/pipeline failure handling and narrowed hash mismatch from an asserted cause to an observed byte difference with cause unresolved.",
-   "original_observation_changed": false,
-   "fresh_external_witness": false
-  },
-  {
-   "date": "2026-09-14",
-   "by": "Build Framework",
-   "kind": "machine_readable_epistemic_and_scope_repair",
-   "change_reference": "COM PR #328",
-   "change": "Made source independence, source-preservation, record/event, selection, rights-layer, purpose-test and correction-route boundaries explicit without changing the original observation values or hashes.",
-   "original_observation_changed": false,
-   "fresh_external_witness": false
+  "ceilings": [
+    "EVIDENCE != INFERENCE",
+    "UNKNOWN != ABSENT",
+    "PROVENANCE != AUTHORSHIP_DETECTOR",
+    "RECORD != EVENT",
+    "AI_CURATION != UNBIASED_HISTORY",
+    "SOURCE_LINK != SOURCE_PRESERVED",
+    "HASH != TRUTH",
+    "INSTITUTIONAL_RECORD != INFALLIBILITY",
+    "MULTIPLE_SOURCES != INDEPENDENT_SOURCES",
+    "CORRECTED_RECORD != ORIGINAL_EVENT_CHANGED",
+    "SELECTION != SIGNIFICANCE",
+    "WORK_RIGHTS != REPRODUCTION_RIGHTS",
+    "PLUMBING_SPECIMEN != SYNTHETIC_ERA_PURPOSE_TEST",
+    "OBSERVED_AT != PERMANENTLY_CURRENT",
+    "A_MUSEUM_RECORD_MATCHED != A_MUSEUM_RECORD_PROVED",
+    "BYTES_IDENTICAL_TODAY != BYTES_IDENTICAL_FOREVER",
+    "BUILD_PROVENANCE != CURRENT_RECORD_AUTHORITY",
+    "REPORTED_COLLECTION_HISTORY != CONTINUOUS_PHYSICAL_CUSTODY_PROOF",
+    "EXHIBITION_LOAN != TITLE_TRANSFER_PROOF",
+    "SALE_REFERENCE != CREATION_EVENT_PROOF"
+  ],
+  "reported_collection_history": {
+    "status": "owner_reported_chain_with_selected_historical_reobservations",
+    "observed_at": "2026-09-19",
+    "basis": {
+      "met_1985_catalogue_source_id": "thr:source:2f8b9c4d-1a73-4e65-9b20-6d7c8e9f0a31",
+      "historical_reobservation_source_ids": [
+        "thr:source:7c31e5a9-4b82-4d60-9f17-2a3b5c6d7e80",
+        "thr:source:5a92d4c7-8e31-4f60-b219-3c4d5e6f7081"
+      ]
+    },
+    "entries": [
+      {
+        "period": "1880-1899",
+        "reported_holder": "Thomas B. Clarke, New York",
+        "basis": "The Met's 1985 catalogue reports Clarke in the Ex Coll. chain for 1880-1899.",
+        "historical_reobservation": "The 1893 World's Columbian Exposition official catalogue lists Camp Fire (no. 568) among seven Homer paintings lent by Thomas B. Clarke.",
+        "boundary": "The historical exhibition record re-observes Clarke's association with the work by 1893. It does not independently prove acquisition in 1880, legal title, or uninterrupted physical custody through 1899."
+      },
+      {
+        "date": "1899",
+        "reported_transition": "Thomas B. Clarke sale -> Alexander Harrison as agent -> Henry K. Pomeroy",
+        "basis": "The Met's 1985 catalogue reports the American Art Galleries sale on 16 February 1899, no. 239, $700; Alexander Harrison as agent; and Henry K. Pomeroy from 1899.",
+        "historical_reobservation": "The Metropolitan Museum's 1911 Winslow Homer loan catalogue describes Camp Fire as 'From the Thomas B. Clarke Sale, 1899' and lent by H. K. Pomroy.",
+        "boundary": "The 1911 catalogue supports a Clarke-sale-to-Pomeroy provenance route but does not itself establish the exact agency transaction, legal-title mechanics, or every custody handoff."
+      },
+      {
+        "period": "1899-1927",
+        "reported_holder": "Henry K. Pomeroy, New York",
+        "basis": "The Met's 1985 catalogue reports Pomeroy in the Ex Coll. chain for 1899-1927; the 1911 Met loan catalogue lists H. K. Pomroy as lender.",
+        "boundary": "Collection/exhibition records support the association but do not prove continuous physical custody."
+      },
+      {
+        "date": "1927",
+        "reported_transition": "Gift to The Metropolitan Museum of Art",
+        "basis": "The current Met credit line records 'Gift of Josephine Pomeroy Hendrick, in the name of Henry Keney Pomeroy, 1927'; the 1985 catalogue lists Gift of Henry Keney Pomeroy, 1927.",
+        "boundary": "The record preserves the institutional wording difference rather than silently reconciling the donor phrasing."
+      }
+    ],
+    "not_established": [
+      "ownership or custody before Thomas B. Clarke, including the circumstances by which Clarke reportedly acquired the work",
+      "continuous physical custody or legal title across every point from 1880 to 1927",
+      "the exact legal/agency mechanics of the 1899 Clarke-sale transition",
+      "independent observation or proof of the 1880 creation event"
+    ],
+    "boundary": "REPORTED COLLECTION HISTORY != CONTINUOUS PHYSICAL CUSTODY PROOF"
   }
- ],
- "correction_route": {
-  "repository": "https://github.com/markgoodbody-bit/human-record",
-  "path": "specimen.json",
-  "human_readable_companion": "specimen.md",
-  "instructions": "https://thehumanrecord.net/CONTRIBUTE.md",
-  "issue_route": "https://github.com/markgoodbody-bit/human-record/issues/new",
-  "historical_source_lineage": "Earlier project copies and review history exist in markgoodbody-bit/COM; those are build/source provenance, not the current operational correction store.",
-  "practice": "Propose a dated correction or a fresh recheck; preserve the original observation and hashes unless evidence shows they were recorded incorrectly.",
-  "access_limit": "The direct repository proposal route is GitHub-based and may require a GitHub account. This specimen does not establish an account-free public correction channel."
- },
- "ceilings": [
-  "EVIDENCE != INFERENCE",
-  "UNKNOWN != ABSENT",
-  "PROVENANCE != AUTHORSHIP_DETECTOR",
-  "RECORD != EVENT",
-  "AI_CURATION != UNBIASED_HISTORY",
-  "SOURCE_LINK != SOURCE_PRESERVED",
-  "HASH != TRUTH",
-  "INSTITUTIONAL_RECORD != INFALLIBILITY",
-  "MULTIPLE_SOURCES != INDEPENDENT_SOURCES",
-  "CORRECTED_RECORD != ORIGINAL_EVENT_CHANGED",
-  "SELECTION != SIGNIFICANCE",
-  "WORK_RIGHTS != REPRODUCTION_RIGHTS",
-  "PLUMBING_SPECIMEN != SYNTHETIC_ERA_PURPOSE_TEST",
-  "OBSERVED_AT != PERMANENTLY_CURRENT",
-  "A_MUSEUM_RECORD_MATCHED != A_MUSEUM_RECORD_PROVED",
-  "BYTES_IDENTICAL_TODAY != BYTES_IDENTICAL_FOREVER",
-  "BUILD_PROVENANCE != CURRENT_RECORD_AUTHORITY"
- ]
 }
