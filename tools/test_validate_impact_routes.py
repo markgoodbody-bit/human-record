@@ -202,5 +202,43 @@ class ImpactRouteTests(unittest.TestCase):
         self.assertEqual(result["affected_records"], ["record-a"])
 
 
+class CurrentRegistryImpactRouteSmokeTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.root = Path(__file__).resolve().parents[1]
+        cls.catalog = json.loads(
+            (cls.root / "records/catalog.json").read_text(encoding="utf-8")
+        )
+        cls.sources = json.loads(
+            (cls.root / "registry/sources.json").read_text(encoding="utf-8")
+        )["sources"]
+
+    def test_current_catalogue_routes_are_accepted(self):
+        index = impact_routes.catalog_path_index(self.catalog)
+        self.assertTrue(index)
+        for record in self.catalog["records"]:
+            for field in ("full_human_record", "machine_record", "human_view"):
+                raw = record.get(field)
+                if raw is None:
+                    continue
+                path = impact_routes.repo_path(raw)
+                self.assertIsNotNone(path, (record["id"], field, raw))
+                self.assertEqual(index[path], record["id"])
+
+    def test_current_registered_sources_preserve_direct_routes(self):
+        for source in self.sources:
+            with self.subTest(source_id=source["id"]):
+                result = impact_routes.derive_impact_routes(
+                    self.root, source["id"]
+                )
+                expected = set(source.get("used_by_records", []))
+                self.assertTrue(
+                    expected.issubset(set(result["affected_records"]))
+                )
+                self.assertEqual(
+                    result["unresolved_direct_used_by_records"], []
+                )
+
+
 if __name__ == "__main__":
     unittest.main()
