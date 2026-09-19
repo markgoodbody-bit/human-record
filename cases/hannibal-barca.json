@@ -46,7 +46,7 @@
     "external_identifiers": [],
     "notes": [
       "Thin routing anchor for the historical human conventionally called Hannibal Barca; exact dates, appearance, routes and biographical details are not identity-key material.",
-      "The checked Nepos Latin passage attests the literal string 'Hannibal'. The checked Polybius English reading surface renders the name as 'Hannibal'; a separate Perseus Greek-edition passage-token check at 3.33.17-18 attests the Greek form 'Ἀννίβας' in both sections. The fuller modern display label remains conventional rather than claimed as source-attested by every checked surface.",
+      "The checked Nepos Latin passage attests the literal string 'Hannibal'. The checked Polybius English reading surface renders the name as 'Hannibal'; a separate Perseus passage-vocabulary index associates 3.33.17 and 3.33.18 with lemma 'Ἀννίβας'. Framework did not directly inspect the inflected Greek source-text spelling in those sections. The fuller modern display label remains conventional.",
       "Two public source-literal mentions remain candidate-linked rather than silently upgraded into identity certainty."
     ]
   },
@@ -119,7 +119,7 @@
     {
       "id": "thr:source:8584dd6b-5940-4805-902a-c11fce3c3675",
       "kind": "digital_text_edition_index",
-      "title": "Polybius, Histories — Perseus Greek edition (Büttner-Wobst), passage vocabulary for 3.33.17-18",
+      "title": "Polybius, Histories — Perseus Greek edition passage vocabulary index for 3.33.17-18",
       "publisher": "Perseus Digital Library / Scaife vocabulary tooling",
       "locators": [
         {
@@ -146,11 +146,11 @@
           "outcome": "partial",
           "record_basis": "cases/hannibal-barca.json Greek source-literal boundary for Polybius 3.33.17-18",
           "digest": null,
-          "scope": "Passage-specific Greek vocabulary/token lists for Polybius Histories 3.33.17 and 3.33.18 in urn:cts:greekLit:tlg0543.tlg001.perseus-grc2; used only to verify that the lemma/form Ἀννίβας occurs in both cited sections. Full Greek passage text, manuscript witnesses and the other THR-cited Polybius sections were not inspected through this source.",
+          "scope": "Passage-specific Greek vocabulary/lemma lists for Polybius Histories 3.33.17 and 3.33.18 in urn:cts:greekLit:tlg0543.tlg001.perseus-grc2; used only to establish that the index associates both sections with lemma Ἀννίβας. The exact inflected source-text spelling, full Greek passage, manuscript witnesses and the other THR-cited Polybius sections were not inspected through this source.",
           "observer": "Framework",
           "notes": [
-            "The edition is identified by Perseus as the Büttner-Wobst Greek text; the passage word lists show Ἀννίβας once in 3.33.17 and once in 3.33.18.",
-            "PASSAGE TOKEN LIST != MANUSCRIPT WITNESS; GREEK NAME FORM ATTESTED != HISTORICAL IDENTITY PROVED."
+            "The vocabulary pages describe lemma lists rather than a transcription of the passage text; each passage list includes lemma Ἀννίβας once.",
+            "VOCABULARY LEMMA != SOURCE-LITERAL SPELLING; PASSAGE INDEX != MANUSCRIPT WITNESS."
           ]
         }
       ],
@@ -198,7 +198,7 @@
           "entity_id": "thr:entity:68be4504-74ab-48a5-81e3-95fb30242db0",
           "state": "candidate",
           "basis": [
-            "The checked English reading surface at Polybius 3.33.17-18 renders the campaign subject as 'Hannibal'; a separate Perseus Greek-edition passage-token check attests 'Ἀννίβας' in both 3.33.17 and 3.33.18. Linked only as a candidate to the conventional modern Hannibal Barca anchor, not as independent identity proof."
+            "The checked English reading surface at Polybius 3.33.17-18 renders the campaign subject as 'Hannibal'. A separate Perseus passage-vocabulary index associates both sections with lemma 'Ἀννίβας', but Framework did not directly inspect the inflected Greek source-text spelling. Linked only as a candidate to the conventional modern Hannibal Barca anchor, not as independent identity proof."
           ],
           "conflicts": []
         }
@@ -348,25 +348,26 @@
     }
   ],
   "source_relationships": {
-    "checked_text_count": 3,
+    "checked_text_count": 2,
     "independence_status": "not_counted_as_two_independent_witnesses_to_one_event",
     "direct_dependence_between_checked_surfaces": "not_established_by_this_record",
-    "current_aperture": "Greek/Roman-mediated and incomplete; includes one bounded Greek-edition token check for Polybius 3.33.17-18",
-    "ceiling": "SURVIVING_SOURCE != COMPLETE_HISTORY"
+    "current_aperture": "Greek/Roman-mediated and incomplete; includes two ancient-text reading surfaces plus one derived Perseus passage-vocabulary index for Polybius 3.33.17-18.",
+    "ceiling": "SURVIVING_SOURCE != COMPLETE_HISTORY",
+    "derived_index_surface_count": 1
   },
   "current_findings": [
     "Two bounded ancient-text reading surfaces make attributed reports about Hannibal and their own source world inspectable.",
     "Polybius' reports about a Lacinium tablet and his own investigative method remain reports by Polybius, not direct THR observations.",
     "Nepos attests Silenus and Sosylus as companions/historians; their complete works are not represented as inspected THR source objects.",
     "The checked aperture is asymmetric and incomplete; later repetition is not counted as independent corroboration by default.",
-    "A Perseus Greek-edition passage-token check attests the form 'Ἀννίβας' at Polybius 3.33.17 and 3.33.18; this narrows the source-literal boundary only and is not manuscript verification or identity proof."
+    "A Perseus passage-vocabulary index associates Polybius 3.33.17 and 3.33.18 with lemma 'Ἀννίβας'; this is lemma-level indexing, not direct inspection of the inflected Greek source-text spelling, manuscript verification or identity proof."
   ],
   "unknowns": [
     "A complete source genealogy among Polybius, Livy and other surviving writers.",
     "The full Punic/Carthaginian documentary aperture and all surviving fragments.",
     "Whether the Lacinium tablet described at 3.33 and column/inscription at 3.56 are the same physical carrier.",
     "The exact Alpine pass and many other biographical/historical disputes outside this record.",
-    "Manuscript-level verification and full passage-level Greek critical-text inspection beyond the bounded 3.33.17-18 token check.",
+    "Direct inspection of the inflected Greek source-text spelling at 3.33.17-18, manuscript-level verification, and full passage-level Greek critical-text inspection beyond the bounded vocabulary-index check.",
     "Reader benefit from this encounter."
   ],
   "inspection_boundary": {
@@ -376,7 +377,7 @@
     "punic_or_carthaginian_archives": "not_established_absent",
     "ancient_tablet": "reported_by_polybius_not_directly_observed_by_thr",
     "lacinium_carrier_identity": "The relationship or physical identity between the bronze tablet described at 3.33.17-18 and the column/inscription described at 3.56.4 is not established by this fixture.",
-    "polybius_greek_literal": "Perseus Greek-edition passage token lists attest 'Ἀννίβας' at 3.33.17 and 3.33.18; full Greek passage text, manuscript witnesses and the other THR-cited Polybius sections were not inspected through this source."
+    "polybius_greek_literal": "Perseus passage-vocabulary lists associate 3.33.17 and 3.33.18 with lemma 'Ἀννίβας'. Framework did not directly inspect the inflected Greek source-text spelling, full Greek passage, manuscript witnesses or the other THR-cited Polybius sections through this source."
   },
   "strongest_owner": "Classical source criticism, critical editions and specialist ancient-history scholarship own historical reconstruction. THR adds only a cross-record public evidence route and correction surface.",
   "rights_and_custody": {
