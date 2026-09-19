@@ -277,6 +277,36 @@ That is a successful use of the three-level addressability rule.
 
 ---
 
+## 7.1 Independent microcase audit repair
+
+A later bounded Codex audit re-read fresh GitHub run/job metadata and the logs for this
+exact microcase.
+
+It found no mismatch in the preserved run, job, trigger head, executed checkout, source
+blob identities, 103-test result or seven THR-validator warnings.
+
+It did find one forward currentness defect in the first receipt shape:
+
+- GitHub metadata exposes `run_attempt = 1`;
+- the first fixture preserved run number and run ID but not run attempt;
+- a generic workflow-run URL can later represent a rerun attempt;
+- the first fixture also did not preserve when that external metadata was re-observed.
+
+The fixture now records the observed attempt and the audit observation timestamp as a
+**later metadata re-observation**. It does not backfill an invented original receipt
+creation time.
+
+```text
+RUN ID != RUN ATTEMPT
+RUN NUMBER != RUN ATTEMPT
+AUDIT OBSERVATION TIME != ORIGINAL RECEIPT CREATION TIME
+LATER REOBSERVATION != ORIGINAL OBSERVATION
+```
+
+This is a narrow self-description repair. It does not earn a global process schema.
+
+---
+
 ## 8. Hostile cases still unresolved
 
 This microcase does not yet solve:
