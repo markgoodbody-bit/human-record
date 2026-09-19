@@ -1,6 +1,6 @@
 {
   "format": "human-record-source-registry/0.1",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "purpose": "Cross-record source identity, observation and preservation-status index. A source ID is not a truth certificate and a URL is not the source identity.",
   "model": "https://thehumanrecord.net/SOURCE_MODEL.md",
   "sources": [
