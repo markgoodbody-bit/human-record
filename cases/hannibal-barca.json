@@ -1,7 +1,7 @@
 {
   "format": "human-record-historical-person-source-survival/0.1",
   "record_id": "hannibal-source-survival",
-  "record_version": "0.1.0",
+  "record_version": "0.1.1",
   "title": "Hannibal: the person and the accounts that remain",
   "record_type": "historical_person_source_survival",
   "recorded_at": "2026-09-18",
@@ -310,14 +310,15 @@
     "Two bounded ancient-text reading surfaces make attributed reports about Hannibal and their own source world inspectable.",
     "Polybius' reports about a Lacinium tablet and his own investigative method remain reports by Polybius, not direct THR observations.",
     "Nepos attests Silenus and Sosylus as companions/historians; their complete works are not represented as inspected THR source objects.",
-    "The checked aperture is asymmetric and incomplete; later repetition is not counted as independent corroboration by default."
+    "The checked aperture is asymmetric and incomplete; later repetition is not counted as independent corroboration by default.",
+    "Stable classical-text edition identifiers can be added as record-local recovery routes without treating a catalogue identity as manuscript verification or changing any historical assertion."
   ],
   "unknowns": [
     "A complete source genealogy among Polybius, Livy and other surviving writers.",
     "The full Punic/Carthaginian documentary aperture and all surviving fragments.",
     "Whether the Lacinium tablet described at 3.33 and column/inscription at 3.56 are the same physical carrier.",
     "The exact Alpine pass and many other biographical/historical disputes outside this record.",
-    "Manuscript-level or checked critical-edition verification of the quoted web reading surfaces.",
+    "Manuscript-level verification remains unperformed. DCC declares a Rolfe 1929 textual basis with editorial modifications, but THR has not line-by-line collated chapter 13 against that print edition; a stable Perseus Greek Polybius edition route is identified, but THR has not established it as the textual basis of the Paton/Loeb reading surface or newly inspected the Greek source-language passages.",
     "Reader benefit from this encounter."
   ],
   "inspection_boundary": {
@@ -326,7 +327,8 @@
     "livy": "not_counted_as_independent_witness_in_this_fixture",
     "punic_or_carthaginian_archives": "not_established_absent",
     "ancient_tablet": "reported_by_polybius_not_directly_observed_by_thr",
-    "lacinium_carrier_identity": "The relationship or physical identity between the bronze tablet described at 3.33.17-18 and the column/inscription described at 3.56.4 is not established by this fixture."
+    "lacinium_carrier_identity": "The relationship or physical identity between the bronze tablet described at 3.33.17-18 and the column/inscription described at 3.56.4 is not established by this fixture.",
+    "edition_identity": "DCC textual-basis metadata and Perseus CTS edition identities inspected; no manuscript collation, no line-by-line DCC-to-Rolfe collation, and no claim that the Perseus Greek Polybius edition underlies Paton's English translation."
   },
   "strongest_owner": "Classical source criticism, critical editions and specialist ancient-history scholarship own historical reconstruction. THR adds only a cross-record public evidence route and correction surface.",
   "rights_and_custody": {
@@ -344,5 +346,27 @@
     "reader_benefit": "not_established",
     "outside_reader_break_request": "no_reader_specific_outside_falsifier_observed_before_promotion",
     "ceiling": "PUBLICATION != VALIDATION"
-  }
+  },
+  "edition_routes": [
+    {
+      "source_id": "thr:source:8d40b5c1-3eb6-47d3-86e2-48e95853e930",
+      "relationship": "declared_textual_basis_with_editorial_modifications",
+      "basis": "Dickinson College Commentaries credits state that its Latin Prologue and Life of Hannibal are based on J. C. Rolfe's 1929 Loeb edition, with punctuation changes and specified textual alterations.",
+      "work_urn": "urn:cts:latinLit:phi0588.abo023",
+      "edition_urn": "urn:cts:latinLit:phi0588.abo023.opp-lat3",
+      "edition_label": "Cornelius Nepos, Hannibal — J. C. Rolfe, 1929 Loeb edition",
+      "edition_catalogue": "https://catalog.perseus.tufts.edu/catalog/urn:cts:latinLit:phi0588.abo023",
+      "ceiling": "DCC-declared textual basis != THR line-by-line collation against the 1929 print edition"
+    },
+    {
+      "source_id": "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2",
+      "relationship": "parallel_source_language_edition_route_not_translation_basis",
+      "basis": "Perseus catalogues a Greek Polybius Histories edition edited by Theodor Büttner-Wobst (Teubner, 1882-1904) under a stable CTS identifier. THR has not established that this Greek edition is the textual basis of the Paton/Loeb English reading surface used by the record.",
+      "work_urn": "urn:cts:greekLit:tlg0543.tlg001",
+      "edition_urn": "urn:cts:greekLit:tlg0543.tlg001.perseus-grc1",
+      "edition_label": "Polybius, Histories — Greek edition, Theodor Büttner-Wobst, Teubner",
+      "edition_catalogue": "https://catalog.perseus.tufts.edu/catalog/urn:cts:greekLit:tlg0543.tlg001.perseus-grc1",
+      "ceiling": "PARALLEL GREEK EDITION ROUTE != CHECKED BASIS OF PATON TRANSLATION; GREEK SOURCE-LITERAL PASSAGES NOT NEWLY INSPECTED"
+    }
+  ]
 }
