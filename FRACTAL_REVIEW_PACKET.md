@@ -190,11 +190,15 @@ In particular:
 
 A result of "THR should shrink to integration / continuation discipline" is valid.
 
-### L. Protocol necessity
+### L. Universal protocol necessity
 
-The current RFC now says a new THR protocol is **not earned**.
+The current RFC now says a **universal THR record / knowledge protocol** is not earned.
 
-Try to break that.
+A narrower statement has already been falsified: THR does have an earned bounded
+task-specific exchange contract, `human-record-contribution-packet/0.1`, for relayed
+contributions.
+
+Try to show that the project now needs something broader than such narrow contracts.
 
 Find a concrete interoperability requirement that:
 - requires two or more independent implementations to exchange/use THR records;
@@ -207,9 +211,13 @@ Find a concrete interoperability requirement that:
 
 If no such requirement exists in the current cases, return:
 
-`NO PROTOCOL PRESSURE FOUND`
+`NO UNIVERSAL PROTOCOL PRESSURE FOUND`
 
-Do not treat future scale alone as protocol pressure.
+Do not treat future scale alone as universal protocol pressure.
+
+Also identify whether any **bounded handoff** genuinely earns another small versioned
+contract. A task-specific envelope is not evidence that one universal THR protocol is
+needed.
 
 
 
@@ -397,8 +405,11 @@ ADD:
 ZERO_NEW_TYPES_ATTACK:
 <one concrete counterexample, or NO COUNTEREXAMPLE FOUND>
 
-PROTOCOL_NECESSITY:
-<concrete current requirement, or NO PROTOCOL PRESSURE FOUND>
+UNIVERSAL_PROTOCOL_NECESSITY:
+<concrete current requirement, or NO UNIVERSAL PROTOCOL PRESSURE FOUND>
+
+BOUNDED_EXCHANGE_CONTRACT:
+<real handoff loss that earns a small contract, or NONE>
 
 MULTI_RECORD_FANOUT:
 <identify a real shared source/assertion spanning multiple public records, or NOT PRESENT IN CURRENT CORPUS>
