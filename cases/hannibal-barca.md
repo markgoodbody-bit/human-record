@@ -152,6 +152,32 @@ MISSING_CARTHAGINIAN_APERTURE != CARTHAGINIAN_HISTORY_DID_NOT_EXIST
 
 The current checked narrative aperture is Greek/Roman-mediated. That asymmetry is part of the record, not a footnote to hide.
 
+## Source recoverability — Nepos edition
+
+A preservation check on 20 September 2026 did **not** establish an archived copy of the
+exact Dickinson College Commentaries chapter-13 web representation used by this record.
+
+It did establish stronger institutional recovery routes for the closely related published
+Dickinson College Commentaries edition by Bret Mulligan:
+
+- Open Book Publishers, *Cornelius Nepos, Life of Hannibal: Latin Text, Notes, Maps,
+  Illustrations and Vocabulary*, DOI `10.11647/OBP.0068`, identifies the book as
+  Dickinson College Commentaries volume 1 and exposes the Nepos text and notes;
+- the Library of Congress provides an unrestricted digital copy under LCCN
+  `2019467885` / persistent handle `hdl.loc.gov/loc.gdc/gdcebookspublic.2019467885`.
+
+These routes improve recoverability of the edition-level text/notes if the live DCC page
+changes or disappears. They were not compared byte-for-byte against the observed chapter
+page and do not preserve its exact layout, hyperlinks, commentary state or web response.
+
+```text
+RELATED EDITION RECOVERABLE != EXACT WEB REPRESENTATION PRESERVED
+PRESERVATION ROUTE != HISTORICAL TRUTH
+INSTITUTIONAL COPY != BYTE-IDENTICAL DCC PAGE
+```
+
+No historical assertion or source interpretation changed in this maintenance revision.
+
 ## Public machine route
 
 The public machine record is:
