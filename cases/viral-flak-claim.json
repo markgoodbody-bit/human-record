@@ -87,7 +87,7 @@
       "id": "westermann-2001-raf-ors-80-percent-passage",
       "kind": "scholarly_book_selected_passage_via_third_party_ocr",
       "url": "https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf",
-      "role": "A second bounded passage in the same accessible Westermann OCR reproduction, in the 1942 Bomber Command discussion, says an Operational Research Section study found that up to 80 percent of 'flak casualties' occurred over the target area. The surrounding text concerns RAF bombers damaged by German flak and subsequent Bomber Command aircrew casualties; it is not a statement about German anti-aircraft crew mortality.",
+      "role": "A second bounded passage in the same accessible Westermann OCR reproduction, in the 1942 Bomber Command discussion, says an Operational Research Section study found that up to 80 percent of 'flak casualties' occurred over the target area. The surrounding text concerns RAF bombers damaged by German flak and subsequent Bomber Command aircrew casualties; it is not a statement about German anti-aircraft crew mortality. Westermann footnote 17 identifies the underlying study as Bomber Command Operational Research Section Report S-91, 'Night-Bomber Losses on German Targets, 1942' (12 April 1943), held by the Air Historical Branch; THR has identified that citation route but has not inspected S-91.",
       "claim_relation": "phrase_level_analogue_relevant_to_mutation_hypothesis_not_transmission"
     },
     {
@@ -114,7 +114,8 @@
     "Whether the 80% figure arose by mutation from a different casualty statistic.",
     "Specifically, whether Allied bomber/aircrew flak statistics were transposed into a German flak-crew mortality claim. A Westermann passage now supplies a closer phrase-level candidate — 'up to 80 percent of flak casualties' in a Bomber Command context — but shared number/wording does not establish transmission, identify the 2025 video's source, or rank this as the most likely ancestor.",
     "The completeness of surviving late-war German personnel and casualty records relevant to this question.",
-    "Whether the selected Westermann OCR passage is byte/text faithful to an authenticated print or restricted scan at that passage, and whether the cited underlying archival documents independently support the reproduced casualty numbers."
+    "Whether the selected Westermann OCR passage is byte/text faithful to an authenticated print or restricted scan at that passage, and whether the cited underlying archival documents independently support the reproduced casualty numbers.",
+    "Whether the cited Bomber Command Operational Research Section Report S-91, 'Night-Bomber Losses on German Targets, 1942' (12 April 1943), contains wording/context materially different from Westermann's representation; THR has identified the Air Historical Branch citation route but has not inspected the report."
   ],
   "not_checked": [
     "Westermann, full authenticated edition and book-wide casualty evidence; two bounded passages have now been checked through an accessible third-party OCR reproduction (1940 German flak personnel casualties; 1942 RAF/Bomber Command 'up to 80 percent of flak casualties' context)",
@@ -167,6 +168,7 @@
     "LUFTWAFFE-LEVEL LOSS TABLE != FLAK-CREW MORTALITY RATE",
     "SAME NUMBER != SAME CLAIM",
     "SAME PHRASE / NUMBER != TRANSMISSION",
-    "PHRASE-LEVEL ANALOGUE != SOURCE ANCESTRY"
+    "PHRASE-LEVEL ANALOGUE != SOURCE ANCESTRY",
+    "ARCHIVAL CITATION ROUTE IDENTIFIED != UNDERLYING REPORT INSPECTED"
   ]
 }
