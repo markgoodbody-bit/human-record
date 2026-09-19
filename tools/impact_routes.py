@@ -157,14 +157,17 @@ def derive_impact_routes(root: Path, source_id: str):
     unresolved_record_links = []
 
     for assertion in assertions:
-        evidence = assertion.get("evidence")
-        if not isinstance(evidence, dict):
-            continue
-        source_ids = evidence.get("source_ids")
-        if not isinstance(source_ids, list) or source_id not in source_ids:
-            continue
-
         assertion_id = assertion.get("id", "<unknown>")
+        evidence = assertion.get("evidence")
+        if evidence is None:
+            continue
+        if not isinstance(evidence, dict):
+            raise ValueError(f"{assertion_id}.evidence must be an object")
+        source_ids = _strict_string_list(
+            evidence, "source_ids", f"{assertion_id}.evidence"
+        )
+        if source_id not in source_ids:
+            continue
         raw_links = _strict_string_list(
             assertion, "record_links", assertion_id
         )
