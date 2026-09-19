@@ -818,10 +818,10 @@
       ],
       "relations": [],
       "preservation": {
-        "status": "publisher_preview_available",
+        "status": "not_yet_checked",
         "copies": [],
-        "last_checked_at": "2026-09-19",
-        "note": "A public publisher preview was retrievable in this aperture. Availability of the full book/result tables was not established."
+        "last_checked_at": null,
+        "note": "The publisher preview was publicly retrievable in this aperture. Retrieval/availability is not a preservation finding; no preservation route or durable copy was checked."
       },
       "used_by_records": [
         "viral-flak-claim"
