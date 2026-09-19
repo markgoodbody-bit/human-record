@@ -1,6 +1,6 @@
 {
   "format": "human-record-catalog/0.6",
-  "updated": "2026-09-19",
+  "updated": "2026-09-20",
   "purpose": "Discovery catalogue for current Human Record entries. This is routing metadata, not a universal record schema, evidence upgrade or certification surface.",
   "record_contract": "https://thehumanrecord.net/RECORD_CONTRACT.md",
   "human_explanation": "https://thehumanrecord.net/records/about.html",
@@ -93,11 +93,11 @@
       "full_human_record": "https://thehumanrecord.net/cases/hannibal-barca.md",
       "machine_record": "https://thehumanrecord.net/cases/hannibal-barca.json",
       "view_basis": {
-        "aligned_at": "2026-09-19",
-        "source_record_version": "0.1.1",
+        "aligned_at": "2026-09-20",
+        "source_record_version": "0.1.2",
         "source_git_blobs": {
-          "cases/hannibal-barca.md": "1b9af46ef18fb53f3937d56d1cdc5f2910712aea",
-          "cases/hannibal-barca.json": "561c63739119170ad2799d3494ddb68b92c5acfd"
+          "cases/hannibal-barca.md": "a58e4d09b91bf7ee09cb92db6de5cab57ca59030",
+          "cases/hannibal-barca.json": "95e1b96732e63841ddff62b521eb6bd20bbf2910"
         }
       },
       "status": "public_bounded_source_survival_record",
