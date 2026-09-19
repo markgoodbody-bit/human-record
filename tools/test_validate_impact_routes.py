@@ -83,6 +83,14 @@ class ImpactRouteTests(unittest.TestCase):
         self.assertEqual(result["affected_records"], ["record-a"])
         self.assertEqual(result["unresolved_direct_used_by_records"], ["missing-record"])
 
+    def test_malformed_direct_routes_fail_loudly(self):
+        for value in ("record-b", None, ["record-a", 42], [""]):
+            with self.subTest(value=value):
+                self.sources["sources"][0]["used_by_records"] = value
+                self.write()
+                with self.assertRaises(ValueError):
+                    impact_routes.derive_impact_routes(self.root, self.source_id)
+
     def test_assertion_route_adds_second_record(self):
         self.add_assertion(self.source_id, ["cases/b.md"])
         result = impact_routes.derive_impact_routes(self.root, self.source_id)
@@ -110,6 +118,14 @@ class ImpactRouteTests(unittest.TestCase):
             "record_link": "cases/missing.json",
         }])
 
+    def test_malformed_assertion_record_links_fail_loudly(self):
+        for value in ("cases/b.json", None, ["cases/b.json", 42], [""]):
+            with self.subTest(value=value):
+                self.assertions = {"assertions": []}
+                self.add_assertion(self.source_id, value)
+                with self.assertRaises(ValueError):
+                    impact_routes.derive_impact_routes(self.root, self.source_id)
+
     def test_unknown_source_rejected(self):
         with self.assertRaises(KeyError):
             impact_routes.derive_impact_routes(
@@ -127,6 +143,63 @@ class ImpactRouteTests(unittest.TestCase):
         )
         result = impact_routes.derive_impact_routes(self.root, self.source_id)
         self.assertEqual(result["assertion_derived_records"], ["record-b"])
+
+    def test_foreign_origin_cannot_resolve_by_matching_path(self):
+        self.add_assertion(
+            self.source_id,
+            ["https://unrelated.example/cases/b.json"],
+        )
+        result = impact_routes.derive_impact_routes(self.root, self.source_id)
+        self.assertEqual(result["affected_records"], ["record-a"])
+        self.assertEqual(result["unresolved_record_links"], [{
+            "assertion_id": "a1",
+            "record_link": "https://unrelated.example/cases/b.json",
+        }])
+
+    def test_public_origin_rejects_credentials_port_and_wrong_scheme(self):
+        links = [
+            "http://thehumanrecord.net/cases/b.json",
+            "https://user@thehumanrecord.net/cases/b.json",
+            "https://thehumanrecord.net:443/cases/b.json",
+        ]
+        for link in links:
+            with self.subTest(link=link):
+                self.assertions = {"assertions": []}
+                self.add_assertion(self.source_id, [link])
+                result = impact_routes.derive_impact_routes(self.root, self.source_id)
+                self.assertEqual(result["affected_records"], ["record-a"])
+                self.assertEqual(result["unresolved_record_links"][0]["record_link"], link)
+
+    def test_query_and_fragment_policy_is_consistent(self):
+        links = [
+            "cases/b.json#part",
+            "https://thehumanrecord.net/cases/b.json#part",
+            "cases/b.json?version=2",
+            "https://thehumanrecord.net/cases/b.json?version=2",
+        ]
+        for link in links:
+            with self.subTest(link=link):
+                self.assertions = {"assertions": []}
+                self.add_assertion(self.source_id, [link])
+                result = impact_routes.derive_impact_routes(self.root, self.source_id)
+                self.assertEqual(result["affected_records"], ["record-a"])
+                self.assertEqual(result["unresolved_record_links"][0]["record_link"], link)
+
+    def test_duplicate_catalogue_path_across_records_is_rejected(self):
+        self.catalog["records"][1]["machine_record"] = (
+            "https://thehumanrecord.net/cases/a.json"
+        )
+        self.write()
+        with self.assertRaises(ValueError):
+            impact_routes.derive_impact_routes(self.root, self.source_id)
+
+    def test_repeated_catalogue_path_within_same_record_is_safe(self):
+        self.catalog["records"][0]["human_view"] = (
+            "https://thehumanrecord.net/cases/a.json"
+        )
+        self.write()
+        result = impact_routes.derive_impact_routes(self.root, self.source_id)
+        self.assertEqual(result["affected_records"], ["record-a"])
 
 
 if __name__ == "__main__":
