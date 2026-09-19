@@ -96,15 +96,15 @@
         "aligned_at": "2026-09-19",
         "source_record_version": "0.1.1",
         "source_git_blobs": {
-          "cases/hannibal-barca.md": "1f39d4d697953469ebb6446463fef2efb852ab13",
-          "cases/hannibal-barca.json": "d1406c93005e8316114c6e0570858010e4dcb891"
+          "cases/hannibal-barca.md": "223b87f4c93eda98db69a5dc45526df841067803",
+          "cases/hannibal-barca.json": "561c63739119170ad2799d3494ddb68b92c5acfd"
         }
       },
       "status": "public_bounded_source_survival_record",
       "historical_truth_status": "attributed_source_reports_not_global_adjudication",
       "recorded_at": "2026-09-18",
-      "known_summary": "Two ancient works remain bounded through modern reading surfaces; a separate Perseus Greek-edition passage-token check now attests 'Ἀννίβας' at Polybius 3.33.17 and 3.33.18 without turning the surviving accounts into the historical person or independent corroboration by count.",
-      "unknown_summary": "Complete source genealogy, much Carthaginian/Punic evidence, manuscript-level verification, full Greek passage inspection beyond the bounded 3.33.17–18 token check, the exact Alpine pass and many biographical disputes remain outside this record.",
+      "known_summary": "Two ancient works remain bounded through modern reading surfaces; a separate Perseus passage-vocabulary index associates Polybius 3.33.17 and 3.33.18 with lemma 'Ἀννίβας' without treating that lemma as the exact inflected source-text spelling, the surviving accounts as the historical person, or repeated accounts as independent corroboration.",
+      "unknown_summary": "Complete source genealogy, much Carthaginian/Punic evidence, direct inspection of the inflected Greek source-text spelling at 3.33.17-18, manuscript-level verification, full Greek passage inspection, the exact Alpine pass and many biographical disputes remain outside this bounded record.",
       "strongest_owner": "Classical source criticism, critical editions and specialist ancient-history scholarship own historical reconstruction; THR preserves a cross-record evidence route and correction surface only.",
       "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
     }
