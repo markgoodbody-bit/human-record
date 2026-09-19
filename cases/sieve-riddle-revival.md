@@ -82,8 +82,9 @@ A Heritage Crafts announcement from 8 March 2019 separately says sieve and riddl
 Sources:
 - current Heritage Crafts craft entry: https://heritagecrafts.org.uk/craft/sieve-and-riddle-making/
 - Heritage Crafts, *Craft skills under threat with 37 additions to the Red List of Endangered Crafts*, 8 March 2019: https://heritagecrafts.org.uk/our-stories/announcements/craft-skills-under-threat-with-37-additions-to-the-red-list-of-endangered-crafts/
+- Heritage Crafts, *The HCA Red List of Endangered Crafts — 2019 edition*: https://www.heritagecrafts.org.uk/wp-content/uploads/2019/03/HCA-Red-List-optimised.pdf
 
-These two sources share one institutional owner. They should not be counted as independent witnesses merely because they are separate pages.
+These three Heritage Crafts sources share one institutional owner. They should not be counted as independent witnesses merely because they are separate publications.
 
 The current Heritage Crafts page also cites the 2009 Guardian feature. Different publishers do not establish independent corroboration for overlapping historical claims. That citation is a known source relationship; it does not establish which individual claims depend on the feature.
 
@@ -109,16 +110,36 @@ READING ABOUT A CRAFT != LEARNING THE CRAFT
 REVIVAL != VIABILITY
 ```
 
-### 4. A published account of direct learning
+### 4. Public sources separate research, reconstruction and direct tuition
 
 In a published Homo Faber interview, Steve Overthrow says he learned partly from Mike Turnock and received knowledge he could not find through research. This is a first-person account as published by Homo Faber, not an interview conducted by The Human Record or independent verification of the teaching.
 
-Source, read 16 September 2026:
-- Homo Faber Guide, *Steve Overthrow*, question “How did you manage to learn the extinct craft of riddle making?”: https://2022.homofaber.com/en/discover/discover-steve-overthrow
+The 2019 Heritage Crafts Red List adds a separate institutional description: it reports that Overthrow began making at the beginning of 2018, received **advice and tuition** from Mike Turnock, and then went through a period of product development and refining before commercial production.
 
-The interview and teaching dates are not established here; the 2022 site address is not proof of either. This supports a reported Turnock-to-Overthrow learning route, but not the precise content or completeness of transmission, nor Colin Davies's learning route.
+A 2023 *Gardens Illustrated* interview adds another part of the route. Overthrow describes beginning with research and repeated failed attempts while developing his making practice, then receiving Turnock's help on matters he says he could not have researched. This record preserves only those high-level learning modes; it does not reproduce the process details published in the article.
 
-Discovery credit: Mark relayed a Dola reading pointing to an [ELITISM article dated 26 August 2026](https://elitismstyle.com/the-craft-that-read-its-own-obituary). Following that lead, Codex located the Homo Faber interview. The publications are not counted as independent corroboration; their claim-level source relationship has not been established.
+Sources:
+- Homo Faber Guide, *Steve Overthrow*: https://2022.homofaber.com/en/discover/discover-steve-overthrow
+- Heritage Crafts, *The HCA Red List of Endangered Crafts — 2019 edition*: https://www.heritagecrafts.org.uk/wp-content/uploads/2019/03/HCA-Red-List-optimised.pdf
+- Natasha Goodfellow, *Sieves and riddles: discover the company making handmade garden sieves*, *Gardens Illustrated*, 26 April 2023: https://www.gardensillustrated.com/features/sieve-and-riddle-handmade-garden-sieves
+
+Together, these public sources narrow the Overthrow route from a generic "direct learning" statement to reported components:
+
+```text
+RED-LIST ATTENTION
+-> RESEARCH / SURVIVING PUBLIC MATERIAL
+-> TRIAL-AND-ERROR / PRODUCT DEVELOPMENT
+-> DIRECT ADVICE + TUITION FROM TURNOCK
+```
+
+They still do not establish the exact tacit content passed between people, the relative contribution of each route, the completeness of what survived, or Colin Davies's learning route. Multiple published accounts carrying practitioner self-report are not automatically independent witnesses to the underlying teaching.
+
+```text
+REPORTED LEARNING MODES != COMPLETE SKILL-TRANSFER RECONSTRUCTION
+MULTIPLE PUBLISHED INTERVIEWS != INDEPENDENT WITNESSES
+```
+
+Discovery credit: Mark relayed a Dola reading pointing to an [ELITISM article dated 26 August 2026](https://elitismstyle.com/the-craft-that-read-its-own-obituary). Following that lead, Codex located the Homo Faber interview. The later Heritage Crafts/Gardens Illustrated follow-up narrows the route further; none of these publications is treated as THR observation of teaching.
 
 ### 5. Current state — alive, but still fragile
 
@@ -141,15 +162,16 @@ As of the checked public sources:
 - Heritage Crafts says the craft had been revived by two new makers by March 2019;
 - its current page identifies Steve Overthrow's discovery of the Red List and Colin Davies's viewing of a *Countryfile* feature as pathways into making;
 - Heritage Crafts currently classifies the craft as critically endangered and reports 0 main-income professionals, 1 side-income professional and 1 trainee;
-- the exact skill-transmission chain is **not fully reconstructed by this record**.
-- Overthrow reports learning partly from Turnock in the published Homo Faber interview; the reported route is no longer wholly unresolved.
+- the exact skill-transmission chain is **not fully reconstructed by this record**;
+- for Overthrow specifically, public sources now report a mixed route involving research, trial-and-error/product development, and advice or tuition from Turnock; the exact tacit content and completeness remain unresolved.
 
 ## What remains unknown
 
 This record does not establish:
 
 - exactly what practical knowledge passed directly from Mike Turnock to any later maker;
-- whether either current maker learned primarily through direct teaching, observation, experimentation, written/video material, surviving tools, prior adjacent skills, or some combination;
+- for Overthrow, the timing, relative contribution, exact tacit content and completeness of the reported research, trial-and-error/product-development and Turnock advice/tuition routes;
+- for Colin Davies, the learning route beyond the reported *Countryfile* / Red List attention pathway;
 - which parts of the older Hill & Sons practice survive unchanged and which have been adapted;
 - whether all materially important tacit knowledge survived the extinction interval;
 - the identity or training stage of the current trainee beyond Heritage Crafts' aggregate count;
@@ -250,6 +272,8 @@ AND THROUGH WHICH ROUTES?
 That question remains open.
 
 ## Dated correction
+
+19 September 2026, Framework: checked the Heritage Crafts 2019 Red List entry and a 2023 *Gardens Illustrated* practitioner interview. The Overthrow lineage now records reported research, trial-and-error/product development and Turnock advice/tuition as distinct learning components. Exact teaching content, timing, relative contribution and completeness remain unknown. No practitioner contact, endorsement, private material or process manual was added.
 
 16 September 2026, Codex: made reconstruction and new learning explicit alternatives to transmission, recorded the Heritage Crafts citation of the Guardian feature, and distinguished the source-read date from the page's named review cycle. Basis: [source review](https://github.com/markgoodbody-bit/human-record/pull/9#issuecomment-5700699961). Reported status, counts and historical events are unchanged. This is a source-relationship and framing correction, not a new practitioner observation.
 
