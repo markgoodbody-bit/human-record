@@ -530,3 +530,130 @@ URL SCRAPE != SAFE DEPENDENCY GRAPH
 ~~~
 
 This narrows the zero-new-types result rather than defeating it.
+
+
+---
+
+## 12. Independent code audit — four concrete repairs
+
+Codex review comment `5745004069` audited the first executable helper at exact head:
+
+`6c4eb7b774bbf3b96d866d7fe7545e8fffa2c521`
+
+Verdict:
+
+`REPAIR`
+
+The direct-plus-assertion union was accepted as the right bounded operation, but four
+helper-level defects were demonstrated with synthetic inputs.
+
+### A. Foreign-origin false positive
+
+First implementation stripped scheme/authority from any absolute URL.
+
+Therefore:
+
+~~~text
+https://unrelated.example/cases/b.json
+~~~
+
+could falsely resolve to the same record as:
+
+~~~text
+https://thehumanrecord.net/cases/b.json
+~~~
+
+Repair:
+- absolute URLs resolve only when scheme is exactly `https`;
+- host is exactly `thehumanrecord.net`;
+- credentials are absent;
+- explicit port is absent;
+- query and fragment are absent.
+
+Foreign / unsupported absolute URLs remain unresolved.
+
+~~~text
+MATCHING PATH != SAME RESOURCE
+ORIGIN IS MATERIAL IDENTITY
+~~~
+
+### B. Ambiguous catalogue path
+
+First implementation used one path -> one record dictionary assignment.
+
+Two catalogue records claiming the same path would silently leave whichever record was
+processed last.
+
+Repair:
+- a path already owned by another record raises a clear error;
+- repeated use of the same path within the same record is safe.
+
+~~~text
+AMBIGUOUS PATH OWNERSHIP
+!=
+CHOOSE BY ITERATION ORDER
+~~~
+
+### C. Malformed route containers
+
+First implementation converted malformed `used_by_records` values such as a string to an
+empty list. That could turn invalid dependency data into apparent absence.
+
+Repair:
+- present `used_by_records` must be a list of non-empty strings;
+- present assertion `record_links` must be a list of non-empty strings;
+- malformed values fail loudly;
+- unknown but well-formed direct record IDs remain separately visible as unresolved.
+
+~~~text
+MALFORMED ROUTE
+!=
+NO ROUTE
+~~~
+
+### D. Query / fragment inconsistency
+
+First implementation treated relative and absolute fragment-bearing paths differently.
+
+Repair:
+- both relative and canonical-public URL forms with query or fragment are unresolved;
+- query/fragment are not stripped for convenience because they can alter resource
+  identity.
+
+~~~text
+NORMALISATION
+!=
+ERASE IDENTITY-BEARING COMPONENTS
+~~~
+
+### Regression coverage
+
+The focused impact-route suite now covers 15 tests including:
+- direct-only route;
+- unresolved direct record ID;
+- malformed direct route container/items;
+- assertion adds second record;
+- route deduplication;
+- assertion-only route;
+- unresolved assertion record link;
+- malformed assertion record-link container/items;
+- unknown source;
+- canonical public URL + repo-path equivalence;
+- foreign-origin rejection;
+- credentials / explicit port / wrong scheme rejection;
+- consistent query / fragment policy;
+- duplicate catalogue-path rejection;
+- repeated same-record path acceptance.
+
+Exact repaired head:
+
+`e9ee7f4c5692f066ea9da5338bdae3ab1ecb8303`
+
+Hosted:
+
+`Validate Human Record integrity — run 154 / 35467002565 — SUCCESS`
+
+This green run establishes structural/test success only.
+
+A semantic re-audit remains useful.
+
