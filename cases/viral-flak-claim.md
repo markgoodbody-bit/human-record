@@ -96,6 +96,40 @@ Source:
 
 Those figures concern casualties **caused by flak among Allied aircrew**. They are not evidence that 80% of German flak crews died.
 
+### A specific phrase-level mutation candidate — still not ancestry
+
+A second bounded passage in the accessible Westermann reproduction materially sharpens the existing mutation hypothesis.
+
+In Westermann's discussion of RAF Bomber Command operations in 1942, the surrounding text is explicitly about aircraft returning to England with flak damage versus fighter damage. It then says that another British Operational Research Section study found that **up to 80 percent of “flak casualties” occurred over the target area**, explaining this by the concentration of anti-aircraft guns around targets. The following paragraph continues with Bomber Command aircrew casualties caused by flak and fighters.
+
+This matters because the phrase is much closer to the later viral wording than a bare numerical resemblance:
+
+```text
+WESTERMANN / RAF CONTEXT
+"up to 80 percent of flak casualties"
+-> RAF BOMBER / AIRCREW LOSS-DAMAGE CONTEXT
+
+VIRAL CLAIM
+"80% of German flak crews died"
+-> GERMAN ANTI-AIRCRAFT PERSONNEL MORTALITY
+```
+
+The subject, denominator and event have changed completely.
+
+The Human Record **does not currently have evidence that the 2025 video, its writer, or an intermediate source used this Westermann passage**. Search-engine proximity, wording similarity and the shared number are not transmission evidence. This therefore remains a **specific phrase-level mutation candidate**, not a source-ancestry finding and not a claim that Westermann is the origin of the viral statistic.
+
+The stronger RAF historical material checked in parallel also uses “casualties due to flak” for losses suffered by Bomber Command aircraft/aircrew, reinforcing the category boundary: in this literature, “flak casualties” can mean casualties **caused by flak**, not casualties **among flak personnel**.
+
+Sources/routes:
+- Westermann reproduction, pp. 96–97 of the scanned file: https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf
+- RAF Air Historical Branch, *RAF in the Bombing Offensive Against Germany*, operational-loss discussion: https://www.raf.mod.uk/what-we-do/our-history/air-historical-branch/second-world-war-campaign-narratives/raf-in-the-bombing-offensive-against-germany-vol-iv-a-period-of-expansion-and-experiment-march-1942-january-1943/
+
+```text
+SAME NUMBER != SAME CLAIM
+SAME PHRASE / NUMBER != TRANSMISSION
+PHRASE-LEVEL MUTATION CANDIDATE != SOURCE ANCESTRY
+```
+
 ### A selected Westermann passage now narrows the source boundary
 
 A Grok contribution relayed by Mark pointed this record toward Edward B. Westermann's *Flak: German Anti-Aircraft Defenses, 1914–1945*. Codex recovered the publisher entry and then located a specific passage in a third-party OCR reproduction. Framework independently re-ran that lead against current catalog/archive surfaces.
@@ -150,6 +184,7 @@ As of this record:
 - a later video's metadata, as reported by Claude Code, both asserts the figure and calls it untraceable without a stated search method;
 - the Army study documents flak-caused casualties within specified Allied samples; the Middlebrook quotation concerns a particular crew, not German aggregate mortality;
 - a selected Westermann passage reports 60 officer and 890 enlisted flak casualties (dead, wounded or missing) in the May–June 1940 western campaign; that is neither a death count nor a whole-war mortality rate, and the inspected OCR copy remains unauthenticated;
+- a second bounded Westermann passage uses the phrase “up to 80 percent of flak casualties” in a 1942 RAF Bomber Command context. That is now a specific phrase-level mutation candidate for the later viral wording, but no transmission path to the 2025 claim has been established;
 - the true aggregate mortality rate for German flak crews remains **UNKNOWN in this record**.
 
 ```text
@@ -188,6 +223,8 @@ Future humans and artificial entities should be able to walk back down the strat
 
 ## Limits and correction
 
+Revision 0.2.6, 19 September 2026: **specific phrase-level mutation candidate.** A second bounded passage in the accessible Westermann reproduction was inspected in its surrounding RAF Bomber Command context. Westermann says an ORS study found “up to 80 percent of flak casualties” occurred over the target area; the surrounding discussion concerns RAF bomber damage/losses and aircrew casualties caused by German flak, not German flak-personnel mortality. This materially sharpens the existing transposition hypothesis but does not establish that the 2025 video or any intermediate source used Westermann. Claim status remains unsupported in sources checked; true German flak-crew mortality remains unknown.
+
 Revision 0.2.5, 18 September 2026: **Grok research-lead / Westermann selected-passage repair.** A user-relayed Grok contribution pointed to Westermann and related personnel-loss literature. Codex recovered an exact bibliographic route and selected passage; Framework independently triangulated the book identity, passage wording and parts of Westermann's archive citation route. The record now treats one May–June 1940 passage as partially checked through a third-party OCR reproduction while explicitly preserving that the OCR copy, full authenticated edition and underlying archive documents were not inspected/authenticated. The passage reports casualties (dead, wounded or missing), not deaths, and does not change the unresolved whole-war 80% claim.
 
 Revision 0.2.4, 16 September 2026: **selection-provenance repair.** Recovered the bounded selection history from Human Record PR #2 and the later COM #342 stress-use direction. The initial candidate pool and alternatives considered were not preserved and are now explicitly recorded as missing rather than reconstructed after the fact. No historical source, mortality finding, propagation node or challenge disposition changed; this is not a fresh external witness.
@@ -206,7 +243,7 @@ This is an initial reconstruction from public web sources on 15 September 2026. 
 
 ### Not checked by this record
 
-- Edward B. Westermann, *Flak: German Anti-Aircraft Defenses, 1914–1945*: full authenticated edition/book-wide casualty evidence not checked; one selected 1940 western-campaign passage checked only through an accessible third-party OCR reproduction;
+- Edward B. Westermann, *Flak: German Anti-Aircraft Defenses, 1914–1945*: full authenticated edition/book-wide casualty evidence not checked; two bounded passages checked through an accessible third-party OCR reproduction (1940 German personnel casualties; 1942 RAF/Bomber Command “up to 80 percent of flak casualties” context);
 - Rüdiger Overmans, *Deutsche militärische Verluste im Zweiten Weltkrieg*;
 - MGFA, *Das Deutsche Reich und der Zweite Weltkrieg*, volume 7;
 - relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings;
