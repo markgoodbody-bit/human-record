@@ -8,6 +8,10 @@ Target branch:
 Target documents:
 - `FRACTAL_ARCHITECTURE.md`
 - `FRACTAL_FALSIFICATION.md`
+- `FRACTAL_OWNER_SUBTRACTION.md`
+- `FRACTAL_OWNER_SUBTRACTION_CULTURAL_PRESERVATION.md`
+- `FRACTAL_RESIDUE_ATTACK.md`
+- `FRACTAL_INTEROP_PROV_MICROCASE.md`
 
 Current public THR baseline for comparison:
 main `1f5a5919938f385f43f1e2383bdfbb52807b206e`
@@ -34,15 +38,23 @@ The RFC asks what additional structure is needed for a synthetic-information env
 where plausible artifacts can be generated cheaply and where the history of a record,
 process or source may itself become contested.
 
-Candidate additional concepts include:
-- event;
-- process;
-- principal;
-- attestation;
-- scoped authority;
-- anchor/checkpoint;
-- independent witness;
-- recursive self-description.
+Earlier candidate concepts included event, process, principal, attestation and
+anchor/checkpoint.
+
+Two owner-subtraction passes now treat those as local conceptual roles unless a
+cross-record THR-specific residue survives stronger owners such as PROV, CIDOC CRM,
+CRMdig, CRMinf, PREMIS, C2PA, Crossmark or domain-specific systems.
+
+The current residue is narrower:
+- THR's own bounded observation;
+- evidence ceilings;
+- material joins between stronger owners;
+- evidence needed for question-specific independence assessment;
+- typed/scoped/temporal authority;
+- correctable history;
+- routing load-bearing changes to affected downstream review;
+- privacy / rights / consent / cultural-control boundaries;
+- continuation without trusting the current THR operator.
 
 The proposal explicitly rejects:
 - truth scores;
@@ -159,6 +171,24 @@ Could an apparently benign provenance graph become:
 - an irreversible identity layer?
 
 Identify concrete protections that are missing.
+
+### K. Residue collapse
+
+Try to show that the surviving THR layer is still too large.
+
+In particular:
+
+- Is "question-specific independence" already fully handled by domain evidence methods,
+  so THR should only preserve ancestry/evidence and never name independence?
+- Is correction impact routing merely a query over PROV/CRMinf/dependency relations plus
+  ordinary currentness handling?
+- Is "continuation without trusting THR" already adequately owned by open archival
+  packaging, preservation systems and documented provenance?
+- Are "material joins" simply ordinary integration work rather than a THR protocol?
+- Does THR need any new protocol at all, or only a readable public discipline for
+  preserving these distinctions across heterogeneous owner systems?
+
+A result of "THR should shrink to integration / continuation discipline" is valid.
 
 ---
 
@@ -320,15 +350,20 @@ CUT:
 <what should be removed>
 
 ADD:
-<smallest missing concepts>
+<smallest missing concepts, if any>
+
+RESIDUE_ATTACK:
+<what, if anything, still appears genuinely THR-shaped after strongest-owner subtraction>
 
 DO_NOT_BUILD_YET:
 - ...
 
 VERDICT:
-REPAIR_RFC
+SHRINK_AGAIN
 or
-READY_FOR_SELF_DESCRIPTION_MICROCASE
+KEEP_NARROW_RESIDUE
+or
+REPAIR_RFC
 
 EVIDENCE_CEILING:
 <what this review does and does not establish>
