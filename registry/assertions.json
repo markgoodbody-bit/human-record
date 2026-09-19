@@ -1,6 +1,6 @@
 {
   "format": "human-record-assertion-registry/0.1",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "purpose": "Sparse cross-record assertions whose evidence/state need durable reference. This is not a universal truth graph and does not replace record-specific structures.",
   "model": "https://thehumanrecord.net/ASSERTION_MODEL.md",
   "assertions": [
@@ -90,10 +90,10 @@
         ]
       },
       "scope": {
-        "record_version": "0.2.5",
+        "record_version": "0.2.6",
         "historical_truth_status": "unknown",
         "meaning": "The bounded sources checked by the current record, now including one selected Westermann 1940 campaign passage inspected through an unauthenticated third-party OCR reproduction, do not establish the claimed aggregate German flak-crew mortality rate.",
-        "not_established": "That the claim is false, that the archive/book search is exhaustive, that the selected OCR is authenticated against the publisher edition, or that no earlier source contains the figure."
+        "not_established": "That the claim is false, that the archive/book search is exhaustive, that the selected Westermann OCR is authenticated against the publisher edition, that the relevant Overmans result tables or any flak-specific breakdown were inspected, or that no earlier source contains the figure."
       },
       "record_links": [
         "cases/viral-flak-claim.json",
