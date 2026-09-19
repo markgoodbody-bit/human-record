@@ -606,7 +606,172 @@ That would be a successful architecture result, not a failure to invent.
 
 ---
 
-## 10. Prior hostile question
+## 10. Zero-new-shared-types test
+
+The strongest current architecture claim should now be tested directly:
+
+~~~text
+NEW SHARED THR CORE TYPES NEEDED NOW = ZERO
+~~~
+
+This does not mean the current records are complete or that future pressure cannot earn a
+new type.
+
+It asks whether the **current** four records plus the RFC microcases require anything
+beyond the already-earned sparse THR layers and record-local structures.
+
+### Camp Fire
+
+Current needs:
+- work/entity reference;
+- source identity;
+- source observations;
+- attribution assertion;
+- byte comparison;
+- rights/custody context;
+- corrections.
+
+Current THR layers already carry those.
+
+If richer museum/event/digitisation semantics become material:
+
+~~~text
+CIDOC CRM / CRMdig -> stronger owner
+~~~
+
+No new THR shared type is currently required.
+
+### Viral flak claim
+
+Current needs:
+- bounded claim;
+- source ancestry;
+- derivative/repetition relations;
+- checked-source aperture;
+- changed scope;
+- unknown historical truth;
+- challenges/corrections.
+
+Current source/assertion models already carry the local need.
+
+If explicit premise/inference chains become material:
+
+~~~text
+CRMinf / PROV -> stronger owner
+~~~
+
+Question-specific independence can remain a bounded analysis over the ancestry evidence.
+
+No new THR shared type is currently required.
+
+### Sieve/riddle revival
+
+Current needs:
+- local lineage events;
+- source statements;
+- current status;
+- living mentions;
+- uncertainty over transmission/reconstruction;
+- authority / consent boundaries.
+
+The local record should keep its lineage shape.
+
+A living mention does not earn a global principal.
+
+If richer event/observation semantics become material:
+
+~~~text
+CIDOC CRM / CRMsci -> stronger owner
+~~~
+
+No new THR shared type is currently required.
+
+### Hannibal
+
+Current needs:
+- historical-person entity convention;
+- source-literal mentions;
+- source-attributed assertions;
+- translation/read-surface boundaries;
+- incomplete survival / genealogy.
+
+Current entity/mention/source/assertion layers already carry those distinctions.
+
+If richer historical event or argumentation semantics become material:
+
+~~~text
+CIDOC CRM / CRMinf -> stronger owner
+~~~
+
+No new THR shared type is currently required.
+
+### THR validator self-description
+
+Current needs:
+- exact source/version identities;
+- one local process receipt;
+- warnings / evidence ceilings;
+- process ancestry;
+- later-description chronology.
+
+The local JSON receipt plus W3C PROV mapping carries the generic process graph.
+
+~~~text
+GLOBAL THR PROCESS TYPE = NOT REQUIRED
+GLOBAL THR PRINCIPAL TYPE = NOT REQUIRED
+~~~
+
+### Correction-routing specimen
+
+Current needs:
+- preserve old dated receipt;
+- repair direct current object;
+- identify current dependents;
+- route them to review;
+- publish later correction state.
+
+Existing Git history + current assertions/source relations + ordinary current-state
+surfaces are enough for this specimen.
+
+A future derived review queue may be useful at scale.
+
+That is an implementation query over dependencies, not a new ontology.
+
+### Long-term continuation
+
+Current need:
+- export enough bits + semantics + context + provenance + correction history for a future
+  reader to continue.
+
+OAIS / PREMIS / OCFL / BagIt / RO-Crate / external archives already own large parts of
+that stack.
+
+No custom THR archive/federation type is currently required.
+
+### Result
+
+Across every current specimen:
+
+~~~text
+CURRENT SHARED THR LAYERS
++ RECORD-LOCAL STRUCTURE
++ STRONGER-OWNER INTEROP WHEN EARNED
+= SUFFICIENT FOR CURRENT PRESSURE
+
+NEW SHARED CORE TYPE
+= NOT EARNED
+~~~
+
+This is the first genuine **zero-new-types** result from the fractal RFC.
+
+It should be attacked, not celebrated.
+
+Kill it if a concrete case cannot preserve a consequential distinction without a new
+shared THR object.
+
+---
+
+## 10a. Prior hostile question
 
 The remaining residue may shrink again.
 
@@ -629,7 +794,7 @@ NEW ONTOLOGY REQUIRED
 
 ---
 
-## 8. Current disposition
+## 11. Current disposition
 
 ~~~text
 UNIVERSAL INDEPENDENCE TYPE = NOT EARNED
