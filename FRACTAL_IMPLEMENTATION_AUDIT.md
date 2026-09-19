@@ -657,3 +657,50 @@ This green run establishes structural/test success only.
 
 A semantic re-audit remains useful.
 
+
+
+---
+
+## 13. Current-registry smoke test
+
+After the hostile synthetic repairs, two tests were added against the actual repository
+state inherited from public `main`.
+
+They check:
+
+1. every current catalogue `full_human_record`, `machine_record` and `human_view`
+   route is accepted by the strict path policy and maps back to the correct record ID;
+
+2. every current registered source can be queried without losing any valid direct
+   `used_by_records` route.
+
+These are not frozen-count tests. They test the invariant against whatever valid current
+registry/catalogue state the branch contains.
+
+Exact code/test head:
+
+`2e27a692aa4761ff6e25ff8c4ba3451956b4da9e`
+
+Hosted:
+
+`Validate Human Record integrity — run 156 / 35467203748 — SUCCESS`
+
+The focused impact-routing suite therefore has **17 tests** at this point:
+- 15 hostile/unit cases;
+- 2 current-registry smoke tests.
+
+Result:
+
+~~~text
+STRICT PATH / ROUTE HARDENING
+!= CURRENT PUBLIC ROUTE BREAKAGE
+~~~
+
+within the scope exercised by the current catalogue and registered direct source routes.
+
+This still does not establish:
+- complete implicit dependency coverage;
+- record-local source coverage;
+- source-ancestry propagation completeness;
+- multi-record fan-out behavior.
+
