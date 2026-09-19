@@ -794,7 +794,105 @@ NEW ONTOLOGY REQUIRED
 
 ---
 
-## 11. Current disposition
+## 11. Protocol versus profile boundary
+
+The zero-new-types result creates one more pressure:
+
+> Does THR need to become a new protocol at all?
+
+The live repository already has a smaller object:
+
+`RECORD_CONTRACT.md`
+
+Its status is:
+
+~~~text
+WORKING INTEROPERABILITY NOTE
+DERIVED FROM CURRENT RECORDS
+NOT A UNIVERSAL SCHEMA
+NOT CANON
+~~~
+
+Its central rule is:
+
+~~~text
+COMMON QUESTIONS != IDENTICAL OBJECTS
+RECORD CONTRACT != UNIVERSAL ONTOLOGY
+STRUCTURE != TRUTH
+~~~
+
+That is closer to the architecture now surviving falsification than the original
+"fractal protocol" intuition.
+
+There is a mature metadata design pattern for this general shape: **application
+profiles**. Dublin Core usage describes application profiles as combining/reusing terms
+from one or more namespaces / base standards for a particular application rather than
+redefining all underlying vocabularies. W3C/DCAT profile guidance similarly describes a
+profile as reusing base standards and adding application-specific constraints or
+requirements.
+
+THR is **not** hereby declared a Dublin Core Application Profile, RDF profile, SHACL
+profile or standards-conformant application profile.
+
+The useful architectural lesson is only:
+
+~~~text
+REUSE STRONGER SEMANTICS
++ DECLARE LOCAL REQUIREMENTS / CEILINGS / ROUTES
++ KEEP TYPE-SPECIFIC EXTENSIONS LOCAL
++ PROVIDE HUMAN + MACHINE ENTRY
+!=
+INVENT UNIVERSAL PROTOCOL
+~~~
+
+Current THR already behaves this way:
+
+- `RECORD_CONTRACT.md` asks common questions without identical record shapes;
+- `SCALE.md` explicitly rejects one giant graph schema;
+- shared registries grow only when repeated cross-record need earns them;
+- record types keep local structures;
+- stronger owners are named where they own a layer better;
+- human views and machine records remain separate but linked.
+
+### Current architecture ceiling
+
+The strongest current claim is therefore:
+
+~~~text
+THR PROTOCOL = NOT EARNED
+
+THR UNIVERSAL ONTOLOGY = NOT EARNED
+
+THR CURRENT ARCHITECTURE
+= PUBLIC RECORD PRODUCT
++ MINIMUM INTEROPERABILITY CONTRACT
++ SPARSE LOCAL CROSS-RECORD IDS / RELATIONS
++ STRONGER-OWNER MAPPINGS WHEN EARNED
++ CORRECTION / EVIDENCE / RIGHTS DISCIPLINE
+~~~
+
+"Profile-like" is a design analogy, not a standards-adoption claim.
+
+A future protocol becomes warranted only if independent implementations need to exchange
+THR-compatible records and existing profile/packaging/ontology mechanisms cannot preserve
+a consequential requirement.
+
+~~~text
+ONE IMPLEMENTATION
+!= PROTOCOL NEEDED
+
+PORTABILITY GOAL
+!= NEW PROTOCOL NEEDED
+
+INTEROPERABILITY
+!= OWN EVERY SEMANTIC
+~~~
+
+This is a further subtraction, not a demotion of purpose.
+
+---
+
+## 12. Current disposition
 
 ~~~text
 UNIVERSAL INDEPENDENCE TYPE = NOT EARNED
