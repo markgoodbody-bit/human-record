@@ -704,3 +704,50 @@ This still does not establish:
 - source-ancestry propagation completeness;
 - multi-record fan-out behavior.
 
+
+
+---
+
+## 14. Framework recheck — malformed assertion source route
+
+A bounded follow-up re-read of the repaired helper found one smaller malformed-input path
+not covered by the 17-test suite.
+
+The helper validated direct `used_by_records` and assertion `record_links`, but it did
+not validate `assertion.evidence.source_ids` before using Python membership testing.
+
+Therefore a malformed value such as:
+
+~~~text
+source_ids = "thr:source:..."
+~~~
+
+could still satisfy:
+
+~~~text
+source_id in source_ids
+~~~
+
+and create an assertion-derived review route from structurally invalid evidence.
+
+This is a helper-level false-positive path on malformed working input. It is **not** a
+claim that current validated public registry data contains malformed `source_ids`.
+
+Repair:
+- present assertion `evidence` must be an object;
+- present `evidence.source_ids` must be a list of non-empty strings;
+- malformed containers/items fail loudly before route derivation.
+
+Added red-before / green-after tests:
+- string / null / mixed-type / blank-item `source_ids`;
+- non-object assertion `evidence`.
+
+Preserve:
+
+~~~text
+MALFORMED EVIDENCE ROUTE != VALID DEPENDENCY
+VALID PUBLIC DATA != HELPER MAY ACCEPT MALFORMED WORKING DATA
+FAIL LOUD != INVENT ABSENCE
+~~~
+
+This does not earn a new stored dependency type.
