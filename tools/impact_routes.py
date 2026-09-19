@@ -70,10 +70,19 @@ def derive_impact_routes(root: Path, source_id: str):
         if isinstance(item.get("id"), str) and item.get("id")
     }
 
+    raw_direct_records = source.get("used_by_records", [])
+    if not isinstance(raw_direct_records, list):
+        raw_direct_records = []
+
     direct_records = sorted({
         record_id
-        for record_id in source.get("used_by_records", [])
+        for record_id in raw_direct_records
         if isinstance(record_id, str) and record_id in valid_record_ids
+    })
+    unresolved_direct_records = sorted({
+        record_id
+        for record_id in raw_direct_records
+        if isinstance(record_id, str) and record_id and record_id not in valid_record_ids
     })
 
     assertion_routes = []
@@ -117,6 +126,7 @@ def derive_impact_routes(root: Path, source_id: str):
         "source_id": source_id,
         "source_title": source.get("title"),
         "direct_used_by_records": direct_records,
+        "unresolved_direct_used_by_records": unresolved_direct_records,
         "assertion_routes": assertion_routes,
         "assertion_derived_records": sorted(assertion_records),
         "affected_records": affected_records,
@@ -125,7 +135,8 @@ def derive_impact_routes(root: Path, source_id: str):
             "AFFECTED_RECORD != FALSE_RECORD",
             "REVIEW_ROUTE != CORRECTION",
             "NO_ASSERTION_EDGE != NO_RECORD_DEPENDENCY",
-            "ROUTE_DERIVED != COMPLETE_DEPENDENCY PROOF",
+            "ROUTE_DERIVED != COMPLETE_DEPENDENCY_PROOF",
+            "UNKNOWN_DIRECT_RECORD_ID != SILENTLY_IGNORED",
         ],
     }
 
