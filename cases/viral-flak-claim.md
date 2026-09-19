@@ -100,7 +100,7 @@ Those figures concern casualties **caused by flak among Allied aircrew**. They a
 
 A Grok contribution relayed by Mark pointed this record toward Edward B. Westermann's *Flak: German Anti-Aircraft Defenses, 1914–1945*. Codex recovered the publisher entry and then located a specific passage in a third-party OCR reproduction. Framework independently re-ran that lead against current catalog/archive surfaces.
 
-The accessible OCR reproduction's western-campaign section reports that, between **10 May and 22 June 1940**, casualties among German flak forces — explicitly including personnel listed as **dead, wounded or missing** — totalled **60 officers and 890 enlisted men**. Westermann's note 75 cites material in the Walther von Axthelm papers (`N 529/Folder 7`) and Flak-Regiment 102 (`RL 12/Folder 457`) at the Bundesarchiv-Militärarchiv, plus Koch.
+The accessible OCR reproduction's western-campaign section reports that, between **10 May and 22 June 1940**, casualties among German flak forces — explicitly including personnel listed as **dead, wounded or missing** — totalled **60 officers and 890 enlisted men**. Westermann's note 75 can now be read more precisely in the checked reproduction: it cites **“Abschlussmeldung über Flakartillerie im Bereich des Gen.d.Lw.Ob.d.H.” (28 February 1942), N 529/Folder 7**, and **“Tagesbefehl des Flakregiments 102” (8 July 1940), RL 12/Folder 457**, plus Koch. The title of the N 529/7 item is recovered here from Westermann's note, not from direct inspection of the Bundesarchiv folder.
 
 This is useful German flak-personnel context, but it does **not** support the viral claim:
 
@@ -109,9 +109,9 @@ This is useful German flak-personnel context, but it does **not** support the vi
 - no denominator for all German flak personnel in that campaign is supplied by this checked passage;
 - the full book has not been reviewed for an aggregate whole-war mortality estimate;
 - the accessible OCR reproduction has not been authenticated against the access-restricted publisher-edition scan;
-- the underlying `N 529/7` and `RL 12/457` casualty documents were not inspected by THR.
+- the underlying `N 529/7` and `RL 12/457` archival contents were not inspected by THR; only Westermann's citation wording plus catalogue-level metadata for the archival route were checked.
 
-University Press of Kansas, Google Books, Smithsonian Libraries and Internet Archive independently catalogue the 2001 book/edition family. Internet Archive holds an access-restricted scan; THR did not bypass that restriction. The Bundesarchiv independently identifies `N 529` as Axthelm's papers, and Deutsche Digitale Bibliothek/Bundesarchiv identifies `RL 12/457` as Flak-Regiment 102 material with May/July 1940 provenance. Those catalogue facts make the citation route more recoverable without authenticating the OCR text or its casualty number.
+University Press of Kansas, Google Books, Smithsonian Libraries and Internet Archive independently catalogue the 2001 book/edition family. Internet Archive holds an access-restricted scan; THR did not bypass that restriction. The Bundesarchiv independently identifies `N 529` as Axthelm's papers. Deutsche Digitale Bibliothek/Bundesarchiv identifies `RL 12/457` as a Flak-Regiment 102 archival unit dated May/July 1940 and describes it as containing an extract from the war diary of **14 May 1940** with a map sketch, plus a **daily order of 8 July 1940**. That independently matches the date/title class of the `RL 12/457` item cited by Westermann, but THR still has not inspected the archival pages themselves or established which statement in that folder supports the 60/890 casualty figure. Those catalogue facts make the citation route more recoverable without authenticating the OCR text or its casualty number.
 
 Sources/routes:
 - https://kansaspress.ku.edu/9780700614202/
@@ -256,6 +256,8 @@ Future humans and artificial entities should be able to walk back down the strat
 
 ## Limits and correction
 
+Revision 0.2.8, 20 September 2026: **Westermann archival-citation-route repair.** Re-read the checked Westermann reproduction's note 75 and recovered the exact cited document labels: “Abschlussmeldung über Flakartillerie im Bereich des Gen.d.Lw.Ob.d.H.” (28 February 1942), N 529/Folder 7, and “Tagesbefehl des Flakregiments 102” (8 July 1940), RL 12/Folder 457. Deutsche Digitale Bibliothek/Bundesarchiv independently identifies RL 12/457 as a Flak-Regiment 102 unit dated May/July 1940 containing a 14 May 1940 war-diary extract and an 8 July 1940 daily order. THR did not inspect the archival pages, did not independently verify the N 529/7 folder title against the archive catalogue, and did not establish which archival statement supports the 60/890 casualty figure. Claim status and true-rate unknown remain unchanged.
+
 Revision 0.2.7, 19 September 2026: **Westermann targeted-book-search repair.** A targeted full-text/OCR search of a full third-party reproduction found an 80-percent flak-casualty passage in RAF/Bomber Command context, not German flak personnel context, and a late-1944 flak-arm personnel-strength figure without an aggregate death numerator. The search did not authenticate the reproduction, exhaustively review the book, establish absence under other wording, or establish transmission into the viral claim. Claim status remains unsupported in sources checked; true aggregate rate remains unknown.
 
 Revision 0.2.6, 19 September 2026: **Overmans scope-preview repair.** A public Oldenbourg/De Gruyter preview of Rüdiger Overmans' *Deutsche militärische Verluste im Zweiten Weltkrieg* was inspected. The preview establishes a sample-based empirical design drawing on individual Deutsche Dienststelle/WASt records and shows that the work contains losses/deaths tables by organisations and Wehrmacht branches, including Luftwaffe-level material. The relevant result-table values and any flak-crew-specific breakdown were not inspected, so the 80% claim status and true-rate unknown remain unchanged. The earlier blanket statement that Overmans was "not checked" is narrowed rather than silently retained.
@@ -281,7 +283,7 @@ This is an initial reconstruction from public web sources on 15 September 2026. 
 - Edward B. Westermann, *Flak: German Anti-Aircraft Defenses, 1914–1945*: full authenticated edition and exhaustive semantic/book-wide casualty review not checked; one selected 1940 passage plus a targeted full-text search of accessible unauthenticated third-party reproductions have been checked;
 - Rüdiger Overmans, *Deutsche militärische Verluste im Zweiten Weltkrieg*: full relevant result tables and any flak-crew-specific breakdown remain unchecked; a public publisher preview has been checked only for methodology/scope and the table list;
 - MGFA, *Das Deutsche Reich und der Zweite Weltkrieg*, volume 7;
-- relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings;
+- relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings; for Westermann note 75, the cited N 529/7 and RL 12/457 document identities are now narrower, but their archival contents remain uninspected;
 - the linked newsreel frames against the original video's frames.
 
 These remain research leads except for the specifically bounded Westermann passage and the specifically bounded Overmans publisher-preview scope check described above. No replacement mortality figure or arithmetic bound is inferred from a selected passage, an unauthenticated OCR reproduction, catalogue metadata or secondhand summaries.
