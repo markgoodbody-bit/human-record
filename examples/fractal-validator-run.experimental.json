@@ -1,0 +1,131 @@
+{
+  "format": "human-record-experimental-process-receipt/0.1",
+  "status": "experimental_not_registry_semantics",
+  "purpose": "Test whether THR can describe one validator execution without turning validator success into a truth verdict or forcing new shared registry object types.",
+  "local_id": "validator-run-35463860339",
+  "subject": {
+    "kind": "validator_execution",
+    "workflow_name": "Validate Human Record integrity",
+    "workflow_run_id": 35463860339,
+    "workflow_run_number": 124,
+    "job_id": 105952403588,
+    "event": "pull_request",
+    "pull_request": 52
+  },
+  "trigger_state": {
+    "branch": "framework/fractal-thr-rfc-20260919",
+    "run_head_sha": "7cd55c24c145d8424256e72ae27b6cdff2669f12",
+    "base_sha_at_pr": "1f5a5919938f385f43f1e2383bdfbb52807b206e",
+    "run_started_at": "2026-09-19T19:17:00Z",
+    "run_updated_at": "2026-09-19T19:17:07Z",
+    "triggering_actor": {
+      "kind": "external_account_label",
+      "value": "markgoodbody-bit",
+      "boundary": "Public GitHub account label from run metadata; not a THR living-person principal profile."
+    }
+  },
+  "executed_checkout": {
+    "kind": "github_pull_request_merge_ref",
+    "commit_sha": "3cced4453cf64b52a9a7364e0ba10b6a2ec28554",
+    "checkout_log_statement": "Merge 7cd55c24c145d8424256e72ae27b6cdff2669f12 into 1f5a5919938f385f43f1e2383bdfbb52807b206e",
+    "basis": "GitHub Actions checkout log for workflow run 35463860339",
+    "boundary": "The executed checkout is distinct from both the branch head that triggered the run and the PR's later current head."
+  },
+  "process_definition": {
+    "workflow": {
+      "path": ".github/workflows/validate-integrity.yml",
+      "git_blob_sha1": "6f8dd76ecb178ea8987616223493ab233908d47e"
+    },
+    "validator_entrypoint": {
+      "path": "tools/validate_all.py",
+      "git_blob_sha1": "273ff23e2031e4d5cb74f24ea9f96778031810a5"
+    },
+    "structural_validator": {
+      "path": "tools/validate_integrity.py",
+      "git_blob_sha1": "86d7fed363273833c1a5762360414b51ddb768a3"
+    },
+    "operational_validator": {
+      "path": "tools/validate_operational.py",
+      "git_blob_sha1": "1231062f79fc0ba450da2cba051ccdba521eeb3b"
+    }
+  },
+  "declared_environment": {
+    "runner": "ubuntu-latest",
+    "python_requested": "3.12",
+    "repository_permissions": {
+      "contents": "read"
+    },
+    "boundary": "Workflow declaration only; this fixture does not claim a complete hardware/OS/supply-chain reproduction environment."
+  },
+  "observed_steps": [
+    {
+      "name": "Check out repository",
+      "conclusion": "success"
+    },
+    {
+      "name": "Set up Python",
+      "conclusion": "success"
+    },
+    {
+      "name": "Validate record, registry and view integrity",
+      "command": "python tools/validate_all.py",
+      "conclusion": "success"
+    },
+    {
+      "name": "Test integrity rejection cases",
+      "command": "python -m unittest discover -s tools -p 'test_validate*.py'",
+      "conclusion": "success"
+    }
+  ],
+  "observed_output": {
+    "structural_integrity": "pass",
+    "operational_integrity": "pass",
+    "validator_warning_count": 7,
+    "validator_warning_groups": [
+      {
+        "count": 5,
+        "kind": "open_observation_outcome_vocabulary",
+        "value": "referenced_by_record"
+      },
+      {
+        "count": 1,
+        "kind": "open_source_relation_vocabulary",
+        "value": "byte_identical_observed_copy"
+      },
+      {
+        "count": 1,
+        "kind": "open_source_relation_vocabulary",
+        "value": "byte_identical_observed_copy_of"
+      }
+    ],
+    "rejection_test_suite": {
+      "tests_run": 103,
+      "result": "OK"
+    },
+    "job_conclusion": "success"
+  },
+  "external_receipts": [
+    {
+      "kind": "github_actions_workflow_run",
+      "url": "https://github.com/markgoodbody-bit/human-record/actions/runs/35463860339"
+    }
+  ],
+  "not_established": [
+    "That the Human Record assertions checked by the validator are historically or factually true.",
+    "That the seven validator warnings are defects or harmless in every future use.",
+    "That GitHub Actions is an independent evidentiary witness to the underlying historical records.",
+    "That the declared workflow environment is fully reproducible from this fixture.",
+    "That the triggering GitHub account label identifies a living human beyond the public account context.",
+    "That successful execution grants GitHub, the triggering actor, or THR policy authority."
+  ],
+  "ceilings": [
+    "PROCESS SUCCESS != WARNING-FREE",
+    "PASS != NO RESIDUAL",
+    "VALIDATOR PASS != TRUTH",
+    "RUN TRIGGER HEAD != EXECUTED CHECKOUT",
+    "CURRENT PR HEAD != HISTORICAL RUN HEAD",
+    "EXTERNAL SERVICE RECEIPT != INDEPENDENT CLAIM EVIDENCE",
+    "ACCOUNT LABEL != LIVING-PERSON PROFILE",
+    "PROCESS RECEIPT != GOVERNANCE AUTHORITY"
+  ]
+}
