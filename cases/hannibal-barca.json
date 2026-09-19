@@ -1,7 +1,7 @@
 {
   "format": "human-record-historical-person-source-survival/0.1",
   "record_id": "hannibal-source-survival",
-  "record_version": "0.1.2",
+  "record_version": "0.1.3",
   "title": "Hannibal: the person and the accounts that remain",
   "record_type": "historical_person_source_survival",
   "recorded_at": "2026-09-18",
@@ -131,8 +131,19 @@
         "hannibal-source-survival"
       ],
       "preservation": {
-        "status": "not_yet_checked",
-        "copies": []
+        "status": "institutional_preservation_route_identified",
+        "copies": [
+          {
+            "provider": "Internet Archive / New York Public Library",
+            "kind": "digitized_printed_edition",
+            "persistent_locator": "https://archive.org/details/historieswitheng02poly",
+            "access": "public",
+            "relationship": "digitized Volume II / Loeb Classical Library 137 carrier for W. R. Paton's Polybius, containing Books III-IV; matches the printed edition family explicitly named by the Thayer Book III reading surface",
+            "verified_against_observation": "archive metadata and OCR/title/contents checked 2026-09-20; exact Thayer HTML bytes/layout and transcription differences not compared"
+          }
+        ],
+        "last_checked_at": "2026-09-20",
+        "note": "Thayer states that its Book III webpage reproduces Volume II of the 1922 Loeb Classical Library edition. Internet Archive item historieswitheng02poly identifies Volume 2, Polybius, W. R. Paton, first printed 1922, Loeb 137, and contains Book III. The exact Thayer HTML representation was not established as archived or byte-identical to the scan. PRINTED EDITION CARRIER RECOVERABLE != EXACT WEB REPRESENTATION PRESERVED."
       }
     },
     {
@@ -423,6 +434,14 @@
       "change": "Identified Open Book Publishers and Library of Congress institutional recovery routes for the related published Dickinson College Commentaries edition containing the Nepos text and notes. The exact observed DCC chapter-13 web representation was not established as archived or byte-identical to those edition carriers.",
       "historical_finding_changed": false,
       "ceiling": "RELATED EDITION RECOVERABLE != EXACT WEB REPRESENTATION PRESERVED"
+    },
+    {
+      "date": "2026-09-20",
+      "kind": "source_preservation_route_repair",
+      "source_id": "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2",
+      "change": "Identified an Internet Archive / New York Public Library digitized carrier for Polybius Volume II / Loeb 137, the 1922 Paton printed edition family explicitly named by the Thayer Book III reading surface. The exact Thayer HTML representation was not established as archived or byte-identical to the scan.",
+      "historical_finding_changed": false,
+      "ceiling": "PRINTED EDITION CARRIER RECOVERABLE != EXACT WEB REPRESENTATION PRESERVED"
     }
   ]
 }
