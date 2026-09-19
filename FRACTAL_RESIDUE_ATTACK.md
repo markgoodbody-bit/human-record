@@ -859,7 +859,7 @@ Current THR already behaves this way:
 The strongest current claim is therefore:
 
 ~~~text
-THR PROTOCOL = NOT EARNED
+UNIVERSAL THR RECORD / KNOWLEDGE PROTOCOL = NOT EARNED
 
 THR UNIVERSAL ONTOLOGY = NOT EARNED
 
@@ -873,9 +873,20 @@ THR CURRENT ARCHITECTURE
 
 "Profile-like" is a design analogy, not a standards-adoption claim.
 
-A future protocol becomes warranted only if independent implementations need to exchange
-THR-compatible records and existing profile/packaging/ontology mechanisms cannot preserve
-a consequential requirement.
+A future **universal record / network protocol** becomes warranted only if independent
+implementations need to exchange THR-compatible records and existing
+profile/packaging/ontology mechanisms cannot preserve a consequential requirement.
+
+This does not exclude narrow task-specific exchange contracts. The current public
+repository already contains one real counterexample to an overbroad "no protocol
+pressure" claim: `human-record-contribution-packet/0.1`, an optional versioned relay
+envelope earned by the need to preserve attribution, source-check state, unknowns and
+rights/privacy boundaries when a contributor cannot post directly.
+
+~~~text
+BOUNDED EXCHANGE CONTRACT = CAN BE EARNED
+UNIVERSAL RECORD PROTOCOL = NOT CURRENTLY EARNED
+~~~
 
 ~~~text
 ONE IMPLEMENTATION
