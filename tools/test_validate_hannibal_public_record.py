@@ -28,7 +28,7 @@ class HannibalPublicRecordTests(unittest.TestCase):
 
     def test_machine_record_keeps_two_source_mentions_separate(self):
         self.assertEqual(self.machine["record_id"], RECORD_ID)
-        self.assertEqual(self.machine["record_version"], "0.1.0")
+        self.assertEqual(self.machine["record_version"], "0.1.1")
         self.assertEqual(len(self.machine["mentions"]), 2)
         self.assertEqual({m["literal"] for m in self.machine["mentions"]}, {"Hannibal"})
         self.assertEqual({m["source_id"] for m in self.machine["mentions"]}, {NEPOS_SOURCE, POLYBIUS_SOURCE})
@@ -38,6 +38,22 @@ class HannibalPublicRecordTests(unittest.TestCase):
             self.assertEqual(mention["candidates"][0]["entity_id"], ENTITY_ID)
             self.assertEqual(mention["candidates"][0]["state"], "candidate")
             self.assertTrue(mention["candidates"][0]["basis"])
+
+    def test_record_local_edition_routes_preserve_ceilings(self):
+        routes = {row["source_id"]: row for row in self.machine["edition_routes"]}
+        self.assertEqual(set(routes), {NEPOS_SOURCE, POLYBIUS_SOURCE})
+
+        nepos = routes[NEPOS_SOURCE]
+        self.assertEqual(nepos["relationship"], "declared_textual_basis_with_editorial_modifications")
+        self.assertEqual(nepos["work_urn"], "urn:cts:latinLit:phi0588.abo023")
+        self.assertEqual(nepos["edition_urn"], "urn:cts:latinLit:phi0588.abo023.opp-lat3")
+        self.assertIn("line-by-line collation", nepos["ceiling"])
+
+        polybius = routes[POLYBIUS_SOURCE]
+        self.assertEqual(polybius["relationship"], "parallel_source_language_edition_route_not_translation_basis")
+        self.assertEqual(polybius["edition_urn"], "urn:cts:greekLit:tlg0543.tlg001.perseus-grc1")
+        self.assertIn("NOT CHECKED BASIS OF PATON TRANSLATION", polybius["ceiling"])
+        self.assertIn("GREEK SOURCE-LITERAL PASSAGES NOT NEWLY INSPECTED", polybius["ceiling"])
 
     def test_all_historical_assertions_remain_source_attributed(self):
         self.assertEqual(len(self.machine["assertions"]), 5)
