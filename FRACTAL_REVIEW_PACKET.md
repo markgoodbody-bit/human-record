@@ -190,6 +190,29 @@ In particular:
 
 A result of "THR should shrink to integration / continuation discipline" is valid.
 
+### L. Protocol necessity
+
+The current RFC now says a new THR protocol is **not earned**.
+
+Try to break that.
+
+Find a concrete interoperability requirement that:
+- requires two or more independent implementations to exchange/use THR records;
+- is consequential to the Human Record purpose;
+- cannot be preserved adequately through the current record contract, existing file
+  formats, ordinary web/API conventions, stronger-owner standards or an application
+  profile / mapping layer;
+- would justify a new normative wire/data protocol rather than merely another export or
+  adapter.
+
+If no such requirement exists in the current cases, return:
+
+`NO PROTOCOL PRESSURE FOUND`
+
+Do not treat future scale alone as protocol pressure.
+
+
+
 The current RFC now makes a stronger provisional claim:
 
 ~~~text
@@ -373,6 +396,9 @@ ADD:
 
 ZERO_NEW_TYPES_ATTACK:
 <one concrete counterexample, or NO COUNTEREXAMPLE FOUND>
+
+PROTOCOL_NECESSITY:
+<concrete current requirement, or NO PROTOCOL PRESSURE FOUND>
 
 RESIDUE_ATTACK:
 <what, if anything, still appears genuinely THR-shaped after strongest-owner subtraction>
