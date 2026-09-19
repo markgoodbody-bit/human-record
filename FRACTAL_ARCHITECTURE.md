@@ -229,11 +229,30 @@ External owner-subtraction is preserved in:
 
 `FRACTAL_OWNER_SUBTRACTION.md`
 
-Current stronger owners include:
+A second pass against cultural-heritage, inference and preservation owners is preserved in:
+
+`FRACTAL_OWNER_SUBTRACTION_CULTURAL_PRESERVATION.md`
+
+Current stronger owners / interop patterns include:
 
 ```text
 GENERIC PROVENANCE ENTITY / ACTIVITY / AGENT
 -> W3C PROV
+
+CULTURAL-HERITAGE THING / EVENT / ACTOR / TIME
+-> CIDOC CRM
+
+DIGITISATION / DIGITAL DERIVATION / PHYSICAL-MEASUREMENT PROVENANCE
+-> CRMdig
+
+PREMISE / INFERENCE / CONCLUSION LINEAGE
+-> CRMinf
+
+DIGITAL PRESERVATION OBJECT / EVENT / AGENT / RIGHTS
+-> PREMIS
+
+ASSERTION / ASSERTION-PROVENANCE / PUBLICATION-PROVENANCE PACKAGING
+-> NANOPUBLICATIONS (EXISTING INTEROP PATTERN; NOT MANDATORY)
 
 SIGNED DIGITAL MEDIA PROVENANCE
 -> C2PA Content Credentials
@@ -296,6 +315,11 @@ REKOR INCLUSION != HISTORICAL CLAIM TRUE
 MEMENTO CAPTURE != ORIGINAL CONTEXT COMPLETE
 SWHID != AUTHORSHIP / LICENCE / GOVERNANCE
 PROV GRAPH != EPISTEMIC VERDICT
+CIDOC CRM EVENT GRAPH != EVENT TRUE
+CRMDIG PROVENANCE != PHYSICAL OBJECT AUTHENTIC
+CRMINF ARGUMENT CHAIN != CONCLUSION TRUE
+PREMIS PRESERVATION EVENT != HISTORICAL AUTHENTICITY
+WELL-FORMED NANOPUBLICATION != ASSERTION TRUE
 ```
 
 The "fractal" therefore means that THR can follow the next material layer into the
@@ -486,8 +510,33 @@ Do not create a global authority score.
 
 The existing entity/source/observation/assertion layers remain valid.
 
-The following are candidate additional concepts. They should become registry types only
-when real records require cross-record use.
+The following are candidate additional **conceptual roles**, not presumptive THR-native
+ontologies. The owner-subtraction passes materially narrow their implementation path.
+
+By default:
+
+```text
+EVENT / ACTOR / HISTORICAL ACTIVITY SEMANTICS
+-> CIDOC CRM / PROV WHERE FIT
+
+DIGITISATION / DIGITAL DERIVATION / PHYSICAL MEASUREMENT
+-> CRMdig / PROV WHERE FIT
+
+PREMISE / INFERENCE / CONCLUSION DEPENDENCY
+-> CRMinf WHERE FIT
+
+DIGITAL PRESERVATION EVENT / AGENT / RIGHTS DETAIL
+-> PREMIS WHERE FIT
+
+SOFTWARE BUILD / EXECUTION PROVENANCE
+-> PROV / in-toto / SLSA WHERE FIT
+
+THR-NATIVE SHARED TYPE
+-> ONLY IF A MATERIAL CROSS-RECORD RESIDUE SURVIVES THOSE OWNERS
+```
+
+A local THR record may still need a small addressable referent for an event, process,
+attestation or actor. Local addressability does not earn a new global ontology.
 
 ### 3.1 Event
 
