@@ -77,7 +77,7 @@ Current provisional ceiling:
 
 ~~~text
 THR UNIVERSAL ONTOLOGY = NOT EARNED
-THR PROTOCOL = NOT EARNED
+UNIVERSAL THR RECORD / KNOWLEDGE PROTOCOL = NOT EARNED
 
 CURRENT ARCHITECTURE
 = PUBLIC RECORD PRODUCT
@@ -92,8 +92,27 @@ This is compatible with the established application-profile design pattern of re
 terms/semantics from stronger base standards and adding local application requirements,
 but THR is not claiming conformance to any particular profile framework.
 
-A protocol should be earned by actual multi-implementation exchange pressure, not by the
-fact that one can be designed.
+A universal record/network protocol should be earned by actual multi-implementation
+exchange pressure, not by the fact that one can be designed.
+
+A later implementation audit in `FRACTAL_PROTOCOL_PRESSURE_AUDIT.md` finds an important
+bounded counterexample: the existing optional contribution packet
+(`human-record-contribution-packet/0.1`) is already an earned task-specific exchange
+contract for preserving meaning across contributor / relay / receiver handoff.
+
+Therefore:
+
+~~~text
+UNIVERSAL THR RECORD / KNOWLEDGE PROTOCOL = NOT EARNED
+
+BOUNDED TASK-SPECIFIC EXCHANGE CONTRACT
+-> MAY BE EARNED BY A REAL HANDOFF / TRANSPORT GAP
+
+CURRENT EXAMPLE
+-> CONTRIBUTION PACKET 0.1
+~~~
+
+That does not create new shared core ontology types.
 
 ~~~text
 ONE IMPLEMENTATION != PROTOCOL NEEDED
