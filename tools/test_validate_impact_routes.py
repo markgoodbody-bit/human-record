@@ -76,6 +76,13 @@ class ImpactRouteTests(unittest.TestCase):
         self.assertEqual(result["affected_records"], ["record-a"])
         self.assertIn("NO_ASSERTION_EDGE != NO_RECORD_DEPENDENCY", result["ceilings"])
 
+    def test_unknown_direct_record_is_visible_not_silently_dropped(self):
+        self.sources["sources"][0]["used_by_records"].append("missing-record")
+        self.write()
+        result = impact_routes.derive_impact_routes(self.root, self.source_id)
+        self.assertEqual(result["affected_records"], ["record-a"])
+        self.assertEqual(result["unresolved_direct_used_by_records"], ["missing-record"])
+
     def test_assertion_route_adds_second_record(self):
         self.add_assertion(self.source_id, ["cases/b.md"])
         result = impact_routes.derive_impact_routes(self.root, self.source_id)
