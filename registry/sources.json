@@ -1059,7 +1059,7 @@
     {
       "id": "thr:source:8584dd6b-5940-4805-902a-c11fce3c3675",
       "kind": "digital_text_edition_index",
-      "title": "Polybius, Histories — Perseus Greek edition (Büttner-Wobst), passage vocabulary for 3.33.17-18",
+      "title": "Polybius, Histories — Perseus Greek edition passage vocabulary index for 3.33.17-18",
       "publisher": "Perseus Digital Library / Scaife vocabulary tooling",
       "locators": [
         {
@@ -1086,11 +1086,11 @@
           "outcome": "partial",
           "record_basis": "cases/hannibal-barca.json Greek source-literal boundary for Polybius 3.33.17-18",
           "digest": null,
-          "scope": "Passage-specific Greek vocabulary/token lists for Polybius Histories 3.33.17 and 3.33.18 in urn:cts:greekLit:tlg0543.tlg001.perseus-grc2; used only to verify that the lemma/form Ἀννίβας occurs in both cited sections. Full Greek passage text, manuscript witnesses and the other THR-cited Polybius sections were not inspected through this source.",
+          "scope": "Passage-specific Greek vocabulary/lemma lists for Polybius Histories 3.33.17 and 3.33.18 in urn:cts:greekLit:tlg0543.tlg001.perseus-grc2; used only to establish that the index associates both sections with lemma Ἀννίβας. The exact inflected source-text spelling, full Greek passage, manuscript witnesses and the other THR-cited Polybius sections were not inspected through this source.",
           "observer": "Framework",
           "notes": [
-            "The edition is identified by Perseus as the Büttner-Wobst Greek text; the passage word lists show Ἀννίβας once in 3.33.17 and once in 3.33.18.",
-            "PASSAGE TOKEN LIST != MANUSCRIPT WITNESS; GREEK NAME FORM ATTESTED != HISTORICAL IDENTITY PROVED."
+            "The vocabulary pages describe lemma lists rather than a transcription of the passage text; each passage list includes lemma Ἀννίβας once.",
+            "VOCABULARY LEMMA != SOURCE-LITERAL SPELLING; PASSAGE INDEX != MANUSCRIPT WITNESS."
           ]
         }
       ],
