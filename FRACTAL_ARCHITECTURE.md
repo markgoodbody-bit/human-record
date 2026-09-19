@@ -36,11 +36,55 @@ The next problem is larger:
 > through which process, and what independent history remains if one custodian lies,
 > disappears or is compromised?**
 
-This RFC proposes a recursive grammar for answering those questions without turning THR
+This RFC tests a recursive grammar for answering those questions without turning THR
 into a central truth authority, a universal people database, or a cryptographic
 authenticity oracle.
 
-It is deliberately a design target, not an instruction to populate new registries now.
+Repeated owner subtraction has narrowed the likely architectural form. The current live
+project already has a minimum `RECORD_CONTRACT.md` derived from the four public records,
+and it explicitly says common questions do not require identical objects.
+
+The current RFC therefore does **not** assume that THR needs a new universal protocol or
+ontology.
+
+It is deliberately a design/falsification target, not an instruction to populate new
+registries now.
+
+---
+
+## Architecture ceiling — profile/contract before protocol
+
+A later residue attack in `FRACTAL_RESIDUE_ATTACK.md` tests whether the surviving
+architecture is better understood as a profile-like interoperability contract rather than
+a new protocol.
+
+Current provisional ceiling:
+
+~~~text
+THR UNIVERSAL ONTOLOGY = NOT EARNED
+THR PROTOCOL = NOT EARNED
+
+CURRENT ARCHITECTURE
+= PUBLIC RECORD PRODUCT
++ MINIMUM INTEROPERABILITY CONTRACT
++ SPARSE CROSS-RECORD REFERENCES WHERE EARNED
++ RECORD-LOCAL STRUCTURE
++ STRONGER-OWNER MAPPINGS WHERE MATERIAL
++ EXPLICIT EVIDENCE / CORRECTION / RIGHTS CEILINGS
+~~~
+
+This is compatible with the established application-profile design pattern of reusing
+terms/semantics from stronger base standards and adding local application requirements,
+but THR is not claiming conformance to any particular profile framework.
+
+A protocol should be earned by actual multi-implementation exchange pressure, not by the
+fact that one can be designed.
+
+~~~text
+ONE IMPLEMENTATION != PROTOCOL NEEDED
+PORTABILITY GOAL != NEW PROTOCOL NEEDED
+INTEROPERABILITY != OWN EVERY SEMANTIC
+~~~
 
 ---
 
