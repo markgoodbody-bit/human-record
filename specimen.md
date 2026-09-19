@@ -65,12 +65,52 @@ Seven of the eight identity fields compared matched the museum's live record exa
 eighth is typographic: our `artist_dates` uses an en dash (`1836–1910`); the museum's API
 gives two integers.
 
+## Reported collection and exhibition history — checked 19 September 2026
+
+The original specimen stopped at the current Met credit line and therefore described
+pre-1927 custody as wholly unknown. That boundary was too broad.
+
+A later Met collection catalogue published in 1985 reports this sequence for *Camp Fire*:
+
+- **Thomas B. Clarke, New York, 1880–1899**;
+- **16 February 1899** — American Art Galleries sale, no. 239, reported at $700;
+- **Alexander Harrison**, reported as agent in 1899;
+- **Henry K. Pomeroy, New York, 1899–1927**;
+- **1927 gift** to The Metropolitan Museum of Art.
+
+Source:
+- The Metropolitan Museum of Art, *American Paintings in The Metropolitan Museum of Art, Volume II* (1985), Camp Fire catalogue entry:
+  https://libmma.contentdm.oclc.org/digital/api/collection/p15324coll10/id/41001/download
+
+Selected historical catalogues re-observe parts of that reported route:
+
+- the official 1893 World's Columbian Exposition fine-arts catalogue lists *Camp Fire*
+  as no. 568 among seven Homer paintings lent by Thomas B. Clarke, New York:
+  https://columbus.iit.edu/od/od-us-oil.html
+- The Met's 1911 Winslow Homer loan catalogue describes *Camp Fire* as
+  “From the Thomas B. Clarke Sale, 1899” and records H. K. Pomroy as lender:
+  https://upload.wikimedia.org/wikipedia/commons/b/b5/Catalogue_of_a_loan_exhibition_of_paintings_by_Winslow_Homer_-_New_York%2C_February_the_sixth_to_March_the_nineteenth%2C_MCMXI_%28IA_catalogueofloane00home%29.pdf
+
+These sources materially narrow the earlier gap, but they are not one complete
+independently witnessed custody ledger. The 1985 catalogue and 1911 loan catalogue are
+both Metropolitan Museum publications. The 1893 exposition catalogue is a separate
+historical publication, but an exhibition loan record establishes an attributed lender
+association, not legal title or uninterrupted physical possession.
+
+```text
+REPORTED COLLECTION HISTORY != CONTINUOUS PHYSICAL CUSTODY PROOF
+EXHIBITION LOAN != TITLE TRANSFER PROOF
+SALE REFERENCE != CREATION EVENT PROOF
+```
+
 ## What this does not establish
 
 - that the Met's record is correct. It establishes that *our* record agrees with *theirs*
   on the day of the check, and that the museum's own primary-image bytes are the bytes
   we serve. The museum is the owner; this is a witness of agreement, not a second source.
-- custody before 1927. The credit line is where our chain starts.
+- ownership or custody before Thomas B. Clarke, and the circumstances by which Clarke reportedly acquired the work.
+- continuous physical custody and legal title across every point of the reported Clarke → 1899 sale/agent → Pomeroy → 1927 gift route.
+- the exact legal/agency mechanics of the 1899 Clarke-sale transition.
 - that the bytes are the painting. They are a photograph the museum published; the
   museum's `metadataDate` for the record was 2026-01-14T04:51:02Z at the time of the check.
 - that the Met's public-domain or Open Access statements settle every possible legal right
@@ -125,6 +165,12 @@ Scope/record correction, Build Framework, 2026-09-14: made selection provenance,
 work/reproduction rights distinction, observation-time scope and the plumbing-versus-purpose
 test boundary explicit. The original observation and hashes remain unchanged; this is not
 a fresh external provenance witness.
+
+Collection-history correction, Framework, 2026-09-19: inspected the Met's 1985 Camp Fire
+catalogue entry plus 1893 and 1911 historical exhibition catalogues. Replaced the blanket
+“custody before 1927” unknown with a bounded reported Clarke → sale/agent → Pomeroy → gift
+history and selected historical re-observations. This does not establish continuous
+physical custody, legal title, exact transfer mechanics or the 1880 creation event.
 
 ## Provenance and correction of this specimen
 

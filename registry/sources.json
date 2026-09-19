@@ -913,6 +913,148 @@
       "used_by_records": [
         "sieve-riddle-revival"
       ]
+    },
+    {
+      "id": "thr:source:2f8b9c4d-1a73-4e65-9b20-6d7c8e9f0a31",
+      "kind": "museum_collection_catalogue",
+      "title": "American Paintings in The Metropolitan Museum of Art, Volume II — Camp Fire catalogue entry",
+      "publisher": "The Metropolitan Museum of Art",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://libmma.contentdm.oclc.org/digital/api/collection/p15324coll10/id/41001/download",
+          "status": "met_publication_page_excerpt_inspected"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:8e4c2a71-6d39-4b50-9f12-7a8b9c0d1e23",
+          "observed_at": "2026-09-19",
+          "precision": "date",
+          "outcome": "partial",
+          "record_basis": "specimen.json reported_collection_history",
+          "digest": null,
+          "scope": "Camp Fire catalogue entry's EXHIBITED and EX COLL. lines in the Met's 1985 American Paintings volume; not a full-volume audit.",
+          "observer": "Framework",
+          "notes": [
+            "The entry reports Thomas B. Clarke, New York, 1880-1899; the 16 February 1899 American Art Galleries sale, no. 239, $700; Alexander Harrison as agent in 1899; Henry K. Pomeroy, New York, 1899-1927; and a 1927 gift.",
+            "The same entry lists 1893 World's Columbian Exposition loan by T. B. Clarke and 1911 Met loan by H. K. Pomeroy.",
+            "This is a later museum catalogue's reported collection/exhibition history, not direct observation of continuous custody or legal title."
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:24f10634-c5da-48d2-9475-8d2e096d5cd6"
+        },
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:fb6063f7-6e0d-4f87-9a9c-c5e5d001d724"
+        }
+      ],
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "camp-fire-1880"
+      ]
+    },
+    {
+      "id": "thr:source:7c31e5a9-4b82-4d60-9f17-2a3b5c6d7e80",
+      "kind": "official_exhibition_catalogue",
+      "title": "World's Columbian Exposition 1893 — Official Catalogue, Fine Arts",
+      "publisher": "World's Columbian Exposition",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://columbus.iit.edu/od/od-us-oil.html",
+          "status": "public_transcription_inspected"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:3b7d1e95-2a64-4c80-9f31-5d6e7a8b9c02",
+          "observed_at": "2026-09-19",
+          "precision": "date",
+          "outcome": "partial",
+          "record_basis": "specimen.json reported_collection_history entry 1880-1899",
+          "digest": null,
+          "scope": "United States oil-painting catalogue section around Winslow Homer entries 566-578; not a full exposition-catalogue audit.",
+          "observer": "Framework",
+          "notes": [
+            "Entry 568 is Camp Fire. The catalogue states that the seven Homer paintings 566-572 were lent by Thomas B. Clarke, New York.",
+            "This supports Clarke's association/lender status in 1893; it does not establish legal title or uninterrupted custody."
+          ]
+        }
+      ],
+      "relations": [],
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "camp-fire-1880"
+      ]
+    },
+    {
+      "id": "thr:source:5a92d4c7-8e31-4f60-b219-3c4d5e6f7081",
+      "kind": "museum_exhibition_catalogue",
+      "title": "Catalogue of a Loan Exhibition of Paintings by Winslow Homer — Metropolitan Museum of Art, 1911",
+      "publisher": "The Metropolitan Museum of Art",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Catalogue_of_a_loan_exhibition_of_paintings_by_Winslow_Homer_-_New_York%2C_February_the_sixth_to_March_the_nineteenth%2C_MCMXI_%28IA_catalogueofloane00home%29.pdf",
+          "status": "digitized_catalogue_inspected"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:6f2a8c41-9d35-4b70-a218-3e4f5a6b7c90",
+          "observed_at": "2026-09-19",
+          "precision": "date",
+          "outcome": "partial",
+          "record_basis": "specimen.json reported_collection_history entries 1899 and 1899-1927",
+          "digest": null,
+          "scope": "Camp Fire entry no. 4 in the 1911 Winslow Homer loan exhibition catalogue; not a full-catalogue audit.",
+          "observer": "Framework",
+          "notes": [
+            "The entry says Camp Fire was 'From the Thomas B. Clarke Sale, 1899' and 'Lent by H. K. Pomroy.'",
+            "This contemporaneous exhibition catalogue re-observes a Clarke-sale/Pomeroy route but does not establish the complete transfer mechanics or continuous custody."
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:24f10634-c5da-48d2-9475-8d2e096d5cd6"
+        },
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:2f8b9c4d-1a73-4e65-9b20-6d7c8e9f0a31"
+        }
+      ],
+      "preservation": {
+        "status": "external_archive_found",
+        "copies": [
+          {
+            "provider": "Internet Archive / Wikimedia Commons",
+            "kind": "digitized_historical_catalogue",
+            "persistent_locator": "https://archive.org/details/catalogueofloane00home",
+            "access": "public",
+            "relationship": "digitized_copy_of_1911_met_catalogue",
+            "verified_against_observation": "page text inspected through public digitized PDF"
+          }
+        ],
+        "last_checked_at": "2026-09-19"
+      },
+      "used_by_records": [
+        "camp-fire-1880"
+      ]
     }
   ],
   "ceilings": [
