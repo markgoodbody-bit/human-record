@@ -780,9 +780,9 @@
           "scope": "Targeted full-text/OCR search of an accessible third-party full-PDF reproduction for '80 percent', 'mortality', the 1940 flak casualty passage and late-1944 flak personnel scale; not a line-by-line whole-book review or authenticated-edition comparison.",
           "observer": "Framework",
           "notes": [
-            "A relevant 'up to 80 percent of flak casualties' passage concerns RAF/Bomber Command aircraft/aircrew casualties over target areas, not mortality among German flak crews.",
+            "Carrier PDF page 96 (one-based), section 'The RAF's Reaction to the Luftwaffe's Air Defense Initiatives', contains the relevant 'up to 80 percent of flak casualties' passage; it concerns RAF/Bomber Command aircraft/aircrew casualties over target areas, not mortality among German flak crews. This is a locator in the checked third-party PDF, not authenticated publisher pagination.",
             "The OCR search returned no literal match for 'mortality'; absence of that word does not prove the concept/claim is absent under other wording or immune from OCR/search failure.",
-            "The same reproduction reports a ground-based air-defense force of 1,110,900 persons by autumn 1944, including 448,700 from outside the Luftwaffe. This is a personnel-strength snapshot, not a whole-war exposed-population denominator or death numerator.",
+            "Carrier PDF page 183 (one-based), section 'The State of the Flak Arm', reports a ground-based air-defense force of 1,110,900 persons by autumn 1944, including 448,700 from outside the Luftwaffe. This is a personnel-strength snapshot, not a whole-war exposed-population denominator or death numerator, and the carrier page is not authenticated publisher pagination.",
             "The previously checked 1940 passage remains 60 officers and 890 enlisted casualties explicitly including dead, wounded or missing.",
             "TARGETED SEARCH != EXHAUSTIVE BOOK REVIEW; THIRD-PARTY REPRODUCTION != AUTHENTICATED EDITION."
           ]
