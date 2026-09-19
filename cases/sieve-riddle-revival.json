@@ -76,7 +76,7 @@
       "url": "https://www.heritagecrafts.org.uk/wp-content/uploads/2019/03/HCA-Red-List-optimised.pdf",
       "observed_at": "2026-09-19",
       "independence_group": "Heritage Crafts",
-      "role": "The 2019 Red List entry reports that Steve Overthrow began making at the beginning of 2018, received advice and tuition from Mike Turnock, and went through product development and refining before commercial production.",
+      "role": "The 2019 Red List entry reports that Steve Overthrow began making at the beginning of 2018, received advice and tuition from Mike Turnock, and also went through product development and refining before commercial production; the report does not establish a strict sequence between those learning components.",
       "boundary": "Same institutional evidence family as the Heritage Crafts announcement/current page. This records reported learning-route components, not the exact teaching content, completeness of transmission or independent observation of tuition."
     },
     {
@@ -98,7 +98,7 @@
       "url": "https://www.gardensillustrated.com/features/sieve-and-riddle-handmade-garden-sieves",
       "observed_at": "2026-09-19",
       "independence_group": "Gardens Illustrated / Our Media",
-      "role": "Published interview reports that Overthrow began by researching the extinct craft, learned through repeated trial and error while developing his making practice, and later received Turnock's advice/help on aspects he said he could not have researched.",
+      "role": "Published interview reports that Overthrow began researching the extinct craft, learned through repeated trial and error while developing his making practice, and also received Turnock's advice/help on aspects he said he could not have researched. Exact sequence and overlap are not fully established by the record.",
       "boundary": "Published practitioner account, not a THR interview or independent observation of learning. This record preserves learning modes only and does not reproduce practitioner-specific process instructions."
     },
     {
@@ -145,8 +145,8 @@
       ]
     },
     {
-      "date": "2018-2019_learning_route",
-      "event": "Public Heritage Crafts and practitioner-interview sources report a mixed Overthrow learning route: research and trial-and-error/product development alongside advice and tuition from Mike Turnock.",
+      "date": "2017_onward_reported_learning_components",
+      "event": "Public Heritage Crafts and practitioner-interview sources report components of Overthrow's learning route including research, trial-and-error/product development, and advice or tuition from Mike Turnock; exact sequence, overlap and relative contribution remain unresolved.",
       "basis_nodes": [
         "heritage-crafts-red-list-2019-report",
         "homo-faber-overthrow-interview",
@@ -233,7 +233,7 @@
       "date": "2026-09-19",
       "by": "Framework",
       "basis": "Heritage Crafts 2019 Red List report + Gardens Illustrated 2023 published practitioner interview",
-      "change": "Narrowed the Overthrow transmission gap from a generic direct-learning route to reported components: research, trial-and-error/product development, and Turnock advice/tuition. Exact tacit content, timing, relative contribution and completeness remain unknown; no process manual or practitioner contact was added.",
+      "change": "Narrowed the Overthrow transmission gap from a generic direct-learning route to reported components: research, trial-and-error/product development, and Turnock advice/tuition. Exact sequence/overlap, tacit content, timing, relative contribution and completeness remain unknown; no process manual or practitioner contact was added.",
       "practitioner_contact_added": false,
       "private_or_restricted_process_material_added": false,
       "reported_status_counts_changed": false
