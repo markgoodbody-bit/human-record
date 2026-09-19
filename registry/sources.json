@@ -1,6 +1,6 @@
 {
   "format": "human-record-source-registry/0.1",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "purpose": "Cross-record source identity, observation and preservation-status index. A source ID is not a truth certificate and a URL is not the source identity.",
   "model": "https://thehumanrecord.net/SOURCE_MODEL.md",
   "sources": [
@@ -772,6 +772,56 @@
         "copies": [],
         "last_checked_at": "2026-09-18",
         "note": "Internet Archive catalogues an access-restricted scan of the 2001 University Press of Kansas edition. THR did not bypass access controls. The accessible third-party OCR representation is not treated as an authenticated preservation copy."
+      },
+      "used_by_records": [
+        "viral-flak-claim"
+      ]
+    },
+    {
+      "id": "thr:source:4c1e2d3a-6b7f-4c8d-9a10-2e3f4b5c6d7e",
+      "kind": "publisher_preview",
+      "title": "Deutsche militärische Verluste im Zweiten Weltkrieg — public publisher preview",
+      "publisher": "Oldenbourg / De Gruyter",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://www.degruyter.com/document/doi/10.1524/9783486594140/html",
+          "status": "publisher_book_page"
+        },
+        {
+          "scheme": "url",
+          "value": "https://api.pageplace.de/preview/DT0400.9783486594140_A21763421/preview-9783486594140_A21763421.pdf",
+          "status": "public_preview_inspected"
+        },
+        {
+          "scheme": "doi",
+          "value": "10.1524/9783486594140",
+          "status": "publisher_identifier"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:7d2f1c8b-3a64-4e91-8b25-6c7d8e9f0a12",
+          "observed_at": "2026-09-19",
+          "precision": "date",
+          "outcome": "partial",
+          "record_basis": "cases/viral-flak-claim.json node overmans-2004-publisher-preview; Framework field follow-up after issue #20",
+          "digest": null,
+          "scope": "Public preview pages covering bibliographic identity, contents/table list, preface, and early discussion of the Deutsche Dienststelle/WASt sampling and data basis. The result tables themselves were not inspected in this aperture.",
+          "observer": "Framework",
+          "notes": [
+            "The preview identifies the 3rd edition (2004) and shows that the study uses a sample drawn from individual Deutsche Dienststelle/WASt records as a core empirical basis.",
+            "Its table list includes losses by organisation and personnel strength, deaths by organisations and years, deaths by Wehrmacht branches and demographic groupings, plus Luftwaffe loss tables in the earlier source-review section.",
+            "The preview does not establish any flak-crew-specific population, denominator, death count or mortality rate. LUFTWAFFE != FLAK CREWS."
+          ]
+        }
+      ],
+      "relations": [],
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null,
+        "note": "The publisher preview was publicly retrievable in this aperture. Retrieval/availability is not a preservation finding; no preservation route or durable copy was checked."
       },
       "used_by_records": [
         "viral-flak-claim"

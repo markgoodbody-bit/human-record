@@ -1,6 +1,6 @@
 {
   "record_type": "provenance_case",
-  "record_version": "0.2.5",
+  "record_version": "0.2.6",
   "recorded_at": "2026-09-16",
   "title": "The viral '80% of German flak crews died' claim",
   "status": "unsupported_in_sources_checked",
@@ -82,6 +82,13 @@
       "url": "https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf",
       "role": "Accessible third-party OCR reproduction of Edward B. Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945. A selected passage for the May 10–June 22, 1940 western campaign reports flak-force casualties, explicitly dead, wounded or missing, as 60 officers and 890 enlisted men. Book identity is independently catalogued by University Press of Kansas / Google Books / Smithsonian / Internet Archive, but this OCR copy itself was not authenticated against the restricted publisher-edition scan and the underlying archival documents were not inspected.",
       "claim_relation": "bounded_campaign_personnel_casualty_context_not_support"
+    },
+    {
+      "id": "overmans-2004-publisher-preview",
+      "kind": "scholarly_book_publisher_preview",
+      "url": "https://api.pageplace.de/preview/DT0400.9783486594140_A21763421/preview-9783486594140_A21763421.pdf",
+      "role": "Public publisher preview for Rüdiger Overmans, Deutsche militärische Verluste im Zweiten Weltkrieg (3rd ed., 2004). The inspected preview establishes that the study uses a sample drawn from individual Deutsche Dienststelle/WASt records as an empirical basis and exposes a table list with losses/deaths by organisations and Wehrmacht branches, including Luftwaffe-level tables. The relevant result-table values and any flak-crew-specific breakdown were not inspected.",
+      "claim_relation": "scope_relevant_personnel_loss_study_preview_not_claim_test"
     }
   ],
   "current_findings": [
@@ -90,7 +97,8 @@
     "Commenters alleged an imagery mismatch; this record has not authenticated the footage.",
     "Claude Code reports that the later video asserts the figure while calling it untraceable without stating its search method; this is not an independent research check.",
     "Authoritative sources support nearby facts about flak danger and Allied casualties but do not, in the sources checked for this record, establish the claimed aggregate German crew mortality rate.",
-    "A selected passage in an accessible third-party OCR reproduction of Westermann's 2001 Flak reports 60 officer and 890 enlisted flak-force casualties, explicitly combining dead, wounded and missing, for the May 10–June 22, 1940 western campaign. This is a campaign-bounded casualty count, not a death count, aggregate mortality rate or whole-war estimate; the OCR reproduction itself has not been authenticated against the restricted publisher-edition scan."
+    "A selected passage in an accessible third-party OCR reproduction of Westermann's 2001 Flak reports 60 officer and 890 enlisted flak-force casualties, explicitly combining dead, wounded and missing, for the May 10–June 22, 1940 western campaign. This is a campaign-bounded casualty count, not a death count, aggregate mortality rate or whole-war estimate; the OCR reproduction itself has not been authenticated against the restricted publisher-edition scan.",
+    "A public publisher preview of Overmans' German military-loss study confirms that its empirical design uses a sample drawn from individual Deutsche Dienststelle/WASt records and that the book contains tables of losses/deaths by organisations and Wehrmacht branches, including Luftwaffe-level material. The preview does not expose the relevant table values here and does not establish a flak-crew-specific denominator or mortality rate."
   ],
   "unknowns": [
     "The true aggregate mortality rate of German anti-aircraft crews.",
@@ -102,7 +110,7 @@
   ],
   "not_checked": [
     "Westermann, full authenticated edition and book-wide casualty evidence; one selected 1940 western-campaign passage has been checked only through an accessible third-party OCR reproduction",
-    "Overmans, Deutsche militärische Verluste im Zweiten Weltkrieg",
+    "Overmans, full relevant result tables and any flak-crew-specific breakdown; a public publisher preview has been checked only for methodology/scope and the table list",
     "MGFA, Das Deutsche Reich und der Zweite Weltkrieg, volume 7",
     "Relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings",
     "Relevant USSBS reports",
@@ -133,9 +141,9 @@
       "url": "https://github.com/markgoodbody-bit/human-record/issues/20",
       "by": "Grok contribution relayed by Mark; follow-up by Codex and Framework",
       "received": "2026-09-16",
-      "checked": "Recovered official/catalogue metadata for Westermann; located a selected western-campaign passage in an accessible third-party OCR reproduction; confirmed that the passage reports 60 officer and 890 enlisted casualties including dead, wounded and missing; independently confirmed the book's 2001 University Press of Kansas identity and parts of the cited Bundesarchiv route. The OCR copy itself and the underlying archival casualty evidence were not authenticated/inspected.",
+      "checked": "Recovered official/catalogue metadata for Westermann; located a selected western-campaign passage in an accessible third-party OCR reproduction; confirmed that the passage reports 60 officer and 890 enlisted casualties including dead, wounded and missing; independently confirmed the book's 2001 University Press of Kansas identity and parts of the cited Bundesarchiv route. A later Framework follow-up also inspected the public publisher preview of Overmans for methodology/scope and its table list; the relevant result-table values and any flak-crew-specific breakdown were not inspected. The Westermann OCR copy itself and the underlying archival casualty evidence were not authenticated/inspected.",
       "disposition": "partially_accepted_research_lead",
-      "reason": "The lead materially improved the checked-source boundary but does not establish, disprove or replace the viral 80% aggregate mortality claim."
+      "reason": "The lead materially improved the checked-source boundary for both Westermann and Overmans, but does not establish, disprove or replace the viral 80% aggregate mortality claim."
     }
   ],
   "challenges_scope": "Recorded review outcomes, not an exhaustive inbox. Absence from this list does not imply rejection or absence of a submission. Editorial review is not independent governance.",
@@ -147,6 +155,7 @@
     "CORRECTION != REPLACEMENT_WITH_ANOTHER_UNSOURCED_NUMBER",
     "SELECTION != SIGNIFICANCE",
     "CASUALTY != DEATH",
-    "SELECTED PASSAGE != WHOLE BOOK"
+    "SELECTED PASSAGE != WHOLE BOOK",
+    "LUFTWAFFE-LEVEL LOSS TABLE != FLAK-CREW MORTALITY RATE"
   ]
 }

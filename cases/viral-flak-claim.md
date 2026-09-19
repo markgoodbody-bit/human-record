@@ -129,6 +129,32 @@ CATALOGUED EDITION != OCR COPY AUTHENTICATED
 ARCHIVAL CITATION ROUTE IDENTIFIED != ARCHIVAL CONTENT INSPECTED
 ```
 
+### Overmans now narrows the personnel-study search space — but not the claim
+
+A public publisher preview of Rüdiger Overmans' *Deutsche militärische Verluste im Zweiten Weltkrieg* (3rd edition, 2004) was inspected on 19 September 2026.
+
+The preview identifies a sample-based empirical design drawing on individual records from the Deutsche Dienststelle / former Wehrmachtauskunftstelle and exposes its contents and table list. That list includes tables for losses by organisation and personnel strength, deaths by organisation and year, deaths by Wehrmacht branch and demographic groups, and earlier Luftwaffe loss tables.
+
+That is a material improvement over treating Overmans as an entirely unread lead: it establishes that the book is structurally relevant to German military personnel losses and contains branch/organisation-level analyses.
+
+It still does **not** establish the viral claim:
+
+- the relevant result-table values were not exposed/inspected in this preview;
+- no flak-crew-specific population or denominator was identified;
+- Luftwaffe-level data cannot be silently treated as data for anti-aircraft crews;
+- the full book was not searched for the viral 80% proposition.
+
+Sources/routes:
+- https://www.degruyter.com/document/doi/10.1524/9783486594140/html
+- https://api.pageplace.de/preview/DT0400.9783486594140_A21763421/preview-9783486594140_A21763421.pdf
+
+```text
+PUBLISHER PREVIEW != FULL BOOK
+TABLE EXISTS != TABLE VALUE INSPECTED
+LUFTWAFFE != FLAK CREWS
+LUFTWAFFE-LEVEL LOSS TABLE != FLAK-CREW MORTALITY RATE
+```
+
 The National Archives page below is a finding aid for United States Strategic Bombing Survey records, not a casualty study. Relevant Survey reports were not examined in this check. It is a research lead, not evidence of an unsuccessful search through those reports.
 
 Archival orientation:
@@ -150,6 +176,7 @@ As of this record:
 - a later video's metadata, as reported by Claude Code, both asserts the figure and calls it untraceable without a stated search method;
 - the Army study documents flak-caused casualties within specified Allied samples; the Middlebrook quotation concerns a particular crew, not German aggregate mortality;
 - a selected Westermann passage reports 60 officer and 890 enlisted flak casualties (dead, wounded or missing) in the May–June 1940 western campaign; that is neither a death count nor a whole-war mortality rate, and the inspected OCR copy remains unauthenticated;
+- an inspected publisher preview of Overmans confirms a sample-based German military-loss study drawing on individual WASt records, with organisation/branch loss tables, including Luftwaffe-level material, but the relevant table values and any flak-crew-specific breakdown remain uninspected;
 - the true aggregate mortality rate for German flak crews remains **UNKNOWN in this record**.
 
 ```text
@@ -188,6 +215,8 @@ Future humans and artificial entities should be able to walk back down the strat
 
 ## Limits and correction
 
+Revision 0.2.6, 19 September 2026: **Overmans scope-preview repair.** A public Oldenbourg/De Gruyter preview of Rüdiger Overmans' *Deutsche militärische Verluste im Zweiten Weltkrieg* was inspected. The preview establishes a sample-based empirical design drawing on individual Deutsche Dienststelle/WASt records and shows that the work contains losses/deaths tables by organisations and Wehrmacht branches, including Luftwaffe-level material. The relevant result-table values and any flak-crew-specific breakdown were not inspected, so the 80% claim status and true-rate unknown remain unchanged. The earlier blanket statement that Overmans was "not checked" is narrowed rather than silently retained.
+
 Revision 0.2.5, 18 September 2026: **Grok research-lead / Westermann selected-passage repair.** A user-relayed Grok contribution pointed to Westermann and related personnel-loss literature. Codex recovered an exact bibliographic route and selected passage; Framework independently triangulated the book identity, passage wording and parts of Westermann's archive citation route. The record now treats one May–June 1940 passage as partially checked through a third-party OCR reproduction while explicitly preserving that the OCR copy, full authenticated edition and underlying archive documents were not inspected/authenticated. The passage reports casualties (dead, wounded or missing), not deaths, and does not change the unresolved whole-war 80% claim.
 
 Revision 0.2.4, 16 September 2026: **selection-provenance repair.** Recovered the bounded selection history from Human Record PR #2 and the later COM #342 stress-use direction. The initial candidate pool and alternatives considered were not preserved and are now explicitly recorded as missing rather than reconstructed after the fact. No historical source, mortality finding, propagation node or challenge disposition changed; this is not a fresh external witness.
@@ -207,12 +236,12 @@ This is an initial reconstruction from public web sources on 15 September 2026. 
 ### Not checked by this record
 
 - Edward B. Westermann, *Flak: German Anti-Aircraft Defenses, 1914–1945*: full authenticated edition/book-wide casualty evidence not checked; one selected 1940 western-campaign passage checked only through an accessible third-party OCR reproduction;
-- Rüdiger Overmans, *Deutsche militärische Verluste im Zweiten Weltkrieg*;
+- Rüdiger Overmans, *Deutsche militärische Verluste im Zweiten Weltkrieg*: full relevant result tables and any flak-crew-specific breakdown remain unchecked; a public publisher preview has been checked only for methodology/scope and the table list;
 - MGFA, *Das Deutsche Reich und der Zweite Weltkrieg*, volume 7;
 - relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings;
 - the linked newsreel frames against the original video's frames.
 
-These remain research leads except for the specifically bounded Westermann passage described above. No replacement mortality figure or arithmetic bound is inferred from a selected passage, an unauthenticated OCR reproduction, catalogue metadata or secondhand summaries.
+These remain research leads except for the specifically bounded Westermann passage and the specifically bounded Overmans publisher-preview scope check described above. No replacement mortality figure or arithmetic bound is inferred from a selected passage, an unauthenticated OCR reproduction, catalogue metadata or secondhand summaries.
 
 A stronger German archival source, personnel study, unit-level casualty compilation, scholarly work, or evidence that predates the identified viral chain may materially change this record.
 

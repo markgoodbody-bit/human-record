@@ -1,6 +1,6 @@
 {
   "format": "human-record-catalog/0.6",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "purpose": "Discovery catalogue for current Human Record entries. This is routing metadata, not a universal record schema, evidence upgrade or certification surface.",
   "record_contract": "https://thehumanrecord.net/RECORD_CONTRACT.md",
   "human_explanation": "https://thehumanrecord.net/records/about.html",
@@ -47,18 +47,18 @@
       "full_human_record": "https://thehumanrecord.net/cases/viral-flak-claim.md",
       "machine_record": "https://thehumanrecord.net/cases/viral-flak-claim.json",
       "view_basis": {
-        "aligned_at": "2026-09-18",
-        "source_record_version": "0.2.5",
+        "aligned_at": "2026-09-19",
+        "source_record_version": "0.2.6",
         "source_git_blobs": {
-          "cases/viral-flak-claim.md": "161984610a7a4274215cc5dd68ee70ec4baf62e0",
-          "cases/viral-flak-claim.json": "751c95967267232db0641c18f08f21bcbd1c980e"
+          "cases/viral-flak-claim.md": "f2d517361511c3f2bad5c15eb635add9a17cb4ba",
+          "cases/viral-flak-claim.json": "87f8a6ba7149de81ebfa67d57fda1ea347ea4cf9"
         }
       },
       "status": "unsupported_in_sources_checked",
       "historical_truth_status": "unknown",
       "recorded_at": "2026-09-16",
-      "known_summary": "A visible online propagation chain is partially reconstructed; downstream repetition is not independent corroboration. A selected Westermann 1940 campaign passage adds bounded German flak personnel-loss context but does not establish the claimed aggregate mortality rate.",
-      "unknown_summary": "The true aggregate rate, any earlier source for the 80% figure, the figure's exact ancestry, and authentication/underlying archive support for the selected Westermann OCR passage remain unresolved in this record.",
+      "known_summary": "A visible online propagation chain is partially reconstructed; downstream repetition is not independent corroboration. A selected Westermann 1940 campaign passage adds bounded German flak personnel-loss context, and an Overmans publisher preview confirms a scope-relevant sample-based military-loss study drawing on individual WASt records with organisation/branch tables, but neither establishes the claimed aggregate mortality rate.",
+      "unknown_summary": "The true aggregate rate, any earlier source for the 80% figure, the figure's exact ancestry, authentication/underlying archive support for the selected Westermann OCR passage, and the uninspected values/any flak-specific breakdown in Overmans remain unresolved in this record.",
       "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
     },
     {
