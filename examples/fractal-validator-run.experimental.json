@@ -10,7 +10,8 @@
     "workflow_run_number": 124,
     "job_id": 105952403588,
     "event": "pull_request",
-    "pull_request": 52
+    "pull_request": 52,
+    "workflow_run_attempt": 1
   },
   "trigger_state": {
     "branch": "framework/fractal-thr-rfc-20260919",
@@ -126,6 +127,14 @@
     "CURRENT PR HEAD != HISTORICAL RUN HEAD",
     "EXTERNAL SERVICE RECEIPT != INDEPENDENT CLAIM EVIDENCE",
     "ACCOUNT LABEL != LIVING-PERSON PROFILE",
-    "PROCESS RECEIPT != GOVERNANCE AUTHORITY"
-  ]
+    "PROCESS RECEIPT != GOVERNANCE AUTHORITY",
+    "RUN NUMBER != RUN ATTEMPT",
+    "AUDIT OBSERVATION TIME != ORIGINAL RECEIPT CREATION TIME"
+  ],
+  "metadata_reobservation": {
+    "observed_at": "2026-09-19T19:27:09Z",
+    "observed_run_attempt": 1,
+    "basis": "Bounded Codex audit of fresh GitHub run/job metadata recorded on PR #52.",
+    "boundary": "This is the later audit observation time, not a reconstructed timestamp for creation of the original experimental receipt."
+  }
 }
