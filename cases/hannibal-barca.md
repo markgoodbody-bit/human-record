@@ -3,7 +3,7 @@
 Status: **PUBLIC RECORD 4 / HISTORICAL-PERSON SOURCE-SURVIVAL / PUBLIC SOURCES / NOT BIOGRAPHICAL CANON / OPEN TO CORRECTION**
 
 Record ID: `hannibal-source-survival`  
-Record version: **0.1.0**  
+Record version: **0.1.1**  
 Recorded: 18 September 2026.
 
 ## Purpose
@@ -95,6 +95,43 @@ Nepos reports that Silenus and Sosylus lived with Hannibal in camp and wrote abo
 
 This record records that **Nepos reports this relationship**. It does not create Silenus' or Sosylus' lost/fragmentary works as inspected THR sources merely because later authors attest them.
 
+## Edition identity routes — stronger owners, not new historical evidence
+
+The two checked web surfaces can now be connected to stronger classical-text edition identifiers without pretending THR has performed manuscript criticism.
+
+### Nepos / DCC
+
+Dickinson College Commentaries' own credits state that its Latin Prologue and *Life of Hannibal* are based on J. C. Rolfe's 1929 Loeb edition, with punctuation changes and specified textual alterations.
+
+Perseus supplies a stable CTS work identity for Nepos' *Hannibal*:
+
+`urn:cts:latinLit:phi0588.abo023`
+
+and a Rolfe 1929 Latin edition route:
+
+`urn:cts:latinLit:phi0588.abo023.opp-lat3`
+
+This makes the edition route more recoverable. It does **not** establish that THR line-by-line collated DCC chapter 13 against the printed Rolfe edition or any manuscript witness.
+
+### Polybius / source-language route
+
+Perseus supplies a stable CTS route for a Greek edition of Polybius' *Histories*, edited by Theodor Büttner-Wobst in the Teubner series:
+
+`urn:cts:greekLit:tlg0543.tlg001.perseus-grc1`
+
+This is a parallel source-language edition route. THR has **not** established that this Perseus/Büttner-Wobst Greek text is the textual basis of the Paton/Loeb English surface checked at LacusCurtius, and this repair does not newly inspect the Greek source-language passages.
+
+```text
+EDITION IDENTIFIER != MANUSCRIPT VERIFICATION
+DECLARED TEXTUAL BASIS != LINE-BY-LINE COLLATION
+PARALLEL GREEK EDITION != TRANSLATION BASIS
+STABLE CTS ROUTE != HISTORICAL CLAIM UPGRADE
+```
+
+Edition routes:
+- DCC credits: https://dcc.dickinson.edu/nepos-hannibal/credits
+- Perseus Nepos work/edition catalogue: https://catalog.perseus.tufts.edu/catalog/urn:cts:latinLit:phi0588.abo023
+- Perseus Polybius Greek edition: https://catalog.perseus.tufts.edu/catalog/urn:cts:greekLit:tlg0543.tlg001.perseus-grc1
 ## Source-survival pressure
 
 These two checked texts do not establish two independent witnesses to the same
@@ -184,6 +221,9 @@ This record does not establish:
 - Hannibal's appearance;
 - the exact wording/historicity of the childhood oath;
 - complete archaeological, numismatic or epigraphic evidence;
+- manuscript-level verification of the checked web passages;
+- line-by-line collation of DCC chapter 13 against Rolfe 1929;
+- proof that the Perseus/Büttner-Wobst Greek Polybius text is the textual basis of the Paton/Loeb English surface used here;
 - a current scholarly consensus on every disputed episode.
 
 ```text
@@ -192,6 +232,16 @@ UNKNOWN != EMPTY_FIELD_TO_FILL
 NO_SURVIVING_WHOLE != NO_FRAGMENT
 ```
 
+## Revision 0.1.1 — edition-route narrowing
+
+On 19 September 2026 the record added record-local edition routes for the two already-used ancient-text surfaces.
+
+DCC's declared Rolfe 1929 textual basis and Perseus CTS identifiers make edition identity easier to recover without adding a historical claim, changing the source count, or pretending a catalogue route is manuscript verification. The Polybius Greek edition route remains parallel rather than being asserted as the textual basis of Paton's translation.
+
+```text
+EDITION ROUTE ADDED != SOURCE REINTERPRETED
+RECOVERABILITY IMPROVED != HISTORICAL ASSERTION CHANGED
+```
 ## Publication boundary
 
 Publication makes this a fourth Human Record encounter. It does not establish:
