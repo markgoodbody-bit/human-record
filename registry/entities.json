@@ -102,7 +102,7 @@
       "external_identifiers": [],
       "notes": [
         "Thin routing anchor for the historical human conventionally called Hannibal Barca; exact dates, appearance, routes and biographical details are not identity-key material.",
-        "The checked Nepos Latin passage attests the literal string 'Hannibal'. The checked Polybius English reading surface renders the name as 'Hannibal'; a separate Perseus Greek-edition passage-token check at 3.33.17-18 attests the Greek form 'Ἀννίβας' in both sections. The fuller modern display label remains conventional rather than claimed as source-attested by every checked surface.",
+        "The checked Nepos Latin passage attests the literal string 'Hannibal'. The checked Polybius English reading surface renders the name as 'Hannibal'; a separate Perseus passage-vocabulary index associates 3.33.17 and 3.33.18 with lemma 'Ἀννίβας'. Framework did not directly inspect the inflected Greek source-text spelling in those sections. The fuller modern display label remains conventional.",
         "Two public source-literal mentions remain candidate-linked rather than silently upgraded into identity certainty."
       ]
     }
