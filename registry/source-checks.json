@@ -93,6 +93,23 @@
       "note": "The retrieval surface returned the Heritage Crafts Sieve and riddle making page and still showed CRITICALLY ENDANGERED / Status Critical, with 0 main-income professionals, 1 side-income professional, 1 trainee, and the 2025 Red List reviewer section. This does not establish current origin-server availability, unchanged bytes, a fresh independent practitioner census, preservation, or truth, and it does not alter the record evidence state. A separate preservation-route lookup was attempted through the available retrieval aperture, but Memento/Internet Archive lookup endpoints were inaccessible; no preservation route was established. An older heritage.wp-support.team surface with different maker/trainee counts was not treated as an authoritative prior state or preservation copy because its relationship and temporal authority were not established.",
       "live_http_state": "not_established",
       "retrieval_surface_freshness": "retrieval surface reported a crawl on 2026-09-19"
+    },
+    {
+      "id": "thr:source-check:7d917a35-0a5b-4f90-9ff1-e203a0111295",
+      "source_id": "thr:source:24f10634-c5da-48d2-9475-8d2e096d5cd6",
+      "checked_at": "2026-09-19",
+      "precision": "date",
+      "locator": "https://www.metmuseum.org/art/collection/search/11112",
+      "method": "public_retrieval_surface_used_by_framework_aperture",
+      "outcome": "retrieval_surface_content_available",
+      "live_http_state": "not_established",
+      "retrieval_surface_freshness": "retrieval surface crawled the Met object page on 2026-09-19",
+      "fingerprint": null,
+      "comparison_to_prior_observation": "visible_owner_fields_no_delta; original_api_response_and_image_bytes_not_rechecked",
+      "preservation_lookup": "not_performed",
+      "preservation_action": "none",
+      "record_evidence_promoted": false,
+      "note": "The retrieval surface returned The Metropolitan Museum of Art object page for Camp Fire and still showed title Camp Fire; artist Winslow Homer; date 1880; medium Oil on canvas; dimensions 23 3/4 x 38 1/8 in. (60.3 x 96.8 cm); credit line Gift of Josephine Pomeroy Hendrick, in the name of Henry Keney Pomeroy, 1927; object number 27.181; and Public Domain. This is an operational no-delta check of the visible object page only. It does not establish current origin-server availability, unchanged bytes, that the separately registered Met API response is unchanged, that the primary-image bytes still match the recorded hashes, independent proof of attribution or creation, preservation completeness, or truth, and it does not alter the record evidence state."
     }
   ],
   "ceilings": [
