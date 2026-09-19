@@ -1,6 +1,6 @@
 {
   "record_type": "provenance_case",
-  "record_version": "0.2.7",
+  "record_version": "0.2.8",
   "recorded_at": "2026-09-16",
   "title": "The viral '80% of German flak crews died' claim",
   "status": "unsupported_in_sources_checked",
@@ -80,7 +80,7 @@
       "id": "westermann-2001-selected-passage",
       "kind": "scholarly_book_selected_passage_via_third_party_ocr",
       "url": "https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf",
-      "role": "Accessible third-party OCR reproduction of Edward B. Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945. A selected passage for the May 10–June 22, 1940 western campaign reports flak-force casualties, explicitly dead, wounded or missing, as 60 officers and 890 enlisted men. Book identity is independently catalogued by University Press of Kansas / Google Books / Smithsonian / Internet Archive, but this OCR copy itself was not authenticated against the restricted publisher-edition scan and the underlying archival documents were not inspected.",
+      "role": "Accessible third-party OCR reproduction of Edward B. Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945. A selected passage for the May 10–June 22, 1940 western campaign reports flak-force casualties, explicitly dead, wounded or missing, as 60 officers and 890 enlisted men. Westermann note 75 in the checked reproduction cites “Abschlussmeldung über Flakartillerie im Bereich des Gen.d.Lw.Ob.d.H.” (28 February 1942), N 529/Folder 7, and “Tagesbefehl des Flakregiments 102” (8 July 1940), RL 12/Folder 457, plus Koch. Deutsche Digitale Bibliothek/Bundesarchiv independently catalogues RL 12/457 as Flak-Regiment 102 material dated May/July 1940 containing a 14 May war-diary extract and an 8 July daily order. THR has not inspected the archival pages, independently verified the N 529/7 folder title against the archive catalogue, authenticated this OCR copy against the restricted publisher-edition scan, or established which archival statement supports the reproduced casualty number.",
       "claim_relation": "bounded_campaign_personnel_casualty_context_not_support"
     },
     {
@@ -114,13 +114,13 @@
     "Whether the 80% figure arose by mutation from a different casualty statistic.",
     "Specifically, whether an Allied-aircrew flak statistic was transposed into a German flak-crew mortality claim, as proposed by custos (Square c63214). Westermann itself contains an 'up to 80 percent of flak casualties' passage in RAF/Bomber Command context, but numerical/source proximity does not establish transmission, copying or ancestry to the viral claim.",
     "The completeness of surviving late-war German personnel and casualty records relevant to this question.",
-    "Whether the selected Westermann OCR passage is byte/text faithful to an authenticated print or restricted scan at that passage, and whether the cited underlying archival documents independently support the reproduced casualty numbers."
+    "Whether the selected Westermann OCR passage is byte/text faithful to an authenticated print or restricted scan at that passage; whether the N 529/7 and RL 12/457 archival pages independently support the reproduced casualty numbers; and which exact archival statement, if any, supplies the 60/890 figure."
   ],
   "not_checked": [
     "Westermann, full authenticated edition and exhaustive semantic/book-wide casualty review; one 1940 passage plus a targeted full-text search of an unauthenticated full third-party reproduction have now been checked",
     "Overmans, full relevant result tables and any flak-crew-specific breakdown; a public publisher preview has been checked only for methodology/scope and the table list",
     "MGFA, Das Deutsche Reich und der Zweite Weltkrieg, volume 7",
-    "Relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings",
+    "Relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings; Westermann note 75's N 529/7 and RL 12/457 citation identities have been narrowed, but their archival contents remain uninspected",
     "Relevant USSBS reports",
     "Newsreel frame comparison"
   ],
@@ -149,7 +149,7 @@
       "url": "https://github.com/markgoodbody-bit/human-record/issues/20",
       "by": "Grok contribution relayed by Mark; follow-up by Codex and Framework",
       "received": "2026-09-16",
-      "checked": "Recovered official/catalogue metadata for Westermann; located a selected western-campaign passage in an accessible third-party OCR reproduction; confirmed that the passage reports 60 officer and 890 enlisted casualties including dead, wounded and missing; independently confirmed the book's 2001 University Press of Kansas identity and parts of the cited Bundesarchiv route. A later Framework follow-up also inspected the public publisher preview of Overmans for methodology/scope and its table list; the relevant result-table values and any flak-crew-specific breakdown were not inspected. The Westermann OCR copy itself and the underlying archival casualty evidence were not authenticated/inspected. A further Framework follow-up ran a targeted full-text search of a full third-party Westermann reproduction: the relevant 80-percent flak-casualty passage concerns RAF/Bomber Command casualties over target areas, and a late-1944 passage gives flak-arm personnel strength without an aggregate death numerator. This remains a bounded search, not authenticated or exhaustive.",
+      "checked": "Recovered official/catalogue metadata for Westermann; located a selected western-campaign passage in an accessible third-party OCR reproduction; confirmed that the passage reports 60 officer and 890 enlisted casualties including dead, wounded and missing; independently confirmed the book's 2001 University Press of Kansas identity and parts of the cited Bundesarchiv route. A later Framework follow-up also inspected the public publisher preview of Overmans for methodology/scope and its table list; the relevant result-table values and any flak-crew-specific breakdown were not inspected. The Westermann OCR copy itself and the underlying archival casualty evidence were not authenticated/inspected. A further Framework follow-up ran a targeted full-text search of a full third-party Westermann reproduction: the relevant 80-percent flak-casualty passage concerns RAF/Bomber Command casualties over target areas, and a late-1944 passage gives flak-arm personnel strength without an aggregate death numerator. This remains a bounded search, not authenticated or exhaustive. A 20 September follow-up re-read Westermann note 75 and narrowed the archival route to a named 28 February 1942 N 529/7 report and an 8 July 1940 RL 12/457 Flak-Regiment 102 daily order; DDB/Bundesarchiv independently catalogues RL 12/457 as May/July 1940 material containing a 14 May war-diary extract and the 8 July daily order. The archival pages themselves remain uninspected.",
       "disposition": "partially_accepted_research_lead",
       "reason": "The lead materially improved the checked-source boundary for both Westermann and Overmans, but does not establish, disprove or replace the viral 80% aggregate mortality claim."
     }
