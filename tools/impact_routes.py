@@ -137,6 +137,7 @@ def derive_impact_routes(root: Path, source_id: str):
             "NO_ASSERTION_EDGE != NO_RECORD_DEPENDENCY",
             "ROUTE_DERIVED != COMPLETE_DEPENDENCY_PROOF",
             "UNKNOWN_DIRECT_RECORD_ID != SILENTLY_IGNORED",
+            "REGISTERED_SOURCE_QUERY != ALL_RECORD_LOCAL_DEPENDENCIES",
         ],
     }
 
