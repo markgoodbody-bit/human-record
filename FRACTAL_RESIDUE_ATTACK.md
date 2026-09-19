@@ -429,7 +429,184 @@ Still a hypothesis.
 
 ---
 
-## 7. New hostile question
+## 7. Continuation without trusting THR — stronger-owner subtraction
+
+The remaining phrase:
+
+> can a future reader continue without trusting the current THR operator?
+
+is important, but it should not silently become a new THR archival protocol.
+
+Mature preservation / portability owners already cover much of the mechanism.
+
+### OAIS
+
+Current OAIS Reference Model:
+https://ccsds.org/Pubs/650x0m3.pdf
+
+OAIS already treats long-term understandability as requiring Representation Information
+and Preservation Description Information, including:
+- provenance;
+- context;
+- reference;
+- fixity;
+- access-rights information.
+
+That is extremely close to the generic "future reader can still make sense of the object"
+problem.
+
+### OCFL
+
+Official source:
+https://ocfl.io/
+
+OCFL owns an application-independent layout for versioned digital objects. Prior object
+versions are intended to remain immutable, with inventories and fixity support.
+
+### BagIt
+
+Official source:
+https://www.rfc-editor.org/rfc/rfc8493
+
+BagIt already owns a simple transfer/storage package with payload manifests and checksums.
+
+### RO-Crate
+
+Official source:
+https://www.researchobject.org/ro-crate/specification
+
+RO-Crate provides an existing JSON-LD packaging pattern for a bounded object plus
+human/machine-readable contextual metadata.
+
+### LOCKSS
+
+Official sources:
+- https://www.lockss.org/about/preservation-principles
+- https://www.lockss.org/use-lockss/how-lockss-works
+
+LOCKSS explicitly addresses preservation across independent / mutually distrusting peers,
+and rejects one canonical fixity store as a central point of failure.
+
+### THR consequence
+
+THR should not build by momentum:
+- a custom archival package;
+- a custom fixity format;
+- an OCFL replacement;
+- a BagIt replacement;
+- a custom distributed-consensus preservation network;
+- a mandatory THR resolver;
+- a federation protocol merely because "fractal" sounds distributed.
+
+The correct architecture rule is narrower:
+
+~~~text
+CONTINUATION WITHOUT TRUSTING THR
+= ACCEPTANCE CRITERION
+
+NOT
+= THR MUST OWN THE PRESERVATION STACK
+~~~
+
+A future export can use whichever stronger owners fit the actual object.
+
+For example:
+
+~~~text
+THR RECORD / BOUNDED EXPORT
+-> CURRENT THR MACHINE/HUMAN MATERIAL
+-> EXTERNAL IDS / PROVENANCE LINKS
+-> REPRESENTATION / CONTEXT NEEDED TO INTERPRET IT
+-> FIXITY / VERSION HISTORY
+-> RIGHTS / ACCESS BOUNDARY
+-> OPTIONAL STRONG-OWNER PACKAGE / PRESERVATION ROUTE
+~~~
+
+The specific packaging choice should be earned by a real transfer/preservation need.
+
+~~~text
+PORTABLE != NEW CONTAINER REQUIRED
+MIRRORED != INDEPENDENT EVIDENCE
+DISTRIBUTED != INDEPENDENT GOVERNANCE
+ARCHIVED != INTERPRETED CORRECTLY
+FIXITY != TRUTH
+~~~
+
+This subtraction does not make THR empty.
+
+It clarifies that THR's possible value is in the **epistemic joins and correction
+discipline across heterogeneous owner systems**, while archival mechanics stay with
+archives.
+
+---
+
+## 8. Revised surviving centre
+
+After the independence, correction-routing and continuation attacks, the working centre
+is now smaller again:
+
+~~~text
+THR VALUE HYPOTHESIS
+=
+MAKE A BOUNDED HUMAN/MACHINE RECORD WALKABLE
+ACROSS HETEROGENEOUS STRONGER OWNERS
+
+WHILE PRESERVING:
+- WHAT THR ACTUALLY OBSERVED
+- WHAT EACH SOURCE / EXTERNAL OBJECT ACTUALLY CLAIMS
+- CLAIM SCOPE
+- EVIDENCE ANCESTRY
+- EVIDENCE CEILINGS / UNKNOWN
+- TYPED / SCOPED / TEMPORAL AUTHORITY
+- CORRECTABLE HISTORY
+- REVIEW ROUTING WHEN LOAD-BEARING DEPENDENCIES CHANGE
+- PRIVACY / RIGHTS / CONSENT / CULTURAL-CONTROL BOUNDARIES
+- ENOUGH REPRESENTATION / CONTEXT FOR A FUTURE READER TO CONTINUE
+~~~
+
+This looks less like a new universal protocol and more like a **portable integration and
+answerability discipline**.
+
+That may be the right result.
+
+~~~text
+SMALLER ARCHITECTURE
+!=
+SMALLER PURPOSE
+
+INTEGRATION VALUE
+!=
+ONTOLOGY NOVELTY
+
+THR CAN BE USEFUL
+WITHOUT OWNING THE LOWER LAYERS
+~~~
+
+---
+
+## 9. New hostile question
+
+The next cut is now very sharp:
+
+> Does THR need any new cross-record semantic layer beyond its existing sparse
+> source / observation / assertion / identity models, or is the right next architecture
+> simply to make those current distinctions exportable/interoperable with stronger owners?
+
+A valid result is:
+
+~~~text
+NO NEW CORE TYPES
+NO NEW PROTOCOL
+KEEP CURRENT SPARSE THR MODEL
++ INTEROP / EXPORT PROFILES WHEN REAL CASES EARN THEM
+~~~
+
+That would be a successful architecture result, not a failure to invent.
+
+
+---
+
+## 10. Prior hostile question
 
 The remaining residue may shrink again.
 
@@ -459,6 +636,11 @@ UNIVERSAL INDEPENDENCE TYPE = NOT EARNED
 UNIVERSAL INDEPENDENCE SCORE = REJECT
 GENERIC CORRECTION-PROPAGATION TYPE = NOT EARNED
 AUTO-CORRECTION OF DEPENDENTS = REJECT
+
+CUSTOM THR ARCHIVAL PACKAGE = NOT EARNED
+CUSTOM THR FIXITY / VERSION FORMAT = NOT EARNED
+CUSTOM THR FEDERATION / PRESERVATION CONSENSUS = NOT EARNED
+CONTINUATION WITHOUT TRUSTING THR = ACCEPTANCE CRITERION
 
 BOUNDED INDEPENDENCE ASSESSMENT = KEEP
 LOAD-BEARING IMPACT ROUTING = KEEP
