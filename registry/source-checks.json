@@ -87,10 +87,10 @@
       "outcome": "retrieval_surface_content_available",
       "fingerprint": null,
       "comparison_to_prior_observation": "semantic_status_no_delta_on_retrieval_surface; byte_identity_not_checked",
-      "preservation_lookup": "not_performed",
+      "preservation_lookup": "attempted_no_route_established",
       "preservation_action": "none",
       "record_evidence_promoted": false,
-      "note": "The retrieval surface returned the Heritage Crafts Sieve and riddle making page and still showed CRITICALLY ENDANGERED / Status Critical, with 0 main-income professionals, 1 side-income professional, 1 trainee, and the 2025 Red List reviewer section. This does not establish current origin-server availability, unchanged bytes, a fresh independent practitioner census, preservation, or truth, and it does not alter the record evidence state.",
+      "note": "The retrieval surface returned the Heritage Crafts Sieve and riddle making page and still showed CRITICALLY ENDANGERED / Status Critical, with 0 main-income professionals, 1 side-income professional, 1 trainee, and the 2025 Red List reviewer section. This does not establish current origin-server availability, unchanged bytes, a fresh independent practitioner census, preservation, or truth, and it does not alter the record evidence state. A separate preservation-route lookup was attempted through the available retrieval aperture, but Memento/Internet Archive lookup endpoints were inaccessible; no preservation route was established. An older heritage.wp-support.team surface with different maker/trainee counts was not treated as an authoritative prior state or preservation copy because its relationship and temporal authority were not established.",
       "live_http_state": "not_established",
       "retrieval_surface_freshness": "retrieval surface reported a crawl on 2026-09-19"
     }
