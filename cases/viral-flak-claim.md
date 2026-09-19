@@ -133,7 +133,7 @@ ARCHIVAL CITATION ROUTE IDENTIFIED != ARCHIVAL CONTENT INSPECTED
 
 A public publisher preview of Rüdiger Overmans' *Deutsche militärische Verluste im Zweiten Weltkrieg* (3rd edition, 2004) was inspected on 19 September 2026.
 
-The preview identifies the study's empirical use of person-level material from the Deutsche Dienststelle / former Wehrmachtauskunftstelle and exposes its contents and table list. That list includes tables for losses by organisation and personnel strength, deaths by organisation and year, deaths by Wehrmacht branch and demographic groups, and earlier Luftwaffe loss tables.
+The preview identifies a sample-based empirical design drawing on individual records from the Deutsche Dienststelle / former Wehrmachtauskunftstelle and exposes its contents and table list. That list includes tables for losses by organisation and personnel strength, deaths by organisation and year, deaths by Wehrmacht branch and demographic groups, and earlier Luftwaffe loss tables.
 
 That is a material improvement over treating Overmans as an entirely unread lead: it establishes that the book is structurally relevant to German military personnel losses and contains branch/organisation-level analyses.
 
@@ -176,7 +176,7 @@ As of this record:
 - a later video's metadata, as reported by Claude Code, both asserts the figure and calls it untraceable without a stated search method;
 - the Army study documents flak-caused casualties within specified Allied samples; the Middlebrook quotation concerns a particular crew, not German aggregate mortality;
 - a selected Westermann passage reports 60 officer and 890 enlisted flak casualties (dead, wounded or missing) in the May–June 1940 western campaign; that is neither a death count nor a whole-war mortality rate, and the inspected OCR copy remains unauthenticated;
-- an inspected publisher preview of Overmans confirms a person-level German military-loss study with organisation/branch loss tables, including Luftwaffe-level material, but the relevant table values and any flak-crew-specific breakdown remain uninspected;
+- an inspected publisher preview of Overmans confirms a sample-based German military-loss study drawing on individual WASt records, with organisation/branch loss tables, including Luftwaffe-level material, but the relevant table values and any flak-crew-specific breakdown remain uninspected;
 - the true aggregate mortality rate for German flak crews remains **UNKNOWN in this record**.
 
 ```text
@@ -215,7 +215,7 @@ Future humans and artificial entities should be able to walk back down the strat
 
 ## Limits and correction
 
-Revision 0.2.6, 19 September 2026: **Overmans scope-preview repair.** A public Oldenbourg/De Gruyter preview of Rüdiger Overmans' *Deutsche militärische Verluste im Zweiten Weltkrieg* was inspected. The preview establishes the study's Deutsche Dienststelle/WASt person-level data basis and shows that the work contains losses/deaths tables by organisations and Wehrmacht branches, including Luftwaffe-level material. The relevant result-table values and any flak-crew-specific breakdown were not inspected, so the 80% claim status and true-rate unknown remain unchanged. The earlier blanket statement that Overmans was "not checked" is narrowed rather than silently retained.
+Revision 0.2.6, 19 September 2026: **Overmans scope-preview repair.** A public Oldenbourg/De Gruyter preview of Rüdiger Overmans' *Deutsche militärische Verluste im Zweiten Weltkrieg* was inspected. The preview establishes a sample-based empirical design drawing on individual Deutsche Dienststelle/WASt records and shows that the work contains losses/deaths tables by organisations and Wehrmacht branches, including Luftwaffe-level material. The relevant result-table values and any flak-crew-specific breakdown were not inspected, so the 80% claim status and true-rate unknown remain unchanged. The earlier blanket statement that Overmans was "not checked" is narrowed rather than silently retained.
 
 Revision 0.2.5, 18 September 2026: **Grok research-lead / Westermann selected-passage repair.** A user-relayed Grok contribution pointed to Westermann and related personnel-loss literature. Codex recovered an exact bibliographic route and selected passage; Framework independently triangulated the book identity, passage wording and parts of Westermann's archive citation route. The record now treats one May–June 1940 passage as partially checked through a third-party OCR reproduction while explicitly preserving that the OCR copy, full authenticated edition and underlying archive documents were not inspected/authenticated. The passage reports casualties (dead, wounded or missing), not deaths, and does not change the unresolved whole-war 80% claim.
 
