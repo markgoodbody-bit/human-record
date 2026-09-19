@@ -28,7 +28,7 @@ class HannibalPublicRecordTests(unittest.TestCase):
 
     def test_machine_record_keeps_two_source_mentions_separate(self):
         self.assertEqual(self.machine["record_id"], RECORD_ID)
-        self.assertEqual(self.machine["record_version"], "0.1.0")
+        self.assertEqual(self.machine["record_version"], "0.1.1")
         self.assertEqual(len(self.machine["mentions"]), 2)
         self.assertEqual({m["literal"] for m in self.machine["mentions"]}, {"Hannibal"})
         self.assertEqual({m["source_id"] for m in self.machine["mentions"]}, {NEPOS_SOURCE, POLYBIUS_SOURCE})

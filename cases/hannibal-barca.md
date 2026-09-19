@@ -3,7 +3,7 @@
 Status: **PUBLIC RECORD 4 / HISTORICAL-PERSON SOURCE-SURVIVAL / PUBLIC SOURCES / NOT BIOGRAPHICAL CANON / OPEN TO CORRECTION**
 
 Record ID: `hannibal-source-survival`  
-Record version: **0.1.0**  
+Record version: **0.1.1**  
 Recorded: 18 September 2026.
 
 ## Purpose
@@ -33,11 +33,12 @@ The entity anchor deliberately carries no exact birth/death date, portrait, Alpi
 The opaque candidate entity ID is a routing handle only. It is not evidence.
 
 The full display string **Hannibal Barca** is used here as a conventional modern
-routing label. The checked Nepos Latin passage attests the literal name **Hannibal**. The
-checked Polybius web surface is an English translation that renders the name as
-**Hannibal**; this record did not inspect the Greek source literal. The full
-modern display string is a conventional routing label, not a claim that both
-checked surfaces attest the same source-language string.
+routing label. The checked Nepos Latin passage attests the literal name **Hannibal**.
+The checked Polybius English surface renders the name as **Hannibal**. A separate
+Perseus passage-vocabulary index for **3.33.17–18** associates both sections with
+the lemma **Ἀννίβας**. That is lemma-level indexing, not direct inspection of the
+inflected Greek source-text spelling. It therefore does not by itself narrow the
+literal spelling to a particular form, establish identity, or inspect a manuscript witness.
 
 ```text
 CONVENTIONAL_DISPLAY_LABEL != SOURCE_ATTESTED_STRING
@@ -84,6 +85,32 @@ This record uses four bounded passages:
 - **3.33.17–18** — Polybius says his unusually detailed troop figures came from a bronze tablet on the Lacinian promontory on which Hannibal had made out the lists. THR has not observed that tablet and does not convert Polybius' report into a surviving inscription object.
 - **3.48.12** — Polybius says he inquired from men present at the crossing and personally inspected the country and crossed the Alps himself. This is evidence about Polybius' claimed method, not automatic proof of every detail in his reconstruction.
 - **3.56.3–4** — Polybius reports Hannibal's post-crossing force totals and attributes them to an inscription/column at Lacinium. This record does **not** establish that the carrier described here is physically identical to the bronze tablet described at 3.33.17–18.
+
+
+#### Greek vocabulary-index check at 3.33.17–18
+
+Perseus identifies a Greek edition of Polybius as
+`urn:cts:greekLit:tlg0543.tlg001.perseus-grc2`, based on the Büttner-Wobst
+edition. THR inspected the passage-specific vocabulary/lemma lists for
+**3.33.17** and **3.33.18**. Each list associates its section with the lemma
+**Ἀννίβας** once.
+
+Routes:
+- https://vocab.perseus.org/word-list/urn:cts:greekLit:tlg0543.tlg001.perseus-grc2:3.33.17/
+- https://vocab.perseus.org/word-list/urn:cts:greekLit:tlg0543.tlg001.perseus-grc2:3.33.18/
+
+This is a bounded vocabulary-index check of the named sections, not direct
+inspection of the inflected Greek source-text spelling, a manuscript inspection,
+or a complete Greek-text audit. The Scaife full-reader route was not available
+through this aperture, and the other THR-cited Polybius passages were not upgraded
+by this check.
+
+```text
+VOCABULARY LEMMA != SOURCE-LITERAL SPELLING
+LEMMA ASSOCIATION != HISTORICAL IDENTITY PROVED
+PASSAGE INDEX != MANUSCRIPT WITNESS
+ONE INDEX CHECK != WHOLE BOOK VERIFIED
+```
 
 ### Cornelius Nepos, *Life of Hannibal* 13.3
 
