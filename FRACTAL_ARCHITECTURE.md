@@ -518,6 +518,20 @@ The existing entity/source/observation/assertion layers remain valid.
 The following are candidate additional **conceptual roles**, not presumptive THR-native
 ontologies. The owner-subtraction passes materially narrow their implementation path.
 
+Current provisional result after testing all four public records plus the self-description,
+interop, correction-routing and continuation microcases:
+
+~~~text
+NEW SHARED THR CORE TYPES REQUIRED NOW = ZERO
+~~~
+
+Current sparse THR entity / mention / source / observation / assertion layers plus
+record-local structures and stronger-owner interoperability are sufficient for every
+current pressure examined.
+
+This is a falsifiable current result, not a permanent schema freeze. A future concrete
+case may still earn the smallest missing shared type.
+
 By default:
 
 ```text
