@@ -742,8 +742,19 @@
         "hannibal-source-survival"
       ],
       "preservation": {
-        "status": "not_yet_checked",
-        "copies": []
+        "status": "institutional_preservation_route_identified",
+        "copies": [
+          {
+            "provider": "Internet Archive / New York Public Library",
+            "kind": "digitized_printed_edition",
+            "persistent_locator": "https://archive.org/details/historieswitheng02poly",
+            "access": "public",
+            "relationship": "digitized Volume II / Loeb Classical Library 137 carrier for W. R. Paton's Polybius, containing Books III-IV; matches the printed edition family explicitly named by the Thayer Book III reading surface",
+            "verified_against_observation": "archive metadata and OCR/title/contents checked 2026-09-20; exact Thayer HTML bytes/layout and transcription differences not compared"
+          }
+        ],
+        "last_checked_at": "2026-09-20",
+        "note": "Thayer states that its Book III webpage reproduces Volume II of the 1922 Loeb Classical Library edition. Internet Archive item historieswitheng02poly identifies Volume 2, Polybius, W. R. Paton, first printed 1922, Loeb 137, and contains Book III. The exact Thayer HTML representation was not established as archived or byte-identical to the scan. PRINTED EDITION CARRIER RECOVERABLE != EXACT WEB REPRESENTATION PRESERVED."
       }
     },
     {
