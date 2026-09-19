@@ -1,6 +1,6 @@
 {
   "record_type": "transmission_lineage_case",
-  "record_version": "0.1.2",
+  "record_version": "0.1.3",
   "recorded_at": "2026-09-16",
   "title": "Sieve and riddle making returns from extinction",
   "subject": "Public evidence about how UK sieve and riddle making moved from a reported last maker and later extinction classification into renewed practice, and what remains unknown about the actual transmission of tacit skill.",
@@ -68,6 +68,18 @@
       "boundary": "The Human Record defers current status and practitioner-count claims to Heritage Crafts rather than independently verifying them."
     },
     {
+      "id": "heritage-crafts-red-list-2019-report",
+      "kind": "institutional_report",
+      "title": "The HCA Red List of Endangered Crafts — 2019 edition",
+      "publisher": "Heritage Crafts Association",
+      "date": "2019",
+      "url": "https://www.heritagecrafts.org.uk/wp-content/uploads/2019/03/HCA-Red-List-optimised.pdf",
+      "observed_at": "2026-09-19",
+      "independence_group": "Heritage Crafts",
+      "role": "The 2019 Red List entry reports that Steve Overthrow began making at the beginning of 2018, received advice and tuition from Mike Turnock, and also went through product development and refining before commercial production; the report does not establish a strict sequence between those learning components.",
+      "boundary": "Same institutional evidence family as the Heritage Crafts announcement/current page. This records reported learning-route components, not the exact teaching content, completeness of transmission or independent observation of tuition."
+    },
+    {
       "id": "homo-faber-overthrow-interview",
       "kind": "published_practitioner_interview",
       "title": "Steve Overthrow",
@@ -76,6 +88,18 @@
       "observed_at": "2026-09-16",
       "role": "Overthrow reports learning partly from Mike Turnock and receiving knowledge he could not find through research.",
       "boundary": "Published first-person account, not independent verification or a THR interview. Interview and teaching dates are not established. Does not establish exact teaching content, completeness, or Colin Davies's learning route."
+    },
+    {
+      "id": "gardens-illustrated-overthrow-2023",
+      "kind": "published_practitioner_interview",
+      "title": "Sieves and riddles: discover the company making handmade garden sieves",
+      "publisher": "Gardens Illustrated / Our Media Ltd",
+      "date": "2023-04-26",
+      "url": "https://www.gardensillustrated.com/features/sieve-and-riddle-handmade-garden-sieves",
+      "observed_at": "2026-09-19",
+      "independence_group": "Gardens Illustrated / Our Media",
+      "role": "Published interview reports that Overthrow began researching the extinct craft, learned through repeated trial and error while developing his making practice, and also received Turnock's advice/help on aspects he said he could not have researched. Exact sequence and overlap are not fully established by the record.",
+      "boundary": "Published practitioner account, not a THR interview or independent observation of learning. This record preserves learning modes only and does not reproduce practitioner-specific process instructions."
     },
     {
       "id": "steve-overthrow-process-site",
@@ -94,46 +118,69 @@
     {
       "date": "2009-11-28",
       "event": "Guardian reports Mike Turnock as, to his knowledge, the last British handmade sieve-and-riddle maker and records his wish to find a successor before retirement.",
-      "basis_nodes": ["guardian-turnock-2009"]
+      "basis_nodes": [
+        "guardian-turnock-2009"
+      ]
     },
     {
       "date": "2010",
       "event": "Heritage Crafts currently reports that Mike Turnock retired in 2010.",
-      "basis_nodes": ["heritage-crafts-current"]
+      "basis_nodes": [
+        "heritage-crafts-current"
+      ]
     },
     {
       "date": "2017",
       "event": "Heritage Crafts reports that sieve and riddle making was listed extinct in the first Red List.",
-      "basis_nodes": ["heritage-crafts-red-list-2019", "heritage-crafts-current"]
+      "basis_nodes": [
+        "heritage-crafts-red-list-2019",
+        "heritage-crafts-current"
+      ]
     },
     {
       "date": "2018",
       "event": "The current Heritage Crafts page describes the extinction interval as lasting until 2018.",
-      "basis_nodes": ["heritage-crafts-current"]
+      "basis_nodes": [
+        "heritage-crafts-current"
+      ]
+    },
+    {
+      "date": "2017_onward_reported_learning_components",
+      "event": "Public Heritage Crafts and practitioner-interview sources report components of Overthrow's learning route including research, trial-and-error/product development, and advice or tuition from Mike Turnock; exact sequence, overlap and relative contribution remain unresolved.",
+      "basis_nodes": [
+        "heritage-crafts-red-list-2019-report",
+        "homo-faber-overthrow-interview",
+        "gardens-illustrated-overthrow-2023"
+      ]
     },
     {
       "date": "2019-03-08",
       "event": "Heritage Crafts reports two new makers had revived the craft and were beginning commercial production.",
-      "basis_nodes": ["heritage-crafts-red-list-2019"]
+      "basis_nodes": [
+        "heritage-crafts-red-list-2019"
+      ]
     },
     {
       "date": "current_at_2026-09-16_check",
       "event": "Heritage Crafts identifies Steve Overthrow and Colin Davies in the revival/current-practice record, reports Steve is focusing on training a new maker, and classifies the craft as critically endangered.",
-      "basis_nodes": ["heritage-crafts-current"]
+      "basis_nodes": [
+        "heritage-crafts-current"
+      ]
     }
   ],
   "current_findings": [
     "A 2009 independent newspaper feature recorded Mike Turnock as, to his knowledge, the last British handmade sieve-and-riddle maker and documented his intention to retire if he could find a successor.",
     "Heritage Crafts reports that the craft was listed extinct in 2017 and had been revived by two new makers by March 2019.",
     "Heritage Crafts currently identifies Steve Overthrow's discovery of the Red List and Colin Davies's viewing of a Countryfile feature as pathways into making.",
-    "These public-attention pathways do not establish how the tacit making skill itself was transmitted.",
-    "In a published Homo Faber interview, Steve Overthrow reports learning partly from Mike Turnock. This supports a reported direct-learning route, not complete reconstruction of the skill transfer.",
-    "Heritage Crafts currently classifies the practice as critically endangered rather than extinct."
+    "Heritage Crafts currently classifies the practice as critically endangered rather than extinct.",
+    "The Red List and media pathways establish attention, not skill transmission by themselves. For Overthrow specifically, later public sources report a mixed learning route involving research, trial-and-error/product development, and direct advice or tuition from Mike Turnock.",
+    "Across the published accounts, Overthrow reports receiving knowledge from Turnock that he could not obtain through research. This narrows the transmission gap but does not establish the exact teaching content, relative contribution of each learning route, or completeness of tacit-knowledge survival."
   ],
   "unknowns": [
     "What was transmitted, what was reconstructed or newly learned, and through which routes.",
     "Exactly what knowledge passed through the Turnock-to-Overthrow learning route reported in the Homo Faber interview, and what other transmission occurred.",
-    "The relative roles of direct teaching, observation, experimentation, published material, surviving tools, prior adjacent skills or other routes in each maker's learning.",
+    "For Overthrow, public sources now identify research, trial-and-error/product development and Turnock advice/tuition as reported components, but their timing, relative contribution, exact tacit content and completeness remain unresolved.",
+    "For Colin Davies, the learning route beyond the reported Countryfile/Red List attention pathway remains unresolved in this record.",
     "Which parts of the older Hill & Sons practice survive unchanged and which have been adapted.",
     "Whether all materially important tacit knowledge survived the extinction interval.",
     "The identity or training stage of the current trainee beyond Heritage Crafts' aggregate count.",
@@ -154,20 +201,43 @@
     "groups": [
       {
         "id": "Guardian News & Media",
-        "nodes": ["guardian-turnock-2009"]
+        "nodes": [
+          "guardian-turnock-2009"
+        ]
       },
       {
         "id": "Heritage Crafts",
-        "nodes": ["heritage-crafts-red-list-2019", "heritage-crafts-current"]
+        "nodes": [
+          "heritage-crafts-red-list-2019",
+          "heritage-crafts-current",
+          "heritage-crafts-red-list-2019-report"
+        ]
       },
       {
         "id": "practitioner_site_not_retrieved",
-        "nodes": ["steve-overthrow-process-site"]
+        "nodes": [
+          "steve-overthrow-process-site"
+        ]
+      },
+      {
+        "id": "Gardens Illustrated / Our Media",
+        "nodes": [
+          "gardens-illustrated-overthrow-2023"
+        ]
       }
     ],
-    "warning": "Two Heritage Crafts pages are separate publications but one institutional evidence family. The current Heritage Crafts page also cites the Guardian feature; different publisher groups do not prove claim-level independence. The citation alone does not establish which individual claims depend on that feature. The practitioner site was not inspected and is not evidence for current findings."
+    "warning": "The Heritage Crafts announcement, 2019 Red List report and current craft page are separate publications but one institutional evidence family. The current Heritage Crafts page also cites the Guardian feature. Homo Faber and Gardens Illustrated are separate publishers, but both carry practitioner-reported learning accounts; distinct publications are not automatically independent witnesses to the underlying teaching. The practitioner site was not inspected and is not evidence for current findings."
   },
   "corrections": [
+    {
+      "date": "2026-09-19",
+      "by": "Framework",
+      "basis": "Heritage Crafts 2019 Red List report + Gardens Illustrated 2023 published practitioner interview",
+      "change": "Narrowed the Overthrow transmission gap from a generic direct-learning route to reported components: research, trial-and-error/product development, and Turnock advice/tuition. Exact sequence/overlap, tacit content, timing, relative contribution and completeness remain unknown; no process manual or practitioner contact was added.",
+      "practitioner_contact_added": false,
+      "private_or_restricted_process_material_added": false,
+      "reported_status_counts_changed": false
+    },
     {
       "date": "2026-09-16",
       "by": "Codex",
@@ -209,6 +279,8 @@
     "RECORDING != OWNING",
     "PRESERVATION != EXTRACTION",
     "UNKNOWN != ABSENT",
-    "FETCH_FAILED_HERE != SITE_GONE"
+    "FETCH_FAILED_HERE != SITE_GONE",
+    "REPORTED LEARNING MODES != COMPLETE SKILL-TRANSFER RECONSTRUCTION",
+    "MULTIPLE PUBLISHED INTERVIEWS != INDEPENDENT WITNESSES"
   ]
 }

@@ -826,6 +826,93 @@
       "used_by_records": [
         "viral-flak-claim"
       ]
+    },
+    {
+      "id": "thr:source:6b12d0a4-9f73-4c5a-8e21-7b90d1f2a3c4",
+      "kind": "institutional_report",
+      "title": "The HCA Red List of Endangered Crafts — 2019 edition",
+      "publisher": "Heritage Crafts Association",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://www.heritagecrafts.org.uk/wp-content/uploads/2019/03/HCA-Red-List-optimised.pdf",
+          "status": "public_pdf_inspected"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:2c8f4a91-6d3b-4e72-9a15-5f6b7c8d9e01",
+          "observed_at": "2026-09-19",
+          "precision": "date",
+          "outcome": "partial",
+          "record_basis": "cases/sieve-riddle-revival.json node heritage-crafts-red-list-2019-report",
+          "digest": null,
+          "scope": "2019 Red List sieve-and-riddle entry describing the revival and reported Turnock-to-Overthrow advice/tuition; not a full-report audit.",
+          "observer": "Framework",
+          "notes": [
+            "The entry reports Overthrow began making at the beginning of 2018, received advice and tuition from Mike Turnock, and also reports product development/refining before commercial production; THR does not infer a strict sequence between these components.",
+            "This is Heritage Crafts reporting, not independent observation by THR of teaching or skill transfer."
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:b9ff9b05-94cc-4f33-b876-015d84aecd14"
+        },
+        {
+          "type": "same_institutional_owner",
+          "target": "thr:source:2790ee98-28a4-4fca-bd80-b5b5484c47ef"
+        }
+      ],
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null,
+        "note": "The public PDF was retrieved for this observation; no separate preservation route was checked."
+      },
+      "used_by_records": [
+        "sieve-riddle-revival"
+      ]
+    },
+    {
+      "id": "thr:source:91d3a7c2-5b48-4f6e-8a10-2c3d4e5f6071",
+      "kind": "published_practitioner_interview",
+      "title": "Sieves and riddles: discover the company making handmade garden sieves",
+      "publisher": "Gardens Illustrated / Our Media Ltd",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://www.gardensillustrated.com/features/sieve-and-riddle-handmade-garden-sieves",
+          "status": "public_article_inspected"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:4e7b2c19-8d65-4a31-9f20-6b7c8d9e0f12",
+          "observed_at": "2026-09-19",
+          "precision": "date",
+          "outcome": "partial",
+          "record_basis": "cases/sieve-riddle-revival.json node gardens-illustrated-overthrow-2023",
+          "digest": null,
+          "scope": "Published interview passages about Overthrow's reported learning components: research, trial-and-error/development, and Turnock advice/help. Exact sequence/overlap are not treated as established, and detailed process instructions were not carried into THR.",
+          "observer": "Framework",
+          "notes": [
+            "The article is dated 26 April 2023 and attributes the learning account to Steve Overthrow.",
+            "It reports research after the extinct classification, repeated failed attempts while developing the making practice, and Turnock's help on matters Overthrow said he could not research; THR does not treat narrative order as a complete chronology.",
+            "This is a public practitioner account published by a third party, not independent THR observation of teaching or skill competence."
+          ]
+        }
+      ],
+      "relations": [],
+      "preservation": {
+        "status": "not_yet_checked",
+        "copies": [],
+        "last_checked_at": null
+      },
+      "used_by_records": [
+        "sieve-riddle-revival"
+      ]
     }
   ],
   "ceilings": [
