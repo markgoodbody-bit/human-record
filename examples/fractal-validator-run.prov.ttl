@@ -1,0 +1,66 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <https://thehumanrecord.net/examples/fractal-validator-run.experimental.json> .
+
+<#trigger-head>
+    a prov:Entity ;
+    dcterms:identifier "7cd55c24c145d8424256e72ae27b6cdff2669f12" ;
+    dcterms:description "Branch head recorded by GitHub Actions as the run head for validator run 35463860339." .
+
+<#base-head>
+    a prov:Entity ;
+    dcterms:identifier "1f5a5919938f385f43f1e2383bdfbb52807b206e" ;
+    dcterms:description "THR main commit used as the pull-request base for the historical run." .
+
+<#executed-checkout>
+    a prov:Entity ;
+    dcterms:identifier "3cced4453cf64b52a9a7364e0ba10b6a2ec28554" ;
+    dcterms:description "Synthetic pull-request merge commit actually checked out by GitHub Actions." ;
+    prov:wasDerivedFrom <#trigger-head>, <#base-head> .
+
+<#workflow-definition>
+    a prov:Entity ;
+    dcterms:identifier "git-blob:6f8dd76ecb178ea8987616223493ab233908d47e" ;
+    dcterms:title ".github/workflows/validate-integrity.yml" .
+
+<#validator-entrypoint>
+    a prov:Entity ;
+    dcterms:identifier "git-blob:273ff23e2031e4d5cb74f24ea9f96778031810a5" ;
+    dcterms:title "tools/validate_all.py" .
+
+<#structural-validator>
+    a prov:Entity ;
+    dcterms:identifier "git-blob:86d7fed363273833c1a5762360414b51ddb768a3" ;
+    dcterms:title "tools/validate_integrity.py" .
+
+<#operational-validator>
+    a prov:Entity ;
+    dcterms:identifier "git-blob:1231062f79fc0ba450da2cba051ccdba521eeb3b" ;
+    dcterms:title "tools/validate_operational.py" .
+
+<#github-actions>
+    a prov:SoftwareAgent ;
+    dcterms:title "GitHub Actions" ;
+    dcterms:description "External execution service for the recorded workflow run; this association does not confer epistemic or governance authority." .
+
+<#validation-run>
+    a prov:Activity ;
+    dcterms:identifier "github-actions-run:35463860339" ;
+    dcterms:title "Validate Human Record integrity — run 124" ;
+    prov:used
+        <#executed-checkout>,
+        <#workflow-definition>,
+        <#validator-entrypoint>,
+        <#structural-validator>,
+        <#operational-validator> ;
+    prov:wasAssociatedWith <#github-actions> ;
+    prov:startedAtTime "2026-09-19T19:17:00Z"^^xsd:dateTime ;
+    prov:endedAtTime "2026-09-19T19:17:07Z"^^xsd:dateTime ;
+    prov:generated <#validation-receipt> .
+
+<#validation-receipt>
+    a prov:Entity ;
+    dcterms:title "THR validator run 35463860339 experimental receipt" ;
+    dcterms:description "Job conclusion success; structural and operational stages passed; 103 rejection tests returned OK; seven THR warnings remained visible. See the THR experimental receipt for warning details and epistemic ceilings." ;
+    prov:wasGeneratedBy <#validation-run> .
