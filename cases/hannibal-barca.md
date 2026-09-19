@@ -35,10 +35,10 @@ The opaque candidate entity ID is a routing handle only. It is not evidence.
 The full display string **Hannibal Barca** is used here as a conventional modern
 routing label. The checked Nepos Latin passage attests the literal name **Hannibal**.
 The checked Polybius English surface renders the name as **Hannibal**. A separate
-Perseus Greek-edition passage-token check for **3.33.17–18** now attests the Greek
-form **Ἀννίβας** in both cited sections. That narrows the source-literal boundary;
-it does not establish identity by itself, inspect a manuscript witness, or turn
-the fuller modern display string into a source-attested ancient name.
+Perseus passage-vocabulary index for **3.33.17–18** associates both sections with
+the lemma **Ἀννίβας**. That is lemma-level indexing, not direct inspection of the
+inflected Greek source-text spelling. It therefore does not by itself narrow the
+literal spelling to a particular form, establish identity, or inspect a manuscript witness.
 
 ```text
 CONVENTIONAL_DISPLAY_LABEL != SOURCE_ATTESTED_STRING
