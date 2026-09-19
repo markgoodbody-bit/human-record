@@ -87,7 +87,7 @@
       "id": "overmans-2004-publisher-preview",
       "kind": "scholarly_book_publisher_preview",
       "url": "https://api.pageplace.de/preview/DT0400.9783486594140_A21763421/preview-9783486594140_A21763421.pdf",
-      "role": "Public publisher preview for Rüdiger Overmans, Deutsche militärische Verluste im Zweiten Weltkrieg (3rd ed., 2004). The inspected preview establishes the study's person-level Deutsche Dienststelle/WASt data basis and exposes a table list with losses/deaths by organisations and Wehrmacht branches, including Luftwaffe-level tables. The relevant result-table values and any flak-crew-specific breakdown were not inspected.",
+      "role": "Public publisher preview for Rüdiger Overmans, Deutsche militärische Verluste im Zweiten Weltkrieg (3rd ed., 2004). The inspected preview establishes that the study uses a sample drawn from individual Deutsche Dienststelle/WASt records as an empirical basis and exposes a table list with losses/deaths by organisations and Wehrmacht branches, including Luftwaffe-level tables. The relevant result-table values and any flak-crew-specific breakdown were not inspected.",
       "claim_relation": "scope_relevant_personnel_loss_study_preview_not_claim_test"
     }
   ],
@@ -98,7 +98,7 @@
     "Claude Code reports that the later video asserts the figure while calling it untraceable without stating its search method; this is not an independent research check.",
     "Authoritative sources support nearby facts about flak danger and Allied casualties but do not, in the sources checked for this record, establish the claimed aggregate German crew mortality rate.",
     "A selected passage in an accessible third-party OCR reproduction of Westermann's 2001 Flak reports 60 officer and 890 enlisted flak-force casualties, explicitly combining dead, wounded and missing, for the May 10–June 22, 1940 western campaign. This is a campaign-bounded casualty count, not a death count, aggregate mortality rate or whole-war estimate; the OCR reproduction itself has not been authenticated against the restricted publisher-edition scan.",
-    "A public publisher preview of Overmans' German military-loss study confirms that its empirical design uses person-level Deutsche Dienststelle/WASt records and that the book contains tables of losses/deaths by organisations and Wehrmacht branches, including Luftwaffe-level material. The preview does not expose the relevant table values here and does not establish a flak-crew-specific denominator or mortality rate."
+    "A public publisher preview of Overmans' German military-loss study confirms that its empirical design uses a sample drawn from individual Deutsche Dienststelle/WASt records and that the book contains tables of losses/deaths by organisations and Wehrmacht branches, including Luftwaffe-level material. The preview does not expose the relevant table values here and does not establish a flak-crew-specific denominator or mortality rate."
   ],
   "unknowns": [
     "The true aggregate mortality rate of German anti-aircraft crews.",
