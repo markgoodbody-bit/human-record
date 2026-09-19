@@ -24,6 +24,11 @@ It already has opaque entity, source and assertion identifiers; source observati
 preservation routes; correction history; identity merge/split handling; living-subject
 boundaries; and sparse cross-record registries.
 
+A further hostile subtraction of the surviving independence / correction residue is
+preserved in:
+
+FRACTAL_RESIDUE_ATTACK.md
+
 The next problem is larger:
 
 > How can a future reader, human or machine, keep asking **why should I believe this
@@ -673,7 +678,7 @@ Eventually, THR should be capable of recording:
 - generated-view processes;
 - releases;
 - stewardship/governance decisions;
-- correction propagation;
+- correction / downstream review routing;
 - public export/checkpoint identity.
 
 This does not mean every execution must become a public record.
@@ -703,19 +708,33 @@ SIGNED RELEASE != CORRECT RECORD
 
 ---
 
-## 5. Independence is a graph property, not a count
+## 5. Independence is a bounded assessment informed by a graph, not a count
 
 Synthetic abundance makes apparent multiplicity cheap.
 
 A robust THR must keep distinguishing:
 
-```text
+~~~text
 TEN COPIES OF ONE ORIGIN
 !=
 TEN INDEPENDENT WITNESSES
-```
+~~~
 
-Independence can be partial and claim-specific.
+But the stronger-owner / residue attack in FRACTAL_RESIDUE_ATTACK.md narrows the earlier
+formulation further.
+
+A provenance / ancestry / custody graph can provide evidence for an independence
+assessment. The graph does not itself establish independence.
+
+~~~text
+GRAPH != INDEPENDENCE VERDICT
+NO KNOWN COMMON ANCESTOR != INDEPENDENT
+DISTINCT URL != INDEPENDENT
+DISTINCT INSTITUTION != INDEPENDENT
+DISTINCT MODEL / AGENT != INDEPENDENT
+~~~
+
+Independence is partial, question-specific and evidence-bearing.
 
 Two institutions may independently preserve one carrier while both derive an attribution
 from the same catalogue.
@@ -723,7 +742,7 @@ from the same catalogue.
 Two photographs may be independent captures of the same physical object but not
 independent evidence for its creator.
 
-Therefore future independence representation should support:
+Therefore the useful inputs include:
 
 - common source ancestry;
 - common owner;
@@ -733,7 +752,9 @@ Therefore future independence representation should support:
 - independent custody;
 - unknown relation.
 
-Do not force a universal numerical independence score.
+A bounded independence finding can remain a record-local analysis or ordinary THR
+assertion with evidence. No global independence object or universal numerical
+independence score is earned.
 
 ---
 
@@ -887,7 +908,8 @@ Response:
 Thousands of synthetic endpoints repeat one origin.
 
 Response:
-- ancestry and independence graph;
+- preserve ancestry / process / custody evidence;
+- make any independence judgement explicit, bounded and question-specific;
 - copies do not become independent evidence merely through count.
 
 ### Threat: retroactive source rewrite
