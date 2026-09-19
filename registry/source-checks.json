@@ -1,6 +1,6 @@
 {
   "format": "human-record-source-check-registry/0.1",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "purpose": "Append-only operational receipts for rechecking source locators and preservation routes. A source check is not record evidence unless separately promoted into an evidence observation.",
   "model": "https://thehumanrecord.net/SOURCE_MODEL.md",
   "checks": [
@@ -76,6 +76,21 @@
       "fingerprint": null,
       "record_evidence_promoted": false,
       "note": "Fresh currentness check observed the Polybius Book 3 reading surface, including its 1922 Loeb / not-yet-proofread notice. Live retrieval is not manuscript verification, a critical-edition check or preservation."
+    },
+    {
+      "id": "thr:source-check:648c7d3e-4c75-562d-b0aa-3f607f8ab191",
+      "source_id": "thr:source:2790ee98-28a4-4fca-bd80-b5b5484c47ef",
+      "checked_at": "2026-09-19",
+      "precision": "date",
+      "locator": "https://heritagecrafts.org.uk/craft/sieve-and-riddle-making/",
+      "method": "fresh_public_retrieval_by_framework_aperture",
+      "outcome": "live_locator_retrieved",
+      "fingerprint": null,
+      "comparison_to_prior_observation": "semantic_status_no_delta_critically_endangered; byte_identity_not_checked",
+      "preservation_lookup": "not_performed",
+      "preservation_action": "none",
+      "record_evidence_promoted": false,
+      "note": "Fresh public retrieval returned the Heritage Crafts Sieve and riddle making page and still showed CRITICALLY ENDANGERED / Status Critical, with 0 main-income professionals, 1 side-income professional, 1 trainee, and the 2025 Red List reviewer section. This operational check does not establish unchanged bytes, a fresh independent practitioner census, preservation, or truth, and it does not alter the record evidence state."
     }
   ],
   "ceilings": [
