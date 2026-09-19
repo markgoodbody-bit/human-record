@@ -52,7 +52,7 @@ class HannibalPublicRecordTests(unittest.TestCase):
         polybius = routes[POLYBIUS_SOURCE]
         self.assertEqual(polybius["relationship"], "parallel_source_language_edition_route_not_translation_basis")
         self.assertEqual(polybius["edition_urn"], "urn:cts:greekLit:tlg0543.tlg001.perseus-grc1")
-        self.assertIn("NOT CHECKED BASIS OF PATON TRANSLATION", polybius["ceiling"])
+        self.assertIn("!= CHECKED BASIS OF PATON TRANSLATION", polybius["ceiling"])
         self.assertIn("GREEK SOURCE-LITERAL PASSAGES NOT NEWLY INSPECTED", polybius["ceiling"])
 
     def test_all_historical_assertions_remain_source_attributed(self):
