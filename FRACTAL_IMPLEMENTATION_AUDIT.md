@@ -428,3 +428,105 @@ The next pressure is not to store more edges by default.
 It is to discover whether a **real material dependency** exists that cannot be recovered
 from current direct routes, assertion evidence, record-local structures or stronger-owner
 relations.
+
+
+---
+
+## 11. Record-local dependency ceiling — Homo Faber specimen
+
+A direct audit of the four current machine records against `registry/sources.json` found
+that not every consequential evidence locator is registered as a shared THR source.
+
+Concrete current specimen:
+
+`cases/sieve-riddle-revival.json`
+
+contains record-local node:
+
+`homo-faber-overthrow-interview`
+
+with locator:
+
+`https://2022.homofaber.com/en/discover/discover-steve-overthrow`
+
+The node is a substantive published practitioner interview. The record currently uses it
+for the bounded finding that Steve Overthrow reports learning partly from Mike Turnock.
+
+It is also cited in a correction entry.
+
+That locator is **not** currently represented by a shared `thr:source:<uuid>` entry.
+
+This is not automatically a defect.
+
+The current registry growth rule explicitly permits:
+
+~~~text
+NO CROSS-RECORD NEED
+-> RECORD-LOCAL STRUCTURE MAY BE ENOUGH
+~~~
+
+Therefore the executable source-ID impact query has an honest scope:
+
+~~~text
+REGISTERED SOURCE
+-> DERIVED IMPACT ROUTES AVAILABLE
+
+RECORD-LOCAL SOURCE WITHOUT SHARED ID
+-> NOT ADDRESSABLE BY source_id QUERY
+-> RECORD-LOCAL REVIEW ROUTE STILL EXISTS
+~~~
+
+Do not infer:
+
+~~~text
+NOT IN SOURCE REGISTRY
+-> NOT EVIDENCE
+
+NOT QUERYABLE BY source_id
+-> NO DEPENDENCY
+~~~
+
+### Why generic URL scraping is not the repair
+
+The same audit also found unregistered URLs that are **not** evidence sources:
+- correction/challenge receipts;
+- GitHub review receipts;
+- public correction routes;
+- build/provenance routes.
+
+Therefore:
+
+~~~text
+URL OCCURS IN RECORD
+!=
+SOURCE DEPENDENCY
+~~~
+
+A generic URL scraper would create false positives.
+
+### Smallest future options
+
+If a real operational need requires automated impact/currentness handling for this local
+Homo Faber source, the project has two bounded options:
+
+1. **Promote that source to the existing source registry**
+   - only if repeated identity, currentness, preservation or cross-record routing earns it;
+   - this uses an already-existing shared type.
+
+2. **Use a record-type-specific adapter**
+   - read the record-local source/node semantics;
+   - emit review candidates without globalising the node.
+
+Neither option currently earns a new global dependency/source type.
+
+### Current ceiling
+
+~~~text
+REGISTERED-SOURCE IMPACT ROUTING = EXECUTABLE
+ALL RECORD-LOCAL DEPENDENCY ROUTING = NOT YET GENERIC
+
+SOURCE REGISTRY != COMPLETE EVIDENCE UNIVERSE
+URL SCRAPE != SAFE DEPENDENCY GRAPH
+~~~
+
+This narrows the zero-new-types result rather than defeating it.
