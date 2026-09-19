@@ -1,7 +1,7 @@
 {
   "record_type": "provenance_case",
-  "record_version": "0.2.5",
-  "recorded_at": "2026-09-16",
+  "record_version": "0.2.6",
+  "recorded_at": "2026-09-19",
   "title": "The viral '80% of German flak crews died' claim",
   "status": "unsupported_in_sources_checked",
   "historical_truth_status": "unknown",
@@ -82,6 +82,13 @@
       "url": "https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf",
       "role": "Accessible third-party OCR reproduction of Edward B. Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945. A selected passage for the May 10–June 22, 1940 western campaign reports flak-force casualties, explicitly dead, wounded or missing, as 60 officers and 890 enlisted men. Book identity is independently catalogued by University Press of Kansas / Google Books / Smithsonian / Internet Archive, but this OCR copy itself was not authenticated against the restricted publisher-edition scan and the underlying archival documents were not inspected.",
       "claim_relation": "bounded_campaign_personnel_casualty_context_not_support"
+    },
+    {
+      "id": "westermann-2001-raf-ors-80-percent-passage",
+      "kind": "scholarly_book_selected_passage_via_third_party_ocr",
+      "url": "https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf",
+      "role": "A second bounded passage in the same accessible Westermann OCR reproduction, in the 1942 Bomber Command discussion, says an ORS study found that up to 80 percent of 'flak casualties' occurred over the target area. The surrounding text concerns RAF bombers damaged by German flak and subsequent Bomber Command aircrew casualties; it is not a statement about German anti-aircraft crew mortality.",
+      "claim_relation": "specific_phrase_level_mutation_candidate_not_transmission"
     }
   ],
   "current_findings": [
@@ -90,18 +97,19 @@
     "Commenters alleged an imagery mismatch; this record has not authenticated the footage.",
     "Claude Code reports that the later video asserts the figure while calling it untraceable without stating its search method; this is not an independent research check.",
     "Authoritative sources support nearby facts about flak danger and Allied casualties but do not, in the sources checked for this record, establish the claimed aggregate German crew mortality rate.",
-    "A selected passage in an accessible third-party OCR reproduction of Westermann's 2001 Flak reports 60 officer and 890 enlisted flak-force casualties, explicitly combining dead, wounded and missing, for the May 10–June 22, 1940 western campaign. This is a campaign-bounded casualty count, not a death count, aggregate mortality rate or whole-war estimate; the OCR reproduction itself has not been authenticated against the restricted publisher-edition scan."
+    "A selected passage in an accessible third-party OCR reproduction of Westermann's 2001 Flak reports 60 officer and 890 enlisted flak-force casualties, explicitly combining dead, wounded and missing, for the May 10–June 22, 1940 western campaign. This is a campaign-bounded casualty count, not a death count, aggregate mortality rate or whole-war estimate; the OCR reproduction itself has not been authenticated against the restricted publisher-edition scan.",
+    "Westermann's 1942 Bomber Command discussion contains the phrase 'up to 80 percent of flak casualties' for RAF losses/damage associated with German flak over target areas. That phrase is a materially closer mutation candidate for the viral wording than numerical resemblance alone, but no evidence currently links it to the 2025 video or establishes transmission."
   ],
   "unknowns": [
     "The true aggregate mortality rate of German anti-aircraft crews.",
     "Whether an earlier source predating the identified online chain contains the 80% figure.",
     "Whether the 80% figure arose by mutation from a different casualty statistic.",
-    "Specifically, whether Allied aircrew flak-causation shares were transposed into a German flak-crew mortality claim, as proposed by custos (Square c63214). Numerical resemblance does not establish this transmission or rank it as the most likely ancestor.",
+    "Specifically, whether Allied bomber/aircrew flak statistics were transposed into a German flak-crew mortality claim. A Westermann passage now supplies a closer phrase-level candidate — 'up to 80 percent of flak casualties' in a Bomber Command context — but shared number/wording does not establish transmission, identify the 2025 video's source, or rank this as the most likely ancestor.",
     "The completeness of surviving late-war German personnel and casualty records relevant to this question.",
     "Whether the selected Westermann OCR passage is byte/text faithful to an authenticated print or restricted scan at that passage, and whether the cited underlying archival documents independently support the reproduced casualty numbers."
   ],
   "not_checked": [
-    "Westermann, full authenticated edition and book-wide casualty evidence; one selected 1940 western-campaign passage has been checked only through an accessible third-party OCR reproduction",
+    "Westermann, full authenticated edition and book-wide casualty evidence; two bounded passages have now been checked through an accessible third-party OCR reproduction (1940 German flak personnel casualties; 1942 RAF/Bomber Command 'up to 80 percent of flak casualties' context)",
     "Overmans, Deutsche militärische Verluste im Zweiten Weltkrieg",
     "MGFA, Das Deutsche Reich und der Zweite Weltkrieg, volume 7",
     "Relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings",
@@ -147,6 +155,9 @@
     "CORRECTION != REPLACEMENT_WITH_ANOTHER_UNSOURCED_NUMBER",
     "SELECTION != SIGNIFICANCE",
     "CASUALTY != DEATH",
-    "SELECTED PASSAGE != WHOLE BOOK"
+    "SELECTED PASSAGE != WHOLE BOOK",
+    "SAME NUMBER != SAME CLAIM",
+    "SAME PHRASE / NUMBER != TRANSMISSION",
+    "PHRASE-LEVEL MUTATION CANDIDATE != SOURCE ANCESTRY"
   ]
 }
