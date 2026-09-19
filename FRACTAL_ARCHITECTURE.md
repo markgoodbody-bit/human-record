@@ -29,6 +29,21 @@ preserved in:
 
 FRACTAL_RESIDUE_ATTACK.md
 
+A direct audit against the current public registries / catalogue is preserved in:
+
+FRACTAL_IMPLEMENTATION_AUDIT.md
+
+That audit finds that current relations already route:
+- one real source -> one assertion -> one record/view; and
+- one real source -> four assertions -> one record/view.
+
+It also preserves the current evidence ceiling:
+
+~~~text
+INTRA-RECORD FAN-OUT = TESTED
+MULTI-RECORD SOURCE FAN-OUT = NOT YET PRESENT / NOT TESTED
+~~~
+
 The next problem is larger:
 
 > How can a future reader, human or machine, keep asking **why should I believe this
