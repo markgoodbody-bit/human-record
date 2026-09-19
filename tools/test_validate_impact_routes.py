@@ -126,6 +126,29 @@ class ImpactRouteTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     impact_routes.derive_impact_routes(self.root, self.source_id)
 
+    def test_malformed_assertion_source_ids_fail_loudly(self):
+        malformed_values = (
+            self.source_id,
+            None,
+            [self.source_id, 42],
+            [""],
+        )
+        for value in malformed_values:
+            with self.subTest(value=value):
+                self.assertions = {"assertions": []}
+                self.add_assertion(self.source_id, ["cases/b.json"])
+                self.assertions["assertions"][0]["evidence"]["source_ids"] = value
+                self.write()
+                with self.assertRaises(ValueError):
+                    impact_routes.derive_impact_routes(self.root, self.source_id)
+
+    def test_malformed_assertion_evidence_container_fails_loudly(self):
+        self.add_assertion(self.source_id, ["cases/b.json"])
+        self.assertions["assertions"][0]["evidence"] = self.source_id
+        self.write()
+        with self.assertRaises(ValueError):
+            impact_routes.derive_impact_routes(self.root, self.source_id)
+
     def test_unknown_source_rejected(self):
         with self.assertRaises(KeyError):
             impact_routes.derive_impact_routes(
