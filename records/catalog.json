@@ -26,17 +26,17 @@
       "full_human_record": "https://thehumanrecord.net/specimen.md",
       "machine_record": "https://thehumanrecord.net/specimen.json",
       "view_basis": {
-        "aligned_at": "2026-09-16",
+        "aligned_at": "2026-09-19",
         "source_record_format": "human-record-specimen/0.1",
         "source_git_blobs": {
-          "specimen.md": "833141f935e88a08e9d3caf3ef85e44687f7badb",
-          "specimen.json": "0447ea7e7060b070e11e6e9397c5017766f0a21f"
+          "specimen.md": "76edf8f22701b1bc2ccb64270526bc11fc8c6dd9",
+          "specimen.json": "4ffe5216cbf955f8d883e2a3b22314409676b0b5"
         }
       },
       "status": "matched_owner_attribution_not_independent_proof",
       "observed_at": "2026-09-14T20:46:10Z",
-      "known_summary": "The Human Record reconciled eight identity fields against The Metropolitan Museum of Art public record and observed byte-identical museum/PSFH image streams at the recorded time.",
-      "unknown_summary": "Custody before 1927, independent proof of the 1880 creation event, and usefulness for contemporary human/synthetic ambiguity remain unestablished.",
+      "known_summary": "The Human Record reconciled eight identity fields against The Metropolitan Museum of Art public record, observed byte-identical museum/PSFH image streams, and now carries a bounded Met-reported Clarke → 1899 sale/agent → Pomeroy → 1927 gift collection history with selected 1893/1911 historical re-observations.",
+      "unknown_summary": "Ownership/custody before Thomas B. Clarke, continuous physical custody/legal title across the reported 1880–1927 route, exact 1899 transfer mechanics, independent proof of the 1880 creation event, and usefulness for contemporary human/synthetic ambiguity remain unestablished.",
       "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
     },
     {
