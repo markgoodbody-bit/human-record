@@ -1,6 +1,6 @@
 {
   "record_type": "provenance_case",
-  "record_version": "0.2.6",
+  "record_version": "0.2.7",
   "recorded_at": "2026-09-16",
   "title": "The viral '80% of German flak crews died' claim",
   "status": "unsupported_in_sources_checked",
@@ -84,6 +84,13 @@
       "claim_relation": "bounded_campaign_personnel_casualty_context_not_support"
     },
     {
+      "id": "westermann-2001-raf-ors-80-percent-passage",
+      "kind": "scholarly_book_selected_passage_via_third_party_ocr",
+      "url": "https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf",
+      "role": "A second bounded passage in the same accessible Westermann OCR reproduction, in the 1942 Bomber Command discussion, says an Operational Research Section study found that up to 80 percent of 'flak casualties' occurred over the target area. The surrounding text concerns RAF bombers damaged by German flak and subsequent Bomber Command aircrew casualties; it is not a statement about German anti-aircraft crew mortality.",
+      "claim_relation": "specific_phrase_level_mutation_candidate_not_transmission"
+    },
+    {
       "id": "overmans-2004-publisher-preview",
       "kind": "scholarly_book_publisher_preview",
       "url": "https://api.pageplace.de/preview/DT0400.9783486594140_A21763421/preview-9783486594140_A21763421.pdf",
@@ -98,18 +105,19 @@
     "Claude Code reports that the later video asserts the figure while calling it untraceable without stating its search method; this is not an independent research check.",
     "Authoritative sources support nearby facts about flak danger and Allied casualties but do not, in the sources checked for this record, establish the claimed aggregate German crew mortality rate.",
     "A selected passage in an accessible third-party OCR reproduction of Westermann's 2001 Flak reports 60 officer and 890 enlisted flak-force casualties, explicitly combining dead, wounded and missing, for the May 10–June 22, 1940 western campaign. This is a campaign-bounded casualty count, not a death count, aggregate mortality rate or whole-war estimate; the OCR reproduction itself has not been authenticated against the restricted publisher-edition scan.",
+    "Westermann's 1942 Bomber Command discussion contains the phrase 'up to 80 percent of flak casualties' for RAF losses/damage associated with German flak over target areas. That phrase is a materially closer mutation candidate for the viral wording than numerical resemblance alone, but no evidence currently links it to the 2025 video or establishes transmission.",
     "A public publisher preview of Overmans' German military-loss study confirms that its empirical design uses a sample drawn from individual Deutsche Dienststelle/WASt records and that the book contains tables of losses/deaths by organisations and Wehrmacht branches, including Luftwaffe-level material. The preview does not expose the relevant table values here and does not establish a flak-crew-specific denominator or mortality rate."
   ],
   "unknowns": [
     "The true aggregate mortality rate of German anti-aircraft crews.",
     "Whether an earlier source predating the identified online chain contains the 80% figure.",
     "Whether the 80% figure arose by mutation from a different casualty statistic.",
-    "Specifically, whether Allied aircrew flak-causation shares were transposed into a German flak-crew mortality claim, as proposed by custos (Square c63214). Numerical resemblance does not establish this transmission or rank it as the most likely ancestor.",
+    "Specifically, whether Allied bomber/aircrew flak statistics were transposed into a German flak-crew mortality claim. A Westermann passage now supplies a closer phrase-level candidate — 'up to 80 percent of flak casualties' in a Bomber Command context — but shared number/wording does not establish transmission, identify the 2025 video's source, or rank this as the most likely ancestor.",
     "The completeness of surviving late-war German personnel and casualty records relevant to this question.",
     "Whether the selected Westermann OCR passage is byte/text faithful to an authenticated print or restricted scan at that passage, and whether the cited underlying archival documents independently support the reproduced casualty numbers."
   ],
   "not_checked": [
-    "Westermann, full authenticated edition and book-wide casualty evidence; one selected 1940 western-campaign passage has been checked only through an accessible third-party OCR reproduction",
+    "Westermann, full authenticated edition and book-wide casualty evidence; two bounded passages have now been checked through an accessible third-party OCR reproduction (1940 German flak personnel casualties; 1942 RAF/Bomber Command 'up to 80 percent of flak casualties' context)",
     "Overmans, full relevant result tables and any flak-crew-specific breakdown; a public publisher preview has been checked only for methodology/scope and the table list",
     "MGFA, Das Deutsche Reich und der Zweite Weltkrieg, volume 7",
     "Relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings",
@@ -156,6 +164,9 @@
     "SELECTION != SIGNIFICANCE",
     "CASUALTY != DEATH",
     "SELECTED PASSAGE != WHOLE BOOK",
-    "LUFTWAFFE-LEVEL LOSS TABLE != FLAK-CREW MORTALITY RATE"
+    "LUFTWAFFE-LEVEL LOSS TABLE != FLAK-CREW MORTALITY RATE",
+    "SAME NUMBER != SAME CLAIM",
+    "SAME PHRASE / NUMBER != TRANSMISSION",
+    "PHRASE-LEVEL MUTATION CANDIDATE != SOURCE ANCESTRY"
   ]
 }
