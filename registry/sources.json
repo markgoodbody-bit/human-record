@@ -776,6 +776,56 @@
       "used_by_records": [
         "viral-flak-claim"
       ]
+    },
+    {
+      "id": "thr:source:4c1e2d3a-6b7f-4c8d-9a10-2e3f4b5c6d7e",
+      "kind": "publisher_preview",
+      "title": "Deutsche militärische Verluste im Zweiten Weltkrieg — public publisher preview",
+      "publisher": "Oldenbourg / De Gruyter",
+      "locators": [
+        {
+          "scheme": "url",
+          "value": "https://www.degruyter.com/document/doi/10.1524/9783486594140/html",
+          "status": "publisher_book_page"
+        },
+        {
+          "scheme": "url",
+          "value": "https://api.pageplace.de/preview/DT0400.9783486594140_A21763421/preview-9783486594140_A21763421.pdf",
+          "status": "public_preview_inspected"
+        },
+        {
+          "scheme": "doi",
+          "value": "10.1524/9783486594140",
+          "status": "publisher_identifier"
+        }
+      ],
+      "observations": [
+        {
+          "id": "thr:observation:7d2f1c8b-3a64-4e91-8b25-6c7d8e9f0a12",
+          "observed_at": "2026-09-19",
+          "precision": "date",
+          "outcome": "partial",
+          "record_basis": "cases/viral-flak-claim.json node overmans-2004-publisher-preview; Framework field follow-up after issue #20",
+          "digest": null,
+          "scope": "Public preview pages covering bibliographic identity, contents/table list, preface, and early discussion of the Deutsche Dienststelle/WASt data basis. The result tables themselves were not inspected in this aperture.",
+          "observer": "Framework",
+          "notes": [
+            "The preview identifies the 3rd edition (2004) and shows that the study uses person-level records from the Deutsche Dienststelle/WASt as a core empirical basis.",
+            "Its table list includes losses by organisation and personnel strength, deaths by organisations and years, deaths by Wehrmacht branches and demographic groupings, plus Luftwaffe loss tables in the earlier source-review section.",
+            "The preview does not establish any flak-crew-specific population, denominator, death count or mortality rate. LUFTWAFFE != FLAK CREWS."
+          ]
+        }
+      ],
+      "relations": [],
+      "preservation": {
+        "status": "publisher_preview_available",
+        "copies": [],
+        "last_checked_at": "2026-09-19",
+        "note": "A public publisher preview was retrievable in this aperture. Availability of the full book/result tables was not established."
+      },
+      "used_by_records": [
+        "viral-flak-claim"
+      ]
     }
   ],
   "ceilings": [
