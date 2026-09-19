@@ -39,6 +39,188 @@ It is deliberately a design target, not an instruction to populate new registrie
 
 ---
 
+## Falsification pass 1 — earned constraints
+
+The first paper test against all four current Human Record machine records is preserved in
+`FRACTAL_FALSIFICATION.md`.
+
+That pass found ten constraints that this RFC now adopts before any implementation work.
+
+### A. Three levels of addressability
+
+Not every meaningful thing should receive a globally durable THR identifier.
+
+```text
+LOCAL VALUE / LOCAL NODE
+-> meaningful only inside one bounded record
+
+RECORD-LOCAL ADDRESSABLE OBJECT
+-> stable inside one record / export
+
+SHARED THR OBJECT
+-> cross-record durable identifier earned by repeated need
+```
+
+```text
+RECORDABLE != GLOBALLY ENUMERABLE
+CAN ASSIGN ID != SHOULD ASSIGN SHARED ID
+```
+
+### B. Recursion is materiality-bounded
+
+The fractal model must not become infinite graph expansion.
+
+Recurse only when the next layer could materially change:
+- identity;
+- evidence;
+- independence;
+- authority;
+- correction;
+- preservation;
+- interpretation;
+- or a consequential handling boundary.
+
+```text
+RECURSION POSSIBLE != RECURSION MATERIAL
+NO MATERIAL CONSEQUENCE -> STOP DESCENT
+```
+
+### C. Event object is not event proof
+
+An event object can provide a stable referent for competing claims.
+
+It does not prove that the event occurred, occurred at the claimed time, involved the
+claimed participants, or had the claimed meaning.
+
+```text
+EVENT OBJECT != ASSERTION EVENT OCCURRED
+EVENT ID != EVENT CERTAINTY
+```
+
+### D. Process referent is not process observation
+
+THR may need to distinguish:
+- a process claimed by a source;
+- a process described by documentation;
+- a process actually executed by THR;
+- a process independently observed by another party.
+
+```text
+PROCESS CLAIMED BY SOURCE
+!=
+PROCESS OBSERVED BY THR
+!=
+PROCESS EXECUTED BY THR
+```
+
+### E. Source statement, observation, attestation and process receipt stay distinct
+
+These are different evidence-bearing acts:
+
+```text
+SOURCE STATEMENT
+!=
+OBSERVATION
+!=
+ATTESTATION
+!=
+PROCESS RECEIPT
+```
+
+Do not wrap every source statement in an `attestation` object merely because the
+attestation vocabulary is convenient.
+
+### F. Authority is typed, scoped and temporal
+
+Authority must state **authority for what**.
+
+Examples:
+- custody;
+- current status classification;
+- technical operation;
+- publication;
+- preservation;
+- governance;
+- correction execution;
+- representation of a community under a documented process.
+
+Where material it must also be time-bounded or observation-bounded.
+
+```text
+AUTHORITY IN ONE FUNCTION != AUTHORITY IN ALL FUNCTIONS
+LATER AUTHORITY != RETROACTIVE CONTROL OF EARLIER STATES
+```
+
+Do not collapse bounded status ownership into cultural, moral or governance authority.
+
+### G. Independence is proposition/function-specific
+
+The same two objects can be independent for one question and dependent for another.
+
+Examples:
+- two independent archives may independently hold the same bytes;
+- they may still derive the artwork attribution from one museum catalogue;
+- two photographs may be independent captures of one physical object while sharing the
+  same stated provenance.
+
+Therefore:
+
+```text
+INDEPENDENT FOR BYTE CUSTODY
+!=
+INDEPENDENT FOR CLAIM ORIGINATION
+!=
+INDEPENDENT FOR PHYSICAL OBSERVATION
+!=
+INDEPENDENT GOVERNANCE
+```
+
+No universal independence score is implied.
+
+### H. Shared interfaces do not imply one universal record schema
+
+Camp Fire, the flak claim, sieve/riddle revival and Hannibal require different local
+structures for good reasons.
+
+The fractal architecture should standardise the joins that need interoperability, not
+flatten all records into one triple store.
+
+```text
+COMMON ADDRESSING / RELATION PRINCIPLES
+!=
+ONE UNIVERSAL RECORD SHAPE
+```
+
+### I. No universal trust score
+
+Trustworthiness is multidimensional and claim-specific.
+
+Do not create a core architecture such as:
+
+```text
+trust_score = 0.94
+```
+
+Prefer inspectable provenance, bounded authority, source ancestry, explicit observations
+and preserved disagreements.
+
+### J. Living-person anti-enumeration applies to principals too
+
+A living person appearing in a source, lineage or interaction does not automatically earn:
+- a shared entity;
+- a shared principal;
+- a public key mapping;
+- a cross-record profile.
+
+```text
+LIVING MENTION != PUBLIC PRINCIPAL
+PRINCIPAL ADDRESSABILITY != PERSON DOSSIER
+```
+
+These constraints are now part of the RFC's design target.
+
+---
+
 ## 1. The fractal proposition
 
 A mature Human Record should not terminate at "the record".
