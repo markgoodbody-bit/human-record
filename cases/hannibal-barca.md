@@ -178,6 +178,34 @@ INSTITUTIONAL COPY != BYTE-IDENTICAL DCC PAGE
 
 No historical assertion or source interpretation changed in this maintenance revision.
 
+## Source recoverability — Polybius Volume II
+
+A second preservation check on 20 September 2026 followed the stronger owner behind the
+University of Chicago / LacusCurtius Book III reading surface.
+
+The live page itself states that it reproduces **Volume II of the 1922 Loeb Classical
+Library edition**. Internet Archive item `historieswitheng02poly`, contributed from the
+New York Public Library, independently identifies:
+
+- Polybius, *The Histories*, **Volume 2**;
+- W. R. Paton;
+- Loeb Classical Library **137**;
+- first printed **1922**;
+- Greek and English on facing pages;
+- contents beginning with **Book III** and continuing with Book IV.
+
+That establishes a recoverable digitized carrier for the printed edition underlying the
+reading surface. It does **not** establish that the Thayer HTML itself is archived,
+byte-identical to the scan, or transcription-perfect.
+
+```text
+PRINTED EDITION CARRIER RECOVERABLE != EXACT WEB REPRESENTATION PRESERVED
+ARCHIVE SCAN != THAYER TRANSCRIPTION
+PRESERVATION ROUTE != HISTORICAL TRUTH
+```
+
+No historical assertion or source interpretation changed in this maintenance revision.
+
 ## Public machine route
 
 The public machine record is:
