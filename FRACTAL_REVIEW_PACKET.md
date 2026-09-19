@@ -190,6 +190,25 @@ In particular:
 
 A result of "THR should shrink to integration / continuation discipline" is valid.
 
+The current RFC now makes a stronger provisional claim:
+
+~~~text
+NEW SHARED THR CORE TYPES NEEDED FOR CURRENT FOUR RECORDS + MICROCASES = ZERO
+~~~
+
+Try to break it.
+
+Find one concrete consequential distinction in Camp Fire, flak, sieve/riddle, Hannibal,
+the validator self-description, correction routing or long-term continuation that cannot
+be preserved using:
+- current sparse THR entity / mention / source / observation / assertion layers;
+- record-local structures;
+- stronger-owner interoperability when material.
+
+If you find one, identify the **smallest** new shared type required.
+
+If you do not, say so. Do not invent a type to make the review look productive.
+
 ---
 
 ## 3. Use the existing four records
@@ -351,6 +370,9 @@ CUT:
 
 ADD:
 <smallest missing concepts, if any>
+
+ZERO_NEW_TYPES_ATTACK:
+<one concrete counterexample, or NO COUNTEREXAMPLE FOUND>
 
 RESIDUE_ATTACK:
 <what, if anything, still appears genuinely THR-shaped after strongest-owner subtraction>
