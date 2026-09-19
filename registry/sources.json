@@ -690,14 +690,14 @@
         "hannibal-source-survival"
       ],
       "preservation": {
-        "status": "multiple_preservation_routes",
+        "status": "institutional_preservation_route_identified",
         "copies": [
           {
             "provider": "Open Book Publishers",
             "kind": "open_access_published_edition",
             "persistent_locator": "https://doi.org/10.11647/OBP.0068",
             "access": "public",
-            "relationship": "Dickinson College Commentaries volume 1 by Bret Mulligan; published edition contains the Text of Nepos' Life of Hannibal and Notes",
+            "relationship": "publisher-controlled open-access route for the related Dickinson College Commentaries volume containing the Nepos text and notes",
             "verified_against_observation": "edition identity and contents route checked 2026-09-20; exact DCC chapter-13 web bytes/layout not compared"
           },
           {
@@ -705,12 +705,12 @@
             "kind": "institutional_open_access_book_copy",
             "persistent_locator": "https://hdl.loc.gov/loc.gdc/gdcebookspublic.2019467885",
             "access": "public",
-            "relationship": "institutional digital copy of Bret Mulligan's Cornelius Nepos, Life of Hannibal open-access book edition",
+            "relationship": "institutional-library digital copy of the related Bret Mulligan open-access book edition containing the Nepos text and notes",
             "verified_against_observation": "bibliographic relationship checked 2026-09-20; exact DCC chapter-13 web bytes/layout not compared"
           }
         ],
         "last_checked_at": "2026-09-20",
-        "note": "The exact DCC chapter-13 web representation was not independently located in a web archive through this aperture. These routes preserve the edition-level text/notes through stronger publisher/library custody; EDITION CONTENT PRESERVED != EXACT WEB REPRESENTATION PRESERVED."
+        "note": "The exact DCC chapter-13 web representation was not independently located in a web archive through this aperture. Stronger publisher/library routes preserve the closely related published DCC edition containing the Nepos text and notes; RELATED EDITION RECOVERABLE != EXACT WEB REPRESENTATION PRESERVED."
       }
     },
     {
