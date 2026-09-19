@@ -221,6 +221,96 @@ These constraints are now part of the RFC's design target.
 
 ---
 
+## Interoperability-first / strongest-owner rule
+
+The fractal architecture must not become an excuse to reimplement mature standards.
+
+External owner-subtraction is preserved in:
+
+`FRACTAL_OWNER_SUBTRACTION.md`
+
+Current stronger owners include:
+
+```text
+GENERIC PROVENANCE ENTITY / ACTIVITY / AGENT
+-> W3C PROV
+
+SIGNED DIGITAL MEDIA PROVENANCE
+-> C2PA Content Credentials
+
+GENERIC CRYPTOGRAPHIC CREDENTIALS
+-> W3C Verifiable Credentials
+
+DECENTRALISED CONTROL IDENTIFIERS
+-> W3C DID
+
+SOFTWARE PROCESS / BUILD ATTESTATION
+-> in-toto / SLSA
+
+SOFTWARE SIGNING TRANSPARENCY
+-> Sigstore / Rekor
+
+WEB VERSION-TIME ROUTING
+-> Memento
+
+SOFTWARE INTRINSIC ID + ARCHIVAL OWNER
+-> Software Heritage / SWHID
+```
+
+Therefore the default rule is:
+
+```text
+STRONGER OWNER EXISTS
+-> LINK / MAP / INTEROPERATE
+
+THR-NATIVE TYPE
+-> ONLY WHEN A MATERIAL THR RESIDUE SURVIVES
+```
+
+THR should not define a competing universal provenance ontology, credential format,
+decentralised identity protocol, media-signing format, transparency log, web-time protocol
+or software-content identifier.
+
+The candidate fractal architecture is instead a **join-preserving evidence layer**.
+
+Its distinct work is to keep visible:
+- what THR actually observed;
+- what a source / external provenance object actually asserts;
+- which evidence is independent for the bounded question;
+- what authority is relevant to which function;
+- what changed and when;
+- what is disputed;
+- what remains unknown / unexamined;
+- which rights / privacy / consent / cultural-control boundary applies;
+- which downstream record may require review;
+- how a future reader can continue without trusting the current THR operator.
+
+External standards remain external evidence objects.
+
+```text
+VALID C2PA MANIFEST != DEPICTED EVENT TRUE
+VALID VC != ISSUER LEGITIMATELY AUTHORITATIVE FOR ALL CLAIMS
+DID CONTROL != REAL-WORLD IDENTITY CERTAINTY
+SLSA PROVENANCE != BUILD OUTPUT CORRECT
+REKOR INCLUSION != HISTORICAL CLAIM TRUE
+MEMENTO CAPTURE != ORIGINAL CONTEXT COMPLETE
+SWHID != AUTHORSHIP / LICENCE / GOVERNANCE
+PROV GRAPH != EPISTEMIC VERDICT
+```
+
+The "fractal" therefore means that THR can follow the next material layer into the
+strongest available owner and return with the relationship preserved.
+
+```text
+FRACTAL THR != THR OWNS EVERY LAYER
+FRACTAL THR = THR PRESERVES THE JOINS
+```
+
+No external standard is mandatory merely because it exists. Interoperability must remain
+materiality-bounded and preserve THR's living-person, rights and uncertainty boundaries.
+
+---
+
 ## 1. The fractal proposition
 
 A mature Human Record should not terminate at "the record".
