@@ -16,6 +16,14 @@ This is not a standards-compliance claim.
 
 It is an owner-subtraction pass.
 
+A second bounded owner pass found material additional overlap in cultural-heritage,
+argumentation/inference and preservation models. Read:
+
+`FRACTAL_OWNER_SUBTRACTION_CULTURAL_PRESERVATION.md`
+
+The second pass narrows the RFC further; it does not supersede the owners documented
+below.
+
 ---
 
 ## 1. W3C PROV — provenance interchange
