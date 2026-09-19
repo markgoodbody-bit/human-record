@@ -57,7 +57,7 @@
       "status": "unsupported_in_sources_checked",
       "historical_truth_status": "unknown",
       "recorded_at": "2026-09-16",
-      "known_summary": "A visible online propagation chain is partially reconstructed. Westermann now contributes a selected 1940 German flak-casualty passage, a targeted full-text search, and a more recoverable note-75 archival route: a named N 529/7 report plus an RL 12/457 Flak-Regiment 102 daily order independently matched at catalogue level. The archival pages remain uninspected, and none of this establishes the claimed aggregate German flak-crew mortality rate.",
+      "known_summary": "A visible online propagation chain is partially reconstructed. Westermann now contributes a selected 1940 German flak-casualty passage, a targeted full-text search, and a more recoverable note-75 archival route: a named N 529/7 report recovered from Westermann's note, plus an RL 12/457 Flak-Regiment 102 daily order independently matched at catalogue level. The archival pages remain uninspected, and none of this establishes the claimed aggregate German flak-crew mortality rate.",
       "unknown_summary": "The true aggregate rate, any earlier source for the viral 80% figure, whether a nearby Allied flak-casualty statistic was ever transposed into the viral claim, authentication of Westermann reproductions, which archival statement in N 529/7 or RL 12/457 supports the 60/890 figure, and the uninspected values/any flak-specific breakdown in Overmans remain unresolved.",
       "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
     },
