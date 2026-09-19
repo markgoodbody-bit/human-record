@@ -400,6 +400,13 @@ ZERO_NEW_TYPES_ATTACK:
 PROTOCOL_NECESSITY:
 <concrete current requirement, or NO PROTOCOL PRESSURE FOUND>
 
+MULTI_RECORD_FANOUT:
+<identify a real shared source/assertion spanning multiple public records, or NOT PRESENT IN CURRENT CORPUS>
+
+If a real multi-record fan-out exists, test whether a material upstream correction can be
+routed to every affected record/view using current source/assertion links. Do not invent a
+shared source solely to make this test pass.
+
 RESIDUE_ATTACK:
 <what, if anything, still appears genuinely THR-shaped after strongest-owner subtraction>
 
