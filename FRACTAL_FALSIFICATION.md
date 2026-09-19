@@ -24,6 +24,35 @@ Purpose:
 
 This is a design falsification pass, not evidence that the RFC is correct.
 
+## Later narrowing — residue attack
+
+This file preserves the first four-record hostile pass. A later stronger-owner /
+correction-routing pass in FRACTAL_RESIDUE_ATTACK.md narrows one of its conclusions:
+
+~~~text
+INDEPENDENCE = QUESTION / FUNCTION SPECIFIC
+~~~
+
+remains useful, but:
+
+~~~text
+INDEPENDENCE IS A GRAPH PROPERTY
+~~~
+
+does not survive.
+
+The graph supplies evidence for a bounded independence assessment. It does not establish
+independence merely because no common ancestor is currently known.
+
+Likewise, "correction propagation" is narrowed to downstream impact routing:
+
+~~~text
+LOAD-BEARING DEPENDENCY CHANGED
+-> REVIEW AFFECTED DEPENDENTS
+
+UPSTREAM CORRECTION != DOWNSTREAM CORRECTION
+~~~
+
 ---
 
 ## 1. Cross-record result
@@ -191,7 +220,7 @@ The current record strongly supports:
 - derivative relationships;
 - correction/challenge events;
 - process receipts for source review;
-- claim-level independence.
+- evidence needed for bounded, question-specific independence assessment.
 
 ### Failure attempt A — every node becomes an entity/event
 
@@ -264,23 +293,36 @@ REVIEW PROCESS
 -> does not establish historical falsehood
 ```
 
-### New RFC pressure from flak case
+### New RFC pressure from flak case — later narrowed
 
-Independence must be **typed by proposition/evidentiary function**.
+First-pass conclusion:
 
-Candidate future relation:
+~~~text
+INDEPENDENCE MUST BE TYPED BY PROPOSITION / EVIDENTIARY FUNCTION
+~~~
 
-```text
-independent_for:
-- byte custody
-- source retrieval
-- physical observation
-- claim origination
-- analysis
-- governance
-```
+Later residue attack keeps the typing requirement but rejects a new generic
+independence relation.
 
-Do not add this schema yet; first preserve the requirement.
+Useful questions remain:
+
+~~~text
+INDEPENDENT FOR BYTE CUSTODY?
+INDEPENDENT FOR SOURCE RETRIEVAL?
+INDEPENDENT FOR PHYSICAL OBSERVATION?
+INDEPENDENT FOR CLAIM ORIGINATION?
+INDEPENDENT FOR ANALYSIS?
+INDEPENDENT FOR GOVERNANCE?
+~~~
+
+But the answer should be an evidence-bearing assertion / analysis under a declared
+question, not an intrinsic property of either source.
+
+~~~text
+ANCESTRY GRAPH -> EVIDENCE FOR ASSESSMENT
+GRAPH != INDEPENDENCE VERDICT
+NO KNOWN COMMON ANCESTOR != INDEPENDENT
+~~~
 
 ---
 
@@ -686,7 +728,7 @@ Pass 1 earns the following textual repairs to the RFC:
 
 6. Require typed/scoped authority rather than universal authority.
 
-7. State that independence is proposition/function-specific.
+7. State that any independence assessment is proposition/function-specific and evidence-bearing; do not create a universal independence relation.
 
 8. State that shared interfaces do not imply one universal record schema.
 
@@ -732,7 +774,7 @@ WHAT DOES THE SOURCE SAY?
 WHAT PROCESS PRODUCED THIS DERIVATIVE?
 WHAT CLAIM IS THR MAKING?
 WHAT AUTHORITY IS RELEVANT TO THAT CLAIM?
-WHICH EVIDENCE IS INDEPENDENT FOR THAT PARTICULAR QUESTION?
+WHAT EVIDENCE SUPPORTS OR LIMITS AN INDEPENDENCE ASSESSMENT FOR THAT PARTICULAR QUESTION?
 WHAT CHANGED?
 WHAT REMAINS UNKNOWN?
 ```
