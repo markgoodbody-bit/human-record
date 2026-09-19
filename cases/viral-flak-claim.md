@@ -151,13 +151,16 @@ The targeted OCR search returned no literal match for `mortality`. That is only 
 search result: it does not prove that the concept cannot appear under other wording, and
 it does not defeat OCR/search error.
 
-This strengthens a previously recorded **ancestry hypothesis** without establishing it:
-an 80-percent flak-related statistic exists in a scholarly flak book, but it concerns
-Allied casualties. There is still no evidence here that the viral video copied, mutated
-or even consulted this passage.
+This supplies a concrete passage to investigate under the previously recorded **ancestry hypothesis**. No evidence here links it to the viral claim or ranks it above other possible origins. The 80-percent flak-related statistic concerns Allied casualties. There is still no evidence here that the viral video copied, mutated or even consulted this passage.
 
 Source route:
 - https://murrellsmodels.co.uk/mm/files/Flak-German-AntiAircraft-Defenses---1914-1945-.pdf
+
+Reproduction locators used in hostile review:
+- carrier PDF page 96 (one-based), section **“The RAF's Reaction to the Luftwaffe's Air Defense Initiatives”** — 80-percent flak-casualty passage;
+- carrier PDF page 183 (one-based), section **“The State of the Flak Arm”** — late-1944 personnel-strength passage.
+
+These are carrier-page locators in the checked third-party PDF, **not authenticated publisher pagination**.
 
 ```text
 SAME NUMBER != SAME POPULATION
