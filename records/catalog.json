@@ -48,17 +48,17 @@
       "machine_record": "https://thehumanrecord.net/cases/viral-flak-claim.json",
       "view_basis": {
         "aligned_at": "2026-09-19",
-        "source_record_version": "0.2.6",
+        "source_record_version": "0.2.7",
         "source_git_blobs": {
-          "cases/viral-flak-claim.md": "f2d517361511c3f2bad5c15eb635add9a17cb4ba",
-          "cases/viral-flak-claim.json": "87f8a6ba7149de81ebfa67d57fda1ea347ea4cf9"
+          "cases/viral-flak-claim.md": "a36f41ed2bfbc257be7e7a5128281794b5393c91",
+          "cases/viral-flak-claim.json": "0597ad02d4ac72082f913814605825ae8c59a154"
         }
       },
       "status": "unsupported_in_sources_checked",
       "historical_truth_status": "unknown",
       "recorded_at": "2026-09-16",
-      "known_summary": "A visible online propagation chain is partially reconstructed; downstream repetition is not independent corroboration. A selected Westermann 1940 campaign passage adds bounded German flak personnel-loss context, and an Overmans publisher preview confirms a scope-relevant sample-based military-loss study drawing on individual WASt records with organisation/branch tables, but neither establishes the claimed aggregate mortality rate.",
-      "unknown_summary": "The true aggregate rate, any earlier source for the 80% figure, the figure's exact ancestry, authentication/underlying archive support for the selected Westermann OCR passage, and the uninspected values/any flak-specific breakdown in Overmans remain unresolved in this record.",
+      "known_summary": "A visible online propagation chain is partially reconstructed. Westermann now contributes a selected 1940 German flak-casualty passage plus a targeted full-text search: its relevant 80-percent flak-casualty passage concerns RAF/Bomber Command casualties, while a late-1944 1,110,900-person flak-arm figure is personnel strength, not a death numerator. An Overmans publisher preview confirms a scope-relevant military-loss study, but none of these establishes the claimed aggregate German flak-crew mortality rate.",
+      "unknown_summary": "The true aggregate rate, any earlier source for the viral 80% figure, whether a nearby Allied flak-casualty statistic was ever transposed into the viral claim, authentication/underlying archive support for Westermann reproductions, and the uninspected values/any flak-specific breakdown in Overmans remain unresolved.",
       "correction_route": "https://thehumanrecord.net/CONTRIBUTE.md"
     },
     {

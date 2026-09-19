@@ -43,7 +43,7 @@ Source:
 
 The Human Record does not currently know a primary German casualty record, Luftwaffe personnel series, or post-war scholarly study that establishes that overall 80% crew-mortality figure.
 
-That statement is deliberately narrower than “the figure is false”. A selected passage in Edward B. Westermann's scholarly study has now been inspected through an accessible third-party OCR reproduction, but the full authenticated edition, the book-wide casualty evidence and the underlying cited archival documents have not been checked. The condition/completeness of the relevant archives has not been established here; the later video's claim about destroyed records is not adopted as fact. This is an unresolved source trail, not a negative archival finding.
+That statement is deliberately narrower than “the figure is false”. A selected passage and a targeted full-text search of accessible third-party reproductions of Edward B. Westermann's scholarly study have now been inspected, but the authenticated edition, an exhaustive semantic/book-wide casualty review and the underlying cited archival documents have not been checked. The condition/completeness of the relevant archives has not been established here; the later video's claim about destroyed records is not adopted as fact. This is an unresolved source trail, not a negative archival finding.
 
 ## A visible propagation chain
 
@@ -127,6 +127,47 @@ CASUALTY != DEATH
 SELECTED PASSAGE != WHOLE BOOK
 CATALOGUED EDITION != OCR COPY AUTHENTICATED
 ARCHIVAL CITATION ROUTE IDENTIFIED != ARCHIVAL CONTENT INSPECTED
+```
+
+
+### A targeted Westermann book search finds an 80% figure — for the wrong population
+
+A second accessible full-PDF reproduction of Westermann was searched in a bounded way for
+`80 percent`, `mortality`, the already-known 1940 casualty passage and late-war personnel
+scale. This was a text/OCR search, **not** a line-by-line whole-book review.
+
+One relevant 80-percent passage appears in Westermann's discussion of RAF Operational
+Research Section work. It says that up to 80 percent of **flak casualties occurred over
+the target area**. The surrounding text is about Bomber Command aircraft and aircrew
+casualties/damage. It is not a statement that 80 percent of German flak personnel died.
+
+The same reproduction later reports that by autumn 1944 the ground-based air-defense
+force numbered **1,110,900 persons**, including 448,700 from outside the Luftwaffe.
+That is a personnel-strength snapshot. It does not supply the aggregate German flak
+death numerator, does not define a whole-war exposed cohort, and cannot be divided into
+an inferred mortality rate.
+
+The targeted OCR search returned no literal match for `mortality`. That is only a
+search result: it does not prove that the concept cannot appear under other wording, and
+it does not defeat OCR/search error.
+
+This supplies a concrete passage to investigate under the previously recorded **ancestry hypothesis**. No evidence here links it to the viral claim or ranks it above other possible origins. The 80-percent flak-related statistic concerns Allied casualties. There is still no evidence here that the viral video copied, mutated or even consulted this passage.
+
+Source route:
+- https://murrellsmodels.co.uk/mm/files/Flak-German-AntiAircraft-Defenses---1914-1945-.pdf
+
+Reproduction locators used in hostile review:
+- carrier PDF page 96 (one-based), section **“The RAF's Reaction to the Luftwaffe's Air Defense Initiatives”** — 80-percent flak-casualty passage;
+- carrier PDF page 183 (one-based), section **“The State of the Flak Arm”** — late-1944 personnel-strength passage.
+
+These are carrier-page locators in the checked third-party PDF, **not authenticated publisher pagination**.
+
+```text
+SAME NUMBER != SAME POPULATION
+SAME NUMBER != SAME MEASURE
+NUMERICAL PROXIMITY != TRANSMISSION
+TARGETED SEARCH != EXHAUSTIVE BOOK REVIEW
+THIRD-PARTY REPRODUCTION != AUTHENTICATED EDITION
 ```
 
 ### Overmans now narrows the personnel-study search space — but not the claim
@@ -215,6 +256,8 @@ Future humans and artificial entities should be able to walk back down the strat
 
 ## Limits and correction
 
+Revision 0.2.7, 19 September 2026: **Westermann targeted-book-search repair.** A targeted full-text/OCR search of a full third-party reproduction found an 80-percent flak-casualty passage in RAF/Bomber Command context, not German flak personnel context, and a late-1944 flak-arm personnel-strength figure without an aggregate death numerator. The search did not authenticate the reproduction, exhaustively review the book, establish absence under other wording, or establish transmission into the viral claim. Claim status remains unsupported in sources checked; true aggregate rate remains unknown.
+
 Revision 0.2.6, 19 September 2026: **Overmans scope-preview repair.** A public Oldenbourg/De Gruyter preview of Rüdiger Overmans' *Deutsche militärische Verluste im Zweiten Weltkrieg* was inspected. The preview establishes a sample-based empirical design drawing on individual Deutsche Dienststelle/WASt records and shows that the work contains losses/deaths tables by organisations and Wehrmacht branches, including Luftwaffe-level material. The relevant result-table values and any flak-crew-specific breakdown were not inspected, so the 80% claim status and true-rate unknown remain unchanged. The earlier blanket statement that Overmans was "not checked" is narrowed rather than silently retained.
 
 Revision 0.2.5, 18 September 2026: **Grok research-lead / Westermann selected-passage repair.** A user-relayed Grok contribution pointed to Westermann and related personnel-loss literature. Codex recovered an exact bibliographic route and selected passage; Framework independently triangulated the book identity, passage wording and parts of Westermann's archive citation route. The record now treats one May–June 1940 passage as partially checked through a third-party OCR reproduction while explicitly preserving that the OCR copy, full authenticated edition and underlying archive documents were not inspected/authenticated. The passage reports casualties (dead, wounded or missing), not deaths, and does not change the unresolved whole-war 80% claim.
@@ -235,7 +278,7 @@ This is an initial reconstruction from public web sources on 15 September 2026. 
 
 ### Not checked by this record
 
-- Edward B. Westermann, *Flak: German Anti-Aircraft Defenses, 1914–1945*: full authenticated edition/book-wide casualty evidence not checked; one selected 1940 western-campaign passage checked only through an accessible third-party OCR reproduction;
+- Edward B. Westermann, *Flak: German Anti-Aircraft Defenses, 1914–1945*: full authenticated edition and exhaustive semantic/book-wide casualty review not checked; one selected 1940 passage plus a targeted full-text search of accessible unauthenticated third-party reproductions have been checked;
 - Rüdiger Overmans, *Deutsche militärische Verluste im Zweiten Weltkrieg*: full relevant result tables and any flak-crew-specific breakdown remain unchecked; a public publisher preview has been checked only for methodology/scope and the table list;
 - MGFA, *Das Deutsche Reich und der Zweite Weltkrieg*, volume 7;
 - relevant Bundesarchiv-Militärarchiv / Deutsche Dienststelle personnel holdings;

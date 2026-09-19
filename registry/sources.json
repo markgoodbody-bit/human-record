@@ -747,6 +747,11 @@
           "scheme": "url",
           "value": "https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf",
           "status": "third_party_ocr_reproduction_inspected"
+        },
+        {
+          "scheme": "url",
+          "value": "https://murrellsmodels.co.uk/mm/files/Flak-German-AntiAircraft-Defenses---1914-1945-.pdf",
+          "status": "third_party_full_pdf_reproduction_targeted_search"
         }
       ],
       "observations": [
@@ -763,6 +768,23 @@
             "The selected OCR passage reports casualties among flak forces as 60 officers and 890 enlisted men and explicitly defines those casualties as dead, wounded or missing.",
             "University Press of Kansas / Google Books / Smithsonian / Internet Archive metadata independently establish the book/edition family; the inspected OCR representation itself is not authenticated as byte-identical to the publisher edition.",
             "Westermann note 75 cites N 529/Folder 7 and RL 12/Folder 457 at BA-MA plus Koch. The Bundesarchiv independently identifies N 529 as Walther von Axthelm's papers, and Deutsche Digitale Bibliothek/Bundesarchiv identifies RL 12/457 as Flak-Regiment 102 material from May/July 1940. The underlying casualty documents were not inspected."
+          ]
+        },
+        {
+          "id": "thr:observation:2bcddd1f-6f51-4d00-8c9c-34889601ad03",
+          "observed_at": "2026-09-19",
+          "precision": "date",
+          "outcome": "partial",
+          "record_basis": "cases/viral-flak-claim.json node westermann-2001-targeted-book-search",
+          "digest": null,
+          "scope": "Targeted full-text/OCR search of an accessible third-party full-PDF reproduction for '80 percent', 'mortality', the 1940 flak casualty passage and late-1944 flak personnel scale; not a line-by-line whole-book review or authenticated-edition comparison.",
+          "observer": "Framework",
+          "notes": [
+            "Carrier PDF page 96 (one-based), section 'The RAF's Reaction to the Luftwaffe's Air Defense Initiatives', contains the relevant 'up to 80 percent of flak casualties' passage; it concerns RAF/Bomber Command aircraft/aircrew casualties over target areas, not mortality among German flak crews. This is a locator in the checked third-party PDF, not authenticated publisher pagination.",
+            "The OCR search returned no literal match for 'mortality'; absence of that word does not prove the concept/claim is absent under other wording or immune from OCR/search failure.",
+            "Carrier PDF page 183 (one-based), section 'The State of the Flak Arm', reports a ground-based air-defense force of 1,110,900 persons by autumn 1944, including 448,700 from outside the Luftwaffe. This is a personnel-strength snapshot, not a whole-war exposed-population denominator or death numerator, and the carrier page is not authenticated publisher pagination.",
+            "The previously checked 1940 passage remains 60 officers and 890 enlisted casualties explicitly including dead, wounded or missing.",
+            "TARGETED SEARCH != EXHAUSTIVE BOOK REVIEW; THIRD-PARTY REPRODUCTION != AUTHENTICATED EDITION."
           ]
         }
       ],
