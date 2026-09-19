@@ -86,14 +86,15 @@
           "thr:observation:e8987ae5-9762-4deb-a1f5-d85b1154f802",
           "thr:observation:5a6bc6b4-305a-45d7-9d1e-ad73a6649688",
           "thr:observation:99b0c704-115b-4286-9748-43cf2add0e67",
-          "thr:observation:ab27e9a4-13cf-4a46-9cc6-01e1b3c8f5d2"
+          "thr:observation:ab27e9a4-13cf-4a46-9cc6-01e1b3c8f5d2",
+          "thr:observation:2bcddd1f-6f51-4d00-8c9c-34889601ad03"
         ]
       },
       "scope": {
-        "record_version": "0.2.6",
+        "record_version": "0.2.7",
         "historical_truth_status": "unknown",
-        "meaning": "The bounded sources checked by the current record, now including one selected Westermann 1940 campaign passage inspected through an unauthenticated third-party OCR reproduction, do not establish the claimed aggregate German flak-crew mortality rate.",
-        "not_established": "That the claim is false, that the archive/book search is exhaustive, that the selected Westermann OCR is authenticated against the publisher edition, that the relevant Overmans result tables or any flak-specific breakdown were inspected, or that no earlier source contains the figure."
+        "meaning": "The bounded sources checked by the current record, now including a selected Westermann 1940 campaign passage, a targeted full-text search of an unauthenticated full Westermann reproduction, and an Overmans publisher-preview scope check, do not establish the claimed aggregate German flak-crew mortality rate.",
+        "not_established": "That the claim is false, that the archive/book search is exhaustive, that the Westermann reproductions are authenticated against the publisher edition, that the relevant Overmans result tables or any flak-specific breakdown were inspected, that an 80-percent Allied flak-casualty passage is ancestral to the viral claim, or that no earlier source contains the figure."
       },
       "record_links": [
         "cases/viral-flak-claim.json",
