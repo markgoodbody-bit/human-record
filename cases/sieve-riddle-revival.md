@@ -114,23 +114,23 @@ REVIVAL != VIABILITY
 
 In a published Homo Faber interview, Steve Overthrow says he learned partly from Mike Turnock and received knowledge he could not find through research. This is a first-person account as published by Homo Faber, not an interview conducted by The Human Record or independent verification of the teaching.
 
-The 2019 Heritage Crafts Red List adds a separate institutional description: it reports that Overthrow began making at the beginning of 2018, received **advice and tuition** from Mike Turnock, and then went through a period of product development and refining before commercial production.
+The 2019 Heritage Crafts Red List adds a separate institutional description: it reports that Overthrow began making at the beginning of 2018, received **advice and tuition** from Mike Turnock, and also reports a period of product development and refining before commercial production. The report does not establish a strict sequence between those components.
 
-A 2023 *Gardens Illustrated* interview adds another part of the route. Overthrow describes beginning with research and repeated failed attempts while developing his making practice, then receiving Turnock's help on matters he says he could not have researched. This record preserves only those high-level learning modes; it does not reproduce the process details published in the article.
+A 2023 *Gardens Illustrated* interview adds another part of the route. Overthrow describes research, repeated failed attempts while developing his making practice, and Turnock's help on matters he says he could not have researched. The record does not treat the article's narrative order as a complete chronology of learning. This record preserves only those high-level learning modes; it does not reproduce the process details published in the article.
 
 Sources:
 - Homo Faber Guide, *Steve Overthrow*: https://2022.homofaber.com/en/discover/discover-steve-overthrow
 - Heritage Crafts, *The HCA Red List of Endangered Crafts — 2019 edition*: https://www.heritagecrafts.org.uk/wp-content/uploads/2019/03/HCA-Red-List-optimised.pdf
 - Natasha Goodfellow, *Sieves and riddles: discover the company making handmade garden sieves*, *Gardens Illustrated*, 26 April 2023: https://www.gardensillustrated.com/features/sieve-and-riddle-handmade-garden-sieves
 
-Together, these public sources narrow the Overthrow route from a generic "direct learning" statement to reported components:
+Together, these public sources narrow the Overthrow route from a generic "direct learning" statement to reported components. They do not establish one complete linear chronology:
 
-```text
-RED-LIST ATTENTION
--> RESEARCH / SURVIVING PUBLIC MATERIAL
--> TRIAL-AND-ERROR / PRODUCT DEVELOPMENT
--> DIRECT ADVICE + TUITION FROM TURNOCK
-```
+- Red List attention / discovery;
+- research and surviving public material;
+- trial-and-error / product development;
+- direct advice or tuition from Turnock.
+
+The components may overlap or iterate; exact sequence remains unresolved.
 
 They still do not establish the exact tacit content passed between people, the relative contribution of each route, the completeness of what survived, or Colin Davies's learning route. Multiple published accounts carrying practitioner self-report are not automatically independent witnesses to the underlying teaching.
 
