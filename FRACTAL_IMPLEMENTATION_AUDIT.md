@@ -710,44 +710,49 @@ This still does not establish:
 
 ## 14. Framework recheck — malformed assertion source route
 
-A bounded follow-up re-read of the repaired helper found one smaller malformed-input path
-not covered by the 17-test suite.
+A bounded follow-up re-read tested malformed assertion evidence handling beyond the
+earlier route/path repairs.
 
-The helper validated direct `used_by_records` and assertion `record_links`, but it did
-not validate `assertion.evidence.source_ids` before using Python membership testing.
+The predecessor helper at `d5621c7e701825bfd743b823aa1c97b352dec7cb` already checked:
 
-Therefore a malformed value such as:
-
-~~~text
-source_ids = "thr:source:..."
+~~~python
+if not isinstance(evidence, dict):
+    continue
+source_ids = evidence.get("source_ids")
+if not isinstance(source_ids, list) or source_id not in source_ids:
+    continue
 ~~~
 
-could still satisfy:
+Therefore the earlier description of a string `source_ids` value creating an
+assertion-derived false-positive route was **incorrect**. A non-list `source_ids` value
+was silently skipped.
+
+The actual earned repair is narrower:
 
 ~~~text
-source_id in source_ids
+MALFORMED PRESENT EVIDENCE
+-> MUST NOT BECOME APPARENT ABSENCE
+-> FAIL LOUD
 ~~~
 
-and create an assertion-derived review route from structurally invalid evidence.
-
-This is a helper-level false-positive path on malformed working input. It is **not** a
-claim that current validated public registry data contains malformed `source_ids`.
-
-Repair:
+Current helper behaviour:
 - present assertion `evidence` must be an object;
 - present `evidence.source_ids` must be a list of non-empty strings;
-- malformed containers/items fail loudly before route derivation.
+- malformed containers/items raise a clear input error;
+- missing evidence still means no assertion-derived route.
 
-Added red-before / green-after tests:
+Regression coverage includes:
 - string / null / mixed-type / blank-item `source_ids`;
 - non-object assertion `evidence`.
 
 Preserve:
 
 ~~~text
+SILENT SKIP OF MALFORMED DATA != FALSE-POSITIVE ROUTE
 MALFORMED EVIDENCE ROUTE != VALID DEPENDENCY
-VALID PUBLIC DATA != HELPER MAY ACCEPT MALFORMED WORKING DATA
 FAIL LOUD != INVENT ABSENCE
+CORRECTION HISTORY != PERMISSION TO DRAMATISE THE PRIOR DEFECT
 ~~~
 
-This does not earn a new stored dependency type.
+No helper code change is made by this documentation correction, and no new stored
+dependency type is earned.
