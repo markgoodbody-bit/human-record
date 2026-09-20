@@ -113,6 +113,23 @@ A record should preserve:
 - uncertainty about source ancestry or independence;
 - boundaries that would materially change the finding if stronger evidence appears.
 
+Where the reason for a missing value changes what a later researcher should do,
+preserve that reason rather than leaving one undifferentiated empty field. Useful
+record-level distinctions may include:
+
+- **not examined / not yet sought** — the record has not done that work;
+- **sought within a stated bound but not obtained** — a bounded search/check
+  produced no value, without establishing global absence;
+- **inaccessible or restricted** — the value or source may exist but the record
+  could not legitimately inspect it;
+- **not applicable** — the question does not arise for this particular subject;
+- **known but withheld** — a value exists but is deliberately not disclosed;
+  this is a rights/access state, not absence.
+
+Do not promote any of these to `unknowable` merely because the current record
+cannot recover the value. These distinctions are about the documentation state
+and next action, not a closed-world claim about reality.
+
 ```text
 UNKNOWN != ABSENT
 NOT_CHECKED != NEGATIVE_FINDING
