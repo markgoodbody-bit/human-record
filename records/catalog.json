@@ -50,8 +50,8 @@
         "aligned_at": "2026-09-20",
         "source_record_version": "0.2.8",
         "source_git_blobs": {
-          "cases/viral-flak-claim.md": "4512434e18460404f557140f8c81e74f95214194",
-          "cases/viral-flak-claim.json": "ddfc5a31b6816246c57579045ac0b9ba2dafd8d4"
+          "cases/viral-flak-claim.md": "0f105f20da1ee9b89e3ad09376c68fa8b4003c44",
+          "cases/viral-flak-claim.json": "11a1b75b5bcffcd991ed425fb996f461928cd559"
         }
       },
       "status": "unsupported_in_sources_checked",
