@@ -196,6 +196,23 @@ class IntegrityRegressionTests(unittest.TestCase):
         self.check_catalog()
         self.assertTrue(any("unknown record ghost" in item for item in validator.errors))
 
+    def test_malformed_browse_card_basis_token(self):
+        browse = self.root / "records/index.html"
+        browse.write_text(
+            browse.read_text(encoding="utf-8").replace(" -->", " garbage -->"),
+            encoding="utf-8",
+        )
+        self.check_catalog()
+        self.assertTrue(any("malformed browse-card basis token" in item for item in validator.errors))
+
+    def test_duplicate_browse_card_basis_token(self):
+        browse = self.root / "records/index.html"
+        current = browse.read_text(encoding="utf-8")
+        token = "a.md@" + self.record["view_basis"]["source_git_blobs"]["a.md"]
+        browse.write_text(current.replace(" -->", " " + token + " -->"), encoding="utf-8")
+        self.check_catalog()
+        self.assertTrue(any("duplicate browse-card basis token" in item for item in validator.errors))
+
     def test_duplicate_html_label(self):
         self.view.write_text(self.label * 2, encoding="utf-8")
         self.check_catalog()
