@@ -251,7 +251,55 @@ def check_catalog() -> set[str]:
                     f"catalog={expected} working-tree={actual}"
                 )
 
+
+    check_browse_index(records)
     return seen
+
+
+def check_browse_index(records) -> None:
+    """Require browse-card source pins so records/index.html cannot silently outrun records."""
+    path = ROOT / "records/index.html"
+    if not path.is_file():
+        error("records/index.html: missing browse catalogue")
+        return
+    try:
+        text = path.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as exc:
+        error(f"records/index.html: cannot read browse catalogue: {exc}")
+        return
+
+    marker_re = re.compile(
+        r"<!--\s*record-card-basis:\s+([A-Za-z0-9._-]+)\s+(.*?)\s*-->",
+        re.DOTALL,
+    )
+    token_re = re.compile(r"([^\s@]+)@([0-9a-f]{40})")
+    found = {}
+    for record_id, payload in marker_re.findall(text):
+        if record_id in found:
+            error(f"records/index.html: duplicate browse-card basis for {record_id}")
+            continue
+        found[record_id] = {name: sha for name, sha in token_re.findall(payload)}
+
+    expected_ids = {
+        record.get("id") for record in records
+        if isinstance(record, dict) and isinstance(record.get("id"), str)
+    }
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        record_id = record.get("id")
+        if not isinstance(record_id, str):
+            continue
+        basis = record.get("view_basis")
+        pinned = basis.get("source_git_blobs") if isinstance(basis, dict) else None
+        marker = found.get(record_id)
+        if marker is None:
+            error(f"{record_id}: missing browse-card basis in records/index.html")
+        elif isinstance(pinned, dict) and marker != pinned:
+            error(f"{record_id}: stale browse-card basis in records/index.html")
+
+    for record_id in sorted(set(found) - expected_ids):
+        error(f"records/index.html: browse-card basis refers to unknown record {record_id}")
 
 
 class BasisParagraphs(HTMLParser):
