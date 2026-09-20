@@ -201,8 +201,10 @@ TRUE AGGREGATE RATE: UNKNOWN
 
 The case exists to make the evidence ancestry walkable: original presentation, downstream
 repetition, community challenge, a later video's contradictory assertions, historical
-sources for nearby facts, and remaining unknowns. No German personnel series or scholarly
-study of German flak has been examined for this case.
+sources for nearby facts, and remaining unknowns. No primary German personnel series has
+been examined for this case. Bounded portions of Westermann's scholarly study and a public
+publisher preview of Overmans have been checked; the authenticated/full relevant editions,
+underlying archival material and any flak-specific Overmans result remain unexamined.
 
 ## Hosting boundary
 
