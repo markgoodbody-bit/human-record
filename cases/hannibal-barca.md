@@ -3,7 +3,7 @@
 Status: **PUBLIC RECORD 4 / HISTORICAL-PERSON SOURCE-SURVIVAL / PUBLIC SOURCES / NOT BIOGRAPHICAL CANON / OPEN TO CORRECTION**
 
 Record ID: `hannibal-source-survival`  
-Record version: **0.1.1**  
+Record version: **0.1.3**  
 Recorded: 18 September 2026.
 
 ## Purpose
@@ -190,11 +190,11 @@ New York Public Library, independently identifies:
 - Polybius, *The Histories*, **Volume 2**;
 - W. R. Paton;
 - Loeb Classical Library **137**;
-- first printed **1922**;
+- **1979 reprint**, first printed **1922**;
 - Greek and English on facing pages;
 - contents beginning with **Book III** and continuing with Book IV.
 
-That establishes a recoverable digitized carrier for the printed edition underlying the
+That establishes a recoverable digitized reprint in the printed-edition lineage named by the
 reading surface. It does **not** establish that the Thayer HTML itself is archived,
 byte-identical to the scan, or transcription-perfect.
 

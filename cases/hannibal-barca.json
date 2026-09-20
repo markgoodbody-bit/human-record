@@ -138,12 +138,12 @@
             "kind": "digitized_printed_edition",
             "persistent_locator": "https://archive.org/details/historieswitheng02poly",
             "access": "public",
-            "relationship": "digitized Volume II / Loeb Classical Library 137 carrier for W. R. Paton's Polybius, containing Books III-IV; matches the printed edition family explicitly named by the Thayer Book III reading surface",
-            "verified_against_observation": "archive metadata and OCR/title/contents checked 2026-09-20; exact Thayer HTML bytes/layout and transcription differences not compared"
+            "relationship": "digitized 1979 reprint of Volume II / Loeb Classical Library 137 for W. R. Paton's Polybius, first printed 1922 and containing Books III-IV; same printed-edition lineage explicitly named by the Thayer Book III reading surface",
+            "verified_against_observation": "archive metadata and OCR/title/contents checked 2026-09-20; scanned title page is the 1979 reprint and states First printed 1922; exact Thayer HTML bytes/layout and transcription differences not compared"
           }
         ],
         "last_checked_at": "2026-09-20",
-        "note": "Thayer states that its Book III webpage reproduces Volume II of the 1922 Loeb Classical Library edition. Internet Archive item historieswitheng02poly identifies Volume 2, Polybius, W. R. Paton, first printed 1922, Loeb 137, and contains Book III. The exact Thayer HTML representation was not established as archived or byte-identical to the scan. A separate Open Library-linked Internet Archive item, polybiushistorie0000poly, was rejected as a preservation route for this source because its scanned title page identifies Volume V rather than Volume II. PRINTED EDITION CARRIER RECOVERABLE != EXACT WEB REPRESENTATION PRESERVED."
+        "note": "Thayer states that its Book III webpage reproduces Volume II of the 1922 Loeb Classical Library edition. Internet Archive item historieswitheng02poly identifies Volume 2, Polybius, W. R. Paton and Loeb 137; its scanned title page is a 1979 reprint that states First printed 1922, and its contents include Book III. The exact Thayer HTML representation was not established as archived or byte-identical to the scan. A separate Open Library-linked Internet Archive item, polybiushistorie0000poly, was rejected as a preservation route for this source because its scanned title page identifies Volume V rather than Volume II. PRINTED EDITION LINEAGE RECOVERABLE != EXACT WEB REPRESENTATION PRESERVED."
       }
     },
     {
