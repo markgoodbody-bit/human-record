@@ -144,6 +144,31 @@ Where bytes cannot legitimately be retained, a digest can still preserve a limit
 
 Different URLs may descend from one source.
 
+A source that is real and retrievable at observation time may still have been
+created **after** the claim it appears to support, including by the claimant or
+answering system itself. Observation time therefore does not establish source
+generation time, prior existence, or independence.
+
+```text
+SOURCE RETRIEVABLE AT T2 != SOURCE EXISTED BEFORE CLAIM AT T1
+OBSERVED_AT != GENERATED_AT
+PUBLIC URL != PREEXISTING EVIDENCE
+CLAIMANT-CREATED SUPPORT != INDEPENDENT CORROBORATION
+```
+
+When source genesis is material, prefer established provenance semantics rather
+than inventing THR-specific ontology. W3C PROV already provides relations such
+as `prov:generatedAtTime`, `prov:wasGeneratedBy`, `prov:wasAttributedTo`,
+`prov:wasDerivedFrom` and `prov:hadPrimarySource`. C2PA provides
+asset-origin/action/ingredient provenance for media and other bound assets.
+
+THR does not currently require these fields in `registry/sources.json`.
+A concrete record may preserve a bounded generation/attribution fact in its
+record-specific structure, or reference an external provenance object, when
+that distinction changes whether evidence is genuinely antecedent or
+independent.
+
+
 Useful source relations may include:
 
 - `cites`
