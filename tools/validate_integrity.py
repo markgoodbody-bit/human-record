@@ -269,7 +269,7 @@ def check_browse_index(records) -> None:
         return
 
     marker_re = re.compile(
-        r"<!--\s*record-card-basis:\s+([A-Za-z0-9._-]+)\s+(.*?)\s*-->",
+        r"<!--\s*record-card-basis:\s+([^\s]+)\s+(.*?)\s*-->",
         re.DOTALL,
     )
     token_re = re.compile(r"([^\s@]+)@([0-9a-f]{40})")
@@ -278,7 +278,18 @@ def check_browse_index(records) -> None:
         if record_id in found:
             error(f"records/index.html: duplicate browse-card basis for {record_id}")
             continue
-        found[record_id] = {name: sha for name, sha in token_re.findall(payload)}
+        tokens = {}
+        for token in payload.split():
+            match = token_re.fullmatch(token)
+            if match is None:
+                error(f"{record_id}: malformed browse-card basis token {token!r}")
+                continue
+            name, sha = match.groups()
+            if name in tokens:
+                error(f"{record_id}: duplicate browse-card basis token for {name}")
+                continue
+            tokens[name] = sha
+        found[record_id] = tokens
 
     expected_ids = {
         record.get("id") for record in records
