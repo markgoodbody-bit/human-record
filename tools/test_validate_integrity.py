@@ -37,6 +37,12 @@ class IntegrityRegressionTests(unittest.TestCase):
         self.label = f"<p><strong>View basis:</strong> record version <code>0.1</code>, {markers}.</p>"
         self.view = self.root / "view.html"
         self.view.write_text(self.label, encoding="utf-8")
+        browse = " ".join(
+            f"{name}@{pin}" for name, pin in self.record["view_basis"]["source_git_blobs"].items()
+        )
+        (self.root / "records/index.html").write_text(
+            f"<!-- record-card-basis: example {browse} -->", encoding="utf-8"
+        )
 
     def check_catalog(self):
         catalog = {field: "https://thehumanrecord.net/contribute.md" for field in (
@@ -166,6 +172,29 @@ class IntegrityRegressionTests(unittest.TestCase):
         self.view.write_text("<p>No basis</p>", encoding="utf-8")
         self.check_catalog()
         self.assertTrue(any("expected one" in item for item in validator.errors))
+
+    def test_missing_browse_card_basis(self):
+        (self.root / "records/index.html").write_text("<p>No browse basis</p>", encoding="utf-8")
+        self.check_catalog()
+        self.assertTrue(any("missing browse-card basis" in item for item in validator.errors))
+
+    def test_stale_browse_card_basis(self):
+        browse = self.root / "records/index.html"
+        current = browse.read_text(encoding="utf-8")
+        pin = self.record["view_basis"]["source_git_blobs"]["a.md"]
+        browse.write_text(current.replace(pin, "0" * 40), encoding="utf-8")
+        self.check_catalog()
+        self.assertTrue(any("stale browse-card basis" in item for item in validator.errors))
+
+    def test_unknown_browse_card_basis(self):
+        browse = self.root / "records/index.html"
+        browse.write_text(
+            browse.read_text(encoding="utf-8") +
+            "<!-- record-card-basis: ghost a.md@" + "0" * 40 + " -->",
+            encoding="utf-8",
+        )
+        self.check_catalog()
+        self.assertTrue(any("unknown record ghost" in item for item in validator.errors))
 
     def test_duplicate_html_label(self):
         self.view.write_text(self.label * 2, encoding="utf-8")
