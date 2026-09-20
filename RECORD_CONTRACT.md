@@ -180,6 +180,8 @@ Each entry should therefore provide, where practical:
 
 The readable page is a view over the record, not a second evidence layer. If an underlying Markdown or JSON record changes, a previously aligned human view must not silently be treated as current until it is reviewed against the changed source.
 
+The public browse catalogue is also a derived reading surface. Each record card carries a machine-readable source-basis marker tied to the same record blobs. A record-source change therefore requires the browse card to be reviewed and re-pinned; a matching marker establishes review against those bytes, not semantic truth.
+
 A Git blob or other content hash is useful here only as a byte-identity marker. It does not upgrade the truth of the record.
 
 ```text
