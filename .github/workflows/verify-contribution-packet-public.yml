@@ -43,29 +43,35 @@ jobs:
           for path in "${paths[@]}"; do
             url="https://thehumanrecord.net/${path}"
             out="/tmp/thr-$(printf '%s' "$path" | tr '/.' '__')"
-            ok=0
+            matched=0
+            last_error="public retrieval failed for $url"
             for attempt in 1 2 3 4 5; do
+              rm -f "$out"
               if curl --fail --silent --show-error --location \
+                --header 'Cache-Control: no-cache' \
                 --connect-timeout 10 --max-time 30 \
                 --output "$out" "$url"; then
-                ok=1
-                break
+                if cmp --silent "$path" "$out"; then
+                  bytes="$(wc -c < "$path" | tr -d ' ')"
+                  sha="$(sha256sum "$path" | awk '{print $1}')"
+                  echo "MATCH $path bytes=$bytes sha256=$sha attempt=$attempt"
+                  matched=1
+                  break
+                fi
+                source_sha="$(sha256sum "$path" | awk '{print $1}')"
+                public_sha="$(sha256sum "$out" | awk '{print $1}')"
+                last_error="byte mismatch source=$source_sha public=$public_sha"
+                echo "WAIT $path attempt=$attempt $last_error"
+              else
+                last_error="public retrieval failed for $url"
+                echo "WAIT $path attempt=$attempt $last_error"
               fi
-              sleep $((attempt * 2))
+              if [[ "$attempt" -lt 5 ]]; then
+                sleep $((attempt * 3))
+              fi
             done
-            if [[ "$ok" != 1 ]]; then
-              echo "::error file=$path::public retrieval failed for $url"
-              failures=$((failures + 1))
-              continue
-            fi
-            if cmp --silent "$path" "$out"; then
-              bytes="$(wc -c < "$path" | tr -d ' ')"
-              sha="$(sha256sum "$path" | awk '{print $1}')"
-              echo "MATCH $path bytes=$bytes sha256=$sha"
-            else
-              source_sha="$(sha256sum "$path" | awk '{print $1}')"
-              public_sha="$(sha256sum "$out" | awk '{print $1}')"
-              echo "::error file=$path::byte mismatch source=$source_sha public=$public_sha"
+            if [[ "$matched" != 1 ]]; then
+              echo "::error file=$path::$last_error"
               failures=$((failures + 1))
             fi
           done
