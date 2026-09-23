@@ -102,8 +102,8 @@ python tools/validate_all.py
 python -m unittest discover -s tools -p 'test_validate*.py'
 ```
 
-The single command runs both validators and exits nonzero if either fails or cannot complete. An optional checkout path selects the same target for both: `python tools/validate_all.py /path/to/checkout`. Warnings remain visible; the command does not fetch sources or edit data.
+The single command runs all validator stages and exits nonzero if any fails or cannot complete. An optional checkout path selects the same target for both: `python tools/validate_all.py /path/to/checkout`. Warnings remain visible; the command does not fetch sources or edit data.
 
-The structural validator checks catalogue/view pins and entity/source/observation/assertion relationships. The operational validator checks mention/entity/source/observation references, resolution-state coherence and source-check/source relationships.
+The structural validator checks catalogue/view pins and entity/source/observation/assertion relationships. The operational validator checks mention/entity/source/observation references, resolution-state coherence and source-check/source relationships. The entity-admission validator enforces the narrower rule that registered entities must be admitted by an existing record-bearing file and that mentions cannot create unregistered referents.
 
 Neither validator decides whether an entity match, source claim, assertion, currentness result or preservation route is true.
