@@ -3,7 +3,7 @@
 Status: **PUBLIC RECORD 4 / HISTORICAL-PERSON SOURCE-SURVIVAL / PUBLIC SOURCES / NOT BIOGRAPHICAL CANON / OPEN TO CORRECTION**
 
 Record ID: `hannibal-source-survival`  
-Record version: **0.1.1**  
+Record version: **0.1.2**  
 Recorded: 18 September 2026.
 
 ## Purpose
