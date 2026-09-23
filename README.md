@@ -73,6 +73,7 @@ Contents:
 - `registry/assertions.json` — cross-record evidence-bearing propositions and correction references;
 - `registry/README.md` — registry growth and privacy boundaries;
 - `tools/validate_integrity.py` — local structural/view-pin/registry validator;
+- `tools/validate_entity_admission.py` — entity-admission guard enforcing that records admit entities and mentions do not create referents;
 - `.github/workflows/validate-integrity.yml` — CI execution of the validator;
 - `specimen.md` — current human-readable artwork record;
 - `specimen.json` — current machine-readable artwork record;
