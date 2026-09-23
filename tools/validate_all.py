@@ -1,7 +1,8 @@
-"""Run both offline THR validators against one identified checkout."""
+"""Run the offline THR validators against one identified checkout."""
 import argparse
 from pathlib import Path
 import sys
+import validate_entity_admission
 import validate_integrity
 import validate_operational
 
@@ -17,16 +18,18 @@ def run(root):
     validate_integrity.errors.clear()
     validate_integrity.warnings.clear()
     failures = 0
+    stages = (
+        ("record integrity", validate_integrity.main),
+        ("operational integrity", lambda: validate_operational.main(root)),
+        ("entity admission", lambda: validate_entity_admission.main(root)),
+    )
     try:
-        for name, check in (
-            ("record integrity", validate_integrity.main),
-            ("operational integrity", lambda: validate_operational.main(root)),
-        ):
+        for name, check in stages:
             try:
                 if check() != 0:
                     failures += 1
             except Exception as exc:
-                # Checker failure must not hide the other stage or become PASS.
+                # Checker failure must not hide later stages or become PASS.
                 print(f"ERROR: {name} could not complete: {type(exc).__name__}: {exc}")
                 failures += 1
     finally:
@@ -34,9 +37,9 @@ def run(root):
         validate_integrity.errors[:] = previous[1]
         validate_integrity.warnings[:] = previous[2]
     if failures:
-        print(f"FAIL: {failures} of 2 validator stages failed or could not complete.")
+        print(f"FAIL: {failures} of {len(stages)} validator stages failed or could not complete.")
         return 1
-    print("PASS: both stages completed. Warnings remain actionable; this is not a truth verdict.")
+    print("PASS: all validator stages completed. Warnings remain actionable; this is not a truth verdict.")
     return 0
 
 
