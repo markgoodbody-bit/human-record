@@ -1,7 +1,7 @@
 {
   "format": "human-record-historical-person-source-survival/0.1",
   "record_id": "hannibal-source-survival",
-  "record_version": "0.1.2",
+  "record_version": "0.1.3",
   "title": "Hannibal: the person and the accounts that remain",
   "record_type": "historical_person_source_survival",
   "recorded_at": "2026-09-18",
@@ -131,8 +131,19 @@
         "hannibal-source-survival"
       ],
       "preservation": {
-        "status": "not_yet_checked",
-        "copies": []
+        "status": "institutional_preservation_route_identified",
+        "copies": [
+          {
+            "provider": "Internet Archive / New York Public Library",
+            "kind": "digitized_printed_edition",
+            "persistent_locator": "https://archive.org/details/historieswitheng02poly",
+            "access": "public",
+            "relationship": "public Volume II carrier for W. R. Paton's Polybius in the printed-edition family named by the Thayer Book III reading surface; Internet Archive metadata currently gives Volume 2, Harvard University Press / Heinemann and publication date [1922]",
+            "verified_against_observation": "Internet Archive public item metadata rechecked 2026-09-25; exact Thayer HTML bytes/text and the physical printing/reprint state of the scanned copy were not established from item metadata"
+          }
+        ],
+        "last_checked_at": "2026-09-25",
+        "note": "Internet Archive item historieswitheng02poly is a New York Public Library-contributed Volume 2 carrier for Paton's Polybius and provides a public institutional recovery route. Item metadata reports publication date [1922], but THR does not infer the exact physical printing/reprint state of the scanned copy from that metadata. The Thayer HTML representation was not established as archived or byte-identical to the scan. PRINTED EDITION ROUTE IDENTIFIED != EXACT WEB REPRESENTATION PRESERVED."
       }
     },
     {
@@ -423,6 +434,14 @@
       "change": "Identified Open Book Publishers and Library of Congress institutional recovery routes for the related published Dickinson College Commentaries edition containing the Nepos text and notes. The exact observed DCC chapter-13 web representation was not established as archived or byte-identical to those edition carriers.",
       "historical_finding_changed": false,
       "ceiling": "RELATED EDITION RECOVERABLE != EXACT WEB REPRESENTATION PRESERVED"
+    },
+    {
+      "date": "2026-09-25",
+      "kind": "source_preservation_route_repair",
+      "source_id": "thr:source:7a1b2e15-a9b2-4af4-9e0b-2c44b10eb9d2",
+      "change": "Identified the Internet Archive / New York Public Library Volume II carrier as a public institutional recovery route for the printed-edition family named by the Thayer Book III reading surface, while leaving exact printing/reprint state and Thayer HTML identity unresolved.",
+      "historical_finding_changed": false,
+      "ceiling": "PRINTED EDITION ROUTE IDENTIFIED != EXACT WEB REPRESENTATION PRESERVED"
     }
   ]
 }
