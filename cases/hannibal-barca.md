@@ -3,7 +3,7 @@
 Status: **PUBLIC RECORD 4 / HISTORICAL-PERSON SOURCE-SURVIVAL / PUBLIC SOURCES / NOT BIOGRAPHICAL CANON / OPEN TO CORRECTION**
 
 Record ID: `hannibal-source-survival`  
-Record version: **0.1.2**  
+Record version: **0.1.3**  
 Recorded: 18 September 2026.
 
 ## Purpose
@@ -174,6 +174,35 @@ page and do not preserve its exact layout, hyperlinks, commentary state or web r
 RELATED EDITION RECOVERABLE != EXACT WEB REPRESENTATION PRESERVED
 PRESERVATION ROUTE != HISTORICAL TRUTH
 INSTITUTIONAL COPY != BYTE-IDENTICAL DCC PAGE
+```
+
+No historical assertion or source interpretation changed in this maintenance revision.
+
+## Source recoverability — Polybius edition
+
+A preservation check on 25 September 2026 followed the printed-edition route named by
+the University of Chicago / LacusCurtius Book III reading surface.
+
+Internet Archive item `historieswitheng02poly`, contributed from the New York Public
+Library, currently identifies:
+
+- Polybius, *The Histories*, **Volume 2**;
+- W. R. Paton;
+- Cambridge: Harvard University Press; London: Heinemann;
+- publication date **[1922]**;
+- Greek and English on opposite pages.
+
+This establishes a public institutional recovery route for a Volume II carrier in the
+printed-edition family used by the reading surface. The item metadata does **not** by
+itself establish whether the scanned physical copy is the original printing or a later
+reprint, and THR has not compared the scan against the Thayer HTML for textual or byte
+identity.
+
+```text
+PRINTED EDITION ROUTE IDENTIFIED != EXACT WEB REPRESENTATION PRESERVED
+ITEM METADATA != PHYSICAL PRINTING STATE
+ARCHIVE SCAN != THAYER TRANSCRIPTION
+PRESERVATION ROUTE != HISTORICAL TRUTH
 ```
 
 No historical assertion or source interpretation changed in this maintenance revision.
