@@ -180,7 +180,7 @@ Each entry should therefore provide, where practical:
 
 The readable page is a view over the record, not a second evidence layer. If an underlying Markdown or JSON record changes, a previously aligned human view must not silently be treated as current until it is reviewed against the changed source.
 
-The public browse catalogue is also a derived reading surface. Each record card carries a machine-readable source-basis marker tied to the same record blobs already declared by the catalogue. If those source bytes change, the card must be reviewed and re-pinned before integrity can pass. A matching marker establishes only byte-basis alignment with the declared record sources; it does not establish that the card's prose is complete, current in every respect, or semantically true.
+The public browse catalogue is also a derived reading surface. Each record card carries its record ID and a machine-readable SHA-256 over the same source-basis map already declared by the catalogue. If those source bytes or declared source routes change, the card must be reviewed and re-pinned before integrity can pass. A matching digest establishes only byte-basis alignment with the declared record sources; it does not establish that the card's prose is complete, current in every respect, or semantically true.
 
 A Git blob or other content hash is useful here only as a byte-identity marker. It does not upgrade the truth of the record.
 
