@@ -251,7 +251,94 @@ def check_catalog() -> set[str]:
                     f"catalog={expected} working-tree={actual}"
                 )
 
+    check_browse_index(records)
     return seen
+
+
+class BrowseBasisComments(HTMLParser):
+    """Collect machine-readable browse-card basis payloads from HTML comments."""
+    PREFIX = "record-card-basis:"
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.payloads = []
+
+    def handle_comment(self, data):
+        text = data.strip()
+        if text.startswith(self.PREFIX):
+            self.payloads.append(text[len(self.PREFIX):].strip())
+
+
+def check_browse_index(records) -> None:
+    """Fail closed when the public browse catalogue is not pinned to current record bytes."""
+    path = ROOT / "records/index.html"
+    if not path.is_file():
+        error("records/index.html: missing browse catalogue")
+        return
+    try:
+        parser = BrowseBasisComments()
+        parser.feed(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError) as exc:
+        error(f"records/index.html: cannot read browse catalogue: {exc}")
+        return
+
+    expected = {
+        record["id"]: record["view_basis"]["source_git_blobs"]
+        for record in records
+        if (
+            isinstance(record, dict)
+            and isinstance(record.get("id"), str)
+            and isinstance(record.get("view_basis"), dict)
+            and isinstance(record["view_basis"].get("source_git_blobs"), dict)
+        )
+    }
+
+    found = {}
+    seen_ids = set()
+    for i, raw in enumerate(parser.payloads):
+        context = f"records/index.html browse basis[{i}]"
+        try:
+            payload = json.loads(raw)
+        except json.JSONDecodeError as exc:
+            error(f"{context}: malformed JSON: {exc.msg}")
+            continue
+        if not isinstance(payload, dict):
+            error(f"{context}: payload must be an object")
+            continue
+        extra = set(payload) - {"record_id", "source_git_blobs"}
+        if extra:
+            error(f"{context}: unsupported fields {sorted(extra)}")
+        record_id = payload.get("record_id")
+        pins = payload.get("source_git_blobs")
+        if not isinstance(record_id, str) or not record_id:
+            error(f"{context}: missing non-empty record_id")
+            continue
+        if record_id in seen_ids:
+            error(f"records/index.html: duplicate browse-card basis for {record_id}")
+            continue
+        seen_ids.add(record_id)
+        if not isinstance(pins, dict) or not pins:
+            error(f"{record_id}: browse-card source_git_blobs must be a non-empty object")
+            found[record_id] = None
+            continue
+        valid = True
+        for rel, sha in pins.items():
+            if not isinstance(rel, str) or not rel:
+                error(f"{record_id}: browse-card source path must be a non-empty string")
+                valid = False
+            if not isinstance(sha, str) or not re.fullmatch(r"[0-9a-f]{40}", sha):
+                error(f"{record_id}: invalid browse-card Git blob ID for {rel!r}")
+                valid = False
+        found[record_id] = pins if valid else None
+
+    for record_id, pins in expected.items():
+        if record_id not in found:
+            error(f"{record_id}: missing browse-card basis in records/index.html")
+        elif found[record_id] is not None and found[record_id] != pins:
+            error(f"{record_id}: stale browse-card basis in records/index.html")
+
+    for record_id in sorted(set(found) - set(expected)):
+        error(f"records/index.html: browse-card basis refers to unknown record {record_id}")
 
 
 class BasisParagraphs(HTMLParser):
