@@ -251,7 +251,86 @@ def check_catalog() -> set[str]:
                     f"catalog={expected} working-tree={actual}"
                 )
 
+    check_browse_index(records)
     return seen
+
+
+def browse_basis_digest(pins) -> str:
+    """Digest the declared source-basis map without inventing a second path grammar."""
+    payload = json.dumps(pins, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+class BrowseCards(HTMLParser):
+    """Collect basis attributes from actual public browse-card articles."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.cards = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag != "article":
+            return
+        values = dict(attrs)
+        classes = (values.get("class") or "").split()
+        if "record-card" in classes:
+            self.cards.append(values)
+
+
+def check_browse_index(records) -> None:
+    """Fail closed when a public browse card is not pinned to current record bytes."""
+    path = ROOT / "records/index.html"
+    if not path.is_file():
+        error("records/index.html: missing browse catalogue")
+        return
+    try:
+        parser = BrowseCards()
+        parser.feed(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError) as exc:
+        error(f"records/index.html: cannot read browse catalogue: {exc}")
+        return
+
+    expected = {
+        record["id"]: browse_basis_digest(record["view_basis"]["source_git_blobs"])
+        for record in records
+        if (
+            isinstance(record, dict)
+            and isinstance(record.get("id"), str)
+            and isinstance(record.get("view_basis"), dict)
+            and isinstance(record["view_basis"].get("source_git_blobs"), dict)
+        )
+    }
+
+    found = {}
+    for i, card in enumerate(parser.cards):
+        context = f"records/index.html record-card[{i}]"
+        record_id = card.get("data-record-id")
+        digest = card.get("data-record-basis-sha256")
+        if not isinstance(record_id, str) or not record_id:
+            error(f"{context}: missing data-record-id")
+            continue
+        if record_id in found:
+            error(f"records/index.html: duplicate browse card for {record_id}")
+            continue
+        if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
+            error(f"{record_id}: invalid browse-card basis SHA-256")
+            found[record_id] = None
+            continue
+        found[record_id] = digest
+
+    for record_id, digest in expected.items():
+        if record_id not in found:
+            error(
+                f"{record_id}: missing browse-card basis in records/index.html; "
+                f"expected data-record-basis-sha256={digest}"
+            )
+        elif found[record_id] is not None and found[record_id] != digest:
+            error(
+                f"{record_id}: stale browse-card basis in records/index.html: "
+                f"card={found[record_id]} catalog={digest}"
+            )
+
+    for record_id in sorted(set(found) - set(expected)):
+        error(f"records/index.html: browse card refers to unknown record {record_id}")
 
 
 class BasisParagraphs(HTMLParser):
