@@ -66,6 +66,7 @@ Where material, preserve:
 - what the source actually states or measures, including material population, denominator and time scope;
 - whether a source is primary, derivative, reported by another reviewer, or still uncertain;
 - known derivation or repetition relationships;
+- where material, whether the source pre-existed the claim it is being used to support, or was generated/altered by the claimant, answering system or another downstream actor;
 - changes in what is claimed as material passes between sources, rather than treating every repetition as the same proposition;
 - source-independence groups where multiple endpoints or copies share one underlying owner/ancestor.
 
