@@ -255,35 +255,42 @@ def check_catalog() -> set[str]:
     return seen
 
 
-class BrowseBasisComments(HTMLParser):
-    """Collect machine-readable browse-card basis payloads from HTML comments."""
-    PREFIX = "record-card-basis:"
+def browse_basis_digest(pins) -> str:
+    """Digest the declared source-basis map without inventing a second path grammar."""
+    payload = json.dumps(pins, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
+
+class BrowseCards(HTMLParser):
+    """Collect basis attributes from actual public browse-card articles."""
     def __init__(self):
         super().__init__(convert_charrefs=True)
-        self.payloads = []
+        self.cards = []
 
-    def handle_comment(self, data):
-        text = data.strip()
-        if text.startswith(self.PREFIX):
-            self.payloads.append(text[len(self.PREFIX):].strip())
+    def handle_starttag(self, tag, attrs):
+        if tag != "article":
+            return
+        values = dict(attrs)
+        classes = (values.get("class") or "").split()
+        if "record-card" in classes:
+            self.cards.append(values)
 
 
 def check_browse_index(records) -> None:
-    """Fail closed when the public browse catalogue is not pinned to current record bytes."""
+    """Fail closed when a public browse card is not pinned to current record bytes."""
     path = ROOT / "records/index.html"
     if not path.is_file():
         error("records/index.html: missing browse catalogue")
         return
     try:
-        parser = BrowseBasisComments()
+        parser = BrowseCards()
         parser.feed(path.read_text(encoding="utf-8"))
     except (OSError, UnicodeError) as exc:
         error(f"records/index.html: cannot read browse catalogue: {exc}")
         return
 
     expected = {
-        record["id"]: record["view_basis"]["source_git_blobs"]
+        record["id"]: browse_basis_digest(record["view_basis"]["source_git_blobs"])
         for record in records
         if (
             isinstance(record, dict)
@@ -294,51 +301,30 @@ def check_browse_index(records) -> None:
     }
 
     found = {}
-    seen_ids = set()
-    for i, raw in enumerate(parser.payloads):
-        context = f"records/index.html browse basis[{i}]"
-        try:
-            payload = json.loads(raw)
-        except json.JSONDecodeError as exc:
-            error(f"{context}: malformed JSON: {exc.msg}")
-            continue
-        if not isinstance(payload, dict):
-            error(f"{context}: payload must be an object")
-            continue
-        extra = set(payload) - {"record_id", "source_git_blobs"}
-        if extra:
-            error(f"{context}: unsupported fields {sorted(extra)}")
-        record_id = payload.get("record_id")
-        pins = payload.get("source_git_blobs")
+    for i, card in enumerate(parser.cards):
+        context = f"records/index.html record-card[{i}]"
+        record_id = card.get("data-record-id")
+        digest = card.get("data-record-basis-sha256")
         if not isinstance(record_id, str) or not record_id:
-            error(f"{context}: missing non-empty record_id")
+            error(f"{context}: missing data-record-id")
             continue
-        if record_id in seen_ids:
-            error(f"records/index.html: duplicate browse-card basis for {record_id}")
+        if record_id in found:
+            error(f"records/index.html: duplicate browse card for {record_id}")
             continue
-        seen_ids.add(record_id)
-        if not isinstance(pins, dict) or not pins:
-            error(f"{record_id}: browse-card source_git_blobs must be a non-empty object")
+        if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
+            error(f"{record_id}: invalid browse-card basis SHA-256")
             found[record_id] = None
             continue
-        valid = True
-        for rel, sha in pins.items():
-            if not isinstance(rel, str) or not rel:
-                error(f"{record_id}: browse-card source path must be a non-empty string")
-                valid = False
-            if not isinstance(sha, str) or not re.fullmatch(r"[0-9a-f]{40}", sha):
-                error(f"{record_id}: invalid browse-card Git blob ID for {rel!r}")
-                valid = False
-        found[record_id] = pins if valid else None
+        found[record_id] = digest
 
-    for record_id, pins in expected.items():
+    for record_id, digest in expected.items():
         if record_id not in found:
             error(f"{record_id}: missing browse-card basis in records/index.html")
-        elif found[record_id] is not None and found[record_id] != pins:
+        elif found[record_id] is not None and found[record_id] != digest:
             error(f"{record_id}: stale browse-card basis in records/index.html")
 
     for record_id in sorted(set(found) - set(expected)):
-        error(f"records/index.html: browse-card basis refers to unknown record {record_id}")
+        error(f"records/index.html: browse card refers to unknown record {record_id}")
 
 
 class BasisParagraphs(HTMLParser):
