@@ -319,9 +319,15 @@ def check_browse_index(records) -> None:
 
     for record_id, digest in expected.items():
         if record_id not in found:
-            error(f"{record_id}: missing browse-card basis in records/index.html")
+            error(
+                f"{record_id}: missing browse-card basis in records/index.html; "
+                f"expected data-record-basis-sha256={digest}"
+            )
         elif found[record_id] is not None and found[record_id] != digest:
-            error(f"{record_id}: stale browse-card basis in records/index.html")
+            error(
+                f"{record_id}: stale browse-card basis in records/index.html: "
+                f"card={found[record_id]} catalog={digest}"
+            )
 
     for record_id in sorted(set(found) - set(expected)):
         error(f"records/index.html: browse card refers to unknown record {record_id}")
