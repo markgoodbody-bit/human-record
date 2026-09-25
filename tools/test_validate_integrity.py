@@ -38,13 +38,13 @@ class IntegrityRegressionTests(unittest.TestCase):
         self.view = self.root / "view.html"
         self.view.write_text(self.label, encoding="utf-8")
         self.browse = self.root / "records/index.html"
-        self.browse_payload = {
-            "record_id": self.record["id"],
-            "source_git_blobs": self.record["view_basis"]["source_git_blobs"],
-        }
-        self.browse_marker = "<!-- record-card-basis: " + json.dumps(
-            self.browse_payload, separators=(",", ":")
-        ) + " -->"
+        self.browse_digest = validator.browse_basis_digest(
+            self.record["view_basis"]["source_git_blobs"]
+        )
+        self.browse_marker = (
+            '<article class="record-card" data-record-id="example" '
+            f'data-record-basis-sha256="{self.browse_digest}"></article>'
+        )
         self.browse.write_text(self.browse_marker, encoding="utf-8")
 
     def check_catalog(self):
@@ -182,63 +182,56 @@ class IntegrityRegressionTests(unittest.TestCase):
         self.assertTrue(any("expected one" in item for item in validator.errors))
 
     def test_missing_browse_card_basis(self):
-        self.browse.write_text("<p>No browse basis</p>", encoding="utf-8")
+        self.browse.write_text("<p>No browse card</p>", encoding="utf-8")
         self.check_catalog()
         self.assertTrue(any("missing browse-card basis" in item for item in validator.errors))
 
     def test_stale_browse_card_basis(self):
-        payload = json.loads(json.dumps(self.browse_payload))
-        payload["source_git_blobs"]["a.md"] = "0" * 40
         self.browse.write_text(
-            "<!-- record-card-basis: " + json.dumps(payload, separators=(",", ":")) + " -->",
+            '<article class="record-card" data-record-id="example" '
+            'data-record-basis-sha256="' + "0" * 64 + '"></article>',
             encoding="utf-8",
         )
         self.check_catalog()
         self.assertTrue(any("stale browse-card basis" in item for item in validator.errors))
 
-    def test_unknown_browse_card_basis(self):
-        ghost = {
-            "record_id": "ghost",
-            "source_git_blobs": {"ghost.md": "0" * 40},
-        }
-        self.browse.write_text(
-            self.browse_marker + "<!-- record-card-basis: " +
-            json.dumps(ghost, separators=(",", ":")) + " -->",
-            encoding="utf-8",
+    def test_unknown_browse_card(self):
+        ghost = (
+            '<article class="record-card" data-record-id="ghost" '
+            'data-record-basis-sha256="' + "0" * 64 + '"></article>'
         )
+        self.browse.write_text(self.browse_marker + ghost, encoding="utf-8")
         self.check_catalog()
         self.assertTrue(any("unknown record ghost" in item for item in validator.errors))
 
-    def test_malformed_browse_card_basis_json(self):
-        self.browse.write_text("<!-- record-card-basis: {not-json} -->", encoding="utf-8")
-        self.check_catalog()
-        self.assertTrue(any("malformed JSON" in item for item in validator.errors))
-
-    def test_duplicate_browse_card_basis(self):
+    def test_duplicate_browse_card(self):
         self.browse.write_text(self.browse_marker * 2, encoding="utf-8")
         self.check_catalog()
-        self.assertTrue(any("duplicate browse-card basis" in item for item in validator.errors))
+        self.assertTrue(any("duplicate browse card" in item for item in validator.errors))
 
-    def test_invalid_browse_card_blob_id(self):
-        payload = json.loads(json.dumps(self.browse_payload))
-        payload["source_git_blobs"]["a.md"] = "not-a-blob"
+    def test_invalid_browse_card_digest(self):
         self.browse.write_text(
-            "<!-- record-card-basis: " + json.dumps(payload, separators=(",", ":")) + " -->",
+            '<article class="record-card" data-record-id="example" '
+            'data-record-basis-sha256="not-a-digest"></article>',
             encoding="utf-8",
         )
         self.check_catalog()
-        self.assertTrue(any("invalid browse-card Git blob ID" in item for item in validator.errors))
+        self.assertTrue(any("invalid browse-card basis SHA-256" in item for item in validator.errors))
 
-    def test_browse_card_basis_refuses_parallel_evidence_semantics(self):
-        payload = json.loads(json.dumps(self.browse_payload))
-        payload["evidence_state"] = "observed"
+    def test_basis_attributes_outside_record_card_do_not_satisfy_guard(self):
         self.browse.write_text(
-            "<!-- record-card-basis: " + json.dumps(payload, separators=(",", ":")) + " -->",
+            '<div data-record-id="example" data-record-basis-sha256="' +
+            self.browse_digest + '"></div>',
             encoding="utf-8",
         )
         self.check_catalog()
-        self.assertTrue(any("unsupported fields" in item for item in validator.errors))
+        self.assertTrue(any("missing browse-card basis" in item for item in validator.errors))
 
+    def test_browse_basis_digest_does_not_create_path_token_grammar(self):
+        a = {"path with spaces@and--marks.md": "0" * 40, "plain.json": "1" * 40}
+        b = {"plain.json": "1" * 40, "path with spaces@and--marks.md": "0" * 40}
+        self.assertEqual(validator.browse_basis_digest(a), validator.browse_basis_digest(b))
+        self.assertRegex(validator.browse_basis_digest(a), r"^[0-9a-f]{64}$")
 
     def test_html_format(self):
         basis = self.record["view_basis"]
