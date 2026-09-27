@@ -1,6 +1,6 @@
 {
   "format": "human-record-source-check-registry/0.1",
-  "updated": "2026-09-19",
+  "updated": "2026-09-27",
   "purpose": "Append-only operational receipts for rechecking source locators and preservation routes. A source check is not record evidence unless separately promoted into an evidence observation.",
   "model": "https://thehumanrecord.net/SOURCE_MODEL.md",
   "checks": [
@@ -93,6 +93,57 @@
       "note": "The retrieval surface returned the Heritage Crafts Sieve and riddle making page and still showed CRITICALLY ENDANGERED / Status Critical, with 0 main-income professionals, 1 side-income professional, 1 trainee, and the 2025 Red List reviewer section. This does not establish current origin-server availability, unchanged bytes, a fresh independent practitioner census, preservation, or truth, and it does not alter the record evidence state. A separate preservation-route lookup was attempted through the available retrieval aperture, but Memento/Internet Archive lookup endpoints were inaccessible; no preservation route was established. An older heritage.wp-support.team surface with different maker/trainee counts was not treated as an authoritative prior state or preservation copy because its relationship and temporal authority were not established.",
       "live_http_state": "not_established",
       "retrieval_surface_freshness": "retrieval surface reported a crawl on 2026-09-19"
+    },
+    {
+      "id": "thr:source-check:07c69f0b-7406-5604-af21-197b147d8fc8",
+      "source_id": "thr:source:24f10634-c5da-48d2-9475-8d2e096d5cd6",
+      "checked_at": "2026-09-27",
+      "precision": "date",
+      "locator": "https://www.metmuseum.org/art/collection/search/11112",
+      "method": "public_web_retrieval_surface_direct_url",
+      "outcome": "retrieval_surface_content_available",
+      "live_http_state": "not_established",
+      "retrieval_surface_freshness": "retrieval surface reported a crawl on 2026-09-27",
+      "fingerprint": null,
+      "comparison_to_prior_observation": "semantic_identity_no_delta_on_checked_fields; byte_identity_not_checked",
+      "preservation_lookup": "not_performed",
+      "preservation_action": "none",
+      "record_evidence_promoted": false,
+      "note": "The public retrieval surface returned The Metropolitan Museum of Art Camp Fire object page with title Camp Fire, Winslow Homer, date 1880, object number 27.181, public-domain status and the current museum object description. This is a fresher operational currentness observation only: it does not establish origin-server HTTP state, unchanged bytes, complete provenance continuity, legal title, or preservation, and it does not alter the Camp Fire record evidence state."
+    },
+    {
+      "id": "thr:source-check:654e7942-5b93-5077-b630-30ed17eb12bd",
+      "source_id": "thr:source:2790ee98-28a4-4fca-bd80-b5b5484c47ef",
+      "checked_at": "2026-09-27",
+      "precision": "date",
+      "locator": "https://heritagecrafts.org.uk/craft/sieve-and-riddle-making/",
+      "method": "public_web_retrieval_surface_direct_url",
+      "outcome": "retrieval_surface_content_available",
+      "live_http_state": "not_established",
+      "retrieval_surface_freshness": "retrieval surface reported a crawl on 2026-09-27",
+      "fingerprint": null,
+      "comparison_to_prior_observation": "semantic_status_no_delta_on_checked_fields; byte_identity_not_checked",
+      "preservation_lookup": "not_performed",
+      "preservation_action": "none",
+      "record_evidence_promoted": false,
+      "note": "The current Heritage Crafts retrieval surface still reports Sieve and riddle making as CRITICALLY ENDANGERED / Status Critical, with 0 main-income professionals, 1 side-income professional and 1 trainee, and names the 2025 Red List reviewer surface. This re-observation is operational currentness only. It does not establish origin-server HTTP state, unchanged bytes, an independent practitioner census, preservation, endorsement, or truth, and it does not alter the living-knowledge record evidence state."
+    },
+    {
+      "id": "thr:source-check:1d1e816b-35d0-568b-8c56-8f7ef3de1c6a",
+      "source_id": "thr:source:47f0817a-3cae-4ded-98eb-320332a72bd5",
+      "checked_at": "2026-09-27",
+      "precision": "date",
+      "locator": "https://www.theguardian.com/money/2009/nov/28/how-to-make-sieve-riddle",
+      "method": "public_web_retrieval_surface_direct_url",
+      "outcome": "retrieval_surface_content_available",
+      "live_http_state": "not_established",
+      "retrieval_surface_freshness": "retrieval surface reported a crawl within the previous week",
+      "fingerprint": null,
+      "comparison_to_prior_observation": "semantic_article_identity_no_delta_on_checked_fields; byte_identity_not_checked",
+      "preservation_lookup": "not_performed",
+      "preservation_action": "none",
+      "record_evidence_promoted": false,
+      "note": "The Guardian retrieval surface returned the expected 28 November 2009 Jon Henley article, including the Mike Turnock workshop context and the article's then-current claim that he was the last British handmade sieve and riddle maker. This is a much fresher retrieval-surface observation than the 16 September cached surface, but it still does not establish live origin HTTP state, unchanged bytes, preservation, present-day craft status, or truth, and it does not alter the record evidence state."
     }
   ],
   "ceilings": [
