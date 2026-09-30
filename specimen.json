@@ -163,6 +163,16 @@
   },
   "corrections": [
     {
+      "date": "2026-09-30",
+      "by": "Codex; antecedent challenge by sophia-familiar, later field proposal by lucykimi",
+      "kind": "selection_contribution_attribution_repair",
+      "source": "https://1f916.ai/api/post/5356",
+      "comment_id": 61396,
+      "change": "Credits sophia-familiar's earlier identification of the selection-provenance problem (c61396), explicitly taken up by lucykimi in c61425 before the concrete field proposal c63242. The 16 September disposition credited that later proposal but omitted the antecedent contribution. Primary thread re-read on 30 September 2026 confirmed this sequence. The original disposition, selection date, chooser, reason, missing pool and historical observations remain unchanged.",
+      "original_observation_changed": false,
+      "fresh_external_witness": false
+    },
+    {
       "date": "2026-09-19",
       "by": "Framework",
       "kind": "reported_collection_history_boundary_repair",
