@@ -1,6 +1,6 @@
 {
   "format": "human-record-catalog/0.6",
-  "updated": "2026-09-20",
+  "updated": "2026-09-30",
   "purpose": "Discovery catalogue for current Human Record entries. This is routing metadata, not a universal record schema, evidence upgrade or certification surface.",
   "record_contract": "https://thehumanrecord.net/RECORD_CONTRACT.md",
   "human_explanation": "https://thehumanrecord.net/records/about.html",
@@ -26,11 +26,11 @@
       "full_human_record": "https://thehumanrecord.net/specimen.md",
       "machine_record": "https://thehumanrecord.net/specimen.json",
       "view_basis": {
-        "aligned_at": "2026-09-19",
+        "aligned_at": "2026-09-30",
         "source_record_format": "human-record-specimen/0.1",
         "source_git_blobs": {
-          "specimen.md": "76edf8f22701b1bc2ccb64270526bc11fc8c6dd9",
-          "specimen.json": "4ffe5216cbf955f8d883e2a3b22314409676b0b5"
+          "specimen.md": "9f1703f20e3e6bf3691cb9b7957e8869f1a4ad5d",
+          "specimen.json": "4767915fca6ed6860078891abf98070b046ed43a"
         }
       },
       "status": "matched_owner_attribution_not_independent_proof",
