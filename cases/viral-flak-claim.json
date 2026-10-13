@@ -1,6 +1,6 @@
 {
   "record_type": "provenance_case",
-  "record_version": "0.2.7",
+  "record_version": "0.2.8",
   "recorded_at": "2026-09-16",
   "title": "The viral '80% of German flak crews died' claim",
   "status": "unsupported_in_sources_checked",
@@ -80,7 +80,7 @@
       "id": "westermann-2001-selected-passage",
       "kind": "scholarly_book_selected_passage_via_third_party_ocr",
       "url": "https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf",
-      "role": "Accessible third-party OCR reproduction of Edward B. Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945. A selected passage for the May 10–June 22, 1940 western campaign reports flak-force casualties, explicitly dead, wounded or missing, as 60 officers and 890 enlisted men. Book identity is independently catalogued by University Press of Kansas / Google Books / Smithsonian / Internet Archive, but this OCR copy itself was not authenticated against the restricted publisher-edition scan and the underlying archival documents were not inspected.",
+      "role": "Accessible third-party OCR reproduction of Edward B. Westermann, Flak: German Anti-Aircraft Defenses, 1914–1945. A selected passage for the May 10–June 22, 1940 western campaign reports flak-force casualties, explicitly dead, wounded or missing, as 60 officers and 890 enlisted men. Book identity is independently catalogued by University Press of Kansas / Google Books / Smithsonian / Internet Archive, but this OCR copy itself was not authenticated against the restricted publisher-edition scan and the underlying archival documents were not inspected. HISTORICAL RESEARCH CARRIER ONLY: complete-copy host permission is UNKNOWN; the URL records the actually inspected third-party representation, not a recommended current access route, independently authenticated edition or proof of infringement. For present-day discovery use the University Press of Kansas publisher edition (https://kansaspress.ku.edu/9780700614202/) or institution/library catalogue and borrowing routes; those are not evidence that the inspected passage was verified against the publisher text.",
       "claim_relation": "bounded_campaign_personnel_casualty_context_not_support"
     },
     {
@@ -94,7 +94,7 @@
       "id": "westermann-2001-targeted-book-search",
       "kind": "scholarly_book_targeted_search_via_third_party_full_pdf",
       "url": "https://murrellsmodels.co.uk/mm/files/Flak-German-AntiAircraft-Defenses---1914-1945-.pdf",
-      "role": "Targeted search of a full third-party reproduction. The relevant 'up to 80 percent of flak casualties' occurrence concerns RAF/Bomber Command casualties over target areas, not German flak crew mortality. A late-1944 passage reports 1,110,900 persons in the ground-based air-defense force, which is a personnel-strength snapshot rather than a death numerator or whole-war denominator. Search-term absence and this reproduction's authenticity remain bounded.",
+      "role": "Targeted search of a full third-party reproduction. The relevant 'up to 80 percent of flak casualties' occurrence concerns RAF/Bomber Command casualties over target areas, not German flak crew mortality. A late-1944 passage reports 1,110,900 persons in the ground-based air-defense force, which is a personnel-strength snapshot rather than a death numerator or whole-war denominator. Search-term absence and this reproduction's authenticity remain bounded. HISTORICAL RESEARCH CARRIER ONLY: complete-copy host permission is UNKNOWN; the URL records the actually inspected third-party representation, not a recommended current access route, independently authenticated edition or proof of infringement. For present-day discovery use the University Press of Kansas publisher edition (https://kansaspress.ku.edu/9780700614202/) or institution/library catalogue and borrowing routes; those are not evidence that the inspected passage was verified against the publisher text.",
       "claim_relation": "targeted_book_search_nearby_80_percent_statistic_not_support"
     }
   ],
@@ -114,7 +114,8 @@
     "Whether the 80% figure arose by mutation from a different casualty statistic.",
     "Specifically, whether an Allied-aircrew flak statistic was transposed into a German flak-crew mortality claim, as proposed by custos (Square c63214). Westermann itself contains an 'up to 80 percent of flak casualties' passage in RAF/Bomber Command context, but numerical/source proximity does not establish transmission, copying or ancestry to the viral claim.",
     "The completeness of surviving late-war German personnel and casualty records relevant to this question.",
-    "Whether the selected Westermann OCR passage is byte/text faithful to an authenticated print or restricted scan at that passage, and whether the cited underlying archival documents independently support the reproduced casualty numbers."
+    "Whether the selected Westermann OCR passage is byte/text faithful to an authenticated print or restricted scan at that passage, and whether the cited underlying archival documents independently support the reproduced casualty numbers.",
+    "Whether the two historically inspected third-party complete-book reproductions were authorised for public distribution by the relevant rights holder; no permission or infringement determination has been established. The publisher/catalogue/borrowing routes are preferred for current discovery, not substitutes for the copies actually inspected."
   ],
   "not_checked": [
     "Westermann, full authenticated edition and exhaustive semantic/book-wide casualty review; one 1940 passage plus a targeted full-text search of an unauthenticated full third-party reproduction have now been checked",
