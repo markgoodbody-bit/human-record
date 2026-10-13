@@ -113,12 +113,12 @@ This is useful German flak-personnel context, but it does **not** support the vi
 
 University Press of Kansas, Google Books, Smithsonian Libraries and Internet Archive independently catalogue the 2001 book/edition family. Internet Archive holds an access-restricted scan; THR did not bypass that restriction. The Bundesarchiv independently identifies `N 529` as Axthelm's papers, and Deutsche Digitale Bibliothek/Bundesarchiv identifies `RL 12/457` as Flak-Regiment 102 material with May/July 1940 provenance. Those catalogue facts make the citation route more recoverable without authenticating the OCR text or its casualty number.
 
-Sources/routes:
-- https://kansaspress.ku.edu/9780700614202/
+**Current reader discovery (publisher and catalogues, not authentication of the inspected OCR):**
+- [University Press of Kansas — publisher edition](https://kansaspress.ku.edu/9780700614202/)
 - https://books.google.com/books?id=XOxmAAAAMAAJ
 - https://www.si.edu/object/flak-german-anti-aircraft-defenses-1914-1945-edward-b-westermann%3Asiris_sil_717196
 - https://archive.org/details/flakgermanantiai0000west
-- https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf
+**Historical research carrier (not a current reading recommendation):** a third-party OCR reproduction hosted at prussia.online was used for the selected passage. Its complete-copy distribution authorisation has not been established. The exact inspected locator remains recoverable in the machine record, source registry and pinned historical Git revision; this editorial routing change does not authenticate its bytes or change what was observed.
 - https://www.bundesarchiv.de/im-archiv-recherchieren/archivgut-recherchieren/nach-themen/unternehmen-barbarossa-der-deutsche-ueberfall-auf-die-sowjetunion-in-den-quellen-der-luftwaffe/
 - https://www.deutsche-digitale-bibliothek.de/item/P566IIEOXIPS7EH4E5RHISTZMBUX3CFT
 
@@ -153,8 +153,7 @@ it does not defeat OCR/search error.
 
 This supplies a concrete passage to investigate under the previously recorded **ancestry hypothesis**. No evidence here links it to the viral claim or ranks it above other possible origins. The 80-percent flak-related statistic concerns Allied casualties. There is still no evidence here that the viral video copied, mutated or even consulted this passage.
 
-Source route:
-- https://murrellsmodels.co.uk/mm/files/Flak-German-AntiAircraft-Defenses---1914-1945-.pdf
+**Historical targeted-search carrier (not a current reading recommendation):** a third-party full-PDF reproduction hosted at murrellsmodels.co.uk was searched. Its complete-copy distribution authorisation is **UNKNOWN**. The exact historical locator remains in the machine record, source registry and pinned Git history. For present-day book discovery, start with the publisher/catalogue routes listed above; those do not verify these inspected passages.
 
 Reproduction locators used in hostile review:
 - carrier PDF page 96 (one-based), section **“The RAF's Reaction to the Luftwaffe's Air Defense Initiatives”** — 80-percent flak-casualty passage;
@@ -255,6 +254,8 @@ The repair is not for an AI to announce a replacement truth. The repair is to pr
 Future humans and artificial entities should be able to walk back down the strata rather than receiving only the most repeated sentence.
 
 ## Limits and correction
+
+Revision 0.2.8, 13 October 2026: **Reader access and third-party rights boundary.** The present reader route now starts with publisher and library/catalogue discovery. The two complete third-party copies remain identified as historical, unauthenticated research carriers, not recommended onward-reading links: hosting/redistribution permission has not been established, which is NOT an infringement finding. Original checked passage/search, carrier-page locators, observations, source identities and earlier corrections remain unchanged; authenticated comparison is still unperformed.
 
 Revision 0.2.7, 19 September 2026: **Westermann targeted-book-search repair.** A targeted full-text/OCR search of a full third-party reproduction found an 80-percent flak-casualty passage in RAF/Bomber Command context, not German flak personnel context, and a late-1944 flak-arm personnel-strength figure without an aggregate death numerator. The search did not authenticate the reproduction, exhaustively review the book, establish absence under other wording, or establish transmission into the viral claim. Claim status remains unsupported in sources checked; true aggregate rate remains unknown.
 

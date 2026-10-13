@@ -764,6 +764,11 @@
       "publisher": "University Press of Kansas",
       "locators": [
         {
+          "scheme": "url",
+          "value": "https://kansaspress.ku.edu/9780700614202/",
+          "status": "publisher_catalogued"
+        },
+        {
           "scheme": "isbn",
           "value": "9780700611362",
           "status": "catalogued_2001_hardcover"
@@ -776,12 +781,12 @@
         {
           "scheme": "url",
           "value": "https://www.prussia.online/Data/Book/fl/flak-german-anti-aircraft-defenses-1914-1945/Westermann%20E.%20Flak%20German%20Anti-Aircraft%20Defenses%2C%201914-1945%20%282001%29%2C%20OCR.pdf",
-          "status": "third_party_ocr_reproduction_inspected"
+          "status": "third_party_ocr_reproduction_inspected_rights_unknown"
         },
         {
           "scheme": "url",
           "value": "https://murrellsmodels.co.uk/mm/files/Flak-German-AntiAircraft-Defenses---1914-1945-.pdf",
-          "status": "third_party_full_pdf_reproduction_targeted_search"
+          "status": "third_party_full_pdf_reproduction_targeted_search_rights_unknown"
         }
       ],
       "observations": [
@@ -823,7 +828,7 @@
         "status": "restricted_archive",
         "copies": [],
         "last_checked_at": "2026-09-18",
-        "note": "Internet Archive catalogues an access-restricted scan of the 2001 University Press of Kansas edition. THR did not bypass access controls. The accessible third-party OCR representation is not treated as an authenticated preservation copy."
+        "note": "Internet Archive catalogues an access-restricted scan of the 2001 University Press of Kansas edition. THR did not bypass access controls. The accessible third-party OCR representation is not treated as an authenticated preservation copy. The prussia.online and murrellsmodels.co.uk complete copies were historical research carriers; rights-holder permission for their public distribution is UNKNOWN, not proven absent or unlawful. Their exact URLs remain here for source ancestry, not as recommended current reader routes. Begin present-day book access with the University Press of Kansas publisher listing and restricted institutional catalogue/borrowing routes, which do not authenticate the inspected OCR/full-PDF passages."
       },
       "used_by_records": [
         "viral-flak-claim"
