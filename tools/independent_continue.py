@@ -199,7 +199,10 @@ def build(root, output):
         if not re.fullmatch(r'[a-zA-Z0-9_-]+', identifier):
             raise ValueError('UNSAFE_RECORD_ID')
         routes = record['routes']
-        body = '<nav><a href="../catalogue.html">Catalogue</a><a href="../context/CONTRIBUTE.md.html">Correction context</a></nav>'
+        body = ('<nav><a href="../catalogue.html">Catalogue</a>'
+                '<a href="../context/CONTRIBUTE.md.html">Correction context</a>'
+                '<a href="../source/registry/sources.json">Source registry</a>'
+                '<a href="../source/registry/assertions.json">Assertion registry</a></nav>')
         body += '<h2>Known in this record</h2><p>' + html.escape(entry.get('known_summary', 'See source')) + '</p>'
         body += '<h2>Unknown or unexamined</h2><p>' + html.escape(entry.get('unknown_summary', 'See source')) + '</p>'
         body += ('<p><a href="../context/' + routes['full_human_record'] + '.html">Full human record</a> · '
@@ -279,6 +282,33 @@ def inspect(copy):
         for name in (*record['routes'].values(),):
             if not inside(copy / 'source', name).is_file():
                 problems.append('MISSING_RECORD_ROUTE: ' + name)
+    # Traverse actual local hyperlink/frame connections, not just an inventory.
+    reached, pending = set(), ['index.html']
+    while pending:
+        name = pending.pop()
+        if name in reached:
+            continue
+        reached.add(name)
+        path = inside(copy, name)
+        if not path.is_file() or path.suffix != '.html':
+            continue
+        parser = Links()
+        parser.feed(path.read_text(encoding='utf-8'))
+        for url in parser.links:
+            if urlsplit(url).scheme or url.startswith('//'):
+                continue
+            target = local_target(name, url)
+            if target and target not in reached:
+                pending.append(target)
+    required = {'catalogue.html', 'source/records/catalog.json',
+                'context/CONTRIBUTE.md.html', 'context/LICENSE.md.html',
+                'context/STEWARDSHIP.md.html', 'source/registry/sources.json'}
+    for record in manifest['records']:
+        required.update((record['reading_route'],
+                         'source/' + record['routes']['machine_record'],
+                         'context/' + record['routes']['full_human_record'] + '.html'))
+    for missing in sorted(required - reached):
+        problems.append('UNREACHABLE_FROM_ENTRANCE: ' + missing)
     code, _ = validate_source(copy / 'source')
     if code:
         problems.append('PRESERVED_SOURCE_VALIDATORS_FAILED')
@@ -316,6 +346,7 @@ def readback(copy):
     return {'status': 'PASS' if manifest['source']['commit'] else 'PARTIAL',
             'scope': 'LOCAL_STATIC_COPY_READBACK_ONLY', 'source': manifest['source'],
             'records': len(manifest['records']), 'http_files_verified': count,
+            'navigation': 'ENTRANCE_TO_CATALOGUE_RECORDS_CONTEXT_AND_MACHINE_ROUTES',
             'external_link_count': manifest['external_link_count'], 'external_requests': 0,
             'manifest_sha256': digest((copy / 'manifest.json').read_bytes()),
             'source_stewardship_declaration': manifest['stewardship_notice'],

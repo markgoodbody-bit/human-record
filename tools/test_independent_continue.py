@@ -89,6 +89,15 @@ class ContinuationTests(unittest.TestCase):
         self.assertEqual(receipt['status'], 'PARTIAL')
         self.assertIsNone(receipt['source']['commit'])
 
+    def test_valid_files_without_frontdoor_navigation_do_not_pass(self):
+        index = self.output / 'index.html'
+        index.write_text(index.read_text().replace('href="catalogue.html"', 'href="index.html"'))
+        manifest = json.loads((self.output / 'manifest.json').read_text())
+        manifest['files']['index.html']['sha256'] = kit.digest(index.read_bytes())
+        (self.output / 'manifest.json').write_text(json.dumps(manifest))
+        _, problems = kit.inspect(self.output)
+        self.assertTrue(any('UNREACHABLE_FROM_ENTRANCE' in p for p in problems))
+
     def test_no_overwrite_or_source_internal_output(self):
         with self.assertRaises(ValueError):
             kit.build(ROOT, self.output)
