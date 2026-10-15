@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 import shutil
+import subprocess
+import sys
 import tempfile
 import unittest
 import independent_continue as kit
@@ -112,6 +114,15 @@ class ContinuationTests(unittest.TestCase):
         self.assertIn('UNKNOWN', flak)
         self.assertNotIn('https://prussia.online', flak)
         self.assertNotIn('https://www.murrellsmodels.co.uk', flak)
+
+    def test_fresh_isolated_process_uses_copied_tools(self):
+        result = subprocess.run([sys.executable, '-I', '-B', '-X', 'utf8',
+            str(self.output / '_kit_tools/independent_continue.py'), '--check', str(self.output)],
+            cwd=self.base, capture_output=True, text=True, timeout=30)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        receipt = json.loads(result.stdout)
+        self.assertEqual(receipt['records'], 4)
+        self.assertEqual(receipt['external_requests'], 0)
 
     def test_carry_forward_uses_only_copy_and_keeps_git_unknown(self):
         carried = kit.build(self.output / 'source', self.base / 'carried')

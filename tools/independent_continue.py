@@ -16,6 +16,7 @@ import os
 from pathlib import Path
 import re
 import subprocess
+import sys
 import threading
 from urllib.parse import unquote, urljoin, urlsplit
 from urllib.request import build_opener, ProxyHandler
@@ -84,6 +85,11 @@ def local_target(relative, url):
 
 def validate_source(root):
     # Reuse all three existing validators; do not reimplement record logic.
+    # Isolated Python (-I) omits the script directory from sys.path. Load only
+    # sibling kit tooling, not cwd/PYTHONPATH or the vanished original checkout.
+    tooling = str(Path(__file__).resolve().parent)
+    if tooling not in sys.path:
+        sys.path.insert(0, tooling)
     import validate_all
     output = io.StringIO()
     with contextlib.redirect_stdout(output):
