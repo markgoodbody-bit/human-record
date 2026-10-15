@@ -1,0 +1,29 @@
+name: Independent THR continuation (local fixture only)
+on:
+  push:
+    branches: [codex/thr-independent-continuation-20261014]
+  pull_request:
+    paths:
+      - 'tools/**'
+      - 'CONTINUE.md'
+      - '.github/workflows/independent-continuation.yml'
+permissions:
+  contents: read
+jobs:
+  continuation:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tools -p test_independent_continue.py -v
+      - run: python tools/validate_all.py
+      - run: git diff --check
+# No remote locator fetch, host publication, provider, credentials or deployment.
