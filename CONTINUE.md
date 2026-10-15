@@ -231,6 +231,49 @@ If a credential is required for a particular host or domain, replace the host or
 
 ## Continuation test
 
+### Local independent-copy acceptance kit
+
+With Python 3.10+ and an obtained source checkout, one command builds a NEW copy
+outside this checkout and performs disposable 127.0.0.1 HTTP byte readback:
+
+```text
+python tools/independent_continue.py --output ../THR-independent-copy
+```
+
+The output directory must not already exist. Open its `index.html` for the
+independent front door and local catalogue; use the original human view link if
+your browser restricts the embedded file view. Preserved evidence bytes remain
+under `source/`; plain-text HTML context views are derived separately. No CNAME,
+third-party downloads, credentials or public hosting are included. External
+source locators are listed in `external-links.json` and still require their hosts.
+Self-generated hashes are not signatures: retain the receipt/manifest digest
+independently when custody matters. The original canonical-domain metadata in
+preserved pages is source history, not this copy's claim to the domain.
+
+To recheck the self-contained copy after losing the source checkout:
+
+```text
+python ../THR-independent-copy/_kit_tools/independent_continue.py --check ../THR-independent-copy
+```
+
+The generated `RECEIVING-STEWARD.md` is the single recipient guide. Its HTML view
+and `mark-decision.html` are linked from the entrance. From inside the copy, carry
+the preserved source into a new sibling directory without the original checkout:
+
+```text
+python -B _kit_tools/independent_continue.py --source source --output ../THR-next-copy
+```
+
+Without Git evidence this rebuilt copy reports PARTIAL and UNKNOWN source commit;
+it does not inherit the previous manifest's commit claim. Preserve earlier receipts
+separately. Publication and rights decisions remain separate from executable checks.
+
+PASS concerns local copy/readback only; PARTIAL retains UNKNOWN source commit
+when it cannot be proved from local Git bytes; BLOCKED reports missing/corrupt
+material or unusable routes. None proves historical truth, third-party rights,
+non-founder participation, community acceptance, permanence or browser/accessibility
+quality. Existing record validators are reused, with their original ceilings.
+
 A minimal successful continuation is:
 
 ```text
