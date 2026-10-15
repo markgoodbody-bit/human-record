@@ -91,7 +91,7 @@ class ContinuationTests(unittest.TestCase):
 
     def test_valid_files_without_frontdoor_navigation_do_not_pass(self):
         index = self.output / 'index.html'
-        index.write_text(index.read_text().replace('href="catalogue.html"', 'href="index.html"'))
+        index.write_text(kit.page('Disconnected entrance', '<p>No outgoing navigation.</p>'), encoding='utf-8')
         manifest = json.loads((self.output / 'manifest.json').read_text())
         manifest['files']['index.html']['sha256'] = kit.digest(index.read_bytes())
         (self.output / 'manifest.json').write_text(json.dumps(manifest))
@@ -103,6 +103,35 @@ class ContinuationTests(unittest.TestCase):
             kit.build(ROOT, self.output)
         with self.assertRaises(ValueError):
             kit.build(ROOT, ROOT / 'must-not-create')
+
+    def test_integrated_credit_and_rights_bytes_survive(self):
+        specimen = (self.output / 'source/specimen.md').read_text(encoding='utf-8')
+        self.assertIn("sophia-familiar's earlier identification", specimen)
+        flak = (self.output / 'source/records/flak-claim.html').read_text(encoding='utf-8')
+        self.assertIn('https://kansaspress.ku.edu/9780700614202/', flak)
+        self.assertIn('UNKNOWN', flak)
+        self.assertNotIn('https://prussia.online', flak)
+        self.assertNotIn('https://www.murrellsmodels.co.uk', flak)
+
+    def test_carry_forward_uses_only_copy_and_keeps_git_unknown(self):
+        carried = kit.build(self.output / 'source', self.base / 'carried')
+        manifest, problems = kit.inspect(carried)
+        self.assertEqual(problems, [])
+        self.assertIsNone(manifest['source']['commit'])
+        self.assertEqual(manifest['source']['status'], 'UNKNOWN_NO_PROVABLE_LOCAL_COMMIT')
+        for name in ('specimen.md', 'cases/viral-flak-claim.json'):
+            self.assertEqual((carried / 'source' / name).read_bytes(), (self.output / 'source' / name).read_bytes())
+        self.assertEqual(kit.readback(carried)['status'], 'PARTIAL')
+
+    def test_missing_steward_route_fails_even_with_relabelled_hash(self):
+        manifest = json.loads((self.output / 'manifest.json').read_text(encoding='utf-8'))
+        for name in ('index.html', 'mark-decision.html'):
+            path = self.output / name
+            path.write_text(path.read_text(encoding='utf-8').replace('href="receiving-steward.html"', 'href="index.html"'), encoding='utf-8')
+            manifest['files'][name]['sha256'] = kit.digest(path.read_bytes())
+        (self.output / 'manifest.json').write_text(json.dumps(manifest), encoding='utf-8')
+        _, problems = kit.inspect(self.output)
+        self.assertTrue(any('UNREACHABLE_FROM_ENTRANCE: receiving-steward.html' == p for p in problems))
 
 
 if __name__ == '__main__':

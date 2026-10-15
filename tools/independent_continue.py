@@ -178,10 +178,13 @@ def build(root, output):
         dest.write_bytes(inside(root, name).read_bytes())
     # Copy the existing validators and this executable for checking after source
     # checkout loss. They are tooling, not public record/evidence content.
+    tooling = root / 'tools'
+    if not tooling.is_dir():
+        tooling = root.parent / '_kit_tools'
     for name in (*VALIDATORS, 'independent_continue.py'):
         dest = output / '_kit_tools' / name
         dest.parent.mkdir(exist_ok=True)
-        dest.write_bytes((root / 'tools' / name).read_bytes())
+        dest.write_bytes((tooling / name).read_bytes())
     (output / 'reading').mkdir()
     (output / 'context').mkdir()
     for name in sorted(selected):
@@ -225,10 +228,74 @@ def build(root, output):
             '<p><a href="catalogue.html">Browse all current catalogue records</a> · '
             '<a href="source/records/catalog.json">Machine catalogue</a> · '
             '<a href="external-links.json">Links requiring external hosts</a></p>'
+            '<p><a href="receiving-steward.html">Start here as a receiving steward</a> · '
+            '<a href="mark-decision.html">Publication decision</a> · '
+            '<a href="manifest.json">Exact file hashes and source provenance</a></p>'
             '<h2>Rights, correction and continuation</h2><ul>' + context + '</ul>'
             '<p>The preserved source pages may identify their original canonical domain; that is source metadata, '
             'not a domain claim by this copy. Correction submissions still use the original repository route and may require an account.</p>')
     (output / 'index.html').write_text(page('The Human Record — independent reading copy', body), encoding='utf-8', newline='\n')
+    readme = '''# Receiving The Human Record
+
+This directory is an offline reader and a runnable copy kit. Start with index.html,
+then catalogue.html. Each of the four record pages links to its full human text,
+machine record, source registry and correction context. Original record bytes are
+under source/; reading/ and context/ are derived views. No linked third-party work
+has been downloaded. External historical locators remain in external-links.json.
+
+## Check what arrived
+
+With Python 3.10+ installed, open a terminal in THIS directory and run:
+
+python -B _kit_tools/independent_continue.py --check .
+
+The check reads the copy and briefly serves it only on 127.0.0.1 for byte readback.
+No original checkout, Git credentials, original website or external host is used.
+Read manifest.json for the observed source commit (or UNKNOWN), per-file hashes,
+record routes and validator report. A hash generated with this copy is not an
+independent witness or signature. Compare with a separately retained receipt if
+you have one; otherwise custody authenticity remains unestablished.
+
+## Carry it forward without the original checkout
+
+Keep this copy unchanged. Choose a NEW sibling directory that does not exist:
+
+python -B _kit_tools/independent_continue.py --source source --output ../THR-next-copy
+
+This reconstructs the reader from the preserved source and included tools. With
+no Git evidence, the new copy reports PARTIAL / UNKNOWN source commit. It must
+not inherit a commit claim merely because this earlier copy named one. Keep the
+earlier manifest and receipt separately as the prior custody account.
+
+## Corrections and publication
+
+Read context/CONTRIBUTE.md.html, context/LICENSE.md.html and
+context/STEWARDSHIP.md.html before proposing corrections or hosting a copy.
+The current correction submission route is external and may require an account.
+If it disappears, keep a dated proposed correction beside the unchanged copy;
+do not describe it as accepted. Receiving files does not make you the steward.
+The publication decision is in mark-decision.html. Copy/readback checks establish
+neither historical truth, third-party reproduction rights, survival nor governance
+acceptance. Browser layout, assistive technology and human cold-reader testing
+remain unverified by these executable checks.
+'''
+    (output / 'RECEIVING-STEWARD.md').write_text(readme, encoding='utf-8', newline='\n')
+    (output / 'receiving-steward.html').write_text(page('Receiving steward — read, check, carry forward',
+        '<nav><a href="index.html">Entrance</a><a href="catalogue.html">Four records</a>'
+        '<a href="manifest.json">Provenance and hashes</a><a href="mark-decision.html">Publication decision</a></nav>'
+        '<pre>' + html.escape(readme) + '</pre>'), encoding='utf-8', newline='\n')
+    decision = ('<p>This is a private draft for review. No publication or ownership transfer is approved by this kit.</p>'
+        '<h2>Executable result</h2><p>The receipt can establish local navigation, preserved file bytes, '
+        'record validators and fresh-process readback. It does not establish an independent historical witness.</p>'
+        '<h2>Mark decision before public hosting</h2><p>Review the integrated credit and Flak source/rights '
+        'guidance, choose whether to publish, and state a correction route and custody role. '
+        'Third-party reproduction authorisation remains UNKNOWN where the source says UNKNOWN. '
+        'The kit includes no third-party carriers or CNAME and assigns no domain or governance rights.</p>'
+        '<p><a href="context/LICENSE.md.html">Rights scope</a> · '
+        '<a href="context/STEWARDSHIP.md.html">Stewardship status</a> · '
+        '<a href="receiving-steward.html">Recheck and carry forward</a> · '
+        '<a href="catalogue.html">Review all four records</a></p>')
+    (output / 'mark-decision.html').write_text(page('Mark — review and publication decision', decision), encoding='utf-8', newline='\n')
     (output / 'external-links.json').write_text(json.dumps({'fetched': False, 'links': sorted(external),
         'scope': 'Bounded HTML/Markdown/CSS/explicit-URL inventory; includes original-host locators and metadata; not live host or rights verification'}, indent=2, ensure_ascii=False) + '\n', encoding='utf-8', newline='\n')
     manifest = {'format': 'thr-independent-copy/0.1', 'source': source, 'records': records,
@@ -301,6 +368,7 @@ def inspect(copy):
             if target and target not in reached:
                 pending.append(target)
     required = {'catalogue.html', 'source/records/catalog.json',
+                'receiving-steward.html', 'mark-decision.html', 'manifest.json',
                 'context/CONTRIBUTE.md.html', 'context/LICENSE.md.html',
                 'context/STEWARDSHIP.md.html', 'source/registry/sources.json'}
     for record in manifest['records']:
